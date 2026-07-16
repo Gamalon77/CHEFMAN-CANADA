@@ -93,17 +93,24 @@
             </p>
             <div class="horizontal-products grid">
               {%- for product in predictive_search.resources.products -%}
-                {%- render 'product-card-horizontal',
-                  product: product,
-                  product_id: product.id,
-                  section_id: section_id,
-                  image_ratio: settings.product_image_ratio,
-                  image_fill: settings.product_image_fill,
-                  show_vendor: settings.predictive_search_show_vendor,
-                  show_price: settings.predictive_search_show_price,
-                  show_quick_add: false,
-                  show_quick_view: false
-                -%}
+                {% capture the_wlm_snippet_content %}{% include 'wlm-search' with product %}{% endcapture %}{%- unless the_wlm_snippet_content contains 'Liquid error' -%}{% include 'wlm-search' with product %}{%- endunless -%}
+                {%- assign is_chef_iq = false -%}
+                {%- for c in product.collections -%}
+                  {%- if c.id == 458756096255 -%}{%- assign is_chef_iq = true -%}{%- break -%}{%- endif -%}
+                {%- endfor -%}
+                {%- unless is_chef_iq -%}
+                  {%- render 'product-card-horizontal',
+                    product: product,
+                    product_id: product.id,
+                    section_id: section_id,
+                    image_ratio: settings.product_image_ratio,
+                    image_fill: settings.product_image_fill,
+                    show_vendor: settings.predictive_search_show_vendor,
+                    show_price: settings.predictive_search_show_price,
+                    show_quick_add: false,
+                    show_quick_view: false
+                  -%}
+                {%- endunless -%}
               {%- endfor -%}
             </div>
           </div>
@@ -133,6 +140,7 @@
             </p>
             <ul class="grid gap-2">
               {%- for collection in predictive_search.resources.collections -%}
+                {%- capture wlm_check -%}{%- render 'wlm-collection' with collection , wlm_is_render:'yes' -%}{%- endcapture -%}{%- if wlm_check == blank -%}{%continue%}{%- endif -%}
                 <li>
                   <a class="reversed-link text-base md:text-lg leading-tight font-medium" href="{{ collection.url }}">
                     {{- collection.title -}}

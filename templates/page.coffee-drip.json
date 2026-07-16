@@ -1,0 +1,195 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "coffee_guide": {
+      "type": "coffee-guide",
+      "blocks": {
+        "b1_rich_text": {
+          "type": "rich_text",
+          "settings": {
+            "eyebrow": "",
+            "heading": "What is drip coffee?",
+            "body": "<p>Drip brewing is exactly what it sounds like: hot water is showered evenly over a bed of ground coffee, then drips through a filter into the carafe below. It's the method behind the classic American cup — smooth, balanced, and easy to make by the potful.</p><p>Because the machine controls the water temperature and flow for you, drip coffee is wonderfully repeatable. The cup you love today tastes the same tomorrow.</p>",
+            "narrow": false
+          }
+        },
+        "b2_image_text": {
+          "type": "image_text",
+          "settings": {
+            "image": "shopify://shop_images/caffeinator-drip-pour.jpg",
+            "image_position": "left",
+            "eyebrow": "How it works",
+            "heading": "Set it and forget it",
+            "body": "<p>Fill the reservoir, add a filter, scoop in your grounds, and hit brew. A few minutes later you've got anywhere from a single mug to a full twelve-cup carafe.</p><ul><li>Minimal hands-on time</li><li>Brews large batches at once</li><li>Simple, quick cleanup</li></ul>",
+            "button_label": "Shop drip makers",
+            "button_link": "shopify://collections/coffee-espresso-makers"
+          }
+        },
+        "b3_image_text": {
+          "type": "image_text",
+          "settings": {
+            "image": "shopify://shop_images/caffeinator-drip-concrete.jpg",
+            "image_position": "right",
+            "eyebrow": "Choosing one",
+            "heading": "What to look for",
+            "body": "<p>Think about how much you drink and how you like it served:</p><ul><li><strong>Capacity</strong> — a 12-cup carafe for a busy household, or a compact size for smaller kitchens.</li><li><strong>Programmable timer</strong> — wake up to a pot that's already brewed.</li><li><strong>Thermal carafe</strong> — keeps coffee hot for hours without a hot plate scorching the flavor.</li></ul>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "b4_callout": {
+          "type": "callout",
+          "settings": {
+            "heading": "Pro tip",
+            "body": "<p>For the best-tasting pot, use about two tablespoons of coffee per six ounces of water, and give your machine a vinegar rinse every month to keep mineral buildup from dulling the flavor.</p>"
+          }
+        },
+        "b5_rich_text": {
+          "type": "rich_text",
+          "settings": {
+            "eyebrow": "",
+            "heading": "Who it's for",
+            "body": "<p>Drip is the right call if you drink coffee by the cup or the pot, value simplicity over barista theatrics, and want something the whole household can use without a lesson. It's the most fuss-free way to keep everyone caffeinated.</p>",
+            "narrow": false
+          }
+        }
+      },
+      "block_order": [
+        "b1_rich_text",
+        "b2_image_text",
+        "b3_image_text",
+        "b5_rich_text",
+        "b4_callout"
+      ],
+      "settings": {
+        "show_breadcrumb": true,
+        "breadcrumb_parent_title": "Find your perfect coffee maker",
+        "breadcrumb_parent_link": "shopify://pages/find-your-perfect-coffee-maker",
+        "eyebrow": "Coffee guide",
+        "heading": "Drip coffee, explained",
+        "heading_size": "title-xl tracking-heading",
+        "intro": "<p>The trusty workhorse of the coffee world. Drip machines brew a full pot of clean, consistent coffee with almost no effort — just add grounds and water, press a button, and walk away.</p>",
+        "padding_top": 48,
+        "padding_bottom": 100,
+        "divider": false,
+        "rounded": false
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "title": "How does a drip coffee maker work?",
+            "text": "<p>A drip coffee maker heats water in a reservoir and then evenly showers it over ground coffee held in a filter basket. Gravity pulls the brewed coffee down through the filter and into the carafe below, so all you do is add water, grounds, and press start.</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "title": "How much coffee and water should I use?",
+            "text": "<p>A common starting point is about 1 to 2 tablespoons of ground coffee for every 6 ounces of water, which you can adjust to taste. Keep in mind that a coffee maker's marked 'cup' is usually around 5 to 6 ounces rather than a full 8-ounce mug, so measure your water accordingly.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "title": "What grind size works best in a drip coffee maker?",
+            "text": "<p>A medium grind, roughly the texture of sand, works best for most automatic drip machines. Too fine a grind can clog the filter and cause bitterness, while too coarse a grind can make the coffee taste weak and watery.</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "title": "How often should I clean and descale my coffee maker?",
+            "text": "<p>Wash the carafe, filter basket, and lid after each use, and descale the machine roughly once a month if you brew daily, or more often with hard water. You can descale with a commercial descaling solution or a mix of equal parts white vinegar and water, followed by two cycles of fresh water to rinse.</p>"
+          }
+        },
+        "q5": {
+          "type": "question",
+          "settings": {
+            "title": "Should I use paper filters or a reusable filter?",
+            "text": "<p>Paper filters trap more oils and fine grounds, giving a cleaner, brighter cup, and they make cleanup easy. Reusable mesh filters cut down on waste and let more oils through for a fuller body, so the best choice really comes down to your taste and convenience preferences.</p>"
+          }
+        },
+        "q6": {
+          "type": "question",
+          "settings": {
+            "title": "What is a programmable timer and how do I use it?",
+            "text": "<p>A programmable timer lets you load coffee and water the night before and set a time for the machine to start brewing automatically. It's a popular feature for waking up to fresh coffee, though for the best flavor it's still a good idea to use freshly ground coffee close to brew time.</p>"
+          }
+        },
+        "q7": {
+          "type": "question",
+          "settings": {
+            "title": "Is a thermal carafe or a glass carafe better?",
+            "text": "<p>A glass carafe sits on a warming plate to stay hot, which is great if you finish the pot quickly, but extended warming can eventually make coffee taste bitter. A thermal carafe is insulated and keeps coffee hot for hours without a heat source, helping preserve the original flavor, so it's a nice option if you sip slowly throughout the morning.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7"
+      ],
+      "settings": {
+        "style": "with-border",
+        "heading": "Frequently asked questions",
+        "heading_size": "title-md",
+        "heading_tag": "h2",
+        "narrow": true,
+        "padding_top": 36,
+        "padding_bottom": 100,
+        "divider": false
+      }
+    },
+    "coffee_cta": {
+      "type": "coffee-guide",
+      "blocks": {
+        "cta": {
+          "type": "cta",
+          "settings": {
+            "heading": "Ready to find yours?",
+            "body": "<p>Browse our drip lineup, or take the quiz and let us match you to the perfect machine.</p>",
+            "button_label": "Shop all coffee makers",
+            "button_link": "shopify://collections/coffee-espresso-makers",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "cta"
+      ],
+      "settings": {
+        "show_breadcrumb": false,
+        "show_hero": false,
+        "eyebrow": "",
+        "heading": "",
+        "heading_size": "title-md",
+        "intro": "",
+        "padding_top": 0,
+        "padding_bottom": 100,
+        "divider": false,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "coffee_guide",
+    "faq",
+    "coffee_cta"
+  ]
+}

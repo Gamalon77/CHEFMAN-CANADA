@@ -5,6 +5,9 @@
   if video_mobile
     assign poster_mobile = video_mobile.preview_image | default: section.settings.cover_image_mobile
   endif
+
+  assign play_button_alpha = section.settings.play_button_opacity | divided_by: 100.0
+  assign play_button_icon_size = section.settings.play_button_size | times: 0.34 | round
 -%}
 
 <style>
@@ -15,6 +18,57 @@
     {%- if poster != null and section.settings.image_height == 'adapt' %}
       --ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;
     {% endif -%}
+  }
+
+  {%- comment -%} Centered, resizable, colour/opacity-adjustable play & pause button {%- endcomment -%}
+  #shopify-section-{{ section.id }} .deferred-poster .play-button {
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    inset-block-end: auto;
+    inset-inline-end: auto;
+    transform: translate(-50%, -50%);
+    width: {{ section.settings.play_button_size }}px;
+    height: {{ section.settings.play_button_size }}px;
+    color: {{ section.settings.play_button_color }};
+    background-color: {{ section.settings.play_button_background | color_modify: 'alpha', play_button_alpha }};
+    backdrop-filter: none;
+  }
+
+  #shopify-section-{{ section.id }} .deferred-poster .play-button .icon {
+    width: {{ play_button_icon_size }}px;
+    height: {{ play_button_icon_size }}px;
+  }
+
+  {%- comment -%} Let a click anywhere on the video toggle play/pause, not just on the button {%- endcomment -%}
+  #shopify-section-{{ section.id }} .deferred-poster {
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  {%- comment -%} The video/iframe ignores clicks so they fall through to the full-area button
+       (except in the autoplay-blocked fallback, where native controls are needed) {%- endcomment -%}
+  #shopify-section-{{ section.id }} video-media:not([suspended]) > :is(video, iframe) {
+    pointer-events: none;
+  }
+
+  {%- comment -%} Show the play button before playback starts {%- endcomment -%}
+  #shopify-section-{{ section.id }} video-media:not([playing]) .deferred-poster .play-button {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  {%- comment -%} Hide it once playing; a click anywhere pauses and brings it back {%- endcomment -%}
+  #shopify-section-{{ section.id }} video-media[playing] .deferred-poster .play-button {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  {%- comment -%} On mouse devices, reveal the pause button on hover {%- endcomment -%}
+  @media screen and (pointer: fine) {
+    #shopify-section-{{ section.id }} video-media[playing]:hover .deferred-poster .play-button {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
   {%- if poster_mobile != blank and section.settings.image_height_mobile == 'adapt' %}
@@ -41,6 +95,7 @@
           description: section.settings.description,
           cover_image: section.settings.cover_image_mobile,
           show_play_button: true,
+          mobile_fullscreen: section.settings.mobile_fullscreen,
           is_mobile: true,
           class: 'banner__media media media--height w-full h-full relative'
         -%}
@@ -56,6 +111,7 @@
         description: section.settings.description,
         cover_image: section.settings.cover_image,
         show_play_button: true,
+        mobile_fullscreen: section.settings.mobile_fullscreen,
         class: 'banner__media media media--height w-full h-full relative'
       -%}
     </div>
@@ -118,6 +174,49 @@
       "id": "enable_video_looping",
       "label": "t:sections.video.settings.enable_video_looping.label",
       "default": false
+    },
+    {
+      "type": "header",
+      "content": "Play button"
+    },
+    {
+      "type": "range",
+      "id": "play_button_size",
+      "min": 40,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Play button size",
+      "default": 88
+    },
+    {
+      "type": "range",
+      "id": "play_button_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Play button background opacity",
+      "default": 100
+    },
+    {
+      "type": "color",
+      "id": "play_button_color",
+      "label": "Play button icon color",
+      "default": "#121e2a"
+    },
+    {
+      "type": "color",
+      "id": "play_button_background",
+      "label": "Play button background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_fullscreen",
+      "label": "Play fullscreen on mobile",
+      "info": "On phones and tablets, the video opens in the device's native fullscreen player (with play\/pause, volume and a minimize button) when playback starts.",
+      "default": true
     },
     {
       "type": "select",

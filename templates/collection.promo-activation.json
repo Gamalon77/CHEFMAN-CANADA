@@ -1,0 +1,190 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_overlay_qHjwDh": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_yAqwPj": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Shop the sale",
+            "subheading_size": "subtitle-md",
+            "secondary_color": false
+          }
+        },
+        "heading_pNGpLr": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ collection.title }}",
+            "heading_size": "title-xl tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_7QLc4y": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Shop the Sale!</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_yAqwPj",
+        "heading_pNGpLr",
+        "text_7QLc4y"
+      ],
+      "name": "t:sections.image-with-text-overlay.presets.name",
+      "settings": {
+        "transparent_header": false,
+        "image": "{{ collection.metafields.custom.desktop_banner_image.value }}",
+        "image_height": "700px",
+        "content_width": "medium",
+        "content_position": "md:items-start md:justify-center",
+        "text_alignment": "center",
+        "image_mobile": "{{ collection.metafields.custom.mobile_image.value }}",
+        "image_height_mobile": "adapt",
+        "content_position_mobile": "items-start justify-center",
+        "text_alignment_mobile": "center",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#121e2a",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#121e2a",
+        "overlay_opacity": 20,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "main-collection-banner": {
+      "type": "main-collection-banner",
+      "blocks": {
+        "spacing": {
+          "type": "spacing",
+          "settings": {
+            "height": 48,
+            "height_mobile": 0
+          }
+        },
+        "breadcrumb": {
+          "type": "breadcrumb",
+          "settings": {
+            "show_collections_link": true
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "title-xl"
+          }
+        }
+      },
+      "block_order": [
+        "spacing",
+        "breadcrumb",
+        "title"
+      ],
+      "disabled": true,
+      "settings": {
+        "transparent_header": true,
+        "show_image": true,
+        "image": "{{ collection.metafields.custom.desktop_banner_image.value }}",
+        "image_height": "700px",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/air-fryer-banner2.5-mobile.jpg",
+        "image_height_mobile": "adapt",
+        "content_position_mobile": "items-end justify-center",
+        "text_alignment_mobile": "center",
+        "color_text": "#ffffff",
+        "color_overlay": "#121e2a",
+        "overlay_opacity": 15,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "settings": {
+        "products_per_page": 10,
+        "columns": 4,
+        "columns_mobile": "2",
+        "pagination": "paginated",
+        "enable_filtering": false,
+        "filter_collapsed": false,
+        "filter_type": "drawer",
+        "filter_color_swatches": true,
+        "enable_sorting": true,
+        "padding_top": 40,
+        "padding_bottom": 100,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+        "product_limit": 6,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Recently Viewed",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 80,
+        "divider": false,
+        "full_width": false,
+        "rounded": true
+      }
+    }
+  },
+  "order": [
+    "image_with_text_overlay_qHjwDh",
+    "main-collection-banner",
+    "main-collection",
+    "recently-viewed"
+  ]
+}

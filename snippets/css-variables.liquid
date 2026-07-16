@@ -1,26 +1,9 @@
 <style>
   {%- liquid
-    assign header_font = settings.type_header_font
-    assign header_font_medium = header_font | font_modify: 'weight', '500'
-    assign header_font_bold = header_font | font_modify: 'weight', '700'
-
-    assign body_font = settings.type_body_font
-    assign body_font_medium = body_font | font_modify: 'weight', '500'
-    assign body_font_bold = body_font | font_modify: 'weight', '700'
-    assign body_font_italic = body_font | font_modify: 'style', 'italic'
-    assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-
-    if header_font.family != body_font.family
-      echo header_font | font_face: font_display: 'swap'
-      echo header_font_medium | font_face: font_display: 'swap'
-      echo header_font_bold | font_face: font_display: 'swap'
-    endif
-
-    echo body_font | font_face: font_display: 'swap'
-    echo body_font_medium | font_face: font_display: 'swap'
-    echo body_font_bold | font_face: font_display: 'swap'
-    echo body_font_italic | font_face: font_display: 'swap'
-    echo body_font_bold_italic | font_face: font_display: 'swap'
+    # Fonts are now loaded externally via Google Fonts (Instrument Sans) — see the
+    # <link> tags after the closing </style> below. The theme's Shopify-hosted
+    # font_face output (Poppins) is intentionally disabled so we don't load
+    # unused font files.
 
     assign rounded_button = 0.75
     if settings.rounded_button == 'round'
@@ -137,19 +120,20 @@
     --sp-96: 24rem;
     --sp-100: 32rem;
 
-    /*! Font family */
-    --font-heading-family: {{ header_font.family }}, {{ header_font.fallback_families }};
-    --font-heading-style: {{ header_font.style }};
-    --font-heading-weight: {{ header_font.weight }};
+    /*! Font family — overridden to Instrument Sans (Google Fonts, loaded below).
+        Design spec: body weight 400, headings/h1-h5 weight 600. */
+    --font-heading-family: "Instrument Sans", sans-serif;
+    --font-heading-style: normal;
+    --font-heading-weight: 600;
     --font-heading-line-height: {{ settings.type_header_line_height }};
-    --font-heading-letter-spacing: {{ settings.type_header_spacing | divided_by: 1000.00 }}em;
+    --font-heading-letter-spacing: -0.01em;
     {% if settings.type_header_capitalize %}
       --font-heading-text-transform: uppercase;
     {% endif %}
 
-    --font-body-family: {{ body_font.family }}, {{ body_font.fallback_families }};
-    --font-body-style: {{ body_font.style }};
-    --font-body-weight: {{ body_font.weight }};
+    --font-body-family: "Instrument Sans", sans-serif;
+    --font-body-style: normal;
+    --font-body-weight: 400;
     --font-body-line-height: {{ settings.type_body_line_height }};
     --font-body-letter-spacing: {{ settings.type_body_spacing | divided_by: 1000.00 }}em;
 
@@ -225,15 +209,22 @@
       --page-padding: max(var(--sp-12), 50vw - var(--scrollbar-width, 0px)/2 - var(--page-width)/2);
     }
   }
+
+  /* Instrument Sans OpenType alternates (per design team), applied site-wide.
+     font-feature-settings is inherited, so setting it on the root cascades to all text.
+       ss01 = round dots (round punctuation/tittles/diacritics)
+       ss02 = single-story a
+       ss07 = alternate G    ss08 = alternate J    ss09 = alternate Q */
+  :root {
+    font-feature-settings: "ss01" 1, "ss02" 1, "ss07" 1, "ss08" 1, "ss09" 1;
+  }
 </style>
 
-{%- unless settings.type_body_font.system? -%}
-  {% # theme-check-disable AssetPreload %}
-  <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
-  {% # theme-check-enable AssetPreload %}
-{%- endunless -%}
-{%- unless settings.type_header_font.system? -%}
-  {% # theme-check-disable AssetPreload %}
-  <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
-  {% # theme-check-enable AssetPreload %}
-{%- endunless -%}
+{%- comment -%}
+  Instrument Sans (Google Fonts) replaces the theme's Shopify-hosted fonts.
+  Variable font, weights 400–700, with italics. display=swap to avoid FOIT.
+{%- endcomment -%}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap">

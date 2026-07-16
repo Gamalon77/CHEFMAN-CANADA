@@ -1,0 +1,273 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "coffee_guide": {
+      "type": "coffee-guide",
+      "blocks": {
+        "b1_rich_text": {
+          "type": "rich_text",
+          "settings": {
+            "eyebrow": "",
+            "heading": "What is espresso?",
+            "body": "<p>Espresso isn't a bean or a roast — it's a method. A pump drives hot water through finely-ground, tightly-packed coffee at high pressure (around nine bars), extracting a concentrated ounce or two topped with a layer of golden <em>crema</em>. That intensity is what makes espresso the building block for milk drinks and long blacks alike.</p>",
+            "narrow": false
+          }
+        },
+        "b2_image_text": {
+          "type": "image_text",
+          "settings": {
+            "image": "shopify://shop_images/pressure-pull-espresso.jpg",
+            "image_position": "left",
+            "eyebrow": "How it works",
+            "heading": "Pressure is everything",
+            "body": "<p>Where drip relies on gravity, espresso relies on force. The machine heats water to the ideal temperature and pushes it through the grounds in about 25–30 seconds. The result is a small, syrupy shot with far more flavor and body than regular coffee.</p>",
+            "button_label": "Shop espresso machines",
+            "button_link": "shopify://collections/coffee-espresso-makers"
+          }
+        },
+        "b3_image_text": {
+          "type": "image_text",
+          "settings": {
+            "image": "shopify://shop_images/espresso-drinks.jpg",
+            "image_position": "right",
+            "eyebrow": "The drinks",
+            "heading": "One shot, endless drinks",
+            "body": "<p>Master the shot and you've unlocked an entire menu:</p><ul><li><strong>Latte</strong> — espresso plus lots of steamed milk</li><li><strong>Cappuccino</strong> — equal parts espresso, steamed milk, and foam</li><li><strong>Flat white</strong> — espresso plus velvety microfoam</li><li><strong>Americano</strong> — espresso plus hot water</li></ul>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "b4_rich_text": {
+          "type": "rich_text",
+          "settings": {
+            "eyebrow": "",
+            "heading": "Manual, semi-automatic, or automatic?",
+            "body": "<p>Espresso machines range from hands-on to hands-off:</p><ul><li><strong>Semi-automatic</strong> — you control the shot, the machine controls pressure. The sweet spot for most home baristas.</li><li><strong>Automatic</strong> — one-touch shots and milk for café drinks with less practice.</li><li><strong>Built-in grinder</strong> — grind fresh beans right into the portafilter for the best possible flavor.</li></ul>",
+            "narrow": false
+          }
+        },
+        "b5_callout": {
+          "type": "callout",
+          "settings": {
+            "heading": "Pro tip",
+            "body": "<p>Fresh, evenly-ground beans and a good tamp matter more than any single setting. If your shot pulls too fast and tastes sour, grind finer; too slow and bitter, grind coarser. Small tweaks, big difference.</p>"
+          }
+        },
+        "b6_image_text": {
+          "type": "image_text",
+          "settings": {
+            "image": "shopify://shop_images/cappuccino-chefman-espresso.jpg",
+            "image_position": "left",
+            "eyebrow": "Milk drinks",
+            "heading": "Steam, froth, repeat",
+            "body": "<p>A built-in steam wand or automatic frother turns cold milk into silky microfoam for lattes and cappuccinos. It's the difference between a plain shot and a proper coffee-shop drink at home.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "b7_rich_text": {
+          "type": "rich_text",
+          "settings": {
+            "eyebrow": "",
+            "heading": "What to look for",
+            "body": "<ul><li><strong>Pressure</strong> — a pump that delivers consistent pressure for a proper extraction.</li><li><strong>Milk system</strong> — a steam wand for control, or an automatic frother for convenience.</li><li><strong>Grinder</strong> — built-in saves counter space and keeps grounds fresh.</li><li><strong>Footprint</strong> — espresso machines run larger, so measure your counter first.</li></ul>",
+            "narrow": false
+          }
+        },
+        "b8_callout": {
+          "type": "callout",
+          "settings": {
+            "heading": "Good to know",
+            "body": "<p>Espresso has the steepest learning curve of the three — but also the highest ceiling. Give yourself a week of practice and you'll be pulling shots you'd happily pay five dollars for.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "b1_rich_text",
+        "b2_image_text",
+        "b3_image_text",
+        "b4_rich_text",
+        "b5_callout",
+        "b6_image_text",
+        "b7_rich_text",
+        "b8_callout"
+      ],
+      "settings": {
+        "show_breadcrumb": true,
+        "breadcrumb_parent_title": "Find your perfect coffee maker",
+        "breadcrumb_parent_link": "shopify://pages/find-your-perfect-coffee-maker",
+        "show_hero": true,
+        "eyebrow": "Coffee guide",
+        "heading": "Espresso, explained",
+        "heading_size": "title-xl tracking-heading",
+        "intro": "<p>The foundation of café culture at home. Espresso machines use pressure to pull a small, intense shot of coffee — the rich base for everything from a morning cappuccino to an afternoon americano.</p>",
+        "padding_top": 48,
+        "padding_bottom": 100,
+        "divider": false,
+        "rounded": false
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "title": "What exactly is espresso, and how is it different from regular coffee?",
+            "text": "<p>Espresso is a concentrated coffee made by forcing hot water through finely ground beans under high pressure, which produces a small, intense shot topped with a layer of golden foam called crema. Regular drip coffee uses coarser grounds and gravity instead of pressure, so it's larger and milder; espresso is also the base for drinks like lattes and cappuccinos.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "title": "What do the 'bars' of pressure mean on an espresso machine?",
+            "text": "<p>A bar is a unit of pressure, and espresso is traditionally brewed at around 9 bars at the coffee itself, which is the sweet spot for balanced flavor and good crema. Machines often advertise 15 or 20 bars, but that refers to the pump's maximum output before it passes through the machine, so a higher number isn't automatically better.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "title": "What's the difference between semi-automatic, automatic, and super-automatic machines?",
+            "text": "<p>A semi-automatic machine handles the pressure and temperature but lets you control the shot timing, giving you more hands-on involvement. Automatic machines stop the shot for you, while super-automatic machines grind, dose, and brew at the touch of a button, trading some control for added convenience.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "title": "Do I need a separate grinder, or should I get a machine with one built in?",
+            "text": "<p>Freshly ground beans make a noticeable difference for espresso, so you'll need either a built-in grinder or a separate one if you brew from whole beans. If you'd rather skip grinding, you can use pre-ground coffee labeled specifically for espresso or a machine that takes pods, which require no grinder at all.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "q5": {
+          "type": "question",
+          "settings": {
+            "title": "How does milk frothing work for lattes and cappuccinos?",
+            "text": "<p>Many espresso machines include a steam wand, which injects steam into milk to heat it and create microfoam for drinks like lattes and cappuccinos. It takes a little practice to position the wand and texture the milk well, but most people get the hang of it within a few tries.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "q6": {
+          "type": "question",
+          "settings": {
+            "title": "What beans and grind size should I use?",
+            "text": "<p>You can use any roast you enjoy, though medium to dark roasts are popular for espresso because of their fuller body. The grind matters most: espresso needs a fine, consistent grind, so look for beans or pre-ground coffee labeled for espresso, and adjust finer if shots run too fast or coarser if they run too slow.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "q7": {
+          "type": "question",
+          "settings": {
+            "title": "How do I clean and descale my espresso machine?",
+            "text": "<p>Wipe and purge the steam wand after every use to keep milk from drying inside it, and rinse the portafilter and basket regularly. Periodically descale the machine with a descaling solution or diluted white vinegar to remove mineral buildup, following your machine's instructions and the hardness of your local water.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "q8": {
+          "type": "question",
+          "settings": {
+            "title": "Is there a learning curve, and is espresso hard to make at home?",
+            "text": "<p>There is a modest learning curve, since dialing in the grind, dose, and shot timing takes some experimentation at first. Most beginners improve quickly with practice, and machines with more automation can simplify the process if you'd prefer fewer variables to manage.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7",
+        "q8"
+      ],
+      "settings": {
+        "style": "with-border",
+        "heading": "Frequently asked questions",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 36,
+        "padding_bottom": 100,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "coffee_cta": {
+      "type": "coffee-guide",
+      "blocks": {
+        "cta": {
+          "type": "cta",
+          "settings": {
+            "heading": "Ready to find yours?",
+            "body": "<p>Explore our espresso machines, or take the quiz and we'll match you to the right one for your skill level and space.</p>",
+            "button_label": "Shop all coffee makers",
+            "button_link": "shopify://collections/coffee-espresso-makers",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "cta"
+      ],
+      "settings": {
+        "show_breadcrumb": false,
+        "breadcrumb_parent_title": "Find your perfect coffee maker",
+        "breadcrumb_parent_link": "",
+        "show_hero": true,
+        "eyebrow": "",
+        "heading": "",
+        "heading_size": "title-md",
+        "intro": "",
+        "padding_top": 0,
+        "padding_bottom": 100,
+        "divider": false,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "coffee_guide",
+    "faq",
+    "coffee_cta"
+  ]
+}

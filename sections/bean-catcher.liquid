@@ -1,0 +1,803 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+    {%- render 'section-variables', section: section -%}
+  }
+
+  #shopify-section-{{ section.id }} .bc {
+    max-width: 640px;
+    margin-inline: auto;
+    text-align: center;
+  }
+  #shopify-section-{{ section.id }} .bc__intro {
+    margin-top: var(--sp-3);
+    color: rgb(var(--color-foreground) / 0.75);
+  }
+
+  #shopify-section-{{ section.id }} .bc__hud {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-4);
+    margin: var(--sp-8) auto var(--sp-3);
+    max-width: 460px;
+  }
+  #shopify-section-{{ section.id }} .bc__stat {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  #shopify-section-{{ section.id }} .bc__stat span {
+    font-variant-numeric: tabular-nums;
+  }
+  #shopify-section-{{ section.id }} .bc__lives {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    min-height: 1.2em;
+  }
+  #shopify-section-{{ section.id }} .bc__life--lost {
+    opacity: 0.2;
+  }
+
+  #shopify-section-{{ section.id }} .bc__stage {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    margin-inline: auto;
+    aspect-ratio: 3 / 4;
+    border-radius: var(--rounded-block);
+    overflow: hidden;
+    background: #f7ecd9;
+    border: 1px solid rgb(var(--color-border));
+    touch-action: none;
+    user-select: none;
+  }
+  #shopify-section-{{ section.id }} .bc__stage.is-hit {
+    animation: bc-shake 0.3s ease;
+  }
+  #shopify-section-{{ section.id }} .bc__stage.is-hit::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgb(200 30 30 / 0.22);
+    pointer-events: none;
+    /* flash red, then fade smoothly back to grey (well under 3s) */
+    animation: bc-flash 0.8s ease forwards;
+  }
+  @keyframes bc-flash {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  @keyframes bc-shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+  }
+  #shopify-section-{{ section.id }} canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    image-rendering: pixelated;
+  }
+
+  #shopify-section-{{ section.id }} .bc__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-4);
+    padding: var(--sp-6);
+    text-align: center;
+    background: rgb(var(--color-background) / 0.9);
+    backdrop-filter: blur(4px);
+  }
+  #shopify-section-{{ section.id }} .bc__overlay[hidden] {
+    display: none;
+  }
+  #shopify-section-{{ section.id }} .bc__overlay p {
+    color: rgb(var(--color-foreground) / 0.75);
+    max-width: 22rem;
+  }
+  #shopify-section-{{ section.id }} .bc__score-big {
+    font-variant-numeric: tabular-nums;
+  }
+  #shopify-section-{{ section.id }} .bc__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-3);
+    justify-content: center;
+  }
+  /* On mobile, drop the "→ Shop coffee makers" suffix so the shop CTA stays punchy */
+  @media (max-width: 749px) {
+    #shopify-section-{{ section.id }} .bc__shop-suffix {
+      display: none;
+    }
+  }
+  #shopify-section-{{ section.id }} .bc__note {
+    margin-top: var(--sp-4);
+    color: rgb(var(--color-foreground) / 0.55);
+  }
+  #shopify-section-{{ section.id }} .bc__toast {
+    position: absolute;
+    inset-block-start: var(--sp-4);
+    inset-inline: 0;
+    margin-inline: auto;
+    width: fit-content;
+    background: #121e2a;
+    color: #fff;
+    padding: var(--sp-2) var(--sp-4);
+    border-radius: var(--rounded-full);
+    font-size: 0.85rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+  }
+  #shopify-section-{{ section.id }} .bc__toast.is-show {
+    opacity: 1;
+  }
+
+  /* Secondary button hover: solid midnight + white text (legibility) */
+  #shopify-section-{{ section.id }} .button--secondary {
+    transition: background-color var(--animation-primary), color var(--animation-primary), border-color var(--animation-primary);
+  }
+  #shopify-section-{{ section.id }} .button--secondary:hover,
+  #shopify-section-{{ section.id }} .button--secondary:focus-visible {
+    background-color: #121e2a;
+    color: #ffffff;
+    border-color: #121e2a;
+  }
+  #shopify-section-{{ section.id }} .button--secondary:hover .btn-text,
+  #shopify-section-{{ section.id }} .button--secondary:focus-visible .btn-text {
+    color: #ffffff;
+  }
+</style>
+
+<div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}">
+  <div class="page-width relative">
+    <div class="bc" data-bc-root>
+
+      {%- if section.settings.heading != blank -%}
+        <h1 class="heading {{ section.settings.heading_size }}">{{ section.settings.heading }}</h1>
+      {%- endif -%}
+      {%- if section.settings.intro != blank -%}
+        <div class="bc__intro text-lg rte">{{ section.settings.intro }}</div>
+      {%- endif -%}
+
+      <div class="bc__hud">
+        <div class="bc__stat">Score <span data-bc-score>0</span></div>
+        <div class="bc__lives" data-bc-lives aria-label="Lives remaining"></div>
+        <div class="bc__stat">Best <span data-bc-best>0</span></div>
+      </div>
+
+      <div class="bc__stage" data-bc-stage>
+        <canvas data-bc-canvas role="img" aria-label="Bean catcher game. Move the cup to catch coffee beans and dodge the decaf."></canvas>
+
+        {%- comment -%} Start overlay {%- endcomment -%}
+        <div class="bc__overlay" data-bc-start>
+          <p class="heading title-md">Ready?</p>
+          <p class="text-base">Catch the <strong>coffee beans</strong> ☕ — but dodge the <strong>decaf</strong> (the bright red beans). Collect three decaf beans and you're out.</p>
+          <button type="button" class="button button--primary" data-bc-play>
+            <span class="btn-fill" data-fill></span>
+            <span class="btn-text">{{ section.settings.play_label | default: 'Play' }}</span>
+          </button>
+        </div>
+
+        {%- comment -%} Pause overlay {%- endcomment -%}
+        <div class="bc__overlay" data-bc-pause hidden>
+          <p class="heading title-md">Paused</p>
+          <button type="button" class="button button--primary" data-bc-resume>
+            <span class="btn-fill" data-fill></span>
+            <span class="btn-text">Resume</span>
+          </button>
+        </div>
+
+        {%- comment -%} Game over overlay {%- endcomment -%}
+        <div class="bc__overlay" data-bc-over hidden>
+          <p class="heading title-md">Good try!</p>
+          <p class="text-base">You caught <strong class="bc__score-big" data-bc-final>0</strong> beans.<br><span data-bc-best-line></span></p>
+          <div class="bc__actions">
+            <button type="button" class="button button--primary" data-bc-again>
+              <span class="btn-fill" data-fill></span>
+              <span class="btn-text">Play again</span>
+            </button>
+            <button type="button" class="button button--secondary" data-bc-share>
+              <span class="btn-fill" data-fill></span>
+              <span class="btn-text">Share score</span>
+            </button>
+          </div>
+          {%- if section.settings.shop_link != blank and section.settings.shop_label != blank -%}
+            {%- assign shop_parts = section.settings.shop_label | split: '→' -%}
+            <a class="button button--secondary bc__shop" href="{{ section.settings.shop_link }}">
+              <span class="btn-fill" data-fill></span>
+              <span class="btn-text">{{ shop_parts[0] | strip }}{%- if shop_parts.size > 1 -%}<span class="bc__shop-suffix"> → {{ shop_parts[1] | strip }}</span>{%- endif -%}</span>
+            </a>
+          {%- endif -%}
+        </div>
+
+        <div class="bc__toast" data-bc-toast aria-live="polite"></div>
+      </div>
+
+      <p class="bc__note text-sm" data-bc-note>Move with the arrow keys, or drag / move your cursor. Click the game (or press P) to pause.</p>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var root = document.getElementById('shopify-section-{{ section.id }}');
+    if (!root) return;
+    var canvas = root.querySelector('[data-bc-canvas]');
+    var stage = root.querySelector('[data-bc-stage]');
+    if (!canvas || !stage) return;
+    var ctx = canvas.getContext('2d');
+
+    var scoreEl = root.querySelector('[data-bc-score]');
+    var bestEl = root.querySelector('[data-bc-best]');
+    var livesEl = root.querySelector('[data-bc-lives]');
+    var startOv = root.querySelector('[data-bc-start]');
+    var pauseOv = root.querySelector('[data-bc-pause]');
+    var overOv = root.querySelector('[data-bc-over]');
+    var finalEl = root.querySelector('[data-bc-final]');
+    var bestLineEl = root.querySelector('[data-bc-best-line]');
+    var toastEl = root.querySelector('[data-bc-toast]');
+    var noteEl = root.querySelector('[data-bc-note]');
+
+    var STORAGE_KEY = 'chefman-bean-catcher-hi';
+    var best = 0;
+    try { best = parseInt(localStorage.getItem(STORAGE_KEY) || '0', 10) || 0; } catch (e) {}
+    if (bestEl) bestEl.textContent = best;
+
+    /* ---- pixel buffer ----
+       Like Melt Down: the game runs on a small offscreen buffer (all game
+       coordinates are buffer pixels) and is scaled up with smoothing off,
+       which gives the crisp chunky-pixel look. */
+    var GW = 162, GH = 216;
+    var COUNTER_Y = GH - 28;           // top of the tabletop
+    var CUP_BASE = COUNTER_Y + 10;     // where the cup's base rests on it
+    var buffer = document.createElement('canvas');
+    buffer.width = GW; buffer.height = GH;
+    var b = buffer.getContext('2d');
+
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var W = 0, H = 0; // CSS size of the stage — only used to map pointer input
+    function resize() {
+      var rect = stage.getBoundingClientRect();
+      W = rect.width; H = rect.height;
+      canvas.width = Math.round(W * dpr);
+      canvas.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.imageSmoothingEnabled = false;
+    }
+    function blit() {
+      ctx.clearRect(0, 0, W, H);
+      ctx.imageSmoothingEnabled = false;
+      ctx.drawImage(buffer, 0, 0, GW, GH, 0, 0, W, H);
+    }
+
+    /* ---- game state (buffer-pixel coordinates) ---- */
+    var state = 'idle'; // idle | playing | paused | over
+    var score = 0, lives = 3, elapsed = 0, level = 0;
+    var items = [];
+    var cupW = 42, cupH = 30, cupX = 0, cupTopY = 0;
+    var moveLeft = false, moveRight = false;
+    var spawnTimer = 0, lastTime = 0, rafId = null, hitTimer = null;
+
+    function metrics() {
+      cupTopY = CUP_BASE - cupH;
+    }
+    // The mug body spans cupX-22 .. cupX+14 (the handle overhangs right).
+    // Clamp so the BODY can reach both walls flush; at the far right the
+    // handle simply crops off-screen.
+    function clampCupX(x) {
+      return Math.max(22, Math.min(GW - 14, x));
+    }
+    function beanR() { return 5; }
+
+    function reset() {
+      score = 0; lives = 3; elapsed = 0; level = 0; items = [];
+      metrics();
+      cupX = GW / 2;
+      spawnTimer = 0;
+      clearTimeout(hitTimer);
+      stage.classList.remove('is-hit');
+      updateHud();
+    }
+
+    function updateHud() {
+      if (scoreEl) scoreEl.textContent = score;
+      if (livesEl) {
+        var s = '';
+        for (var i = 0; i < 3; i++) {
+          s += '<span class="bc__life' + (i >= lives ? ' bc__life--lost' : '') + '">☕</span>';
+        }
+        livesEl.innerHTML = s;
+      }
+    }
+
+    /* ---- difficulty (buffer px per second) ---- */
+    // Beans fall faster every 30 seconds of play (capped), on top of score scaling.
+    function fallSpeed() { return (GH * 0.30 + Math.min(score, 240) * (GH * 0.0016)) * (1 + level * 0.2); }
+    function spawnInterval() { return Math.max(0.36, 0.92 - score * 0.004); }
+    function badChance() { return Math.min(0.42, 0.2 + score * 0.0016); }
+
+    function spawn() {
+      var r = beanR();
+      var roll = Math.random();
+      var type;
+      if (roll < badChance()) type = 'bad';
+      else if (roll > 0.93) type = 'gold';
+      else type = 'good';
+      items.push({
+        x: r + Math.random() * (GW - 2 * r),
+        y: -r,
+        r: r,
+        type: type,
+        vy: fallSpeed() * (0.85 + Math.random() * 0.3),
+        bob: Math.random() * 6.28,
+        caught: false
+      });
+    }
+
+    /* ---- sprites & scene ---- */
+    // A coffee bean: 9x11, an oval body with a diagonal centre crease and a
+    // top-left highlight. Colours are swapped per type (good / gold / decaf).
+    var BEAN = [
+      '...bbb...',
+      '..bhbbb..',
+      '.bbbcbbb.',
+      'bbbbcbbbb',
+      'bbbbcbbbb',
+      'bbbccbbbb',
+      'bbbcbbbbb',
+      'bbbcbbbb.',
+      '.bbcbbbb.',
+      '..bbbbb..',
+      '...bbb...'
+    ];
+    var BEAN_COLORS = {
+      good: { b: '#6f4e37', c: '#3e2b20', h: '#987153' },
+      gold: { b: '#d9a441', c: '#a9781f', h: '#f2cd85' },
+      bad:  { b: '#e8281e', c: '#a31a12', h: '#ff6f66' }
+    };
+    function drawBean(cx, cy, cols) {
+      var x0 = Math.round(cx - 4), y0 = Math.round(cy - 5);
+      for (var r = 0; r < BEAN.length; r++) {
+        var row = BEAN[r];
+        for (var c = 0; c < row.length; c++) {
+          var ch = row.charAt(c);
+          if (ch === '.') continue;
+          b.fillStyle = cols[ch] || cols.b;
+          b.fillRect(x0 + c, y0 + r, 1, 1);
+        }
+      }
+    }
+    function drawItem(it) {
+      drawBean(it.x, it.y, BEAN_COLORS[it.type] || BEAN_COLORS.good);
+    }
+
+    // The Chefman arcade mug, transcribed from the pixel-art asset
+    // (AdobeStock_1639530169): slate body, near-black outline, two lighter
+    // highlight columns on the left, blocky right handle, stepped corners.
+    // Drawn in code (each map cell = 2x2 buffer px) so it's always crisp —
+    // no network image, no CORS, no transparent-padding surprises.
+    var CUP_PAL = { o: '#15191d', m: '#3d4a54', L: '#48545d', l: '#5d6a72', d: '#2e3841' };
+    var CUP_MAP = [
+      'oooooooooooooooooo',
+      'oLLllmmmmmmmmmmmdo',
+      'oLLllmmmmmmmmmmmdo',
+      'oLLllmmmmmmmmmmmdo',
+      'oLLllmmmmmmmmmmmdo',
+      'oLLllmmmmmmmmmmmdo',
+      'oLLllmmmmmmmmmmmdo',
+      'oLLllmmmmmmmmmmmdo',
+      'oLLllmmmmmmmmmmmdo',
+      'oLLllmmmmmmmmmmmdo',
+      'oLLllmmmmmmmmmmmdo',
+      'oLLllmmmmmmmmmmmdo',
+      'oLLllmmmmmmmmmmmdo',
+      '.oLlmmmmmmmmmmmdo.',
+      '..oooooooooooooo..'
+    ];
+    function drawCup() {
+      var y0 = Math.round(cupTopY);
+      var x0 = Math.round(cupX - 22); // body left; the handle overhangs right
+      // soft shadow on the tabletop
+      b.fillStyle = 'rgba(58,36,21,0.45)';
+      b.fillRect(x0 + 3, y0 + cupH - 1, 44, 2);
+      // handle first, so the body laps the joint
+      var hx = x0 + 35;
+      b.fillStyle = CUP_PAL.o;
+      b.fillRect(hx, y0 + 6, 11, 4);
+      b.fillRect(hx + 7, y0 + 6, 4, 14);
+      b.fillRect(hx, y0 + 16, 11, 4);
+      b.fillStyle = CUP_PAL.m;
+      b.fillRect(hx, y0 + 7, 9, 2);
+      b.fillRect(hx + 8, y0 + 7, 2, 12);
+      b.fillRect(hx, y0 + 17, 9, 2);
+      // body from the sprite map, each cell drawn 2x2
+      for (var r = 0; r < CUP_MAP.length; r++) {
+        var row = CUP_MAP[r];
+        for (var c = 0; c < row.length; c++) {
+          var ch = row.charAt(c);
+          if (ch === '.') continue;
+          b.fillStyle = CUP_PAL[ch];
+          b.fillRect(x0 + c * 2, y0 + r * 2, 2, 2);
+        }
+      }
+    }
+
+    // Flat wall + a wood tabletop the cup rests on.
+    var BG = '#f1e3c9';
+    function drawScene() {
+      b.fillStyle = BG;
+      b.fillRect(0, 0, GW, GH);
+      // tabletop
+      b.fillStyle = '#6f4e37'; b.fillRect(0, COUNTER_Y, GW, GH - COUNTER_Y);
+      b.fillStyle = '#8a6650'; b.fillRect(0, COUNTER_Y, GW, 2);   // front-edge highlight
+      b.fillStyle = '#4a3324'; b.fillRect(0, GH - 4, GW, 4);      // base shadow
+      b.fillStyle = '#5f4128';                                    // faint grain
+      for (var g = 8; g < GW; g += 26) b.fillRect(g, COUNTER_Y + 8, 12, 1);
+    }
+
+    // Flappy-style in-game score: big pixel digits, top centre, white with a
+    // dark outline — same style as Melt Down. Each glyph is a 3x5 map at 2x.
+    var DIGITS = [
+      ['111','101','101','101','111'],
+      ['010','110','010','010','111'],
+      ['111','001','111','100','111'],
+      ['111','001','111','001','111'],
+      ['101','101','111','001','001'],
+      ['111','100','111','001','111'],
+      ['111','100','111','101','111'],
+      ['111','001','001','010','010'],
+      ['111','101','111','101','111'],
+      ['111','101','111','001','111']
+    ];
+    function drawDigit(d, x, y, px, color) {
+      var map = DIGITS[d];
+      b.fillStyle = color;
+      for (var r = 0; r < 5; r++) {
+        for (var c = 0; c < 3; c++) {
+          if (map[r].charAt(c) === '1') b.fillRect(x + c * px, y + r * px, px, px);
+        }
+      }
+    }
+    function drawScore() {
+      var str = String(score);
+      var px = 2;
+      var gw = 3 * px, sp = px;
+      var total = str.length * gw + (str.length - 1) * sp;
+      var x0 = Math.round((GW - total) / 2);
+      var y0 = 10;
+      var i, d, x;
+      // outline pass
+      for (i = 0; i < str.length; i++) {
+        d = str.charCodeAt(i) - 48;
+        x = x0 + i * (gw + sp);
+        drawDigit(d, x - 1, y0, px, '#3a2b23');
+        drawDigit(d, x + 1, y0, px, '#3a2b23');
+        drawDigit(d, x, y0 - 1, px, '#3a2b23');
+        drawDigit(d, x, y0 + 1, px, '#3a2b23');
+      }
+      // face pass
+      for (i = 0; i < str.length; i++) {
+        d = str.charCodeAt(i) - 48;
+        drawDigit(d, x0 + i * (gw + sp), y0, px, '#ffffff');
+      }
+    }
+
+    /* ---- loop ---- */
+    function step(now) {
+      if (state !== 'playing') return;
+      var dt = Math.min(0.05, (now - lastTime) / 1000 || 0);
+      lastTime = now;
+
+      // every 30s of play, bump the difficulty level (beans fall faster)
+      elapsed += dt;
+      var lvl = Math.min(Math.floor(elapsed / 30), 10);
+      if (lvl > level) { level = lvl; toast('Speeding up! ☕'); }
+
+      // cup movement (keyboard)
+      var cupSpeed = GW * 1.1;
+      if (moveLeft) cupX -= cupSpeed * dt;
+      if (moveRight) cupX += cupSpeed * dt;
+      cupX = clampCupX(cupX);
+
+      // spawn
+      spawnTimer -= dt;
+      if (spawnTimer <= 0) { spawn(); spawnTimer = spawnInterval(); }
+
+      // update items
+      for (var i = items.length - 1; i >= 0; i--) {
+        var it = items[i];
+        it.y += it.vy * dt;
+        // catch?
+        if (!it.caught &&
+            it.y + it.r >= cupTopY && it.y <= cupTopY + cupH * 0.6 &&
+            it.x >= cupX - cupW / 2 && it.x <= cupX + cupW / 2) {
+          it.caught = true;
+          items.splice(i, 1);
+          if (it.type === 'bad') {
+            lives--;
+            flashHit();
+            updateHud();
+            if (lives <= 0) { gameOver(); return; }
+          } else {
+            score += (it.type === 'gold') ? 5 : 1;
+            updateHud();
+          }
+          continue;
+        }
+        // missed (off the bottom)
+        if (it.y - it.r > GH) items.splice(i, 1);
+      }
+
+      render();
+      rafId = requestAnimationFrame(step);
+    }
+
+    function render() {
+      drawScene();
+      for (var i = 0; i < items.length; i++) drawItem(items[i]);
+      drawCup();
+      drawScore();
+      blit();
+    }
+
+    /* ---- state transitions ---- */
+    function startGame() {
+      reset();
+      hide(startOv); hide(pauseOv); hide(overOv); hide(noteEl);
+      state = 'playing';
+      lastTime = performance.now();
+      cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(step);
+    }
+    function pauseGame() {
+      if (state !== 'playing') return;
+      state = 'paused';
+      cancelAnimationFrame(rafId);
+      show(pauseOv);
+    }
+    function resumeGame() {
+      if (state !== 'paused') return;
+      hide(pauseOv);
+      state = 'playing';
+      lastTime = performance.now();
+      rafId = requestAnimationFrame(step);
+    }
+    function gameOver() {
+      state = 'over';
+      cancelAnimationFrame(rafId);
+      render();
+      if (finalEl) finalEl.textContent = score;
+      var isRecord = score > best;
+      if (isRecord) {
+        best = score;
+        try { localStorage.setItem(STORAGE_KEY, String(best)); } catch (e) {}
+        if (bestEl) bestEl.textContent = best;
+      }
+      if (bestLineEl) bestLineEl.textContent = isRecord ? 'New personal best! 🎉' : 'Your best: ' + best;
+      show(overOv);
+      show(noteEl);
+    }
+
+    function show(el) { if (el) el.hidden = false; }
+    function hide(el) { if (el) el.hidden = true; }
+    function flashHit() {
+      stage.classList.remove('is-hit');
+      void stage.offsetWidth; // reflow to restart the animation
+      stage.classList.add('is-hit');
+      clearTimeout(hitTimer);
+      hitTimer = setTimeout(function () { stage.classList.remove('is-hit'); }, 800);
+    }
+
+    var toastTimer = null;
+    function toast(msg) {
+      if (!toastEl) return;
+      toastEl.textContent = msg;
+      toastEl.classList.add('is-show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () { toastEl.classList.remove('is-show'); }, 1600);
+    }
+
+    // Legacy clipboard fallback for contexts without navigator.clipboard.
+    function legacyCopy(str) {
+      try {
+        var ta = document.createElement('textarea');
+        ta.value = str;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = document.execCommand('copy');
+        document.body.removeChild(ta);
+        return ok;
+      } catch (e) { return false; }
+    }
+
+    function share() {
+      var text = 'I caught ' + score + ' beans in Chefman Bean Catcher! ☕';
+      var url = location.href;
+      var payload = text + ' ' + url;
+      // Always try to copy to the clipboard and confirm, so every click gives feedback.
+      var onCopied = function () { toast('Copied to clipboard! ☕'); };
+      var onFailed = function () { toast(legacyCopy(payload) ? 'Copied to clipboard! ☕' : text); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(payload).then(onCopied, onFailed);
+      } else {
+        onFailed();
+      }
+      // Also open the native share sheet where supported (mostly mobile / Safari).
+      // It's blocked in the theme-editor preview iframe, but works on the live site.
+      if (navigator.share) {
+        navigator.share({ title: 'Chefman Bean Catcher', text: text, url: url }).catch(function () {});
+      }
+    }
+
+    /* ---- input ---- */
+    var lastTouchTime = 0;
+    function pointerX(e) {
+      var rect = stage.getBoundingClientRect();
+      var cx = (e.touches && e.touches[0] ? e.touches[0].clientX : e.clientX);
+      var bx = (cx - rect.left) / (rect.width || 1) * GW; // CSS px -> buffer px
+      return clampCupX(bx);
+    }
+    function onMove(e) {
+      if (e.touches) lastTouchTime = performance.now();
+      if (state !== 'playing') return;
+      if (e.cancelable) e.preventDefault();
+      cupX = pointerX(e);
+    }
+    stage.addEventListener('mousemove', onMove);
+    stage.addEventListener('touchmove', onMove, { passive: false });
+    stage.addEventListener('touchstart', onMove, { passive: false });
+
+    // Click the play area to pause (mouse only — ignore touch-synthesized clicks
+    // so tapping to move the cup on mobile doesn't pause). The pause overlay then
+    // covers the canvas, so a click there can't reach the canvas.
+    canvas.addEventListener('click', function () {
+      if (performance.now() - lastTouchTime < 600) return;
+      if (state === 'playing') pauseGame();
+    });
+    // Click anywhere on the pause overlay to resume (Resume button still works too).
+    if (pauseOv) pauseOv.addEventListener('click', function () { resumeGame(); });
+
+    window.addEventListener('keydown', function (e) {
+      // Don't hijack typing: ignore keystrokes aimed at form fields or
+      // editable content (e.g. the footer newsletter email input).
+      var t = e.target;
+      if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+      if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') { moveLeft = true; }
+      else if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') { moveRight = true; }
+      else if (e.key === 'p' || e.key === 'P') { state === 'playing' ? pauseGame() : resumeGame(); return; }
+      else return;
+      if (state === 'playing' && e.cancelable) e.preventDefault();
+    });
+    window.addEventListener('keyup', function (e) {
+      if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') moveLeft = false;
+      else if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') moveRight = false;
+    });
+
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) pauseGame();
+    });
+
+    root.querySelector('[data-bc-play]').addEventListener('click', startGame);
+    root.querySelector('[data-bc-again]').addEventListener('click', startGame);
+    root.querySelector('[data-bc-resume]').addEventListener('click', resumeGame);
+    var shareBtn = root.querySelector('[data-bc-share]');
+    if (shareBtn) shareBtn.addEventListener('click', share);
+
+    var resizeRaf = null;
+    window.addEventListener('resize', function () {
+      cancelAnimationFrame(resizeRaf);
+      resizeRaf = requestAnimationFrame(function () {
+        resize(); metrics();
+        cupX = clampCupX(cupX || GW / 2);
+        if (state !== 'playing') render();
+      });
+    });
+
+    /* ---- init ---- */
+    resize();
+    metrics();
+    cupX = GW / 2;
+    updateHud();
+    render();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Bean catcher",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Bean Catcher"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "title-md", "label": "Medium" },
+        { "value": "title-lg tracking-heading", "label": "Large" },
+        { "value": "title-xl tracking-heading", "label": "Extra large" }
+      ],
+      "default": "title-lg tracking-heading"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Intro",
+      "default": "<p>Catch the coffee beans, dodge the decaf. How high can you score?</p>"
+    },
+    {
+      "type": "text",
+      "id": "play_label",
+      "label": "Play button label",
+      "default": "Play"
+    },
+    {
+      "type": "header",
+      "content": "Game-over call to action"
+    },
+    {
+      "type": "text",
+      "id": "shop_label",
+      "label": "Shop button label",
+      "default": "Caffeinate for real → Shop coffee makers"
+    },
+    {
+      "type": "url",
+      "id": "shop_link",
+      "label": "Shop button link"
+    },
+    {
+      "type": "header",
+      "content": "Section"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 80
+    },
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "Show divider",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bean catcher"
+    }
+  ]
+}
+{% endschema %}

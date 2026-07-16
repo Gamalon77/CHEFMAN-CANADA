@@ -1,0 +1,2096 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+    /* Redesign tokens (midnight accent, no orange) */
+    --cf-r-card: 28px;   /* quiz + result card radius */
+    --cf-r-tile: 20px;   /* option tile radius */
+    --cf-r-pill: 999px;  /* buttons + progress + chips */
+    --cf-ink: 18 30 42;  /* #121e2a as rgb components */
+    --cf-error: 200 30 30;
+    {%- render 'section-variables', section: section -%}
+  }
+
+  #shopify-section-{{ section.id }} .cf-intro {
+    max-width: 52rem;
+    margin-inline: auto;
+    text-align: center;
+  }
+  #shopify-section-{{ section.id }} .cf-intro__subtext {
+    margin-top: var(--sp-4);
+    color: rgb(var(--color-foreground) / 0.75);
+  }
+
+  /* ---- Breadcrumb ---- */
+  #shopify-section-{{ section.id }} .cf-breadcrumb {
+    margin-bottom: var(--sp-8);
+  }
+  #shopify-section-{{ section.id }} .cf-breadcrumb__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--sp-2);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: rgb(var(--color-foreground) / 0.6);
+  }
+  #shopify-section-{{ section.id }} .cf-breadcrumb__item {
+    display: inline-flex;
+    align-items: center;
+  }
+  #shopify-section-{{ section.id }} .cf-breadcrumb__link {
+    color: rgb(var(--color-foreground) / 0.6);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+  }
+  #shopify-section-{{ section.id }} .cf-breadcrumb__link:hover,
+  #shopify-section-{{ section.id }} .cf-breadcrumb__link:focus-visible {
+    color: rgb(var(--color-foreground));
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
+  }
+  #shopify-section-{{ section.id }} .cf-breadcrumb__sep {
+    display: inline-flex;
+    align-items: center;
+    opacity: 0.5;
+  }
+  #shopify-section-{{ section.id }} .cf-breadcrumb__item--current {
+    color: rgb(var(--color-foreground));
+  }
+
+  /* ---- Type cards ---- */
+  #shopify-section-{{ section.id }} .cf-types {
+    display: grid;
+    gap: var(--sp-5);
+    grid-template-columns: 1fr;
+    margin-top: var(--sp-28);
+  }
+  @media (min-width: 750px) {
+    #shopify-section-{{ section.id }} .cf-types {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  /* Optional heading + intro above the three type cards. */
+  #shopify-section-{{ section.id }} .cf-types-head {
+    max-width: 44rem;
+    margin: var(--sp-28) auto 0;
+    text-align: center;
+  }
+  #shopify-section-{{ section.id }} .cf-types-head__intro {
+    margin-top: var(--sp-3);
+    color: rgb(var(--color-foreground) / 0.65);
+  }
+  /* When the heading is present it supplies the top spacing; pull the grid up. */
+  #shopify-section-{{ section.id }} .cf-types-head + .cf-types {
+    margin-top: var(--sp-8);
+  }
+  #shopify-section-{{ section.id }} .cf-type {
+    display: flex;
+    flex-direction: column;
+    padding: var(--sp-6);
+    border: 1px solid rgb(var(--color-border));
+    border-radius: var(--cf-r-card);
+    background: rgb(var(--color-background));
+  }
+  #shopify-section-{{ section.id }} .cf-type__image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: var(--sp-5);
+    background: rgb(var(--color-foreground) / 0.04);
+  }
+  #shopify-section-{{ section.id }} .cf-type__desc {
+    margin-top: var(--sp-2);
+    color: rgb(var(--color-foreground) / 0.75);
+  }
+  #shopify-section-{{ section.id }} .cf-type__best {
+    margin-top: var(--sp-4);
+    padding-top: var(--sp-4);
+    border-top: 1px solid rgb(var(--color-border));
+    color: rgb(var(--color-foreground) / 0.85);
+  }
+  #shopify-section-{{ section.id }} .cf-type__best strong {
+    color: rgb(var(--color-foreground));
+  }
+  #shopify-section-{{ section.id }} .cf-type__title {
+    margin: 0;
+  }
+  #shopify-section-{{ section.id }} .cf-type__cta {
+    margin-top: var(--sp-5);
+    align-self: flex-start;
+  }
+
+  /* Pill buttons (redesign): round the quiz nav, result actions and type CTAs.
+     The theme draws the outline with ::after, so match its radius too. */
+  #shopify-section-{{ section.id }} .cf-type__cta,
+  #shopify-section-{{ section.id }} .cf-nav .button,
+  #shopify-section-{{ section.id }} .cf-result__actions .button {
+    border-radius: var(--cf-r-pill);
+  }
+  #shopify-section-{{ section.id }} .cf-type__cta::after,
+  #shopify-section-{{ section.id }} .cf-nav .button::after,
+  #shopify-section-{{ section.id }} .cf-result__actions .button::after {
+    border-radius: var(--cf-r-pill);
+  }
+
+  /* Secondary button hover: solid midnight + white text (legibility).
+     These buttons aren't is="hover-button", so the theme's JS fill-rise never
+     runs — set the hover background/text directly, with a smooth fade. */
+  #shopify-section-{{ section.id }} .button--secondary {
+    transition: background-color var(--animation-primary), color var(--animation-primary), border-color var(--animation-primary);
+  }
+  #shopify-section-{{ section.id }} .button--secondary:hover,
+  #shopify-section-{{ section.id }} .button--secondary:focus-visible {
+    background-color: #121e2a;
+    color: #ffffff;
+    border-color: #121e2a;
+  }
+  #shopify-section-{{ section.id }} .button--secondary:hover .btn-text,
+  #shopify-section-{{ section.id }} .button--secondary:focus-visible .btn-text {
+    color: #ffffff;
+  }
+  #shopify-section-{{ section.id }} .button--secondary:hover::after,
+  #shopify-section-{{ section.id }} .button--secondary:focus-visible::after {
+    border-color: #121e2a;
+  }
+
+  /* ---- Comparison table ---- */
+  #shopify-section-{{ section.id }} .cf-compare {
+    margin-top: var(--sp-28);
+  }
+  #shopify-section-{{ section.id }} .cf-compare__scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid rgb(var(--color-border));
+    border-radius: var(--rounded-block);
+    margin-top: var(--sp-6);
+  }
+  #shopify-section-{{ section.id }} table.cf-table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 640px;
+  }
+  #shopify-section-{{ section.id }} .cf-table th,
+  #shopify-section-{{ section.id }} .cf-table td {
+    padding: var(--sp-3) var(--sp-4);
+    text-align: left;
+    border-bottom: 1px solid rgb(var(--color-border));
+    vertical-align: top;
+  }
+  #shopify-section-{{ section.id }} .cf-table thead th {
+    background: rgb(var(--color-foreground) / 0.04);
+    font-weight: 600;
+  }
+  #shopify-section-{{ section.id }} .cf-table tbody th {
+    font-weight: 600;
+    white-space: nowrap;
+    color: rgb(var(--color-foreground));
+  }
+  #shopify-section-{{ section.id }} .cf-table td {
+    color: rgb(var(--color-foreground) / 0.8);
+  }
+  #shopify-section-{{ section.id }} .cf-table tr:last-child th,
+  #shopify-section-{{ section.id }} .cf-table tr:last-child td {
+    border-bottom: 0;
+  }
+
+  /* ---- Quiz ---- */
+  #shopify-section-{{ section.id }} .cf-quiz {
+    margin-top: var(--sp-16);
+    max-width: 42.5rem;
+    margin-inline: auto;
+    border: 1px solid rgb(var(--color-border));
+    border-radius: var(--cf-r-card);
+    padding: var(--sp-8) var(--sp-6);
+    background: rgb(var(--color-background));
+  }
+  @media (min-width: 750px) {
+    #shopify-section-{{ section.id }} .cf-quiz {
+      padding: var(--sp-10) var(--sp-9);
+    }
+  }
+
+  /* Section label (was a fake CTA heading): uppercase eyebrow + trailing rule. */
+  #shopify-section-{{ section.id }} .cf-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-3);
+    margin-bottom: var(--sp-5);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgb(var(--color-foreground) / 0.6);
+  }
+  #shopify-section-{{ section.id }} .cf-eyebrow::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgb(var(--color-foreground) / 0.15);
+  }
+
+  #shopify-section-{{ section.id }} .cf-progress {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-4);
+    margin-bottom: var(--sp-8);
+  }
+  #shopify-section-{{ section.id }} .cf-progress__bar {
+    flex: 1;
+    height: 6px;
+    background: rgb(var(--color-foreground) / 0.1);
+    border-radius: var(--cf-r-pill);
+    overflow: hidden;
+  }
+  #shopify-section-{{ section.id }} .cf-progress__fill {
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: rgb(var(--cf-ink));
+    border-radius: var(--cf-r-pill);
+    transition: width 0.35s ease;
+  }
+  #shopify-section-{{ section.id }} .cf-progress__label {
+    white-space: nowrap;
+    font-weight: 600;
+    color: rgb(var(--color-foreground) / 0.6);
+  }
+
+  @keyframes cf-step-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: none; }
+  }
+  #shopify-section-{{ section.id }} .cf-step {
+    display: none;
+  }
+  #shopify-section-{{ section.id }} .cf-step.is-active {
+    display: block;
+    animation: cf-step-in 0.3s ease;
+  }
+  #shopify-section-{{ section.id }} .cf-step__question {
+    margin-bottom: var(--sp-5);
+    letter-spacing: -0.01em;
+  }
+  #shopify-section-{{ section.id }} .cf-options {
+    display: grid;
+    gap: var(--sp-3);
+  }
+  #shopify-section-{{ section.id }} .cf-options.is-invalid .cf-option {
+    border-color: rgb(var(--cf-error));
+  }
+  #shopify-section-{{ section.id }} .cf-option {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--sp-3);
+    width: 100%;
+    min-height: 56px;
+    text-align: left;
+    padding: var(--sp-4) var(--sp-5);
+    border: 1px solid rgb(var(--color-border-dark));
+    border-radius: var(--cf-r-tile);
+    background: rgb(var(--color-background));
+    color: rgb(var(--color-foreground));
+    cursor: pointer;
+    font: inherit;
+    transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+  }
+  #shopify-section-{{ section.id }} .cf-option:hover:not(:disabled):not(.is-disabled) {
+    background: rgb(var(--color-foreground) / 0.04);
+  }
+  #shopify-section-{{ section.id }} .cf-option:disabled,
+  #shopify-section-{{ section.id }} .cf-option.is-disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  #shopify-section-{{ section.id }} .cf-option:focus-visible {
+    outline: 2px solid rgb(var(--cf-ink));
+    outline-offset: 2px;
+  }
+  #shopify-section-{{ section.id }} .cf-option[aria-checked='true'],
+  #shopify-section-{{ section.id }} .cf-option.is-selected {
+    border-color: rgb(var(--cf-ink));
+    background: rgb(var(--color-foreground) / 0.05);
+    box-shadow: inset 0 0 0 1px rgb(var(--cf-ink));
+  }
+  /* Check/dot box: rounded square (multi) shows a tick, circle (single) a dot. */
+  #shopify-section-{{ section.id }} .cf-option__check {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: var(--cf-r-pill);
+    border: 1.5px solid rgb(var(--color-foreground));
+    background: rgb(var(--color-background));
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+  #shopify-section-{{ section.id }} .cf-option--multi .cf-option__check {
+    border-radius: 6px;
+  }
+  #shopify-section-{{ section.id }} .cf-option[aria-checked='true'] .cf-option__check,
+  #shopify-section-{{ section.id }} .cf-option.is-selected .cf-option__check {
+    border-color: rgb(var(--cf-ink));
+    background: rgb(var(--cf-ink));
+  }
+  /* single-select: filled dot (flex-centered by the box) */
+  #shopify-section-{{ section.id }} .cf-option:not(.cf-option--multi).is-selected .cf-option__check::after,
+  #shopify-section-{{ section.id }} .cf-option:not(.cf-option--multi)[aria-checked='true'] .cf-option__check::after {
+    content: '';
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #fff;
+  }
+  /* multi-select: check mark (flex-centered, nudged up so the tick sits true) */
+  #shopify-section-{{ section.id }} .cf-option--multi.is-selected .cf-option__check::after,
+  #shopify-section-{{ section.id }} .cf-option--multi[aria-checked='true'] .cf-option__check::after {
+    content: '';
+    width: 5px;
+    height: 9px;
+    margin-top: -2px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  #shopify-section-{{ section.id }} .cf-option__label {
+    font-size: 1rem;
+  }
+  #shopify-section-{{ section.id }} .cf-option.is-selected .cf-option__label,
+  #shopify-section-{{ section.id }} .cf-option[aria-checked='true'] .cf-option__label {
+    font-weight: 600;
+  }
+  #shopify-section-{{ section.id }} .cf-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--sp-4);
+    margin-top: var(--sp-8);
+  }
+  /* Reserve the Back button's space when on step 1 so Next does not reflow.
+     Use visibility (not the hidden attribute) and neutralize interaction. */
+  #shopify-section-{{ section.id }} .cf-nav__back.is-invisible {
+    visibility: hidden;
+    pointer-events: none;
+  }
+  /* Validation: tinted panel with an alert glyph, shown only when it has text. */
+  #shopify-section-{{ section.id }} .cf-error {
+    display: none;
+    margin-top: var(--sp-5);
+    align-items: flex-start;
+    gap: var(--sp-3);
+    padding: var(--sp-3) var(--sp-4);
+    border: 1px solid rgb(var(--cf-error));
+    border-radius: 12px;
+    background: rgb(var(--cf-error) / 0.07);
+    color: rgb(var(--cf-error));
+    font-weight: 600;
+  }
+  #shopify-section-{{ section.id }} .cf-error:not(:empty) {
+    display: flex;
+  }
+  #shopify-section-{{ section.id }} .cf-error:not(:empty)::before {
+    content: '';
+    flex: 0 0 auto;
+    width: 22px;
+    height: 22px;
+    margin-top: 1px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c81e1e' stroke-width='1.75' stroke-linejoin='round'%3E%3Cpath d='M12 3.5 22 20H2Z'/%3E%3Cpath d='M12 10v4.5' stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat;
+  }
+
+  /* ---- Results ---- */
+  #shopify-section-{{ section.id }} .cf-result {
+    margin-top: var(--sp-16);
+    max-width: 44rem;              /* single match */
+    margin-inline: auto;
+  }
+  #shopify-section-{{ section.id }} .cf-result.is-2 { max-width: 52rem; }
+  #shopify-section-{{ section.id }} .cf-result.is-3 { max-width: 64rem; }
+  #shopify-section-{{ section.id }} .cf-result__inner {
+    border: 1px solid rgb(var(--color-border));
+    border-radius: var(--cf-r-card);
+    padding: var(--sp-8) var(--sp-6);
+    text-align: center;
+    background: rgb(var(--color-background));
+  }
+  @media (min-width: 750px) {
+    #shopify-section-{{ section.id }} .cf-result__inner {
+      padding: var(--sp-10);
+    }
+  }
+  #shopify-section-{{ section.id }} .cf-result__eyebrow {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: rgb(var(--color-foreground) / 0.6);
+    margin-bottom: var(--sp-3);
+  }
+  #shopify-section-{{ section.id }} .cf-result__why {
+    margin: var(--sp-4) auto 0;
+    max-width: 36rem;
+    color: rgb(var(--color-foreground) / 0.8);
+  }
+
+  /* Matched / missed must-have chips (from the wish-list step). */
+  #shopify-section-{{ section.id }} .cf-chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--sp-2);
+    margin: var(--sp-5) auto 0;
+    max-width: 40rem;
+  }
+  #shopify-section-{{ section.id }} .cf-chips:empty {
+    display: none;
+  }
+  #shopify-section-{{ section.id }} .cf-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.85rem;
+    border-radius: var(--cf-r-pill);
+    border: 1px solid transparent;
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  #shopify-section-{{ section.id }} .cf-chip::before {
+    font-weight: 700;
+  }
+  #shopify-section-{{ section.id }} .cf-chip--match {
+    background: rgb(var(--cf-ink) / 0.08);
+    color: rgb(var(--cf-ink));
+    border-color: rgb(var(--cf-ink) / 0.25);
+  }
+  #shopify-section-{{ section.id }} .cf-chip--match::before {
+    content: '\2713'; /* check */
+  }
+  #shopify-section-{{ section.id }} .cf-chip--miss {
+    color: rgb(var(--color-foreground) / 0.6);
+    border-color: rgb(var(--color-foreground) / 0.15);
+  }
+  #shopify-section-{{ section.id }} .cf-chip--miss::before {
+    content: '\2013'; /* en dash */
+  }
+  #shopify-section-{{ section.id }} .cf-chip--neutral {
+    background: rgb(var(--color-foreground) / 0.05);
+    color: rgb(var(--color-foreground) / 0.7);
+  }
+  /* Podium results: custom cards built client-side from the product data,
+     styled to match the mockup. The best match leads in a wider, elevated
+     first column; the alternates follow with rank labels. */
+  #shopify-section-{{ section.id }} .cf-result__cards {
+    display: grid;
+    gap: var(--sp-6);
+    grid-template-columns: 1fr;
+    max-width: 24rem;
+    margin: var(--sp-10) auto 0;   /* room for the floating "Best match" badge */
+    text-align: left;
+    align-items: stretch;
+  }
+  #shopify-section-{{ section.id }} .cf-result__cards.is-multi {
+    max-width: none;
+  }
+  @media (min-width: 750px) {
+    #shopify-section-{{ section.id }} .cf-result__cards.is-2 { grid-template-columns: 1.25fr 1fr; }
+    #shopify-section-{{ section.id }} .cf-result__cards.is-3 { grid-template-columns: 1.35fr 1fr 1fr; }
+  }
+
+  #shopify-section-{{ section.id }} .cf-pcard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-4);
+    padding: var(--sp-5);
+    border: 1px solid rgb(var(--color-border));
+    border-radius: 24px;
+    background: rgb(var(--color-background));
+  }
+  #shopify-section-{{ section.id }} .cf-pcard--best {
+    border: 2px solid rgb(var(--cf-ink));
+    box-shadow: 0 24px 48px -28px rgba(18, 30, 42, 0.35);
+  }
+  #shopify-section-{{ section.id }} .cf-pcard__badge {
+    position: absolute;
+    top: -14px;
+    left: var(--sp-5);
+    padding: 0.4em 0.9em;
+    border-radius: var(--rounded-full);
+    background: #121e2a;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1.4;
+  }
+  #shopify-section-{{ section.id }} .cf-pcard__rank {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1.4;
+    color: rgb(var(--color-foreground) / 0.4);
+  }
+  #shopify-section-{{ section.id }} .cf-pcard__media {
+    display: block;
+    aspect-ratio: 1 / 1;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  #shopify-section-{{ section.id }} .cf-pcard__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  #shopify-section-{{ section.id }} .cf-pcard__name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  #shopify-section-{{ section.id }} .cf-pcard--best .cf-pcard__name {
+    font-size: 1.3rem;
+  }
+  #shopify-section-{{ section.id }} .cf-pcard__name a {
+    color: inherit;
+    text-decoration: none;
+  }
+  #shopify-section-{{ section.id }} .cf-pcard__name a:hover,
+  #shopify-section-{{ section.id }} .cf-pcard__name a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
+  }
+  #shopify-section-{{ section.id }} .cf-pcard__why {
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: rgb(var(--color-foreground) / 0.65);
+  }
+  #shopify-section-{{ section.id }} .cf-pcard__stock {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    align-self: flex-start;
+    padding: 0.3em 0.75em;
+    border-radius: var(--rounded-full);
+    background: rgb(var(--color-foreground) / 0.06);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: rgb(var(--color-foreground) / 0.6);
+  }
+  #shopify-section-{{ section.id }} .cf-pcard__stock .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgb(var(--color-foreground) / 0.4);
+  }
+  #shopify-section-{{ section.id }} .cf-pcard__price {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+    margin-top: auto;
+  }
+  #shopify-section-{{ section.id }} .cf-pcard__price .now {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  #shopify-section-{{ section.id }} .cf-pcard__price .was {
+    font-size: 0.9rem;
+    color: rgb(var(--color-foreground) / 0.4);
+    text-decoration: line-through;
+  }
+  #shopify-section-{{ section.id }} .cf-pcard__price .save {
+    padding: 0.2em 0.6em;
+    border-radius: var(--rounded-full);
+    background: #121e2a;
+    color: #fff;
+    font-size: 0.68rem;
+    font-weight: 700;
+  }
+  #shopify-section-{{ section.id }} .cf-pcard__cta {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: var(--cf-r-pill);
+  }
+  #shopify-section-{{ section.id }} .cf-pcard__cta::after {
+    border-radius: var(--cf-r-pill);
+  }
+  #shopify-section-{{ section.id }} .cf-pcard__ico {
+    width: 18px;
+    height: 18px;
+    flex: none;
+  }
+
+  #shopify-section-{{ section.id }} .cf-result__actions {
+    margin-top: var(--sp-10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-4);
+  }
+  #shopify-section-{{ section.id }} .cf-result__actions-row {
+    display: flex;
+    gap: var(--sp-3);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #shopify-section-{{ section.id }} .cf-result__browse {
+    margin-top: var(--sp-3);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgb(var(--color-foreground) / 0.6);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  #shopify-section-{{ section.id }} .cf-result__browse:hover,
+  #shopify-section-{{ section.id }} .cf-result__browse:focus-visible {
+    color: rgb(var(--color-foreground));
+  }
+  #shopify-section-{{ section.id }} .cf-result__copied {
+    min-height: 1.2em;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgb(var(--cf-ink));
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  #shopify-section-{{ section.id }} .cf-result__copied.is-visible {
+    opacity: 1;
+  }
+
+  /* hidden source cards for client scoring */
+  #shopify-section-{{ section.id }} .cf-pool {
+    display: none;
+  }
+
+  #shopify-section-{{ section.id }} .cf-empty {
+    margin-top: var(--sp-6);
+    color: rgb(var(--color-foreground) / 0.7);
+    text-align: center;
+  }
+
+  /* Respect reduced motion for this section's own animation. */
+  @media (prefers-reduced-motion: reduce) {
+    #shopify-section-{{ section.id }} .cf-progress__fill,
+    #shopify-section-{{ section.id }} .cf-option {
+      transition: none !important;
+    }
+    #shopify-section-{{ section.id }} .cf-step.is-active {
+      animation: none !important;
+    }
+  }
+</style>
+
+{%- liquid
+  assign coffee_collection = section.settings.collection
+  if coffee_collection == blank
+    assign coffee_collection = collections['coffee-and-espresso']
+  endif
+  assign product_count = coffee_collection.products.size
+-%}
+
+<div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
+  <div class="page-width relative">
+
+    {%- comment -%} ===== BREADCRUMB ===== {%- endcomment -%}
+    {%- if section.settings.show_breadcrumb -%}
+      {%- assign cf_crumb_current = section.settings.heading | default: page.title -%}
+      <nav class="cf-breadcrumb" aria-label="Breadcrumb">
+        <ol class="cf-breadcrumb__list text-sm">
+          <li class="cf-breadcrumb__item">
+            <a href="{{ routes.root_url }}" class="cf-breadcrumb__link" aria-label="Home">
+              {%- render 'icon', icon: 'home', size: 'sm' -%}
+            </a>
+          </li>
+          {%- if section.settings.breadcrumb_parent_title != blank -%}
+            <li class="cf-breadcrumb__sep" aria-hidden="true">{%- render 'icon', icon: 'chevron-right', size: 'xs' -%}</li>
+            <li class="cf-breadcrumb__item">
+              {%- if section.settings.breadcrumb_parent_link != blank -%}
+                <a href="{{ section.settings.breadcrumb_parent_link }}" class="cf-breadcrumb__link">{{ section.settings.breadcrumb_parent_title }}</a>
+              {%- else -%}
+                {{ section.settings.breadcrumb_parent_title }}
+              {%- endif -%}
+            </li>
+          {%- endif -%}
+          <li class="cf-breadcrumb__sep" aria-hidden="true">{%- render 'icon', icon: 'chevron-right', size: 'xs' -%}</li>
+          <li class="cf-breadcrumb__item cf-breadcrumb__item--current" aria-current="page">{{ cf_crumb_current }}</li>
+        </ol>
+      </nav>
+    {%- endif -%}
+
+    {%- comment -%} ===== 1) INTRO ===== {%- endcomment -%}
+    <div class="cf-intro">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="heading {{ section.settings.heading_size }}">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.subtext != blank -%}
+        <div class="cf-intro__subtext text-lg">{{ section.settings.subtext }}</div>
+      {%- endif -%}
+    </div>
+
+    {%- comment -%}
+      The quiz + results UI only make sense with products to score. When the
+      collection is empty we render a single message instead of a dead-end quiz.
+    {%- endcomment -%}
+    {%- if product_count > 0 -%}
+
+      {%- comment -%} ===== 4) QUIZ ===== {%- endcomment -%}
+      <div class="cf-quiz" id="cf-quiz-{{ section.id }}">
+        {%- if section.settings.quiz_heading != blank -%}
+          <p class="cf-eyebrow">{{ section.settings.quiz_heading }}</p>
+        {%- endif -%}
+
+        <div class="cf-progress">
+          <div class="cf-progress__bar" data-cf-progress-bar role="progressbar" aria-label="Quiz progress">
+            <span class="cf-progress__fill" data-cf-progress-fill></span>
+          </div>
+          <span class="cf-progress__label subtext-md" data-cf-progress-label>Step 1</span>
+        </div>
+
+        {%- comment -%} Steps are injected by JS into this region {%- endcomment -%}
+        <div data-cf-steps role="group" aria-label="Coffee maker quiz"></div>
+
+        <p class="cf-error text-sm" data-cf-error role="alert" aria-live="assertive"></p>
+
+        <div class="cf-nav">
+          <button type="button" class="button button--secondary cf-nav__back" data-cf-back>
+            <span class="btn-fill" data-fill></span>
+            <span class="btn-text">&larr; Back</span>
+          </button>
+          <button type="button" class="button button--primary cf-nav__next" data-cf-next>
+            <span class="btn-fill" data-fill></span>
+            <span class="btn-text" data-cf-next-label>Next</span>
+          </button>
+        </div>
+      </div>
+
+      {%- comment -%} ===== 5) RESULTS ===== {%- endcomment -%}
+      <div class="cf-result" data-cf-result hidden>
+        <div class="cf-result__inner">
+          <div class="cf-result__eyebrow subtext-md" data-cf-result-eyebrow>Your match</div>
+          <h3 class="heading title-sm" data-cf-result-title>Your perfect coffee maker</h3>
+          <p class="cf-result__why text-base" data-cf-result-why></p>
+          <div class="cf-chips text-sm" data-cf-result-chips aria-live="polite"></div>
+          <div class="cf-result__cards" data-cf-result-card></div>
+          <div class="cf-result__actions">
+            <div class="cf-result__actions-row">
+              <button type="button" class="button button--secondary" data-cf-copy>
+                <span class="btn-fill" data-fill></span>
+                <span class="btn-text">
+                  <svg class="cf-pcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M10 14a4.5 4.5 0 0 0 6.4.4l3-3a4.5 4.5 0 0 0-6.4-6.4l-1.6 1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 10a4.5 4.5 0 0 0-6.4-.4l-3 3a4.5 4.5 0 0 0 6.4 6.4l1.6-1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Copy link to my match
+                </span>
+              </button>
+              <button type="button" class="button button--secondary" data-cf-restart>
+                <span class="btn-fill" data-fill></span>
+                <span class="btn-text">Start over</span>
+              </button>
+            </div>
+            {%- if coffee_collection != blank and coffee_collection.url != blank -%}
+              <a class="cf-result__browse" href="{{ coffee_collection.url }}">Browse all coffee makers</a>
+            {%- endif -%}
+            <span class="cf-result__copied" data-cf-copied role="status" aria-live="polite"></span>
+          </div>
+        </div>
+      </div>
+
+      {%- comment -%}
+        ===== HIDDEN DATA POOL (server-rendered, client-scored) =====
+        One lightweight <div> per product carrying the data-* the quiz needs:
+        namespaced tags for scoring, plus the fields the results podium renders
+        (title, price, image, availability, blurb). The result cards are BUILT
+        client-side from these attributes — no product-card markup is moved or
+        duplicated.
+
+        PRODUCT TAGS (merchant applies these to coffee products):
+          brew:drip | brew:capsule | brew:espresso        (one or more — active)
+          feat:programmable | feat:built-in-grinder
+            | feat:single-serve | feat:thermal-carafe
+            | feat:milk-frother | feat:compact             (zero or more — active)
+          budget:* and cap:* tags are read but DORMANT (their quiz questions
+          were removed); they matter again if those questions are reinstated.
+        Products missing tags simply score lower; a fallback always shows one.
+      {%- endcomment -%}
+      <div class="cf-pool" data-cf-pool aria-hidden="true">
+        {%- for product in coffee_collection.products -%}
+          {%- liquid
+            assign brews = ''
+            assign budget = ''
+            assign capacity = ''
+            assign features = ''
+            for tag in product.tags
+              assign parts = tag | split: ':'
+              assign ns = parts.first | strip
+              assign val = parts.last | strip
+              if ns == 'brew'
+                assign brews = brews | append: val | append: ' '
+              elsif ns == 'budget'
+                assign budget = val
+              elsif ns == 'cap'
+                assign capacity = val
+              elsif ns == 'feat'
+                assign features = features | append: val | append: ' '
+              endif
+            endfor
+
+            assign rating = 0
+            if product.metafields.reviews.rating.value != blank and product.metafields.reviews.rating_count.value > 0
+              assign rating = product.metafields.reviews.rating.value.rating | round: 1
+            endif
+
+            assign on_sale = false
+            if product.compare_at_price and product.compare_at_price > product.price
+              assign on_sale = true
+            endif
+          -%}
+          <div
+            class="cf-pool__item"
+            data-cf-card
+            data-product-id="{{ product.id }}"
+            data-brew="{{ brews | strip }}"
+            data-budget="{{ budget }}"
+            data-capacity="{{ capacity }}"
+            data-features="{{ features | strip }}"
+            data-rating="{{ rating }}"
+            data-title="{{ product.title | escape }}"
+            data-price="{{ product.price }}"
+            data-price-money="{{ product.price | money }}"
+            {%- if on_sale %}
+              data-compare-money="{{ product.compare_at_price | money }}"
+              data-save-money="{{ product.compare_at_price | minus: product.price | money }}"
+            {%- endif %}
+            data-url="{{ product.url }}"
+            data-available="{{ product.available }}"
+            {%- if product.featured_image %} data-image="{{ product.featured_image | image_url: width: 600 }}"{%- endif %}
+            data-why="{{ product.description | strip_html | truncatewords: 16 | escape }}"
+          ></div>
+        {%- endfor -%}
+      </div>
+
+    {%- else -%}
+      <p class="cf-empty text-base" data-cf-empty>
+        No coffee makers are available right now. Please check back soon.
+      </p>
+    {%- endif -%}
+
+    {%- comment -%} ===== 2) THREE COFFEE-MAKER TYPES (blocks) ===== {%- endcomment -%}
+    {%- if section.blocks.size > 0 -%}
+      {%- if section.settings.types_heading != blank or section.settings.types_intro != blank -%}
+        <div class="cf-types-head">
+          {%- if section.settings.types_heading != blank -%}
+            <h2 class="heading title-md">{{ section.settings.types_heading }}</h2>
+          {%- endif -%}
+          {%- if section.settings.types_intro != blank -%}
+            <div class="cf-types-head__intro text-lg">{{ section.settings.types_intro }}</div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+      <div class="cf-types">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'coffee_type' -%}
+            <div class="cf-type" {{ block.shopify_attributes }}>
+              {%- if block.settings.image != blank -%}
+                {{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy', widths: '300,400,500,600,700,800,1000', sizes: '(min-width: 750px) 30vw, 90vw', class: 'cf-type__image', is: 'lazy-image' }}
+              {%- endif -%}
+              {%- if block.settings.title != blank -%}
+                <h3 class="heading title-sm cf-type__title">{{ block.settings.title }}</h3>
+              {%- endif -%}
+              {%- if block.settings.description != blank -%}
+                <div class="cf-type__desc text-base">{{ block.settings.description }}</div>
+              {%- endif -%}
+              {%- if block.settings.best_for != blank -%}
+                <div class="cf-type__best text-sm"><strong>Best for:</strong> {{ block.settings.best_for }}</div>
+              {%- endif -%}
+              {%- if block.settings.link != blank -%}
+                <a
+                  class="button button--secondary cf-type__cta"
+                  href="{{ block.settings.link }}"
+                >
+                  <span class="btn-fill" data-fill></span>
+                  <span class="btn-text">{{ section.settings.type_cta_label | default: 'Learn more' }}</span>
+                </a>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} ===== 3) COMPARISON TABLE ===== {%- endcomment -%}
+    {%- if section.settings.show_comparison -%}
+      <div class="cf-compare">
+        {%- if section.settings.comparison_heading != blank -%}
+          <h3 class="heading title-sm" style="text-align:center;">{{ section.settings.comparison_heading }}</h3>
+        {%- endif -%}
+        <div class="cf-compare__scroll">
+          <table class="cf-table text-sm">
+            <caption class="sr-only">Comparison of drip, capsule, and espresso coffee makers</caption>
+            <thead>
+              <tr>
+                <th scope="col"><span class="sr-only">Attribute</span></th>
+                <th scope="col">Drip</th>
+                <th scope="col">Capsule / Single-Serve</th>
+                <th scope="col">Espresso</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Speed</th>
+                <td>Minutes for a full pot</td>
+                <td>Seconds per cup</td>
+                <td>A few minutes per drink</td>
+              </tr>
+              <tr>
+                <th scope="row">Effort</th>
+                <td>Low</td>
+                <td>Lowest</td>
+                <td>Hands-on</td>
+              </tr>
+              <tr>
+                <th scope="row">Cost</th>
+                <td>Low upfront, cheap per cup</td>
+                <td>Low upfront, pricier pods</td>
+                <td>Higher upfront, low per cup</td>
+              </tr>
+              <tr>
+                <th scope="row">Milk drinks</th>
+                <td>No</td>
+                <td>Limited (some models)</td>
+                <td>Yes &mdash; its specialty</td>
+              </tr>
+              <tr>
+                <th scope="row">Capacity</th>
+                <td>Full carafe / family</td>
+                <td>One cup at a time</td>
+                <td>One to two shots at a time</td>
+              </tr>
+              <tr>
+                <th scope="row">Best for</th>
+                <td>Pot-by-pot households</td>
+                <td>Speed &amp; variety</td>
+                <td>Latte lovers &amp; home baristas</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    {%- endif -%}
+
+  </div>
+</div>
+
+{%- if product_count > 0 -%}
+<script>
+  (function () {
+    var root = document.getElementById('shopify-section-{{ section.id }}');
+    if (!root) return;
+
+    var stepsHost = root.querySelector('[data-cf-steps]');
+    var nextBtn = root.querySelector('[data-cf-next]');
+    var nextLabel = root.querySelector('[data-cf-next-label]');
+    var backBtn = root.querySelector('[data-cf-back]');
+    var errorEl = root.querySelector('[data-cf-error]');
+    var progressFill = root.querySelector('[data-cf-progress-fill]');
+    var progressLabel = root.querySelector('[data-cf-progress-label]');
+    var progressBar = root.querySelector('[data-cf-progress-bar]');
+    var resultWrap = root.querySelector('[data-cf-result]');
+    var resultWhy = root.querySelector('[data-cf-result-why]');
+    var resultTitle = root.querySelector('[data-cf-result-title]');
+    var resultEyebrow = root.querySelector('[data-cf-result-eyebrow]');
+    var resultCardHost = root.querySelector('[data-cf-result-card]');
+    var resultChips = root.querySelector('[data-cf-result-chips]');
+    var restartBtn = root.querySelector('[data-cf-restart]');
+    var copyBtn = root.querySelector('[data-cf-copy]');
+    var copiedNote = root.querySelector('[data-cf-copied]');
+    var quizEl = root.querySelector('.cf-quiz');
+
+    if (!stepsHost || !nextBtn) return;
+
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var scrollBehavior = reduceMotion ? 'auto' : 'smooth';
+    function smoothScroll(el) {
+      if (el && el.scrollIntoView) el.scrollIntoView({ behavior: scrollBehavior, block: 'start' });
+    }
+
+    /* ---------- Quiz definition (edit here) ---------- */
+    var STEPS = [
+      {
+        key: 'brew',
+        type: 'multi',
+        required: true,
+        question: "What's your current coffee routine? Pick all that apply.",
+        options: [
+          { label: 'A classic pot of coffee', value: 'drip' },
+          { label: 'One-touch pods, zero fuss', value: 'capsule' },
+          { label: 'Café-style espresso & lattes', value: 'espresso' },
+          { label: 'Depends on the day', value: 'unsure', exclusive: true }
+        ]
+      },
+      {
+        key: 'milk',
+        type: 'single',
+        required: true,
+        question: 'How café-worthy do your drinks get?',
+        options: [
+          { label: 'Full barista mode — lattes & cappuccinos', value: 'yes' },
+          { label: 'Keep it simple — just great coffee', value: 'no' },
+          { label: 'A fancy treat now and then', value: 'sometimes' }
+        ]
+      },
+      {
+        key: 'features',
+        type: 'multi',
+        required: false,
+        question: 'Any must-haves on your wish list? Pick any (or skip).',
+        options: [
+          { label: 'Programmable timer', value: 'programmable' },
+          { label: 'Built-in grinder for fresh beans', value: 'built-in-grinder' },
+          { label: 'Single-serve pods', value: 'single-serve' },
+          { label: 'Carafe', value: 'thermal-carafe' },
+          { label: 'Built-in milk frother', value: 'milk-frother' },
+          { label: 'Saves counter space', value: 'compact' }
+        ]
+      }
+    ];
+
+    /* answers store */
+    var answers = {};
+    var current = 0;
+
+    function isStepAnswered(step) {
+      if (!step.required) return true;
+      if (step.type === 'multi') {
+        var v = answers[step.key];
+        return Array.isArray(v) && v.length > 0;
+      }
+      return typeof answers[step.key] !== 'undefined';
+    }
+
+    function clearError() {
+      if (errorEl) errorEl.textContent = '';
+      Array.prototype.forEach.call(stepsHost.querySelectorAll('.cf-options'), function (g) {
+        g.classList.remove('is-invalid');
+      });
+    }
+
+    /* ---------- Build step DOM ---------- */
+    function buildSteps() {
+      stepsHost.innerHTML = '';
+      STEPS.forEach(function (step, i) {
+        var fs = document.createElement('div');
+        fs.className = 'cf-step';
+        fs.setAttribute('role', 'group');
+        fs.setAttribute('aria-labelledby', 'cf-q-{{ section.id }}-' + i);
+
+        var q = document.createElement('p');
+        q.className = 'cf-step__question heading title-sm';
+        q.id = 'cf-q-{{ section.id }}-' + i;
+        q.textContent = step.question;
+        fs.appendChild(q);
+
+        var list = document.createElement('div');
+        list.className = 'cf-options';
+        list.setAttribute('role', step.type === 'multi' ? 'group' : 'radiogroup');
+        list.setAttribute('aria-labelledby', q.id);
+
+        step.options.forEach(function (opt, optIdx) {
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'cf-option text-base' + (step.type === 'multi' ? ' cf-option--multi' : '');
+          btn.setAttribute('data-value', opt.value);
+          if (opt.exclusive) btn.setAttribute('data-exclusive', 'true');
+          if (step.type === 'multi') {
+            // role=checkbox + aria-checked matches the square check visual
+            btn.setAttribute('role', 'checkbox');
+            btn.setAttribute('aria-checked', 'false');
+            btn.tabIndex = 0;
+          } else {
+            // radiogroup: roving tabindex (first option tabbable initially)
+            btn.setAttribute('role', 'radio');
+            btn.setAttribute('aria-checked', 'false');
+            btn.tabIndex = optIdx === 0 ? 0 : -1;
+          }
+          var check = document.createElement('span');
+          check.className = 'cf-option__check';
+          check.setAttribute('aria-hidden', 'true');
+          var lbl = document.createElement('span');
+          lbl.className = 'cf-option__label';
+          lbl.textContent = opt.label;
+          btn.appendChild(check);
+          btn.appendChild(lbl);
+
+          btn.addEventListener('click', function () {
+            selectOption(step, btn, opt);
+          });
+
+          if (step.type === 'single') {
+            btn.addEventListener('keydown', function (e) {
+              handleRadioKeydown(e, step, list, btn);
+            });
+          }
+
+          list.appendChild(btn);
+        });
+
+        fs.appendChild(list);
+        stepsHost.appendChild(fs);
+      });
+    }
+
+    function setRovingTabindex(list, activeBtn) {
+      Array.prototype.forEach.call(list.querySelectorAll('.cf-option'), function (o) {
+        o.tabIndex = o === activeBtn ? 0 : -1;
+      });
+    }
+
+    function handleRadioKeydown(e, step, list, btn) {
+      var opts = Array.prototype.slice.call(list.querySelectorAll('.cf-option'));
+      var idx = opts.indexOf(btn);
+      var target = null;
+      switch (e.key) {
+        case 'ArrowDown':
+        case 'ArrowRight':
+          target = opts[(idx + 1) % opts.length];
+          break;
+        case 'ArrowUp':
+        case 'ArrowLeft':
+          target = opts[(idx - 1 + opts.length) % opts.length];
+          break;
+        case 'Home':
+          target = opts[0];
+          break;
+        case 'End':
+          target = opts[opts.length - 1];
+          break;
+        default:
+          return;
+      }
+      e.preventDefault();
+      selectOption(step, target, { value: target.getAttribute('data-value') });
+      setRovingTabindex(list, target);
+      target.focus();
+    }
+
+    function selectOption(step, btn, opt) {
+      var value = opt.value;
+      var list = btn.parentNode;
+      clearError();
+      if (step.type === 'multi') {
+        var exclusiveBtn = list.querySelector('.cf-option[data-exclusive="true"]');
+        var exclusiveVal = exclusiveBtn ? exclusiveBtn.getAttribute('data-value') : null;
+
+        if (opt.exclusive) {
+          // Exclusive option (e.g. "Not sure"): selecting it clears the others
+          // and becomes the only selection; toggling it off clears everything.
+          var turnOn = btn.getAttribute('aria-checked') !== 'true';
+          Array.prototype.forEach.call(list.querySelectorAll('.cf-option'), function (o) {
+            var isSelf = o === btn;
+            o.setAttribute('aria-checked', isSelf && turnOn ? 'true' : 'false');
+            o.classList.toggle('is-selected', isSelf && turnOn);
+          });
+          answers[step.key] = turnOn ? [value] : [];
+          refreshExclusive(list);
+          return;
+        }
+
+        // A normal option: clear any exclusive choice, then toggle.
+        if (exclusiveBtn) {
+          exclusiveBtn.setAttribute('aria-checked', 'false');
+          exclusiveBtn.classList.remove('is-selected');
+        }
+        var checked = btn.getAttribute('aria-checked') === 'true';
+        btn.setAttribute('aria-checked', checked ? 'false' : 'true');
+        btn.classList.toggle('is-selected', !checked);
+        var set = (answers[step.key] || []).filter(function (v) {
+          return v !== value && v !== exclusiveVal;
+        });
+        if (!checked) set.push(value);
+        answers[step.key] = set;
+        refreshExclusive(list);
+      } else {
+        Array.prototype.forEach.call(list.querySelectorAll('.cf-option'), function (o) {
+          o.setAttribute('aria-checked', 'false');
+          o.classList.remove('is-selected');
+        });
+        btn.setAttribute('aria-checked', 'true');
+        btn.classList.add('is-selected');
+        setRovingTabindex(list, btn);
+        answers[step.key] = value;
+      }
+    }
+
+    // Disable the exclusive option (e.g. "Not sure") whenever any other option in
+    // the group is selected; re-enable it once they're all cleared.
+    function refreshExclusive(list) {
+      var exBtn = list.querySelector('.cf-option[data-exclusive="true"]');
+      if (!exBtn) return;
+      var anyOther = Array.prototype.some.call(list.querySelectorAll('.cf-option'), function (o) {
+        return o !== exBtn && o.getAttribute('aria-checked') === 'true';
+      });
+      exBtn.disabled = anyOther;
+      exBtn.setAttribute('aria-disabled', anyOther ? 'true' : 'false');
+      exBtn.classList.toggle('is-disabled', anyOther);
+    }
+
+    /* ---------- Navigation ---------- */
+    function showStep(i) {
+      clearError();
+      var stepEls = stepsHost.querySelectorAll('.cf-step');
+      stepEls.forEach(function (el, idx) {
+        el.classList.toggle('is-active', idx === i);
+      });
+      current = i;
+      backBtn.classList.toggle('is-invisible', i === 0);
+      backBtn.setAttribute('aria-hidden', i === 0 ? 'true' : 'false');
+      backBtn.tabIndex = i === 0 ? -1 : 0;
+      var isLast = i === STEPS.length - 1;
+      nextLabel.textContent = isLast ? 'See my match' : 'Next';
+      var pct = Math.round(((i + 1) / STEPS.length) * 100);
+      if (progressFill) progressFill.style.width = pct + '%';
+      if (progressLabel) progressLabel.textContent = 'Step ' + (i + 1) + ' of ' + STEPS.length;
+      if (progressBar) {
+        progressBar.setAttribute('aria-valuemin', '1');
+        progressBar.setAttribute('aria-valuemax', String(STEPS.length));
+        progressBar.setAttribute('aria-valuenow', String(i + 1));
+      }
+      // focus the tabbable (checked or first) option for keyboard users
+      var active = stepEls[i];
+      if (active) {
+        var focusTarget = active.querySelector('.cf-option[tabindex="0"]') || active.querySelector('.cf-option');
+        if (focusTarget) focusTarget.focus();
+      }
+    }
+
+    nextBtn.addEventListener('click', function () {
+      var step = STEPS[current];
+      if (!isStepAnswered(step)) {
+        if (errorEl) {
+          errorEl.textContent = step.type === 'multi'
+            ? 'Choose at least one option to continue.'
+            : 'Choose one option to continue.';
+        }
+        var group = stepsHost.querySelector('.cf-step.is-active .cf-options');
+        if (group) group.classList.add('is-invalid');
+        var active = stepsHost.querySelector('.cf-step.is-active .cf-option[tabindex="0"]')
+          || stepsHost.querySelector('.cf-step.is-active .cf-option');
+        if (active) active.focus();
+        return;
+      }
+      if (current < STEPS.length - 1) {
+        showStep(current + 1);
+      } else {
+        finish();
+      }
+    });
+    backBtn.addEventListener('click', function () {
+      if (current > 0) showStep(current - 1);
+    });
+
+    if (restartBtn) {
+      restartBtn.addEventListener('click', function () {
+        answers = {};
+        buildSteps();
+        resultWrap.hidden = true;
+        resultCardHost.innerHTML = '';
+        if (resultChips) resultChips.innerHTML = '';
+        resultCardHost.classList.remove('is-multi', 'is-2', 'is-3');
+        resultWrap.classList.remove('is-2', 'is-3');
+        clearShareHash();
+        quizEl.style.display = '';
+        showStep(0);
+        smoothScroll(quizEl);
+      });
+
+      if (copyBtn) {
+        copyBtn.addEventListener('click', function () {
+          function done() {
+            if (!copiedNote) return;
+            copiedNote.textContent = 'Link copied';
+            copiedNote.classList.add('is-visible');
+            setTimeout(function () { copiedNote.classList.remove('is-visible'); }, 2200);
+          }
+          var url = location.href;
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(url).then(done, done);
+          } else {
+            done();
+          }
+        });
+      }
+    }
+
+    /* ---------- Results ---------- */
+    var resultGeneric = false;
+
+    /* ---------- Scoring ---------- */
+    var WEIGHTS = {
+      brewMatch: 100,
+      brewExtra: 20,
+      brewMiss: -60,
+      budgetExact: 30,
+      budgetAdjacent: 12,
+      capExact: 25,
+      capAdjacent: 10,
+      featEach: 15,
+      featCap: 60,
+      milkEspresso: 20,
+      compactMatch: 15
+    };
+    var BUDGET_ORDER = ['budget', 'mid', 'premium'];
+    var CAP_ORDER = ['single-cup', 'small', 'large'];
+
+    function adjacent(order, a, b) {
+      var ia = order.indexOf(a), ib = order.indexOf(b);
+      return ia >= 0 && ib >= 0 && Math.abs(ia - ib) === 1;
+    }
+
+    function parseList(str) {
+      if (!str) return [];
+      return str.split(/[\s,]+/).filter(Boolean);
+    }
+
+    // Build the feature set the user is matching against, folding the milk
+    // answer into a concrete feature tag so that question contributes to
+    // scoring (in addition to the direct signals below). The answers.space
+    // fold is DORMANT: the space question was removed from STEPS, so it only
+    // fires again if that question is reinstated.
+    function collectFeatures() {
+      var feats = (answers.features || []).slice();
+      if (answers.milk === 'yes' || answers.milk === 'sometimes') {
+        if (feats.indexOf('milk-frother') === -1) feats.push('milk-frother');
+      }
+      if (answers.space === 'compact') {
+        if (feats.indexOf('compact') === -1) feats.push('compact');
+      }
+      return feats;
+    }
+
+    function scoreProduct(card, desiredFeatures) {
+      var score = 0;
+      var matched = [];
+      var brews = parseList(card.getAttribute('data-brew'));
+      var budget = card.getAttribute('data-budget') || '';
+      var cap = card.getAttribute('data-capacity') || '';
+      var feats = parseList(card.getAttribute('data-features'));
+      var brewMatched = false;
+
+      // 1. brew (primary signal). answers.brew is a multi-select array; "unsure"
+      //    or no selection means no brew preference. A product that covers MORE of
+      //    the chosen styles (e.g. an all-in-one station) scores higher.
+      var desiredBrews = (answers.brew || []).filter(function (b) { return b && b !== 'unsure'; });
+      if (desiredBrews.length) {
+        var brewHits = desiredBrews.filter(function (b) { return brews.indexOf(b) !== -1; });
+        if (brewHits.length) {
+          score += WEIGHTS.brewMatch + (brewHits.length - 1) * WEIGHTS.brewExtra;
+          brewMatched = true;
+          brewHits.forEach(function (b) { matched.push(brewLabel(b)); });
+        } else {
+          score += WEIGHTS.brewMiss;
+        }
+      }
+
+      // 2. budget (DORMANT — the budget question is not in the current STEPS,
+      //    so answers.budget is never set. Kept so the question can be
+      //    reinstated by just re-adding it to STEPS; products keep budget: tags.)
+      if (answers.budget && answers.budget !== 'any') {
+        if (budget === answers.budget) {
+          score += WEIGHTS.budgetExact;
+          matched.push('budget:' + budget);
+        } else if (adjacent(BUDGET_ORDER, budget, answers.budget)) {
+          score += WEIGHTS.budgetAdjacent;
+        }
+      }
+
+      // 3. capacity (DORMANT — capacity question removed from STEPS; see note above)
+      if (answers.capacity && answers.capacity !== 'any') {
+        if (cap === answers.capacity) {
+          score += WEIGHTS.capExact;
+          matched.push('cap:' + cap);
+        } else if (adjacent(CAP_ORDER, cap, answers.capacity)) {
+          score += WEIGHTS.capAdjacent;
+        }
+      }
+
+      // 4. features (clamped) - includes synthetic milk-frother/compact
+      var featTotal = 0, featHits = 0;
+      desiredFeatures.forEach(function (f) {
+        if (feats.indexOf(f) !== -1) {
+          featTotal += WEIGHTS.featEach;
+          featHits++;
+          matched.push('feat:' + f);
+        }
+      });
+      if (featTotal > WEIGHTS.featCap) featTotal = WEIGHTS.featCap;
+      score += featTotal;
+
+      // 5. milk affinity: wanting milk drinks nudges toward espresso brewers,
+      //    so the milk question still matters even if a product is untagged
+      //    for feat:milk-frother.
+      if (answers.milk === 'yes' && brews.indexOf('espresso') !== -1) {
+        score += WEIGHTS.milkEspresso;
+      }
+
+      // 6. footprint (DORMANT — space question removed from STEPS; compact still
+      //    scores via the features question through collectFeatures/featEach)
+      if (answers.space === 'compact' && feats.indexOf('compact') !== -1) {
+        score += WEIGHTS.compactMatch;
+      }
+
+      // 7. Station grinder rule-out. A multi-brew "station" (covers 2+ brew
+      //    methods, or is named like one) is an all-in-one without a built-in
+      //    grinder. If the shopper explicitly wants a grinder, don't recommend
+      //    a grinder-less station — UNLESS they also want pods or a carafe, the
+      //    station's signature combo that a single-purpose grinder machine
+      //    can't provide. A station that actually carries feat:built-in-grinder
+      //    is never ruled out.
+      var title = (card.getAttribute('data-title') || '').toLowerCase();
+      var isStation = brews.length >= 2 || title.indexOf('station') !== -1;
+      var wantsGrinder = (answers.features || []).indexOf('built-in-grinder') !== -1;
+      var wantsPods = (answers.brew || []).indexOf('capsule') !== -1;
+      var wantsCarafe = (answers.features || []).indexOf('thermal-carafe') !== -1;
+      var hasGrinder = feats.indexOf('built-in-grinder') !== -1;
+      var ruledOut = isStation && wantsGrinder && !hasGrinder && !wantsPods && !wantsCarafe;
+
+      return {
+        card: card,
+        score: score,
+        matched: matched,
+        featHits: featHits,
+        brewMatched: brewMatched,
+        ruledOut: ruledOut,
+        budgetExact: budget === answers.budget,
+        rating: parseFloat(card.getAttribute('data-rating')) || 0,
+        price: parseInt(card.getAttribute('data-price'), 10) || 0,
+        url: card.getAttribute('data-url') || '',
+        budget: budget,
+        cap: cap
+      };
+    }
+
+    // NOTE on weight invariant: brewMatch(+100) - brewMiss(-60) = 160-point gap,
+    // which exceeds the max non-brew points. Currently active signals total
+    // featCap(60) + milkEspresso(20) = 80; even with every dormant signal
+    // reactivated (budget30 + cap25 + compact15 -> 150 total) the gap still
+    // wins. So a brew-matching product always outranks a brew-missing one;
+    // the fallback below only fires when NO product matched the requested brew.
+    // How close a runner-up must score (relative to the top pick) to be shown
+    // alongside it, and the most matches we'll ever surface. A dominant winner
+    // stands alone; genuinely comparable options show together (up to MAX).
+    var RESULT_MAX = 3;
+    var RESULT_KEEP_RATIO = 0.5;
+    // When a shopper says they like pods/capsules, this product should always be
+    // one of the matches shown (matched by title, case-insensitive). Configurable
+    // via the section setting; leave blank to disable.
+    var CAPSULE_PICK = {{ section.settings.capsule_pick | default: '' | json }};
+
+    function pickResults() {
+      var cards = Array.prototype.slice.call(root.querySelectorAll('[data-cf-card]'));
+      if (!cards.length) return null;
+
+      var desiredFeatures = collectFeatures();
+      var scored = cards.map(function (c) { return scoreProduct(c, desiredFeatures); });
+
+      // Drop products ruled out by the station grinder rule (see scoreProduct),
+      // so they can't surface via ranking OR the rating fallback. Never let the
+      // rule empty the pool — if everything is ruled out, keep the full set.
+      var kept = scored.filter(function (s) { return !s.ruledOut; });
+      if (kept.length) scored = kept;
+
+      // Guarantee the capsule pick (e.g. the Caffeinator) is one of the results
+      // whenever pods/capsules is among the chosen brews. If it didn't already
+      // make the cut, append it (or replace the lowest-ranked slot) so it always
+      // shows up — without disturbing the natural ranking of the others.
+      function withCapsulePick(list) {
+        var wantsCapsule = (answers.brew || []).indexOf('capsule') !== -1;
+        if (!CAPSULE_PICK || !wantsCapsule) return list;
+        var needle = CAPSULE_PICK.toLowerCase();
+        function isPick(s) {
+          return (s.card.getAttribute('data-title') || '').toLowerCase().indexOf(needle) !== -1;
+        }
+        var k;
+        for (k = 0; k < list.length; k++) { if (isPick(list[k])) return list; }
+        var pick = null;
+        for (k = 0; k < scored.length; k++) { if (isPick(scored[k])) { pick = scored[k]; break; } }
+        if (!pick) return list;
+        if (list.length < RESULT_MAX) list.push(pick);
+        else list[list.length - 1] = pick;
+        return list;
+      }
+
+      // tie-break leaning: no brew preference (unsure / none) + milk -> espresso
+      var brewArr = answers.brew || [];
+      var noBrewPref = brewArr.length === 0 || brewArr.indexOf('unsure') !== -1;
+      var espressoLean = noBrewPref && answers.milk === 'yes';
+
+      scored.sort(function (a, b) {
+        if (b.score !== a.score) return b.score - a.score;
+        if (espressoLean) {
+          var ae = parseList(a.card.getAttribute('data-brew')).indexOf('espresso') !== -1 ? 1 : 0;
+          var be = parseList(b.card.getAttribute('data-brew')).indexOf('espresso') !== -1 ? 1 : 0;
+          if (be !== ae) return be - ae;
+        }
+        if (b.featHits !== a.featHits) return b.featHits - a.featHits;
+        if (b.rating !== a.rating) return b.rating - a.rating;
+        return 0;
+      });
+
+      var top = scored[0];
+
+      // Fallback: nothing scored positively (e.g. untagged catalog, or a
+      // requested brew that no product carries). Surface the highest-rated few.
+      if (top.score <= 0) {
+        var byRating = scored.slice().sort(function (a, b) { return b.rating - a.rating; });
+        return { results: withCapsulePick(byRating.slice(0, RESULT_MAX)), generic: true };
+      }
+
+      // Keep the top pick plus any runner-up scoring at least RESULT_KEEP_RATIO
+      // of the top — so a single clear winner returns one card, while several
+      // close options return two or three.
+      var threshold = top.score * RESULT_KEEP_RATIO;
+      var results = scored.filter(function (s, idx) {
+        return idx === 0 || (s.score > 0 && s.score >= threshold);
+      }).slice(0, RESULT_MAX);
+
+      return { results: withCapsulePick(results), generic: false };
+    }
+
+    /* ---------- Copy generation ---------- */
+    function brewLabel(v) {
+      return { drip: 'a classic pot of coffee', capsule: 'fuss-free single-serve', espresso: 'café-style espresso and lattes' }[v] || v;
+    }
+    function capPhrase(v) {
+      return { 'single-cup': 'your solo cup', small: 'a few cups a day', large: 'a busy household' }[v] || v;
+    }
+    function budgetPhrase(v) {
+      return { budget: 'value', mid: 'mid-range', premium: 'premium' }[v] || v;
+    }
+    function featLabel(v) {
+      return {
+        'milk-frother': 'a built-in milk frother',
+        programmable: 'a programmable timer',
+        'built-in-grinder': 'a built-in grinder',
+        'single-serve': 'single-serve brewing',
+        'thermal-carafe': 'a carafe',
+        compact: 'a space-saving design',
+        'fast-brew': 'fast brewing',
+        'easy-clean': 'easy cleaning',
+        quiet: 'quiet operation',
+        'large-reservoir': 'a large reservoir'
+      }[v] || v.replace(/-/g, ' ');
+    }
+    function joinList(arr) {
+      if (arr.length === 1) return arr[0];
+      if (arr.length === 2) return arr[0] + ' and ' + arr[1];
+      return arr.slice(0, -1).join(', ') + ', and ' + arr[arr.length - 1];
+    }
+
+    function buildWhy(result, title, rank, total) {
+      if (result.generic) {
+        return 'Based on your answers, the ' + title
+          + (rank === 0 ? ' is our top all-around pick' : ' is another popular pick')
+          + ' — a reliable choice that covers the essentials beautifully.';
+      }
+      // Assemble the explanation as discrete, self-contained sentences and join
+      // them with a space. Keeping each clause a full sentence avoids fragile
+      // connector logic (a missing middle clause can't leave an orphaned comma).
+      var sentences = [];
+
+      var wantBrews = (answers.brew || []).filter(function (b) { return b && b !== 'unsure'; });
+      if (wantBrews.length) {
+        var bestBrews = parseList(result.best.card.getAttribute('data-brew'));
+        var matchedBrews = wantBrews.filter(function (b) { return bestBrews.indexOf(b) !== -1; }).map(brewLabel);
+        if (matchedBrews.length) sentences.push('Built for ' + joinList(matchedBrews) + '.');
+      }
+
+      // (dormant while the capacity question is out of STEPS)
+      if (answers.capacity && answers.capacity !== 'any' && result.best.cap === answers.capacity) {
+        sentences.push('It keeps up with ' + capPhrase(answers.capacity) + '.');
+      }
+
+      var featMatched = result.best.matched.filter(function (m) { return m.indexOf('feat:') === 0; })
+        .map(function (m) { return featLabel(m.split(':')[1]); });
+      if (featMatched.length) {
+        sentences.push('It checks your boxes: ' + joinList(featMatched) + '.');
+      }
+
+      // (dormant while the budget question is out of STEPS)
+      if (answers.budget && answers.budget !== 'any' && result.best.budget === answers.budget) {
+        sentences.push('All at a ' + budgetPhrase(answers.budget) + ' price.');
+      }
+
+      var lead;
+      if (rank > 0) lead = ' is also a great fit. ';
+      else if (total > 1) lead = ' is your top match. ';
+      else lead = ' is your match. ';
+      return (title + lead + sentences.join(' ')).trim();
+    }
+
+    /* ---------- Match chips ---------- */
+    // Short label for the wish-list features (kept separate from featLabel's
+    // article-prefixed prose, e.g. "a built-in grinder").
+    function featChipLabel(v) {
+      return {
+        programmable: 'Programmable timer',
+        'built-in-grinder': 'Built-in grinder',
+        'single-serve': 'Single-serve',
+        'thermal-carafe': 'Carafe',
+        'milk-frother': 'Milk frother',
+        compact: 'Compact'
+      }[v] || v.replace(/-/g, ' ');
+    }
+
+    // Honest at-a-glance chips: which of the shopper's explicit must-haves the
+    // best match has (green check) and which it doesn't (muted dash). Based on
+    // the wish-list step only, so we never flag a feature they didn't ask for.
+    function renderChips(best) {
+      if (!resultChips) return;
+      resultChips.innerHTML = '';
+      if (resultGeneric || !best) return;
+      var wishes = answers.features || [];
+      if (!wishes.length) {
+        var neutral = document.createElement('span');
+        neutral.className = 'cf-chip cf-chip--neutral';
+        neutral.textContent = 'Matched on your routine & drinks';
+        resultChips.appendChild(neutral);
+        return;
+      }
+      var bestFeats = parseList(best.card.getAttribute('data-features'));
+      wishes.forEach(function (w) {
+        var has = bestFeats.indexOf(w) !== -1;
+        var chip = document.createElement('span');
+        chip.className = 'cf-chip ' + (has ? 'cf-chip--match' : 'cf-chip--miss');
+        chip.textContent = has ? featChipLabel(w) : ('No ' + featChipLabel(w).toLowerCase());
+        resultChips.appendChild(chip);
+      });
+    }
+
+    /* ---------- Escaping + shareable-URL helpers ---------- */
+    // Cards are built via innerHTML, so re-escape any product-derived string.
+    function esc(s) {
+      return String(s == null ? '' : s).replace(/[&<>"']/g, function (ch) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch];
+      });
+    }
+    var BELL_SVG = '<svg class="cf-pcard__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l1.5 2.5h-15Z" stroke-linejoin="round"/><path d="M10 21h4" stroke-linecap="round"/></svg>';
+
+    // The answer set lives in the URL hash so a match can be shared/reopened.
+    function buildShareHash() {
+      var b = (answers.brew || []).join('.');
+      var m = answers.milk || '';
+      var f = (answers.features || []).join('.');
+      return '#cf-match=' + encodeURIComponent(b + '|' + m + '|' + f);
+    }
+    function setShareHash() {
+      try { history.replaceState(null, '', location.pathname + location.search + buildShareHash()); } catch (e) {}
+    }
+    function clearShareHash() {
+      try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+    }
+
+    /* ---------- Finish / reveal ---------- */
+    function finish() {
+      var picked = pickResults();
+      resultCardHost.innerHTML = '';
+      if (resultChips) resultChips.innerHTML = '';
+      resultCardHost.classList.remove('is-multi', 'is-2', 'is-3');
+      resultWrap.classList.remove('is-2', 'is-3');
+
+      if (!picked || !picked.results || !picked.results.length) {
+        resultEyebrow.textContent = 'Your match';
+        resultTitle.textContent = 'No match available';
+        quizEl.style.display = 'none';
+        resultWrap.hidden = false;
+        requestAnimationFrame(function () {
+          resultWhy.textContent = 'We could not find a match right now. Please browse our full lineup.';
+        });
+        smoothScroll(resultWrap);
+        return;
+      }
+
+      resultGeneric = picked.generic;
+      // pickResults returns score order (results[0] = best-fit match).
+      var scoreOrder = picked.results;
+      var count = scoreOrder.length;
+
+      // Podium order: keep the score ranking, but demote sold-out products to
+      // the end so the elevated first slot is always something the shopper can
+      // buy. Array.sort is stable, so equal-availability items keep score order.
+      var displayOrder = scoreOrder.slice().sort(function (a, b) {
+        var aOut = a.card.getAttribute('data-available') === 'false' ? 1 : 0;
+        var bOut = b.card.getAttribute('data-available') === 'false' ? 1 : 0;
+        return aOut - bOut;
+      });
+
+      // The hero is whatever leads the podium (the best buyable match).
+      var best = displayOrder[0];
+      var bestTitle = best.card.getAttribute('data-title') || 'Your coffee maker';
+
+      // Header copy — constant "Meet your machine"; the product is named in the
+      // reasoning line below.
+      resultEyebrow.textContent = count > 1 ? 'Your matches' : 'Your match';
+      resultTitle.textContent = 'Meet your machine';
+
+      // Size the panel + grid to the number of cards.
+      resultCardHost.classList.toggle('is-multi', count > 1);
+      if (count >= 3) { resultCardHost.classList.add('is-3'); resultWrap.classList.add('is-3'); }
+      else if (count === 2) { resultCardHost.classList.add('is-2'); resultWrap.classList.add('is-2'); }
+
+      // Build the podium cards from each match's data-* attributes: hero leads
+      // (wider column, elevated, "Best match" badge); alternates get a rank
+      // label. Sold-out cards are muted with an "Out of stock" chip and a
+      // "Notify me when it's back" button (links to the PDP, where the Back in
+      // Stock app popup lives).
+      var rankLabels = ['Runner-up', 'Also fits'];
+      displayOrder.forEach(function (r, i) {
+        var c = r.card;
+        var url = c.getAttribute('data-url') || '#';
+        var title = c.getAttribute('data-title') || '';
+        var why = c.getAttribute('data-why') || '';
+        var img = c.getAttribute('data-image') || '';
+        var priceMoney = c.getAttribute('data-price-money') || '';
+        var compareMoney = c.getAttribute('data-compare-money') || '';
+        var saveMoney = c.getAttribute('data-save-money') || '';
+        var soldOut = c.getAttribute('data-available') === 'false';
+        var isBest = i === 0;
+
+        var card = document.createElement('article');
+        card.className = 'cf-pcard'
+          + (isBest && count > 1 ? ' cf-pcard--best' : '')
+          + (soldOut ? ' cf-pcard--soldout' : '');
+
+        var html = '';
+        if (count > 1) {
+          html += isBest
+            ? '<span class="cf-pcard__badge">Best match</span>'
+            : '<span class="cf-pcard__rank">' + esc(rankLabels[i - 1] || 'Also fits') + '</span>';
+        }
+        html += '<a class="cf-pcard__media" href="' + esc(url) + '" tabindex="-1" aria-hidden="true">'
+          + (img ? '<img src="' + esc(img) + '" alt="" loading="lazy">' : '')
+          + '</a>';
+        html += '<h3 class="cf-pcard__name"><a href="' + esc(url) + '">' + esc(title) + '</a></h3>';
+        if (why) html += '<p class="cf-pcard__why">' + esc(why) + '</p>';
+        if (soldOut) html += '<span class="cf-pcard__stock"><span class="dot"></span>Out of stock</span>';
+        html += '<div class="cf-pcard__price"><span class="now">' + esc(priceMoney) + '</span>'
+          + (compareMoney ? '<span class="was">' + esc(compareMoney) + '</span>' : '')
+          + (saveMoney ? '<span class="save">Save ' + esc(saveMoney) + '</span>' : '')
+          + '</div>';
+        if (soldOut) {
+          html += '<a class="button button--secondary cf-pcard__cta" href="' + esc(url) + '">'
+            + BELL_SVG + 'Notify me when it\'s back</a>';
+        } else {
+          html += '<a class="button ' + (isBest ? 'button--primary' : 'button--secondary')
+            + ' cf-pcard__cta" href="' + esc(url) + '">Shop now</a>';
+        }
+        card.innerHTML = html;
+        resultCardHost.appendChild(card);
+      });
+
+      renderChips(best);
+      setShareHash();
+
+      quizEl.style.display = 'none';
+      resultWrap.hidden = false;
+      requestAnimationFrame(function () {
+        resultWhy.textContent = buildWhy({ best: best, generic: resultGeneric }, bestTitle, 0, count);
+      });
+      smoothScroll(resultWrap);
+      resultTitle.setAttribute('tabindex', '-1');
+      resultTitle.focus();
+    }
+
+    /* ---------- Restore from a shared URL ---------- */
+    // Rehydrate the answer set from the hash and jump straight to results.
+    // Options are role=button (not native inputs), so their selected state is
+    // re-applied here for when the shopper hits Back.
+    function applyAnswersToUI() {
+      var stepEls = stepsHost.querySelectorAll('.cf-step');
+      STEPS.forEach(function (step, i) {
+        var stepEl = stepEls[i];
+        if (!stepEl) return;
+        var val = answers[step.key];
+        Array.prototype.forEach.call(stepEl.querySelectorAll('.cf-option'), function (btn) {
+          var v = btn.getAttribute('data-value');
+          var on = step.type === 'multi'
+            ? (Array.isArray(val) && val.indexOf(v) !== -1)
+            : (val === v);
+          btn.setAttribute('aria-checked', on ? 'true' : 'false');
+          btn.classList.toggle('is-selected', on);
+        });
+        if (step.type === 'multi') {
+          var list = stepEl.querySelector('.cf-options');
+          if (list) refreshExclusive(list);
+        }
+      });
+    }
+
+    function restore() {
+      var m = location.hash.match(/^#cf-match=(.*)$/);
+      if (!m) return;
+      var parts = decodeURIComponent(m[1]).split('|');
+      var brew = parts[0] ? parts[0].split('.').filter(Boolean) : [];
+      var milk = parts[1] || '';
+      var feat = parts[2] ? parts[2].split('.').filter(Boolean) : [];
+      if (!brew.length && !milk) return;
+      answers = {};
+      if (brew.length) answers.brew = brew;
+      if (milk) answers.milk = milk;
+      if (feat.length) answers.features = feat;
+      applyAnswersToUI();
+      finish();
+    }
+
+    /* ---------- Init ---------- */
+    buildSteps();
+    showStep(0);
+    restore();
+  })();
+</script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Coffee finder",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Breadcrumb"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_breadcrumb",
+      "label": "Show breadcrumb",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "breadcrumb_parent_title",
+      "label": "Parent label",
+      "info": "Optional. Leave blank for Home › this page."
+    },
+    {
+      "type": "url",
+      "id": "breadcrumb_parent_link",
+      "label": "Parent link"
+    },
+    {
+      "type": "header",
+      "content": "Products"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Coffee & espresso collection",
+      "info": "Products in this collection are scored by the quiz. If left blank, defaults to the collection with handle 'coffee-and-espresso'."
+    },
+    {
+      "type": "text",
+      "id": "capsule_pick",
+      "label": "Always include for pod/capsule picks",
+      "info": "When a shopper selects pods/capsules, this product is always one of the recommended matches. Match by product title (partial, case-insensitive). Leave blank to disable.",
+      "default": "Caffeinator"
+    },
+    {
+      "type": "header",
+      "content": "Required product tags"
+    },
+    {
+      "type": "paragraph",
+      "content": "Scoring reads namespaced tags on each coffee product. Active: brew:drip/capsule/espresso (one or more) and feat:programmable/built-in-grinder/single-serve/thermal-carafe/milk-frother/compact (optional). budget:* and cap:* tags are currently unused (the quiz no longer asks those questions) but are safe to keep — they take effect again if those questions are reinstated. Untagged products still appear via a fallback but score lower."
+    },
+    {
+      "type": "header",
+      "content": "Intro"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Find your perfect coffee maker"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "title-sm", "label": "Small" },
+        { "value": "title-md", "label": "Medium" },
+        { "value": "title-lg tracking-heading", "label": "Large" },
+        { "value": "title-xl tracking-heading", "label": "Extra large" }
+      ],
+      "default": "title-lg tracking-heading"
+    },
+    {
+      "type": "richtext",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "<p>Answer a few quick questions and we'll match you with the Chefman coffee maker that fits your taste, your kitchen, and your routine.</p>"
+    },
+    {
+      "type": "text",
+      "id": "type_cta_label",
+      "label": "Type card button label",
+      "default": "Learn more"
+    },
+    {
+      "type": "header",
+      "content": "Coffee types"
+    },
+    {
+      "type": "text",
+      "id": "types_heading",
+      "label": "Types heading",
+      "info": "Shown above the three coffee-maker type cards. Leave blank to hide.",
+      "default": "Not sure yet? Know the three types first"
+    },
+    {
+      "type": "richtext",
+      "id": "types_intro",
+      "label": "Types intro",
+      "default": "<p>Every Chefman coffee maker is one of these. Two minutes here makes the quiz obvious.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Comparison table"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_comparison",
+      "label": "Show comparison table",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "comparison_heading",
+      "label": "Comparison heading",
+      "default": "How the three compare"
+    },
+    {
+      "type": "header",
+      "content": "Quiz"
+    },
+    {
+      "type": "text",
+      "id": "quiz_heading",
+      "label": "Quiz heading",
+      "default": "Take the 30-second quiz"
+    },
+    {
+      "type": "header",
+      "content": "Section"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 100
+    },
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "Show divider",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "rounded",
+      "label": "Rounded section",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "coffee_type",
+      "name": "Coffee maker type",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Drip"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Guide page link",
+          "info": "Optional. The \"Learn more\" button links here (e.g. the Drip / Capsule / Espresso page). The button only shows when this is set."
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Ground coffee, hot water, a full carafe — the reliable backbone of any kitchen."
+        },
+        {
+          "type": "text",
+          "id": "best_for",
+          "label": "Best for",
+          "default": "Households that drink coffee by the pot."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Coffee finder",
+      "blocks": [
+        {
+          "type": "coffee_type",
+          "settings": {
+            "title": "Drip",
+            "description": "Ground coffee, hot water, a full carafe — drip machines are the reliable backbone of any kitchen. Set it, walk away, and pour cup after cup.",
+            "best_for": "Households that drink coffee by the pot and want fuss-free mornings."
+          }
+        },
+        {
+          "type": "coffee_type",
+          "settings": {
+            "title": "Capsule / Single-Serve",
+            "description": "Drop in a pod, press a button, done — no grinding, no measuring, no cleanup. Unbeatable speed and consistency, every single time.",
+            "best_for": "Solo drinkers, busy mornings, and homes where everyone wants something different."
+          }
+        },
+        {
+          "type": "coffee_type",
+          "settings": {
+            "title": "Espresso",
+            "description": "Pressurized brewing pulls rich, concentrated shots — the foundation for lattes, cappuccinos, and flat whites at home. Genuine coffee-shop quality.",
+            "best_for": "Latte lovers and aspiring home baristas willing to dial it in."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

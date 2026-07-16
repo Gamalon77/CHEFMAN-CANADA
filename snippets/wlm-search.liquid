@@ -1,0 +1,27 @@
+{%- assign w_continue = 'no' -%}
+{% assign wlmHideItem_Search = false %}{% assign wlmLockedTags299315 = false %}
+{% assign wlmLockedTags384432 = false %}
+{% for tag in customer.tags %}
+{% if tag == 'employee_purchase' %}{% assign wlmLockedTags299315 = true %}{% endif %}
+{% if tag == 'employee_purchase' %}{% assign wlmLockedTags384432 = true %}{% endif %}
+{% endfor %}
+
+
+{%  if wlm-search.object_type == 'product' and wlm-search.collections %}
+
+{% for c in wlm-search.collections %}
+
+    {% if c.id == 458756096255 %}
+{% unless customer %}
+{% assign wlmLockON = true %}
+  {% assign wlmHideItem_Search = true %}
+{% else %}
+{% unless wlmLockedTags384432 %}{% assign wlmHideItem_Search = true %}{% endunless %}
+{% endunless %}
+
+{% endif %}
+{% endfor %}{% endif %}
+
+
+{% if wlmHideItem_Search == true %}{% continue %}{% endif %} {%- if wlm_is_render == 'yes' -%}{{- w_continue -}}{%-endif -%} 
+

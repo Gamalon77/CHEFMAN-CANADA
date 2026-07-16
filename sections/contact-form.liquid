@@ -13,7 +13,7 @@
     <div class="contact flex flex-col lg:flex-row">
       {%- liquid
         assign custom_fields = section.blocks | where: "type", "custom_field"
-        assign form_id = 'ContactForm-' | append: section.id
+        assign form_id = 'ContactForm'
       -%}
       {%- form 'contact', id: form_id, class: 'grow' -%}
         <div class="contact__fields flex flex-wrap gap-4d5 md:gap-6">
@@ -41,7 +41,7 @@
               autocomplete="name"
               type="text"
               id="ContactFormName-{{ section.id }}"
-              name="contact[{{ 'contact.form.name' | t }}]"
+              name="contact[full_name]"
               value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
               placeholder="{{ 'contact.form.name' | t | escape }}"
             />
@@ -156,22 +156,26 @@
           {%- endfor -%}
 
           <div class="field field--full">
-            <textarea
-              class="textarea is-floating"
-              rows="5"
-              id="ContactFormMessage-{{ section.id }}"
-              name="contact[{{ 'contact.form.message' | t }}]"
-              placeholder=" "
-            >
-              {{- form.body -}}
-            </textarea>
-            <label class="label is-floating" for="ContactFormMessage-{{ section.id }}">{{ 'contact.form.message' | t }}</label>
-          </div>
+  <textarea
+    class="textarea is-floating"
+    rows="5"
+    id="ContactFormMessage-{{ section.id }}"
+    name="contact[{{ 'contact.form.message' | t }}]"
+    placeholder=" "
+  >
+    {{- form.body -}}
+  </textarea>
+  <label class="label is-floating" for="ContactFormMessage-{{ section.id }}">
+    {{ 'contact.form.message' | t }}
+  </label>
+</div>
+
+      
           <div class="field field--full">
             <label for="ContactSubmit-{{ section.id }}" class="sr-only">{{ 'contact.form.send' | t }}</label>
-            <button type="submit" id="ContactSubmit-{{ section.id }}" class="button button--primary button--fixed" is="hover-button">
+            <button type="submit" id="submit_button_contact" id="ContactSubmit-{{ section.id }}" class="button button--primary button--fixed" is="hover-button">
               <span class="btn-fill" data-fill></span>
-              <span class="btn-text">{{ 'contact.form.send' | t }}</span>
+              <span class="btn-text">Opt Out</span>
             </button>
           </div>
 
@@ -183,7 +187,6 @@
           {%- endcomment -%}
           <div class="field field--full rte text-sm">
             {% # theme-check-disable TranslationKeyExists %}
-            {{- 'shopify.online_store.spam_detection.disclaimer_html' | t -}}
             {% # theme-check-enable TranslationKeyExists %}
           </div>
         </div>

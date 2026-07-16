@@ -1,0 +1,309 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_size": "title-xl",
+        "heading_alignment": "text-left",
+        "heading_tag": "h1",
+        "text_size": "text-lg md:text-2xl",
+        "padding_top": 72,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Contact Us",
+            "heading_size": "title-xl tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We'd love to hear from you. Our team is here to help. <br/></p><p>Email: <a href=\"mailto:support@chefman.com\" target=\"_blank\" title=\"mailto:support@chefman.com\"><strong>support@chefman.com</strong></a></p><p>Call Toll Free: <a href=\"tel:1-888-315-6553\" title=\"tel:1-888-315-6553\">1-888-315-6553</a></p><p>Mon – Thurs: 09:00 – 17:00 (EST)<br/>Fri: 09:00 - 14:00 (EST)<br/>Sat & Sun: Closed</p>",
+            "text_size": "subtext-lg",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "disabled": true,
+      "settings": {
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    },
+    "rich_text_q68mYX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fexfJK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Do Not Sell My Personal Information",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "spacing_w4fVKk": {
+          "type": "spacing",
+          "settings": {
+            "height": 40,
+            "height_mobile": 28
+          }
+        },
+        "text_zwb499": {
+          "type": "text",
+          "settings": {
+            "text": "{{ page.content }}",
+            "text_size": "subtext-lg",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_98D6Qp": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "View Documentation",
+            "button_link": "shopify://pages/document-library-catalog",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": true,
+            "button_icon": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_fexfJK",
+        "spacing_w4fVKk",
+        "text_zwb499",
+        "button_98D6Qp"
+      ],
+      "settings": {
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 0,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    },
+    "multicolumn_EN3m37": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_gPM7RA": {
+          "type": "column",
+          "settings": {
+            "show_border": false,
+            "text_alignment": "center",
+            "text_alignment_mobile": "left",
+            "image_ratio": "adapt",
+            "heading": "Email",
+            "heading_size": "text-lg-2xl",
+            "text": "<p><a href=\"mailto:support@chefman.com\" target=\"_blank\" title=\"mailto:support@chefman.com\">support@chefman.com</a></p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column_GqwzF9": {
+          "type": "column",
+          "settings": {
+            "show_border": false,
+            "text_alignment": "center",
+            "text_alignment_mobile": "left",
+            "image_ratio": "adapt",
+            "heading": "Call us toll free",
+            "heading_size": "text-lg-2xl",
+            "text": "<p><a href=\"tel:1-888-315-6553\" title=\"tel:1-888-315-6553\">1-888-315-6553</a></p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "column_gPM7RA",
+        "column_GqwzF9"
+      ],
+      "disabled": true,
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "gap": "small",
+        "columns": 2,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 88,
+        "padding_bottom": 120,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "image_with_text_overlay_q8wzUM": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "name": "t:sections.image-with-text-overlay.presets.name",
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/performance-series-banner2.jpg",
+        "image_height": "450px",
+        "content_width": "small",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/performance-series-collection.jpg",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#121e2a",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#121e2a",
+        "overlay_opacity": 70,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": false,
+        "rounded": true,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "dns_opt_out": {
+      "type": "custom-liquid",
+      "settings": {
+        "liquid": "<script>\n(function() {\n  var params = new URLSearchParams(window.location.search);\n  if (params.get('success') !== 'true') return;\n\n  function deleteAllCookies() {\n    var cookies = document.cookie.split(';');\n    var hostname = window.location.hostname;\n    var parts = hostname.split('.');\n    var domains = [hostname, '.' + hostname];\n    if (parts.length > 2) {\n      var root = parts.slice(-2).join('.');\n      domains.push(root, '.' + root);\n    }\n    cookies.forEach(function(c) {\n      var eq = c.indexOf('=');\n      var name = (eq > -1 ? c.substring(0, eq) : c).trim();\n      document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';\n      domains.forEach(function(d) {\n        document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=' + d;\n      });\n    });\n  }\n\n  function revokeConsent() {\n    if (typeof window.gtag === 'function') {\n      window.gtag('consent', 'update', {\n        analytics_storage: 'denied',\n        ad_storage: 'denied',\n        ad_user_data: 'denied',\n        ad_personalization: 'denied'\n      });\n    }\n    if (typeof window.fbq === 'function') { window.fbq('consent', 'revoke'); }\n    try { localStorage.setItem('shopify_ccpa_opt_out', '1'); } catch(e) {}\n    deleteAllCookies();\n    setTimeout(function() { window.location.replace(window.location.pathname); }, 500);\n  }\n\n  function run() {\n    if (window.Shopify && window.Shopify.customerPrivacy) {\n      window.Shopify.customerPrivacy.setTrackingConsent({\n        marketing: false,\n        analytics: false,\n        preferences: false\n      }, revokeConsent);\n    } else if (window.Shopify && typeof window.Shopify.loadFeatures === 'function') {\n      window.Shopify.loadFeatures([{\n        name: 'consent-tracking-api',\n        version: '0.1',\n        onLoad: function() {\n          window.Shopify.customerPrivacy.setTrackingConsent({\n            marketing: false,\n            analytics: false,\n            preferences: false\n          }, revokeConsent);\n        }\n      }]);\n    } else {\n      revokeConsent();\n    }\n  }\n\n  if (document.readyState === 'loading') {\n    document.addEventListener('DOMContentLoaded', run);\n  } else {\n    run();\n  }\n})();\n</script>",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich-text",
+    "rich_text_q68mYX",
+    "multicolumn_EN3m37",
+    "image_with_text_overlay_q8wzUM",
+    "dns_opt_out"
+  ]
+}

@@ -1,0 +1,282 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "kettle_detail": {
+      "type": "kettle-detail",
+      "blocks": {
+        "why_1": {
+          "type": "reason",
+          "settings": {
+            "title": "Pour exactly where you want",
+            "text": "The signature slow-control gooseneck spout delivers a thin, steady stream instead of a rushing pour, so you can saturate coffee grounds evenly for pour-over or pour a smooth, controlled stream while whisking matcha."
+          }
+        },
+        "why_2": {
+          "type": "reason",
+          "settings": {
+            "title": "Compact and counter-ready",
+            "text": "At a personal 0.8L (about 2–4 cups) with a sleek matte finish, it takes up little space and looks like a designed object — ideal for solo drinkers, small kitchens, and travel."
+          }
+        },
+        "why_3": {
+          "type": "reason",
+          "settings": {
+            "title": "Fast, cordless convenience",
+            "text": "Water heats quickly, then the kettle lifts off its 360° swivel base so you can carry it straight to your dripper or bowl — no cord in the way."
+          }
+        },
+        "why_4": {
+          "type": "reason",
+          "settings": {
+            "title": "Safety built in",
+            "text": "Automatic shut-off and boil-dry protection are standard, every model is cETL approved, and each one is backed by a 1-year Chefman assurance."
+          }
+        },
+        "why_5": {
+          "type": "reason",
+          "settings": {
+            "title": "A gooseneck for every level",
+            "text": "There's a gooseneck for every level: start with a straightforward one-touch boiler, or choose a model with temperature presets for dialing in the ideal heat for pour-over coffee, matcha, and delicate teas."
+          }
+        },
+        "feat_1": {
+          "type": "feature",
+          "settings": {
+            "icon": "🦢",
+            "title": "Slow-control gooseneck spout",
+            "text": "A long, curved spout pours a thin, steady stream exactly where you aim it."
+          }
+        },
+        "feat_2": {
+          "type": "feature",
+          "settings": {
+            "icon": "☕",
+            "title": "Made for pour-over & matcha",
+            "text": "Saturate grounds evenly for a cleaner cup, or pour a smooth stream for whisking matcha."
+          }
+        },
+        "feat_3": {
+          "type": "feature",
+          "settings": {
+            "icon": "🔌",
+            "title": "Cordless 360° base",
+            "text": "Lift the kettle off its swivel base and carry it right to your dripper or bowl."
+          }
+        },
+        "feat_4": {
+          "type": "feature",
+          "settings": {
+            "icon": "🛡️",
+            "title": "Auto shut-off & boil-dry protection",
+            "text": "Standard safety on every model, and cETL approved for peace of mind."
+          }
+        },
+        "feat_5": {
+          "type": "feature",
+          "settings": {
+            "icon": "🌡️",
+            "title": "Temperature presets on select models",
+            "text": "Higher-end models let you choose the right heat for coffee, matcha, or delicate teas."
+          }
+        },
+        "feat_6": {
+          "type": "feature",
+          "settings": {
+            "icon": "💧",
+            "title": "Easy-view water window",
+            "text": "See exactly how much water you're heating and pouring."
+          }
+        },
+        "note_1": {
+          "type": "note",
+          "settings": {
+            "title": "Compact 0.8L size",
+            "text": "Chefman gooseneck kettles come in a personal 0.8L capacity — about 2–4 cups — which makes them ideal for solo brewing, small kitchens, and travel, and quick to heat a single serving."
+          }
+        },
+        "note_2": {
+          "type": "note",
+          "settings": {
+            "title": "Temperature guidance",
+            "text": "Pour-over coffee is typically brewed around 195–205°F, while matcha and delicate green teas do best with water below a full boil. Models with temperature presets make hitting the right range simple."
+          }
+        },
+        "note_3": {
+          "type": "note",
+          "settings": {
+            "title": "Cleaning & descaling",
+            "text": "If you have hard water, descale about once a month with a 50/50 mix of water and white vinegar: boil, let it sit 15–20 minutes, then rinse well. Hand-wash the body, never submerge the electrical base, and fill only between the min and max lines."
+          }
+        },
+        "note_4": {
+          "type": "note",
+          "settings": {
+            "title": "Design & build options",
+            "text": "A sleek matte finish keeps the look minimal and counter-ready, and an easy-view water window shows exactly how much you're heating and pouring. Every model lifts off a 360° cordless swivel base, so you can carry it straight to your dripper, mug, or matcha bowl."
+          }
+        },
+        "rel_1": {
+          "type": "related",
+          "settings": {
+            "label": "All kettle types",
+            "link": "/pages/find-your-perfect-electric-kettle-chefman"
+          }
+        },
+        "rel_2": {
+          "type": "related",
+          "settings": {
+            "label": "Fast-Boil",
+            "link": "/pages/fast-boil-electric-kettles-chefman"
+          }
+        },
+        "rel_3": {
+          "type": "related",
+          "settings": {
+            "label": "Tea Infuser",
+            "link": "/pages/tea-infuser-electric-kettles-chefman"
+          }
+        },
+        "rel_4": {
+          "type": "related",
+          "settings": {
+            "label": "Temperature Control",
+            "link": "/pages/temperature-control-electric-kettles-chefman"
+          }
+        },
+        "rel_5": {
+          "type": "related",
+          "settings": {
+            "label": "Keep-Warm",
+            "link": "/pages/keep-warm-electric-kettles-chefman"
+          }
+        },
+        "rel_6": {
+          "type": "related",
+          "settings": {
+            "label": "Stainless Steel",
+            "link": "/pages/stainless-steel-electric-kettles-chefman"
+          }
+        },
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "What is a gooseneck kettle used for?",
+            "answer": "<p>A gooseneck kettle is used to pour a slow, precise stream of hot water, which makes it ideal for pour-over coffee and matcha. The narrow, curved spout lets you saturate coffee grounds evenly for a balanced extraction, or pour a controlled stream while whisking matcha — and it's a satisfying way to pour anything.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "What's the difference between a gooseneck kettle and a regular electric kettle?",
+            "answer": "<p>The main difference is the spout. A regular electric kettle has a standard drip-free spout made for quick, everyday pouring, while a gooseneck kettle has a long, narrow, curved spout that pours a slow, precise stream. That control is what makes a gooseneck ideal for pour-over coffee and matcha, where the way you pour shapes the result. Chefman gooseneck kettles also come in a compact 0.8L size, so they suit solo brewers and small kitchens.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I use a gooseneck kettle for matcha?",
+            "answer": "<p>Yes. A gooseneck kettle is great for matcha because the precise stream helps you add water gradually while whisking. Matcha and other delicate green teas taste best with water below a full boil, so a model with temperature presets makes it easy to reach the right heat.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "What size are Chefman gooseneck kettles?",
+            "answer": "<p>Chefman gooseneck kettles come in a compact 0.8L capacity, which is roughly 2–4 cups. That personal size is perfect for solo coffee and tea drinkers, small kitchens, and travel, and it heats a single serving quickly.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq",
+          "settings": {
+            "question": "Do gooseneck kettles have temperature control?",
+            "answer": "<p>It depends on the model. Chefman offers a gooseneck for every level — from a simple one-touch boiler to models with temperature presets for dialing in the ideal heat for coffee, matcha, or delicate teas. Check the details on the specific model you're considering.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I clean and descale a gooseneck kettle?",
+            "answer": "<p>To keep boil times fast and water tasting fresh, descale about once a month if you have hard water: fill with a 50/50 mix of water and white vinegar, boil, let it sit 15–20 minutes, then rinse well. Hand-wash the body and never submerge the electrical base.</p>"
+          }
+        },
+        "faq_7": {
+          "type": "faq",
+          "settings": {
+            "question": "Are Chefman gooseneck kettles safe to use?",
+            "answer": "<p>Yes. Every Chefman gooseneck kettle includes automatic shut-off and boil-dry protection, lifts off a 360° cordless swivel base, is cETL approved, and is backed by a 1-year Chefman assurance.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "why_1",
+        "why_2",
+        "why_3",
+        "why_4",
+        "why_5",
+        "feat_1",
+        "feat_2",
+        "feat_3",
+        "feat_4",
+        "feat_5",
+        "feat_6",
+        "note_1",
+        "note_2",
+        "note_3",
+        "note_4",
+        "rel_1",
+        "rel_2",
+        "rel_3",
+        "rel_4",
+        "rel_5",
+        "rel_6",
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7"
+      ],
+      "settings": {
+        "show_breadcrumb": true,
+        "crumb1_title": "Kettles",
+        "crumb1_link": "shopify://collections/kettles-2",
+        "crumb2_title": "Find your kettle",
+        "crumb2_link": "/pages/find-your-perfect-electric-kettle-chefman",
+        "eyebrow": "Chefman Kettle Guide",
+        "heading": "Electric Gooseneck Kettles",
+        "heading_size": "title-lg tracking-heading",
+        "intro": "<p>Meet the kettle built for the perfect pour. Chefman gooseneck kettles give you the slow, controlled stream that pour-over coffee and matcha depend on — in a compact design that looks as good on the counter as it performs.</p>",
+        "best_for": "pour-over coffee & matcha",
+        "what_heading": "What it is",
+        "what_it_is": "<p>A gooseneck kettle is defined by its spout — a long, slender, curved neck that pours a thin, steady, slow-controlled stream instead of a rushing gush. That precision is exactly what pour-over coffee and matcha depend on: you can saturate the grounds evenly for a balanced extraction, or pour a smooth, measured stream as you whisk. Chefman's gooseneck is compact at 0.8L (about 2–4 cups) with a sleek matte finish that looks as good on the counter as it performs. It lifts off a 360° cordless base, has an easy-view water-level window and a drip-free pour, and shuts off automatically once the water's ready. Select models add temperature presets, so you can dial in the ideal heat for coffee, matcha, and delicate teas.</p>",
+        "why_heading": "Why choose a Gooseneck kettle",
+        "features_heading": "Key features",
+        "who_heading": "Who it's for",
+        "who_for": "<p>Gooseneck kettles are made for pour-over coffee lovers, matcha drinkers, and anyone who takes pride in a beautiful, controlled pour. The compact 0.8L size (about 2–4 cups) is perfect for solo brewers, small kitchens, and travel, while the precise spout rewards anyone dialing in their morning ritual. If you want café-quality control at home — or simply enjoy the satisfying feel of a slow, deliberate pour — this is your kettle.</p>",
+        "notes_heading": "Good to know",
+        "product_handles": "0-8l-electric-gooseneck-kettle, fast-boil-0-8l-gooseneck-kettle",
+        "shop_heading": "Shop Gooseneck kettles",
+        "shop_button_label": "Shop all kettles",
+        "shop_button_link": "shopify://collections/kettles-2",
+        "related_heading": "Explore other kettle types",
+        "faq_heading": "Frequently asked questions",
+        "padding_top": 64,
+        "padding_bottom": 100,
+        "divider": false,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "kettle_detail"
+  ]
+}

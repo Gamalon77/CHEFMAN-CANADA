@@ -8,6 +8,16 @@
   assign alt = 'general.accessibility.load_video' | t: description: video_alt | escape
   assign preview_image = video.preview_image | default: cover_image
 
+  comment
+    On mobile we drop `playsinline` so iPhones enter native fullscreen automatically
+    when playback starts (Android/iPad use the Fullscreen API in theme.js instead).
+    Keep it for autoplay videos, which must be allowed to play inline.
+  endcomment
+  assign use_playsinline = true
+  if mobile_fullscreen and autoplay != true
+    assign use_playsinline = false
+  endif
+
   capture poster
     if preview_image != blank
       echo preview_image | image_url: width: preview_image.width | image_tag: loading: loading, fetchpriority: fetchpriority, sizes: sizes, widths: '300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', is: 'lazy-image', alt: alt
@@ -22,12 +32,13 @@
     style="--aspect-ratio: {{ video.aspect_ratio }}"
     {%- unless video %} host="{{ video_url.type }}"{% endunless -%}
     {%- if autoplay %} autoplay{% endif -%}
+    {%- if mobile_fullscreen %} mobile-fullscreen{% endif -%}
   >
     {{- poster -}}
 
     <template>
       {%- if video != blank -%}
-        {{- video | video_tag: playsinline: true, muted: muted, autoplay: true, loop: loop, controls: false, preload: 'metadata', image_size: '800x' -}}
+        {{- video | video_tag: playsinline: use_playsinline, muted: muted, autoplay: true, loop: loop, controls: false, preload: 'metadata', image_size: '800x' -}}
       {%- else -%}
         {%- if video_url.type == 'youtube' -%}
           <iframe src="https://www.youtube.com/embed/{{ video_url.id }}?playsinline=1&controls=0{% if autoplay %}&autoplay=1{% endif %}{% if muted %}&mute=1{% endif %}{% if loop %}&loop=1{% endif %}&playlist={{ video_url.id }}&enablejsapi=1&rel=0&modestbranding=1&origin={{ 'https://' | append: request.host | url_encode }}" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>

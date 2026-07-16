@@ -115,6 +115,21 @@
                         </div>
                       </animate-element>
                     {%- endif -%}
+
+                  {%- when 'image' -%}
+                    {%- if block.settings.image != blank -%}
+                      <animate-element class="block" data-animate="fade-up" data-animate-delay="{{ delay | times: 250 }}" {{ block.shopify_attributes }}>
+                        <style>
+                          #banner-img-{{ block.id }} { max-width: {{ block.settings.image_width_mobile }}px; }
+                          @media screen and (min-width: 768px) {
+                            #banner-img-{{ block.id }} { max-width: {{ block.settings.image_width }}px; }
+                          }
+                        </style>
+                        <div id="banner-img-{{ block.id }}">
+                          {{- block.settings.image | image_url: width: block.settings.image_width | image_tag: loading: 'lazy', widths: '100,150,200,250,300,400,500,600', is: 'lazy-image', alt: block.settings.image.alt -}}
+                        </div>
+                      </animate-element>
+                    {%- endif -%}
                 {%- endcase -%}
               {%- endfor -%}
             </div>
@@ -379,7 +394,7 @@
       "type": "color",
       "id": "color_overlay",
       "label": "t:sections.global.settings.color_overlay.label",
-      "default": "#1f1f1f"
+      "default": "#121e2a"
     },
     {
       "type": "range",
@@ -595,6 +610,38 @@
           "max": 120,
           "step": 4,
           "unit": "px"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image / Logo",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "label": "Image width (desktop)",
+          "min": 50,
+          "max": 600,
+          "step": 10,
+          "unit": "px",
+          "default": 200
+        },
+        {
+          "type": "range",
+          "id": "image_width_mobile",
+          "label": "Image width (mobile)",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "default": 150
         }
       ]
     }

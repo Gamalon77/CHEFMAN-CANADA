@@ -1,0 +1,232 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "coffee_guide": {
+      "type": "coffee-guide",
+      "blocks": {
+        "b1_rich_text": {
+          "type": "rich_text",
+          "settings": {
+            "eyebrow": "",
+            "heading": "What is single-serve coffee?",
+            "body": "<p>Capsule and single-serve machines brew one cup at a time from a pre-measured pod. The machine pierces the capsule, forces hot water through it, and delivers a consistent cup straight into your mug. Every cup is identical, and there's nothing to clean but the spent pod.</p>",
+            "narrow": false
+          }
+        },
+        "b2_image_text": {
+          "type": "image_text",
+          "settings": {
+            "image": "shopify://shop_images/capsule-coffee-1.jpg",
+            "image_position": "left",
+            "eyebrow": "How it works",
+            "heading": "One cup, on demand",
+            "body": "<p>Drop in a pod, choose your cup size, and brew. Because each capsule is sealed and pre-portioned, you get the same great cup every time — and everyone in the house can have a different flavor.</p><ul><li>Ready in under a minute</li><li>Zero measuring or grinding</li><li>Cleanup is just tossing the pod</li></ul>",
+            "button_label": "Shop single-serve",
+            "button_link": "shopify://collections/coffee-espresso-makers"
+          }
+        },
+        "b3_image_text": {
+          "type": "image_text",
+          "settings": {
+            "image": "shopify://shop_images/capsule-coffee-2.jpg",
+            "image_position": "right",
+            "eyebrow": "Choosing one",
+            "heading": "What to look for",
+            "body": "<ul><li><strong>Pod compatibility</strong> — make sure it works with the capsules you like, or reusable pods for your own grounds.</li><li><strong>Cup sizes</strong> — from a concentrated shot to a tall travel mug.</li><li><strong>Footprint</strong> — most are compact enough for the smallest counter or office desk.</li></ul>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "b5_rich_text": {
+          "type": "rich_text",
+          "settings": {
+            "eyebrow": "",
+            "heading": "Who it's for",
+            "body": "<p>Single-serve shines for solo drinkers, busy mornings, and households where everyone wants something different. If speed, consistency, and zero cleanup matter more than dialing in every variable, this is your machine.</p>",
+            "narrow": false
+          }
+        },
+        "b4_callout": {
+          "type": "callout",
+          "settings": {
+            "heading": "Good to know",
+            "body": "<p>Love the convenience but want less waste? Many single-serve machines accept refillable pods, so you can use your own coffee and skip the disposable capsules entirely.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "b1_rich_text",
+        "b2_image_text",
+        "b3_image_text",
+        "b5_rich_text",
+        "b4_callout"
+      ],
+      "settings": {
+        "show_breadcrumb": true,
+        "breadcrumb_parent_title": "Find your perfect coffee maker",
+        "breadcrumb_parent_link": "shopify://pages/find-your-perfect-coffee-maker",
+        "show_hero": true,
+        "eyebrow": "Coffee guide",
+        "heading": "Capsule & single-serve, explained",
+        "heading_size": "title-xl tracking-heading",
+        "intro": "<p>The fastest path from craving to cup. Pop in a pod, press a button, and you've got a fresh single serving in under a minute — no grinding, no measuring, no mess.</p>",
+        "padding_top": 48,
+        "padding_bottom": 100,
+        "divider": false,
+        "rounded": false
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "title": "How does a single-serve coffee maker work?",
+            "text": "<p>A single-serve coffee maker brews one cup at a time by piercing a pre-filled pod and forcing hot water through the coffee grounds inside, sending fresh coffee straight into your mug. Because each cup is brewed on demand, there's no waiting on a full pot and no leftover coffee going to waste.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "title": "What kinds of pods can I use?",
+            "text": "<p>Many single-serve machines are designed to accept popular single-cup pod styles, such as the common K-Cup style sold by lots of different coffee brands. It's always smart to check your machine's instructions for the pod size and shape it supports, since not every pod format fits every brewer.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "title": "Can I use my own coffee instead of buying pods?",
+            "text": "<p>Yes, many single-serve brewers either include or are compatible with a reusable refillable pod that you fill with your own ground coffee. This lets you choose any roast or blend you like, often saves money over pre-filled pods, and reduces single-use waste. A medium grind, similar to what you'd use for drip coffee, usually works best.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "title": "Can I choose different cup sizes?",
+            "text": "<p>Most single-serve machines let you select from a few brew sizes, so you can make anything from a small, strong cup to a larger, milder travel mug. Keep in mind that the same pod brewed at a larger size produces a more diluted cup, so smaller sizes generally taste bolder.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "q5": {
+          "type": "question",
+          "settings": {
+            "title": "How do I clean and descale my single-serve coffee maker?",
+            "text": "<p>Regularly wash the removable parts like the drip tray and pod holder, and run a descaling cycle every few months to remove mineral buildup from the water that can affect taste and performance. You can use a store-bought descaling solution or a diluted white vinegar rinse, always followed by a few cycles of fresh water. Descaling more often helps if you have hard water.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "q6": {
+          "type": "question",
+          "settings": {
+            "title": "Are coffee pods recyclable, and what about the waste?",
+            "text": "<p>It depends on the pod's materials and your local recycling rules; some plastic or aluminum pods can be recycled if you separate the lid, empty the grounds, and follow your area's guidelines, and certain brands offer their own take-back programs. If reducing waste is a priority, a reusable refillable pod is the simplest way to cut down on single-use packaging.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "q7": {
+          "type": "question",
+          "settings": {
+            "title": "Can a single-serve machine make a full pot or carafe?",
+            "text": "<p>Single-serve machines are built to brew one cup at a time rather than a full carafe, which is part of what makes them so compact and quick. If you regularly need to serve several people at once, a traditional drip coffee maker or a hybrid machine that offers both single-cup and carafe brewing may suit you better.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7"
+      ],
+      "settings": {
+        "style": "with-border",
+        "heading": "Frequently asked questions",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 36,
+        "padding_bottom": 100,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "coffee_cta": {
+      "type": "coffee-guide",
+      "blocks": {
+        "cta": {
+          "type": "cta",
+          "settings": {
+            "heading": "Ready to find yours?",
+            "body": "<p>Browse our single-serve makers, or take the quiz to get matched in 60 seconds.</p>",
+            "button_label": "Shop all coffee makers",
+            "button_link": "shopify://collections/coffee-espresso-makers",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "cta"
+      ],
+      "settings": {
+        "show_breadcrumb": false,
+        "breadcrumb_parent_title": "Find your perfect coffee maker",
+        "breadcrumb_parent_link": "",
+        "show_hero": false,
+        "eyebrow": "",
+        "heading": "",
+        "heading_size": "title-md",
+        "intro": "",
+        "padding_top": 0,
+        "padding_bottom": 100,
+        "divider": false,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "coffee_guide",
+    "faq",
+    "coffee_cta"
+  ]
+}

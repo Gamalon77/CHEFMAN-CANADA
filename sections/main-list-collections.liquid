@@ -3,6 +3,11 @@
     --section-padding-top: {{ section.settings.padding_top }}px;
     --section-padding-bottom: {{ section.settings.padding_bottom }}px;
   }
+
+  {%- comment -%} Sit the card arrow next to the collection title instead of at the far right edge {%- endcomment -%}
+  #shopify-section-{{ section.id }} .media-card__content {
+    justify-content: flex-start;
+  }
 </style>
 
 <div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
@@ -40,12 +45,26 @@
               endif
 
               for collection in collections
-                render 'collection-card', collection: collection, image_type: section.settings.image_type, image_ratio: section.settings.image_ratio, overlay_content: section.settings.overlay_content, show_products_count: section.settings.show_products_count
+                  capture wlm_check
+                  include 'wlm-collection' with collection
+                  endcapture
+                  unless wlm_check contains "Liquid error"
+                  include 'wlm-collection' with collection
+                  endunless
+                unless collection.handle == 'chef-iq'
+                  render 'collection-card', collection: collection, image_type: section.settings.image_type, image_ratio: section.settings.image_ratio, overlay_content: section.settings.overlay_content, show_products_count: section.settings.show_products_count
+                endunless
               endfor
 
             else
               for block in section.blocks
                 assign collection = collections[block.settings.collection]
+                  capture wlm_check
+                  include 'wlm-collection' with collection
+                  endcapture
+                  unless wlm_check contains "Liquid error"
+                  include 'wlm-collection' with collection
+                  endunless
                 render 'collection-card', collection: collection, image_type: section.settings.image_type, image_ratio: section.settings.image_ratio, overlay_content: section.settings.overlay_content, show_products_count: section.settings.show_products_count, block: block
               endfor
             endif
@@ -388,7 +407,7 @@
           "type": "color",
           "id": "color_overlay",
           "label": "t:sections.global.settings.color_overlay.label",
-          "default": "#000000"
+          "default": "#121e2a"
         },
         {
           "type": "range",

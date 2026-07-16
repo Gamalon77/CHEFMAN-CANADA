@@ -1,0 +1,1380 @@
+{%- comment -%} Melt Down — pixel-art flappy game: a winged ice cream hero flaps through candy land, threading the gaps between sweets; one bump ends the run {%- endcomment -%}
+<style>
+  #shopify-section-{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+    {%- render 'section-variables', section: section -%}
+  }
+
+  #shopify-section-{{ section.id }} .fs {
+    max-width: 640px;
+    margin-inline: auto;
+    text-align: center;
+  }
+  #shopify-section-{{ section.id }} .fs__intro {
+    margin-top: var(--sp-3);
+    color: rgb(var(--color-foreground) / 0.75);
+  }
+
+  #shopify-section-{{ section.id }} .fs__hud {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-4);
+    margin: var(--sp-8) auto var(--sp-3);
+    max-width: 460px;
+  }
+  #shopify-section-{{ section.id }} .fs__stat {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  #shopify-section-{{ section.id }} .fs__stat span {
+    font-variant-numeric: tabular-nums;
+  }
+
+  #shopify-section-{{ section.id }} .fs__stage {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    margin-inline: auto;
+    aspect-ratio: 3 / 4;
+    border-radius: var(--rounded-block);
+    overflow: hidden;
+    background: #cdeefd;
+    border: 1px solid rgb(var(--color-border));
+    /* Allow page scroll from idle/paused/over states; block it only mid-game
+       (the .is-live class) so a thumb resting on the stage can't scroll-jank. */
+    touch-action: manipulation;
+    user-select: none;
+  }
+  #shopify-section-{{ section.id }} .fs__stage.is-live {
+    touch-action: none;
+  }
+  #shopify-section-{{ section.id }} canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    image-rendering: pixelated;
+  }
+
+  /* Small pause control — clicking the stage flaps, so pause lives here (or the P key). */
+  #shopify-section-{{ section.id }} .fs__pausebtn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    z-index: 2;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--rounded-full);
+    border: 1px solid rgb(var(--color-border-dark));
+    background: rgb(255 255 255 / 0.92);
+    box-shadow: 0 2px 8px rgb(18 30 42 / 0.28);
+    color: #121e2a;
+    cursor: pointer;
+  }
+  #shopify-section-{{ section.id }} .fs__pausebtn svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    display: block;
+  }
+  #shopify-section-{{ section.id }} .fs__pausebtn[hidden] { display: none; }
+  #shopify-section-{{ section.id }} .fs__pausebtn:focus-visible {
+    outline: 2px solid #121e2a;
+    outline-offset: 2px;
+  }
+
+  #shopify-section-{{ section.id }} .fs__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-4);
+    padding: var(--sp-6);
+    text-align: center;
+    background: rgb(var(--color-background) / 0.9);
+    backdrop-filter: blur(4px);
+  }
+  #shopify-section-{{ section.id }} .fs__overlay[hidden] {
+    display: none;
+  }
+  #shopify-section-{{ section.id }} .fs__overlay p {
+    color: rgb(var(--color-foreground) / 0.75);
+    max-width: 22rem;
+  }
+  #shopify-section-{{ section.id }} .fs__score-big {
+    font-variant-numeric: tabular-nums;
+  }
+  #shopify-section-{{ section.id }} .fs__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-3);
+    justify-content: center;
+  }
+  /* On mobile, drop the "→ Shop ..." suffix so the shop CTA stays punchy */
+  @media (max-width: 749px) {
+    #shopify-section-{{ section.id }} .fs__shop-suffix {
+      display: none;
+    }
+  }
+  #shopify-section-{{ section.id }} .fs__note {
+    margin-top: var(--sp-4);
+    color: rgb(var(--color-foreground) / 0.55);
+  }
+  #shopify-section-{{ section.id }} .fs__toast {
+    position: absolute;
+    inset-block-end: var(--sp-4);
+    inset-inline: 0;
+    z-index: 2;
+    margin-inline: auto;
+    width: fit-content;
+    background: #121e2a;
+    color: #fff;
+    padding: var(--sp-2) var(--sp-4);
+    border-radius: var(--rounded-full);
+    font-size: 0.85rem;
+    opacity: 0;
+    pointer-events: none;
+  }
+  #shopify-section-{{ section.id }} .fs__toast.is-show {
+    opacity: 1;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    #shopify-section-{{ section.id }} .fs__toast {
+      transition: opacity 0.2s ease;
+    }
+    #shopify-section-{{ section.id }} .button--secondary {
+      transition: background-color var(--animation-primary), color var(--animation-primary), border-color var(--animation-primary);
+    }
+  }
+
+  /* Secondary button hover: solid midnight + white text (legibility) */
+  #shopify-section-{{ section.id }} .button--secondary:hover,
+  #shopify-section-{{ section.id }} .button--secondary:focus-visible {
+    background-color: #121e2a;
+    color: #ffffff;
+    border-color: #121e2a;
+  }
+  #shopify-section-{{ section.id }} .button--secondary:hover .btn-text,
+  #shopify-section-{{ section.id }} .button--secondary:focus-visible .btn-text {
+    color: #ffffff;
+  }
+
+  /* Primary buttons here aren't is="hover-button", so the theme's fill-rise
+     never runs; its hover rule darkens the label to the (still-dark) button
+     background and it disappears. Keep the label white on hover. */
+  #shopify-section-{{ section.id }} .button--primary:hover,
+  #shopify-section-{{ section.id }} .button--primary:focus-visible {
+    color: #ffffff;
+  }
+  #shopify-section-{{ section.id }} .button--primary:hover .btn-text,
+  #shopify-section-{{ section.id }} .button--primary:focus-visible .btn-text {
+    color: #ffffff;
+  }
+</style>
+
+<div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}">
+  <div class="page-width relative">
+    <div class="fs" data-fs-root>
+
+      {%- if section.settings.heading != blank -%}
+        <h1 class="heading {{ section.settings.heading_size }}">{{ section.settings.heading }}</h1>
+      {%- endif -%}
+      {%- if section.settings.intro != blank -%}
+        <div class="fs__intro text-lg rte">{{ section.settings.intro }}</div>
+      {%- endif -%}
+
+      <div class="fs__hud">
+        <div class="fs__stat">Score <span data-fs-score>0</span></div>
+        <div class="fs__stat">Best <span data-fs-best>0</span></div>
+      </div>
+
+      <div class="fs__stage" data-fs-stage tabindex="0">
+        <canvas data-fs-canvas role="img" aria-label="Melt Down game. Tap or press Space to flap the winged ice cream flyer, thread the gaps between the sweets, and grab ice cubes before the melt meter runs out. The world changes as you go. How far can you fly?"></canvas>
+
+        <button type="button" class="fs__pausebtn" data-fs-pausebtn hidden aria-label="Pause">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><rect x="6" y="5" width="4.5" height="14" rx="1.5"></rect><rect x="13.5" y="5" width="4.5" height="14" rx="1.5"></rect></svg>
+        </button>
+
+        {%- comment -%} Start overlay {%- endcomment -%}
+        <div class="fs__overlay" data-fs-start>
+          <p class="heading title-md">Ready to fly?</p>
+          <p class="text-base">Tap, click, or press <strong>Space</strong> to flap. Thread the gaps and grab the <strong>ice cubes&nbsp;❄️</strong> so you don&rsquo;t melt. <strong>One bump ends the run.</strong> The world changes as you climb — how far can you fly?</p>
+          <button type="button" class="button button--primary" data-fs-play>
+            <span class="btn-fill" data-fill></span>
+            <span class="btn-text">{{ section.settings.play_label | default: 'Play' }}</span>
+          </button>
+        </div>
+
+        {%- comment -%} Pause overlay {%- endcomment -%}
+        <div class="fs__overlay" data-fs-pause hidden>
+          <p class="heading title-md">Paused</p>
+          <button type="button" class="button button--primary" data-fs-resume>
+            <span class="btn-fill" data-fill></span>
+            <span class="btn-text">Resume</span>
+          </button>
+        </div>
+
+        {%- comment -%} Game over overlay {%- endcomment -%}
+        <div class="fs__overlay" data-fs-over hidden>
+          <p class="heading title-md" data-fs-over-title>Splat!</p>
+          <p class="text-base">You scored <strong class="fs__score-big" data-fs-final>0</strong>.<br><span data-fs-best-line></span></p>
+          <div class="fs__actions">
+            <button type="button" class="button button--primary" data-fs-again>
+              <span class="btn-fill" data-fill></span>
+              <span class="btn-text">Play again</span>
+            </button>
+            <button type="button" class="button button--secondary" data-fs-share>
+              <span class="btn-fill" data-fill></span>
+              <span class="btn-text">Share score</span>
+            </button>
+          </div>
+          {%- if section.settings.shop_link != blank and section.settings.shop_label != blank -%}
+            {%- assign shop_parts = section.settings.shop_label | split: '→' -%}
+            <a class="button button--secondary fs__shop" href="{{ section.settings.shop_link }}">
+              <span class="btn-fill" data-fill></span>
+              <span class="btn-text">{{ shop_parts[0] | strip }}{%- if shop_parts.size > 1 -%}<span class="fs__shop-suffix"> → {{ shop_parts[1] | strip }}</span>{%- endif -%}</span>
+            </a>
+          {%- endif -%}
+        </div>
+
+        <div class="fs__toast" data-fs-toast aria-live="polite"></div>
+      </div>
+
+      <p class="fs__note text-sm" data-fs-note>Tap, click, or press Space to flap. Grab ice cubes to keep from melting. Press P or the ⏸ button to pause.</p>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var root = document.getElementById('shopify-section-{{ section.id }}');
+    if (!root) return;
+    var canvas = root.querySelector('[data-fs-canvas]');
+    var stage = root.querySelector('[data-fs-stage]');
+    if (!canvas || !stage) return;
+    var ctx = canvas.getContext('2d');
+
+    var scoreEl = root.querySelector('[data-fs-score]');
+    var bestEl = root.querySelector('[data-fs-best]');
+    var startOv = root.querySelector('[data-fs-start]');
+    var pauseOv = root.querySelector('[data-fs-pause]');
+    var overOv = root.querySelector('[data-fs-over]');
+    var overTitleEl = root.querySelector('[data-fs-over-title]');
+    var finalEl = root.querySelector('[data-fs-final]');
+    var bestLineEl = root.querySelector('[data-fs-best-line]');
+    var toastEl = root.querySelector('[data-fs-toast]');
+    var noteEl = root.querySelector('[data-fs-note]');
+    var pauseBtn = root.querySelector('[data-fs-pausebtn]');
+
+    var STORAGE_KEY = 'chefman-melt-down-hi';
+    var best = 0;
+    try { best = parseInt(localStorage.getItem(STORAGE_KEY) || '0', 10) || 0; } catch (e) {}
+    if (bestEl) bestEl.textContent = best;
+
+    var motionQuery = null;
+    try { motionQuery = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)'); } catch (e) {}
+    var reduceMotion = motionQuery ? motionQuery.matches : false;
+    if (motionQuery) {
+      var onMotionChange = function (e) { reduceMotion = e.matches; };
+      if (motionQuery.addEventListener) motionQuery.addEventListener('change', onMotionChange);
+      else if (motionQuery.addListener) motionQuery.addListener(onMotionChange);
+    }
+
+    /* ---- pixel buffer ----
+       The game renders to a small offscreen buffer, then scales up with
+       smoothing disabled — that's what gives the crisp chunky-pixel look.
+       (A smaller buffer = a more "zoomed in" game.) */
+    var GW = 162, GH = 216;
+    var GROUND_H = 16, GROUND_Y = GH - GROUND_H;
+    var buffer = document.createElement('canvas');
+    buffer.width = GW; buffer.height = GH;
+    var b = buffer.getContext('2d');
+
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var W = 0, H = 0;
+    function resize() {
+      var rect = stage.getBoundingClientRect();
+      W = rect.width; H = rect.height;
+      canvas.width = Math.round(W * dpr);
+      canvas.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.imageSmoothingEnabled = false;
+    }
+    function blit() {
+      ctx.clearRect(0, 0, W, H);
+      ctx.imageSmoothingEnabled = false;
+      ctx.drawImage(buffer, 0, 0, GW, GH, 0, 0, W, H);
+    }
+
+    /* ---- sprites ---- */
+    var PAL = {
+      o: '#3a2b23', P: '#ff9ec4', p: '#e76fa0', E: '#26202b', M: '#26202b',
+      b: '#ff6f9c', e: '#ffffff', V: '#fdf6e3', v: '#ecd9b0',
+      C: '#e0b977', c: '#b98d4f', W: '#ffffff'
+    };
+    /* Three 16x20 heroes, side view facing right, randomized each round.
+       All share the wing, the 2px shiny eyes, blush cheeks, and curved smile.
+       Each defines its own anchors for the wing and the splat X-eyes
+       (rects/pixels relative to the sprite's top-left origin). */
+    var SPRITES = [
+      { // classic scoop-on-a-cone (inspired by ice-cream-cone-1.svg)
+        map: [
+          '.....oPPPPo.....',
+          '...oPPPPPPPPo...',
+          '..oPPPPPPPPPPo..',
+          '.oPPPPPPPPPPPPo.',
+          '.oPPPPPPPPEePPo.',
+          '.oPPPPPPPPEEPPo.',
+          'oPPPPPPPPPPPPPPo',
+          'oPPbbPPPPPMPPMPo',
+          'oPPbbPPPPPPMMPPo',
+          '.oPPPPPPPPPPPPo.',
+          '..opPppPPppPpo..',
+          '...oCCCCCCCCo...',
+          '...oCcCcCcCCo...',
+          '....oCCCCCCo....',
+          '....oCcCcCo.....',
+          '.....oCCCCo.....',
+          '.....oCcCo......',
+          '......oCCo......',
+          '......oCo.......',
+          '.......o........'
+        ],
+        wing: [1, 3],
+        eyePatch: [10, 4, 2, 2], eyePatchColor: '#ff9ec4',
+        xPix: [[9, 3], [12, 3], [10, 4], [11, 5], [9, 6], [12, 6]]
+      },
+      { // ice cream bar on a stick, bite taken from the top right (inspired by ice-cream-bar-1.svg)
+        map: [
+          '...oPPPo........',
+          '..oPPPPPo.......',
+          '..oPPPPPPPo.....',
+          '..oPPPPPPPPPo...',
+          '..oPPPPPPPPPPo..',
+          '..oPPPPPPPEePo..',
+          '..oPPPPPPPEEPo..',
+          '..oPPPPPPPPPPo..',
+          '..oPbbPPPMPPMo..',
+          '..oPbbPPPPMMPo..',
+          '..oPPPPPPPPPPo..',
+          '..oPPPPPPPPPPo..',
+          '..oPpPPpPPpPPo..',
+          '..oppppppppppo..',
+          '.......oCCo.....',
+          '.......oCCo.....',
+          '.......oCCo.....',
+          '.......oCCo.....',
+          '.......oCCo.....',
+          '........oo......'
+        ],
+        wing: [1, 5],
+        eyePatch: [10, 5, 2, 2], eyePatchColor: '#ff9ec4',
+        xPix: [[9, 4], [12, 4], [10, 5], [11, 6], [9, 7], [12, 7]]
+      },
+      { // vanilla soft-serve swirl on a cone (inspired by the soft-serve photo)
+        map: [
+          '........oVo.....',
+          '.......oVVo.....',
+          '.....oVVVVo.....',
+          '....oVvVVvVo....',
+          '...oVVvVVvVVo...',
+          '..oVVVVVVVEeVo..',
+          '..oVVVVVVVEEVo..',
+          '..oVVVVVVVVVVo..',
+          '..oVbbVVVMVVMo..',
+          '..oVbbVVVVMMVo..',
+          '..oVVVVVVVVVVo..',
+          '..ovVvvVVvvVvo..',
+          '...oCCCCCCCCo...',
+          '...oCcCcCcCCo...',
+          '....oCCCCCCo....',
+          '....oCcCcCo.....',
+          '.....oCCCCo.....',
+          '.....oCcCo......',
+          '......oCCo......',
+          '.......oo.......'
+        ],
+        wing: [1, 5],
+        eyePatch: [10, 5, 2, 2], eyePatchColor: '#fdf6e3',
+        xPix: [[9, 4], [12, 4], [10, 5], [11, 6], [9, 7], [12, 7]]
+      }
+    ];
+    var sprite = SPRITES[0];
+    // big obvious wing (8x7), pivoting at the shoulder: up / level / down
+    var WING_FRAMES = [
+      [
+        '..oWWo..',
+        '.oWWWWo.',
+        '.oWWWWo.',
+        '..oWWWo.',
+        '...oWWo.',
+        '....oo..',
+        '........'
+      ],
+      [
+        '........',
+        '........',
+        '.ooooo..',
+        'oWWWWWo.',
+        'oWWWWWo.',
+        '.ooooo..',
+        '........'
+      ],
+      [
+        '........',
+        '....oo..',
+        '...oWWo.',
+        '..oWWWo.',
+        '.oWWWWo.',
+        '.oWWWWo.',
+        '..oWWo..'
+      ]
+    ];
+
+    function drawMap(map, x, y) {
+      for (var r = 0; r < map.length; r++) {
+        var row = map[r];
+        for (var c = 0; c < row.length; c++) {
+          var ch = row.charAt(c);
+          if (ch === '.') continue;
+          b.fillStyle = PAL[ch] || '#000';
+          b.fillRect(x + c, y + r, 1, 1);
+        }
+      }
+    }
+
+    // cached circle row spans for pixelated scoops
+    var spanCache = {};
+    function circleSpans(r) {
+      if (spanCache[r]) return spanCache[r];
+      var rows = [];
+      for (var dy = -r; dy <= r; dy++) {
+        rows.push(Math.floor(Math.sqrt(r * r - dy * dy)));
+      }
+      spanCache[r] = rows;
+      return rows;
+    }
+    function drawPixelCircle(cx, cy, r, fill, shade, highlight) {
+      var rows = circleSpans(r);
+      for (var i = 0; i < rows.length; i++) {
+        var dy = i - r;
+        var span = rows[i];
+        b.fillStyle = (dy > r * 0.35) ? shade : fill;
+        b.fillRect(cx - span, cy + dy, span * 2 + 1, 1);
+      }
+      if (highlight) {
+        b.fillStyle = highlight;
+        b.fillRect(cx - Math.floor(r * 0.5), cy - Math.floor(r * 0.6), 2, 1);
+        b.fillRect(cx - Math.floor(r * 0.65), cy - Math.floor(r * 0.4), 1, 1);
+      }
+    }
+
+    var FLAVORS = [
+      { f: '#ff9ec4', s: '#e76fa0', h: '#ffd9ea' }, // strawberry
+      { f: '#8fe3c6', s: '#5fc3a3', h: '#d9f7ec' }, // mint
+      { f: '#a98be8', s: '#8367c4', h: '#e2d7fa' }, // grape
+      { f: '#ffd98a', s: '#e9b65a', h: '#fff0cd' }, // mango
+      { f: '#7fc8ff', s: '#4fa6e6', h: '#d3ecff' }, // bubblegum
+      { f: '#c08457', s: '#9a6638', h: '#e8c391' }  // chocolate
+    ];
+    var CARAMEL = { f: '#d9a066', s: '#a86d38', h: '#f0c48a' };
+
+    /* ---- themes (feature 1) ----
+       Each theme recolors the sky, celestial body, hills, floor, and the
+       obstacles (obs palette + scoop flavor pool). Always starts on index 0. */
+    var THEMES = [
+      {
+        name: 'Candy Land', night: false,
+        skyTop: '#cdeefd', skyBand: '#daf3ff',
+        sun: { f: '#ffd23f', s: '#f5b93a', h: '#fff3c4', ray: '#ffb43f' },
+        hillBack: '#d9f2e4', hillFront: '#f7cfe4',
+        lip: '#ff9ec4', lip2: '#e76fa0', base: '#c08457', sprA: '#ffd23f', sprB: '#7fc8ff',
+        obs: { poleA: '#ff5d6b', poleB: '#fff6f7', poleShade: '#d8949e', poleEdge: '#3a2b23', poleCap: '#fff6f7', waferLight: '#fff4e6', waferDark: '#e0b977', waferSeam: '#b98d4f' },
+        flavors: [FLAVORS[0], FLAVORS[1], FLAVORS[2], FLAVORS[3], FLAVORS[4], FLAVORS[5]]
+      },
+      {
+        name: 'Choco Factory', night: false,
+        skyTop: '#f3e2c7', skyBand: '#e8cfa8',
+        sun: { f: '#ffe1a3', s: '#f0c46a', h: '#fff6df', ray: '#e9b65a' },
+        hillBack: '#c9a06a', hillFront: '#8a5a34',
+        lip: '#a86d38', lip2: '#7a4a2a', base: '#3a2417', sprA: '#e8c98f', sprB: '#fff4e6',
+        obs: { poleA: '#6f4a2a', poleB: '#c9a06a', poleShade: '#4a3016', poleEdge: '#2a1a0e', poleCap: '#e8c98f', waferLight: '#e8c98f', waferDark: '#8a5a34', waferSeam: '#5c3620' },
+        flavors: [FLAVORS[5], CARAMEL, FLAVORS[3]]
+      },
+      {
+        name: 'Sorbet Sunset', night: false,
+        skyTop: '#ffd6a8', skyBand: '#ffb0c8',
+        sun: { f: '#ff9e5a', s: '#e97a3a', h: '#ffd0a8', ray: '#ff7e3a' },
+        hillBack: '#ffb37a', hillFront: '#e8739b',
+        lip: '#ff7eb0', lip2: '#d94f86', base: '#a34a7a', sprA: '#ffffff', sprB: '#ffd23f',
+        obs: { poleA: '#ff5d9c', poleB: '#ffe0ef', poleShade: '#d84f86', poleEdge: '#5a2340', poleCap: '#ffe0ef', waferLight: '#ffe6d0', waferDark: '#e89bc0', waferSeam: '#c65b8f' },
+        flavors: [FLAVORS[0], FLAVORS[2], FLAVORS[4]]
+      },
+      {
+        name: 'Midnight Freezer', night: true,
+        skyTop: '#1b2a4a', skyBand: '#2e3f66',
+        sun: null,
+        hillBack: '#3a4d78', hillFront: '#2a3a5a',
+        lip: '#7fc8ff', lip2: '#4fa6e6', base: '#243a5a', sprA: '#ffffff', sprB: '#bfe6ff',
+        obs: { poleA: '#4fa6e6', poleB: '#eaf6ff', poleShade: '#2e6fa8', poleEdge: '#16324a', poleCap: '#eaf6ff', waferLight: '#eaf6ff', waferDark: '#7fc8ff', waferSeam: '#4fa6e6' },
+        flavors: [FLAVORS[1], FLAVORS[4], FLAVORS[2]]
+      }
+    ];
+    var T = THEMES[0];
+    // Background crossfade state: Tprev -> T over `mix` (0..1); CUR holds the
+    // blended sky/hill/floor colours used by the draw functions each frame.
+    var Tprev = T, mix = 1, CUR = T;
+    var STARS = [[12, 20], [34, 12], [58, 28], [80, 16], [104, 34], [126, 14], [148, 26], [22, 46], [70, 40], [118, 50], [44, 30], [92, 22]];
+
+    /* ---- tunables (buffer px) ---- */
+    var GRAVITY = 430;
+    var FLAP_V = -132;
+    var MAX_FALL = 185;
+    var BIRD_X = 42;
+    var SPEED_START = 38;
+    var SPEED_MAX = 64;
+    var GAP_START = 70;
+    var GAP_MIN = 56;
+    var SPACING = 84;             // px between spawns
+    var LEVEL_EVERY = 10;         // points per slight speed-up (feature 3)
+    var DELTA_MIN_START = 30;     // consecutive gap centers must differ by at least this
+    var DELTA_MIN_MAX = 50;       // ...growing with level, so you climb/dive harder
+
+    // Theme cycling (feature 1): a new world every THEME_EVERY points, cycling
+    // through THEMES and always starting on Candy Land (index 0).
+    var THEME_EVERY = 20;
+    var THEME_FADE = 0.7;        // seconds to crossfade the background on a swap
+
+    // Melt mechanic (feature 2): the flyer melts as it travels; ice cubes top it
+    // back up. Draining by DISTANCE (not time) keeps the pressure constant as the
+    // game speeds up. Cubes are spaced out (every CUBE_EVERY towers) for drama.
+    var MELT_MAX = 100;
+    var MELT_DRAIN_PER_PX = 0.18; // full meter empties over ~555px (≈ 6-7 towers)
+    var MELT_PER_CUBE = 48;
+    var CUBE_EVERY = 2;           // one ice cube every N towers (first on tower 1)
+
+    /* ---- game state ---- */
+    var state = 'idle'; // idle | ready | playing | paused | dying | over
+    var pausedFrom = 'playing';
+    var score = 0, level = 0;
+    var speed = SPEED_START, gap = GAP_START;
+    var birdY = 0, vy = 0, readyT = 0;
+    var obstacles = [];
+    var iceCubes = [];
+    var melt = MELT_MAX;
+    var towerCount = 0, themeIdx = 0, deathCause = null;
+    var sinceSpawn = 0;
+    var lastCenter = 0;
+    var groundOff = 0, hillOff1 = 0, hillOff2 = 0, timeT = 0;
+    var dyingT = 0;
+    var lastTime = 0, rafId = null;
+    var clouds = [
+      { x: 18, y: 30, s: 1 },
+      { x: 82, y: 52, s: 0.7 },
+      { x: 136, y: 24, s: 0.85 }
+    ];
+
+    function reset() {
+      score = 0; level = 0;
+      speed = SPEED_START; gap = GAP_START;
+      birdY = 92; vy = 0; readyT = 0;
+      obstacles = [];
+      iceCubes = [];
+      melt = MELT_MAX;
+      towerCount = 0;
+      themeIdx = 0; T = THEMES[0]; Tprev = T; mix = 1;
+      deathCause = null;
+      sinceSpawn = 0;
+      lastCenter = (18 + (GROUND_Y - 18)) / 2;
+      dyingT = 0;
+      try { stage.style.background = T.skyTop; } catch (e) {}
+      updateHud();
+    }
+
+    function updateHud() {
+      if (scoreEl) scoreEl.textContent = score;
+    }
+
+    /* ---- spawning ---- */
+    function spawn() {
+      var type = ['scoop', 'pole', 'wafer'][(Math.random() * 3) | 0];
+      var w = type === 'scoop' ? 26 : (type === 'pole' ? 15 : 26);
+      var half = gap / 2;
+      var minC = 18 + half;
+      var maxC = GROUND_Y - 18 - half;
+
+      // Force real vertical variation: each gap center must differ from the
+      // previous one by at least minDelta (growing with level), so the player
+      // has to climb or dive between towers instead of cruising level.
+      var minDelta = Math.min(DELTA_MIN_MAX, DELTA_MIN_START + level * 3);
+      var center = minC + Math.random() * (maxC - minC);
+      if (Math.abs(center - lastCenter) < minDelta) {
+        var dir = center >= lastCenter ? 1 : -1;
+        center = lastCenter + dir * minDelta;
+        // if that pushed past the bounds, go the other way instead
+        if (center > maxC || center < minC) center = lastCenter - dir * minDelta;
+        center = Math.max(minC, Math.min(maxC, center));
+      }
+      lastCenter = center;
+
+      obstacles.push({
+        x: GW + 14,
+        w: w,
+        type: type,
+        flavor: T.flavors[(Math.random() * T.flavors.length) | 0],
+        flavor2: T.flavors[(Math.random() * T.flavors.length) | 0],
+        obs: T.obs,
+        gapTop: Math.round(center - half),
+        gapBot: Math.round(center + half),
+        stripe: (Math.random() * 5) | 0,
+        passed: false
+      });
+
+      // Spread-out ice cubes (feature 2): one every CUBE_EVERY towers, floating
+      // in open air just past this tower, near the gap height so it's reachable
+      // but usually a little off the safe line — grab it or risk melting.
+      towerCount++;
+      if ((towerCount - 1) % CUBE_EVERY === 0) spawnCube(center);
+    }
+
+    function spawnCube(nearY) {
+      // Keep the cube close to the gap line so chasing it never forces a crash.
+      var y = nearY + (Math.random() * 32 - 16);
+      y = Math.max(26, Math.min(GROUND_Y - 26, y));
+      iceCubes.push({
+        x: GW + 14 + Math.round(SPACING * 0.5),
+        y: y,
+        bob: Math.random() * 6.28
+      });
+    }
+
+    // Difficulty ramps by score now (no checkpoints): every LEVEL_EVERY towers
+    // the world speeds up, gaps tighten, and the height swings grow.
+    function levelUp() {
+      level++;
+      speed = Math.min(SPEED_MAX, speed * 1.05);
+      gap = Math.max(GAP_MIN, gap - 2);
+    }
+
+
+    /* ---- drawing ---- */
+    /* ---- background crossfade helpers ---- */
+    function hx(c) { return [parseInt(c.slice(1, 3), 16), parseInt(c.slice(3, 5), 16), parseInt(c.slice(5, 7), 16)]; }
+    function lerpHex(a, c, t) {
+      var A = hx(a), B = hx(c);
+      return 'rgb(' + Math.round(A[0] + (B[0] - A[0]) * t) + ',' + Math.round(A[1] + (B[1] - A[1]) * t) + ',' + Math.round(A[2] + (B[2] - A[2]) * t) + ')';
+    }
+    // Blend the flat sky/hill/floor colours from Tprev -> T by `mix`. When not
+    // transitioning (mix >= 1) use the target theme object as-is (exact hex).
+    function computeCur() {
+      if (mix >= 1) { CUR = T; return; }
+      CUR = {
+        skyTop: lerpHex(Tprev.skyTop, T.skyTop, mix),
+        skyBand: lerpHex(Tprev.skyBand, T.skyBand, mix),
+        hillBack: lerpHex(Tprev.hillBack, T.hillBack, mix),
+        hillFront: lerpHex(Tprev.hillFront, T.hillFront, mix),
+        lip: lerpHex(Tprev.lip, T.lip, mix),
+        lip2: lerpHex(Tprev.lip2, T.lip2, mix),
+        base: lerpHex(Tprev.base, T.base, mix),
+        sprA: lerpHex(Tprev.sprA, T.sprA, mix),
+        sprB: lerpHex(Tprev.sprB, T.sprB, mix)
+      };
+    }
+
+    function drawSky() {
+      b.fillStyle = CUR.skyTop;
+      b.fillRect(0, 0, GW, GH);
+      b.fillStyle = CUR.skyBand;
+      b.fillRect(0, 88, GW, GH - 88);
+      for (var x = 0; x < GW; x += 2) {
+        b.fillRect(x, 86, 1, 1);
+        b.fillRect(x + 1, 84, 1, 1);
+      }
+    }
+
+    // Celestial + backdrop take a theme + alpha so a theme swap can crossfade
+    // the old world out while the new one fades in.
+    function drawCelestial(theme, alpha) {
+      b.globalAlpha = alpha;
+      if (theme.night) drawMoon(theme); else drawSun(theme);
+      b.globalAlpha = 1;
+    }
+    function drawSun(theme) {
+      var s = theme.sun, cx = 136, cy = 20;
+      drawPixelCircle(cx, cy, 8, s.f, s.s, s.h);
+      b.fillStyle = s.ray;
+      b.fillRect(cx - 11, cy, 2, 1); b.fillRect(cx + 10, cy, 2, 1);
+      b.fillRect(cx, cy - 11, 1, 2); b.fillRect(cx, cy + 10, 1, 2);
+      b.fillRect(cx - 8, cy - 8, 1, 1); b.fillRect(cx + 8, cy - 8, 1, 1);
+      b.fillRect(cx - 8, cy + 8, 1, 1); b.fillRect(cx + 8, cy + 8, 1, 1);
+      // cheeky grin
+      b.fillStyle = '#7a5410';
+      b.fillRect(cx - 3, cy - 2, 1, 1); b.fillRect(cx + 2, cy - 2, 1, 1);
+      b.fillRect(cx - 2, cy + 3, 5, 1);
+      b.fillRect(cx - 3, cy + 2, 1, 1); b.fillRect(cx + 3, cy + 2, 1, 1);
+    }
+    function drawMoon(theme) {
+      var cx = 134, cy = 22;
+      drawPixelCircle(cx, cy, 8, '#eef3ff', '#cdd8f0', '#ffffff');
+      // carve a crescent with a sky-coloured circle offset up-right
+      drawPixelCircle(cx + 4, cy - 3, 8, theme.skyTop, theme.skyTop, null);
+    }
+    function drawStars(alpha) {
+      b.globalAlpha = (alpha == null ? 1 : alpha);
+      b.fillStyle = '#ffffff';
+      for (var i = 0; i < STARS.length; i++) {
+        // a third of the stars twinkle on the time beat
+        if (i % 3 === 0 && (Math.floor(timeT * 2 + i) % 2) === 0) continue;
+        b.fillRect(STARS[i][0], STARS[i][1], 1, 1);
+      }
+      b.globalAlpha = 1;
+    }
+    function drawClouds(alpha) {
+      b.globalAlpha = (alpha == null ? 1 : alpha);
+      for (var i = 0; i < clouds.length; i++) drawCloud(clouds[i]);
+      b.globalAlpha = 1;
+    }
+
+    function drawCloud(c) {
+      var x = Math.round(c.x), y = c.y;
+      var r1 = Math.round(6 * c.s), r2 = Math.round(4 * c.s);
+      drawPixelCircle(x, y, r1, '#ffffff', '#e8f5fd', null);
+      drawPixelCircle(x - r1, y + 2, r2, '#ffffff', '#e8f5fd', null);
+      drawPixelCircle(x + r1, y + 2, r2, '#ffffff', '#e8f5fd', null);
+    }
+
+    function drawHills() {
+      var x;
+      for (x = 0; x < GW; x++) {
+        var y2 = Math.round(142 + Math.sin((x + hillOff2) * 0.045) * 9);
+        b.fillStyle = CUR.hillBack;
+        b.fillRect(x, y2, 1, GROUND_Y - y2);
+      }
+      for (x = 0; x < GW; x++) {
+        var y1 = Math.round(160 + Math.sin((x + hillOff1) * 0.075) * 10);
+        b.fillStyle = CUR.hillFront;
+        b.fillRect(x, y1, 1, GROUND_Y - y1);
+      }
+    }
+
+    function drawGround() {
+      // frosting lip with a wavy scallop
+      b.fillStyle = CUR.lip;
+      b.fillRect(0, GROUND_Y, GW, 4);
+      var off = Math.round(groundOff);
+      for (var x = 0; x < GW; x++) {
+        if (((x + off) % 8 + 8) % 8 < 4) {
+          b.fillRect(x, GROUND_Y - 1, 1, 1);
+        }
+      }
+      b.fillStyle = CUR.lip2;
+      b.fillRect(0, GROUND_Y + 4, GW, 2);
+      // base with drifting sprinkles
+      b.fillStyle = CUR.base;
+      b.fillRect(0, GROUND_Y + 6, GW, GH - GROUND_Y - 6);
+      for (var y = GROUND_Y + 8; y < GH; y += 3) {
+        for (var x3 = 0; x3 < GW; x3++) {
+          var wx = x3 + off;
+          if (((wx * 7 + y * 13) % 41 + 41) % 41 === 0) {
+            b.fillStyle = (y + x3) % 2 ? CUR.sprA : CUR.sprB;
+            b.fillRect(x3, y, 1, 1);
+          }
+        }
+      }
+    }
+
+    function drawScoopStack(o, fromTop) {
+      var cx = Math.round(o.x + o.w / 2);
+      var r = 12;
+      var cy, guard = 0;
+      if (fromTop) {
+        cy = o.gapTop - r + 1;
+        while (cy + r > 0 && guard++ < 24) {
+          drawPixelCircle(cx, cy, r, o.flavor.f, o.flavor.s, o.flavor.h);
+          cy -= 19;
+        }
+        // drips under the lowest scoop
+        b.fillStyle = o.flavor.f;
+        b.fillRect(cx - 7, o.gapTop + 1, 2, 3);
+        b.fillRect(cx + 1, o.gapTop + 1, 2, 5);
+        b.fillRect(cx + 7, o.gapTop + 1, 1, 2);
+        b.fillStyle = o.flavor.s;
+        b.fillRect(cx + 1, o.gapTop + 5, 2, 1);
+      } else {
+        cy = o.gapBot + r - 1;
+        while (cy - r < GROUND_Y && guard++ < 24) {
+          drawPixelCircle(cx, cy, r, o.flavor.f, o.flavor.s, o.flavor.h);
+          cy += 19;
+        }
+      }
+    }
+
+    function drawPole(o, fromTop) {
+      var P = o.obs;
+      var x = Math.round(o.x);
+      var yStart = fromTop ? 0 : o.gapBot;
+      var yEnd = fromTop ? o.gapTop : GROUND_Y;
+      for (var y = yStart; y < yEnd; y++) {
+        var stripe = (((y + o.stripe * 3) / 5) | 0) % 2;
+        b.fillStyle = stripe ? P.poleA : P.poleB;
+        b.fillRect(x + 1, y, o.w - 2, 1);
+      }
+      b.fillStyle = P.poleShade;
+      b.fillRect(x + o.w - 2, yStart, 1, yEnd - yStart);
+      b.fillStyle = P.poleEdge;
+      b.fillRect(x, yStart, 1, yEnd - yStart);
+      b.fillRect(x + o.w - 1, yStart, 1, yEnd - yStart);
+      // rounded cap at the gap end
+      b.fillStyle = P.poleCap;
+      if (fromTop) b.fillRect(x + 2, o.gapTop - 1, o.w - 4, 1);
+      else b.fillRect(x + 2, o.gapBot, o.w - 4, 1);
+    }
+
+    function drawWafer(o, fromTop) {
+      var P = o.obs;
+      var x = Math.round(o.x);
+      var yStart = fromTop ? 0 : o.gapBot;
+      var yEnd = fromTop ? o.gapTop : GROUND_Y;
+      for (var y = yStart; y < yEnd; y++) {
+        var layer = (((y - yStart) / 7) | 0) % 2;
+        b.fillStyle = layer ? P.waferLight : P.waferDark;
+        b.fillRect(x, y, o.w, 1);
+        if ((y - yStart) % 7 === 6) {
+          b.fillStyle = P.waferSeam;
+          b.fillRect(x, y, o.w, 1);
+        }
+      }
+      b.fillStyle = P.waferSeam;
+      b.fillRect(x + o.w - 2, yStart, 2, yEnd - yStart);
+      b.fillStyle = o.flavor2.f;
+      var mid = Math.round(x + o.w / 2);
+      for (var y2 = yStart + 3; y2 < yEnd - 2; y2 += 7) {
+        b.fillRect(mid - 5, y2, 10, 1);
+      }
+    }
+
+    function drawObstacle(o) {
+      if (o.type === 'scoop') { drawScoopStack(o, true); drawScoopStack(o, false); }
+      else if (o.type === 'pole') { drawPole(o, true); drawPole(o, false); }
+      else { drawWafer(o, true); drawWafer(o, false); }
+    }
+
+    // Flappy-style in-game score: big pixel digits, top center, white with a
+    // dark outline. Each glyph is a 3x5 map drawn at 2x (6x10 buffer px).
+    var DIGITS = [
+      ['111','101','101','101','111'],
+      ['010','110','010','010','111'],
+      ['111','001','111','100','111'],
+      ['111','001','111','001','111'],
+      ['101','101','111','001','001'],
+      ['111','100','111','001','111'],
+      ['111','100','111','101','111'],
+      ['111','001','001','010','010'],
+      ['111','101','111','101','111'],
+      ['111','101','111','001','111']
+    ];
+    function drawDigit(d, x, y, px, color) {
+      var map = DIGITS[d];
+      b.fillStyle = color;
+      for (var r = 0; r < 5; r++) {
+        for (var c = 0; c < 3; c++) {
+          if (map[r].charAt(c) === '1') b.fillRect(x + c * px, y + r * px, px, px);
+        }
+      }
+    }
+    function drawScore() {
+      var str = String(score);
+      var px = 2;
+      var gw = 3 * px, gh = 5 * px, sp = px;
+      var total = str.length * gw + (str.length - 1) * sp;
+      var x0 = Math.round((GW - total) / 2);
+      // Sit on the melt meter's line (bar now at y 14..20): center the 10px-tall
+      // digits on the meter's vertical centre (~17).
+      var y0 = 12;
+      var i, d, x;
+      // outline pass
+      for (i = 0; i < str.length; i++) {
+        d = str.charCodeAt(i) - 48;
+        x = x0 + i * (gw + sp);
+        drawDigit(d, x - 1, y0, px, '#3a2b23');
+        drawDigit(d, x + 1, y0, px, '#3a2b23');
+        drawDigit(d, x, y0 - 1, px, '#3a2b23');
+        drawDigit(d, x, y0 + 1, px, '#3a2b23');
+      }
+      // face pass
+      for (i = 0; i < str.length; i++) {
+        d = str.charCodeAt(i) - 48;
+        drawDigit(d, x0 + i * (gw + sp), y0, px, '#ffffff');
+      }
+    }
+
+    function drawIceCube(cube) {
+      var x = Math.round(cube.x);
+      var y = Math.round(cube.y + Math.sin(timeT * 3 + cube.bob) * 2);
+      b.fillStyle = '#9fe6ff'; b.fillRect(x - 3, y - 3, 7, 7);   // icy edge
+      b.fillStyle = '#d6f4ff'; b.fillRect(x - 2, y - 2, 5, 5);   // body
+      b.fillStyle = '#bfeeff'; b.fillRect(x + 1, y + 1, 2, 2);   // facet
+      b.fillStyle = '#ffffff';                                   // shine
+      b.fillRect(x - 1, y - 2, 2, 1);
+      b.fillRect(x - 2, y - 1, 1, 2);
+    }
+
+    // Melt meter (feature 2): top-left frost gauge — icy blue when full, warming
+    // to orange/red as the flyer melts.
+    function drawMeltMeter() {
+      var mx = 6, my = 14, mw = 46, mh = 6;
+      var frac = Math.max(0, Math.min(1, melt / MELT_MAX));
+      b.fillStyle = '#26202b'; b.fillRect(mx - 1, my - 1, mw + 2, mh + 2);
+      b.fillStyle = '#0d1b2a'; b.fillRect(mx, my, mw, mh);
+      b.fillStyle = frac > 0.5 ? '#7fd4ff' : (frac > 0.25 ? '#ffd23f' : '#ff5d6b');
+      b.fillRect(mx, my, Math.round(mw * frac), mh);
+    }
+
+    function drawBird() {
+      var bx = BIRD_X, by = Math.round(birdY);
+      var left = bx - 8, top = by - 9;
+      var i;
+      drawMap(sprite.map, left, top);
+      // wing frame by vertical motion: up while rising, down while falling
+      var frame = vy < -40 ? 0 : (vy < 60 ? 1 : 2);
+      drawMap(WING_FRAMES[frame], left + sprite.wing[0], top + sprite.wing[1]);
+      if (state === 'dying' || state === 'over') {
+        // X eyes over the eye block
+        b.fillStyle = sprite.eyePatchColor;
+        b.fillRect(left + sprite.eyePatch[0], top + sprite.eyePatch[1], sprite.eyePatch[2], sprite.eyePatch[3]);
+        b.fillStyle = PAL.E;
+        for (i = 0; i < sprite.xPix.length; i++) {
+          b.fillRect(left + sprite.xPix[i][0], top + sprite.xPix[i][1], 1, 1);
+        }
+      }
+    }
+
+    function render() {
+      computeCur();
+      drawSky();
+      // celestial body + backdrop (clouds/stars), crossfading during a theme swap
+      if (mix >= 1) {
+        drawCelestial(T, 1);
+        if (T.night) drawStars(1); else drawClouds(1);
+      } else {
+        drawCelestial(Tprev, 1 - mix);
+        drawCelestial(T, mix);
+        if (Tprev.night === T.night) {
+          if (T.night) drawStars(1); else drawClouds(1);
+        } else {
+          if (Tprev.night) drawStars(1 - mix); else drawClouds(1 - mix);
+          if (T.night) drawStars(mix); else drawClouds(mix);
+        }
+      }
+      drawHills();
+      for (var j = 0; j < obstacles.length; j++) drawObstacle(obstacles[j]);
+      for (var k = 0; k < iceCubes.length; k++) drawIceCube(iceCubes[k]);
+      drawGround();
+      drawBird();
+      if (state === 'playing' || state === 'dying' || state === 'ready') { drawScore(); drawMeltMeter(); }
+      blit();
+    }
+
+    /* ---- physics / update ---- */
+    function flap() {
+      if (state === 'ready') {
+        state = 'playing';
+        if (pauseBtn) pauseBtn.hidden = false;
+      }
+      if (state !== 'playing') return;
+      vy = FLAP_V;
+    }
+
+    function birdBox() {
+      return { x: BIRD_X - 5, y: birdY - 7, w: 10, h: 15 };
+    }
+    function overlaps(bb, x, y, w, h) {
+      return bb.x < x + w && bb.x + bb.w > x && bb.y < y + h && bb.y + bb.h > y;
+    }
+
+    function step(now) {
+      if (state !== 'playing' && state !== 'ready' && state !== 'dying') return;
+      var dt = Math.min(0.05, (now - lastTime) / 1000 || 0);
+      lastTime = now;
+      timeT += dt;
+      if (mix < 1) mix = Math.min(1, mix + dt / THEME_FADE);
+
+      var dx = (state === 'dying') ? 0 : speed * dt;
+      var bgDx = (state === 'ready') ? SPEED_START * dt : dx;
+      groundOff += bgDx;
+      hillOff1 += bgDx * 0.6;
+      hillOff2 += bgDx * 0.35;
+      for (var ci = 0; ci < clouds.length; ci++) {
+        clouds[ci].x -= bgDx * 0.25;
+        if (clouds[ci].x < -20) { clouds[ci].x = GW + 20; clouds[ci].y = 18 + Math.random() * 46; }
+      }
+
+      if (state === 'ready') {
+        readyT += dt;
+        birdY = 92 + Math.sin(readyT * 4) * 3;
+        render();
+        rafId = requestAnimationFrame(step);
+        return;
+      }
+
+      if (state === 'dying') {
+        // classic flappy fall-and-splat to the ground
+        dyingT += dt;
+        vy = Math.min(MAX_FALL, vy + GRAVITY * dt);
+        birdY = Math.min(GROUND_Y - 9, birdY + vy * dt);
+        if (birdY < 10) { birdY = 10; vy = 0; } // same ceiling clamp as playing
+        render();
+        if (dyingT >= 0.8) { gameOver(); return; }
+        rafId = requestAnimationFrame(step);
+        return;
+      }
+
+      // playing
+      vy = Math.min(MAX_FALL, vy + GRAVITY * dt);
+      birdY += vy * dt;
+      if (birdY < 10) { birdY = 10; vy = 0; }
+
+      sinceSpawn += dx;
+      if (sinceSpawn >= SPACING) { sinceSpawn -= SPACING; spawn(); }
+
+      // Feature 2: melt as we travel (distance-based, so the pressure stays the
+      // same as the game speeds up).
+      melt -= dx * MELT_DRAIN_PER_PX;
+
+      var bb = birdBox();
+
+      for (var i = obstacles.length - 1; i >= 0; i--) {
+        var o = obstacles[i];
+        o.x -= dx;
+
+        if (!o.passed && o.x + o.w < BIRD_X - 5) {
+          o.passed = true;
+          score++;
+          if (score % LEVEL_EVERY === 0) levelUp();
+          // Feature 1: cross a THEME_EVERY milestone -> begin a crossfade to
+          // the next world (no popup).
+          var ti = Math.floor(score / THEME_EVERY) % THEMES.length;
+          if (ti !== themeIdx) {
+            themeIdx = ti;
+            Tprev = T; T = THEMES[ti]; mix = 0;
+            try { stage.style.background = T.skyTop; } catch (e) {}
+          }
+          updateHud();
+        }
+
+        if (overlaps(bb, o.x, 0, o.w, o.gapTop) || overlaps(bb, o.x, o.gapBot, o.w, GROUND_Y - o.gapBot)) {
+          die();
+          return;
+        }
+
+        if (o.x + o.w < -16) obstacles.splice(i, 1);
+      }
+
+      // Feature 2: ice cubes — move, collect (top up the melt meter), retire.
+      for (var ic = iceCubes.length - 1; ic >= 0; ic--) {
+        var cube = iceCubes[ic];
+        cube.x -= dx;
+        // Match the drawn (bobbing) position so the hitbox and sprite agree.
+        var cy = cube.y + Math.sin(timeT * 3 + cube.bob) * 2;
+        if (overlaps(bb, cube.x - 3, cy - 3, 7, 7)) {
+          melt = Math.min(MELT_MAX, melt + MELT_PER_CUBE);
+          iceCubes.splice(ic, 1);
+          continue;
+        }
+        if (cube.x < -10) iceCubes.splice(ic, 1);
+      }
+
+      // Out of cool — melt down.
+      if (melt <= 0) { melt = 0; deathCause = 'melt'; die(); return; }
+
+      // crashing into the ground ends the run, flappy-style
+      if (birdY + 8 >= GROUND_Y) { die(); return; }
+
+      updateHud();
+      render();
+      rafId = requestAnimationFrame(step);
+    }
+
+    /* ---- state transitions ---- */
+    function focusStage() {
+      try { stage.focus({ preventScroll: true }); } catch (e) { stage.focus(); }
+    }
+    function startGame() {
+      reset();
+      // a different hero every round
+      sprite = SPRITES[(Math.random() * SPRITES.length) | 0];
+      hide(startOv); hide(pauseOv); hide(overOv); hide(noteEl);
+      if (pauseBtn) pauseBtn.hidden = false;
+      stage.classList.add('is-live');
+      state = 'ready';
+      focusStage();
+      lastTime = performance.now();
+      cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(step);
+      toast('Tap to start flying!');
+    }
+    function pauseGame() {
+      if (state !== 'playing' && state !== 'ready') return;
+      pausedFrom = state;
+      state = 'paused';
+      cancelAnimationFrame(rafId);
+      stage.classList.remove('is-live');
+      if (pauseBtn) pauseBtn.hidden = true;
+      show(pauseOv);
+      var rb = root.querySelector('[data-fs-resume]');
+      if (rb) { try { rb.focus({ preventScroll: true }); } catch (e) { rb.focus(); } }
+    }
+    function resumeGame() {
+      if (state !== 'paused') return;
+      hide(pauseOv);
+      if (pauseBtn) pauseBtn.hidden = false;
+      stage.classList.add('is-live');
+      state = pausedFrom;
+      focusStage();
+      lastTime = performance.now();
+      rafId = requestAnimationFrame(step);
+    }
+    function die() {
+      state = 'dying';
+      dyingT = 0;
+      if (pauseBtn) pauseBtn.hidden = true;
+      stage.classList.remove('is-live');
+      if (reduceMotion) { gameOver(); return; }
+      rafId = requestAnimationFrame(step);
+    }
+    function gameOver() {
+      state = 'over';
+      cancelAnimationFrame(rafId);
+      render();
+      if (overTitleEl) overTitleEl.textContent = (deathCause === 'melt') ? 'Melted!' : 'Splat!';
+      if (finalEl) finalEl.textContent = score;
+      var isRecord = score > best;
+      if (isRecord) {
+        best = score;
+        try { localStorage.setItem(STORAGE_KEY, String(best)); } catch (e) {}
+        if (bestEl) bestEl.textContent = best;
+      }
+      if (bestLineEl) bestLineEl.textContent = isRecord ? 'New personal best! 🎉' : 'Your best: ' + best;
+      // Announce the outcome to screen readers: the game-over panel is not a
+      // live region, but the toast (aria-live=polite) is.
+      toast((deathCause === 'melt' ? 'Melted! ' : 'Splat! ') + 'You scored ' + score + '.' + (isRecord ? ' New best!' : ''));
+      if (pauseBtn) pauseBtn.hidden = true;
+      stage.classList.remove('is-live');
+      show(overOv);
+      show(noteEl);
+      var again = root.querySelector('[data-fs-again]');
+      if (again) { try { again.focus({ preventScroll: true }); } catch (e) { again.focus(); } }
+    }
+
+    function show(el) { if (el) el.hidden = false; }
+    function hide(el) { if (el) el.hidden = true; }
+
+    var toastTimer = null;
+    function toast(msg) {
+      if (!toastEl) return;
+      toastEl.textContent = msg;
+      toastEl.classList.add('is-show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () { toastEl.classList.remove('is-show'); }, 1600);
+    }
+
+    // Legacy clipboard fallback for contexts without navigator.clipboard.
+    function legacyCopy(str) {
+      try {
+        var ta = document.createElement('textarea');
+        ta.value = str;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = document.execCommand('copy');
+        document.body.removeChild(ta);
+        return ok;
+      } catch (e) { return false; }
+    }
+
+    function share() {
+      var text = 'I scored ' + score + ' in Chefman Melt Down! 🍦';
+      var url = location.href;
+      var payload = text + ' ' + url;
+      var onCopied = function () { toast('Copied to clipboard! 🍦'); };
+      var onFailed = function () { toast(legacyCopy(payload) ? 'Copied to clipboard! 🍦' : text); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(payload).then(onCopied, onFailed);
+      } else {
+        onFailed();
+      }
+      if (navigator.share) {
+        navigator.share({ title: 'Chefman Melt Down', text: text, url: url }).catch(function () {});
+      }
+    }
+
+    /* ---- input ---- */
+    function onPress(e) {
+      if (state === 'ready' || state === 'playing') {
+        if (e.cancelable) e.preventDefault();
+        flap();
+      }
+    }
+    if (window.PointerEvent) {
+      canvas.addEventListener('pointerdown', onPress);
+    } else {
+      canvas.addEventListener('touchstart', onPress, { passive: false });
+      canvas.addEventListener('mousedown', onPress);
+    }
+
+    if (pauseBtn) {
+      pauseBtn.addEventListener('click', function () {
+        if (state === 'paused') resumeGame();
+        else pauseGame();
+        this.blur(); // never keep focus on the button mid-game (Space would re-click it)
+      });
+    }
+    // Tap/click anywhere on the pause overlay resumes (the Resume button also
+    // bubbles here; resumeGame() no-ops on the second call).
+    if (pauseOv) pauseOv.addEventListener('click', function () { resumeGame(); });
+
+    window.addEventListener('keydown', function (e) {
+      // Only react when the game has keyboard focus, and never hijack typing
+      // or focused controls (buttons handle their own keys).
+      if (!root.contains(document.activeElement)) return;
+      var t = e.target;
+      if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT|BUTTON)$/.test(t.tagName))) {
+        if (!(e.key === 'p' || e.key === 'P') || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName) || t.isContentEditable) return;
+      }
+      if (e.key === ' ' || e.key === 'Spacebar' || e.key === 'ArrowUp') {
+        if (state === 'ready' || state === 'playing') {
+          if (e.cancelable) e.preventDefault();
+          flap();
+        }
+      } else if (e.key === 'p' || e.key === 'P') {
+        if (state === 'playing' || state === 'ready') pauseGame();
+        else if (state === 'paused') resumeGame();
+      }
+    });
+
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) pauseGame();
+    });
+
+    root.querySelector('[data-fs-play]').addEventListener('click', startGame);
+    root.querySelector('[data-fs-again]').addEventListener('click', startGame);
+    root.querySelector('[data-fs-resume]').addEventListener('click', resumeGame);
+    var shareBtn = root.querySelector('[data-fs-share]');
+    if (shareBtn) shareBtn.addEventListener('click', share);
+
+    var resizeRaf = null;
+    window.addEventListener('resize', function () {
+      cancelAnimationFrame(resizeRaf);
+      resizeRaf = requestAnimationFrame(function () {
+        resize();
+        if (state !== 'playing' && state !== 'ready' && state !== 'dying') render();
+      });
+    });
+
+    /* ---- init ---- */
+    resize();
+    birdY = 92;
+    updateHud();
+    render();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Melt Down",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Melt Down"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "title-md", "label": "Medium" },
+        { "value": "title-lg tracking-heading", "label": "Large" },
+        { "value": "title-xl tracking-heading", "label": "Extra large" }
+      ],
+      "default": "title-lg tracking-heading"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Intro",
+      "default": "<p>Flap through candy land and thread the gaps between the sweets. How far can you fly?</p>"
+    },
+    {
+      "type": "text",
+      "id": "play_label",
+      "label": "Play button label",
+      "default": "Play"
+    },
+    {
+      "type": "header",
+      "content": "Game-over call to action"
+    },
+    {
+      "type": "text",
+      "id": "shop_label",
+      "label": "Shop button label",
+      "default": "Make your own → Shop ice cream makers"
+    },
+    {
+      "type": "url",
+      "id": "shop_link",
+      "label": "Shop button link"
+    },
+    {
+      "type": "header",
+      "content": "Section"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 80
+    },
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "Show divider",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Melt Down"
+    }
+  ]
+}
+{% endschema %}

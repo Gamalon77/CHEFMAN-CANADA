@@ -1,0 +1,444 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+    --kf-ink: 18 30 42;      /* #121e2a midnight accent */
+    --kf-r-card: 24px;
+    --kf-r-tile: 16px;
+    --kf-r-pill: 999px;
+    {%- render 'section-variables', section: section -%}
+  }
+
+  /* ---- Breadcrumb ---- */
+  #shopify-section-{{ section.id }} .kf-breadcrumb { margin-bottom: var(--sp-8); }
+  #shopify-section-{{ section.id }} .kf-breadcrumb__list {
+    display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-2);
+    list-style: none; margin: 0; padding: 0;
+    color: rgb(var(--color-foreground) / 0.6);
+  }
+  #shopify-section-{{ section.id }} .kf-breadcrumb__item { display: inline-flex; align-items: center; }
+  #shopify-section-{{ section.id }} .kf-breadcrumb__link { color: inherit; text-decoration: none; }
+  #shopify-section-{{ section.id }} .kf-breadcrumb__link:hover { color: rgb(var(--kf-ink)); }
+  #shopify-section-{{ section.id }} .kf-breadcrumb__item--current { color: rgb(var(--kf-ink)); font-weight: 600; }
+
+  /* ---- Intro ---- */
+  #shopify-section-{{ section.id }} .kf-intro { max-width: 52rem; margin-inline: auto; text-align: center; }
+  #shopify-section-{{ section.id }} .kf-eyebrow {
+    display: inline-block; margin-bottom: var(--sp-3);
+    padding: 0.35rem 0.9rem; border-radius: var(--kf-r-pill);
+    background: rgb(var(--kf-ink) / 0.08); color: rgb(var(--kf-ink));
+    font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  #shopify-section-{{ section.id }} .kf-intro__subtext { margin-top: var(--sp-4); color: rgb(var(--color-foreground) / 0.75); }
+
+  /* ---- Generic block heading ---- */
+  #shopify-section-{{ section.id }} .kf-block { margin-top: var(--sp-14); }
+  #shopify-section-{{ section.id }} .kf-block__head { max-width: 52rem; margin-inline: auto; text-align: center; margin-bottom: var(--sp-8); }
+  #shopify-section-{{ section.id }} .kf-block__intro { margin-top: var(--sp-3); color: rgb(var(--color-foreground) / 0.72); }
+
+  /* ---- Universal features ---- */
+  #shopify-section-{{ section.id }} .kf-features {
+    display: grid; gap: var(--sp-5); grid-template-columns: 1fr;
+  }
+  @media (min-width: 750px) { #shopify-section-{{ section.id }} .kf-features { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 990px) { #shopify-section-{{ section.id }} .kf-features { grid-template-columns: repeat(5, 1fr); } }
+  #shopify-section-{{ section.id }} .kf-feature {
+    text-align: center; padding: var(--sp-5) var(--sp-3);
+    border: 1px solid rgb(var(--color-border)); border-radius: var(--kf-r-tile);
+    background: rgb(var(--color-background));
+  }
+  #shopify-section-{{ section.id }} .kf-feature__icon { font-size: 1.9rem; line-height: 1; }
+  #shopify-section-{{ section.id }} .kf-feature__svg { display: inline-block; width: 2.25rem; height: 2.25rem; object-fit: contain; }
+  #shopify-section-{{ section.id }} .kf-feature__title { margin: var(--sp-3) 0 var(--sp-1); font-weight: 700; }
+  #shopify-section-{{ section.id }} .kf-feature__text { color: rgb(var(--color-foreground) / 0.7); font-size: 0.88rem; }
+
+  /* ---- The 5 differences ---- */
+  #shopify-section-{{ section.id }} .kf-diffs { display: grid; gap: var(--sp-4); grid-template-columns: 1fr; }
+  @media (min-width: 750px) { #shopify-section-{{ section.id }} .kf-diffs { grid-template-columns: repeat(2, 1fr); } }
+  #shopify-section-{{ section.id }} .kf-diff {
+    display: flex; gap: var(--sp-4); align-items: flex-start;
+    padding: var(--sp-4) var(--sp-5); border: 1px solid rgb(var(--color-border)); border-radius: var(--kf-r-tile);
+  }
+  #shopify-section-{{ section.id }} .kf-diff__num {
+    flex: none; width: 2rem; height: 2rem; display: grid; place-items: center;
+    border-radius: var(--kf-r-pill); background: rgb(var(--kf-ink)); color: #fff; font-weight: 700; font-size: 0.9rem;
+  }
+  #shopify-section-{{ section.id }} .kf-diff__title { font-weight: 700; margin-bottom: 2px; }
+  #shopify-section-{{ section.id }} .kf-diff__text { color: rgb(var(--color-foreground) / 0.72); font-size: 0.9rem; }
+
+  /* ---- Kettle type cards ---- */
+  #shopify-section-{{ section.id }} .kf-types {
+    display: grid; gap: var(--sp-6); grid-template-columns: 1fr;
+  }
+  @media (min-width: 750px) { #shopify-section-{{ section.id }} .kf-types { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 990px) { #shopify-section-{{ section.id }} .kf-types { grid-template-columns: repeat(3, 1fr); } }
+  #shopify-section-{{ section.id }} .kf-card {
+    position: relative; /* anchors the stretched "Learn more" link */
+    display: flex; flex-direction: column; overflow: hidden;
+    border: 1px solid rgb(var(--color-border)); border-radius: var(--kf-r-card);
+    background: rgb(var(--color-background));
+    cursor: pointer;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    #shopify-section-{{ section.id }} .kf-card { transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
+  }
+  #shopify-section-{{ section.id }} .kf-card:hover {
+    transform: translateY(-4px); border-color: rgb(var(--kf-ink) / 0.5);
+    box-shadow: 0 18px 40px -18px rgb(var(--kf-ink) / 0.45);
+  }
+  #shopify-section-{{ section.id }} .kf-card__media {
+    position: relative; aspect-ratio: 4 / 3; overflow: hidden;
+    display: grid; place-items: center; background: rgb(var(--kf-ink) / 0.05);
+  }
+  #shopify-section-{{ section.id }} .kf-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  #shopify-section-{{ section.id }} .kf-card__glyph { font-size: clamp(2.6rem, 8vw, 3.6rem); line-height: 1; opacity: 0.55; }
+  #shopify-section-{{ section.id }} .kf-card__badge {
+    position: absolute; top: var(--sp-3); left: var(--sp-3);
+    padding: 0.2rem 0.6rem; border-radius: var(--kf-r-pill);
+    background: rgb(var(--kf-ink)); color: #fff; font-size: 0.68rem; font-weight: 700;
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  #shopify-section-{{ section.id }} .kf-card__body { display: flex; flex: 1 1 auto; flex-direction: column; gap: var(--sp-2); padding: var(--sp-5); }
+  #shopify-section-{{ section.id }} .kf-card__bestfor {
+    align-self: flex-start; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.03em;
+    text-transform: uppercase; color: rgb(var(--kf-ink) / 0.75);
+  }
+  #shopify-section-{{ section.id }} .kf-card__title { margin: 0; font-weight: 700; }
+  #shopify-section-{{ section.id }} .kf-card__desc { flex: 1 1 auto; margin: 0; color: rgb(var(--color-foreground) / 0.72); font-size: 0.92rem; }
+  #shopify-section-{{ section.id }} .kf-card__link {
+    align-self: flex-start; margin-top: var(--sp-2); font-weight: 600; text-decoration: none;
+    color: rgb(var(--kf-ink)); border-bottom: 2px solid rgb(var(--kf-ink) / 0.3);
+  }
+  #shopify-section-{{ section.id }} .kf-card__link:hover { border-bottom-color: rgb(var(--kf-ink)); }
+  {%- comment -%} Stretch the link over the whole card so clicking anywhere on the
+     card navigates (the visible "Learn more" link still works as its own target). {%- endcomment -%}
+  #shopify-section-{{ section.id }} .kf-card__link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+  {%- comment -%} Keep the card's own hover focus ring visible when the link is focused. {%- endcomment -%}
+  #shopify-section-{{ section.id }} .kf-card__link:focus-visible { outline: none; }
+  #shopify-section-{{ section.id }} .kf-card:has(.kf-card__link:focus-visible) {
+    outline: 2px solid rgb(var(--kf-ink));
+    outline-offset: 2px;
+  }
+
+  /* ---- Size guide ---- */
+  #shopify-section-{{ section.id }} .kf-size-wrap { max-width: 52rem; margin-inline: auto; overflow-x: auto; }
+  #shopify-section-{{ section.id }} .kf-size { width: 100%; border-collapse: collapse; }
+  #shopify-section-{{ section.id }} .kf-size th, #shopify-section-{{ section.id }} .kf-size td {
+    text-align: left; padding: var(--sp-3) var(--sp-4); border-bottom: 1px solid rgb(var(--color-border));
+    font-size: 0.92rem;
+  }
+  #shopify-section-{{ section.id }} .kf-size th { font-weight: 700; color: rgb(var(--kf-ink)); }
+  #shopify-section-{{ section.id }} .kf-size td:first-child { font-weight: 700; white-space: nowrap; }
+
+  /* ---- Shop grid ---- */
+  #shopify-section-{{ section.id }} .kf-shop__cta { text-align: center; margin-top: var(--sp-8); }
+
+  /* ---- Care tips ---- */
+  #shopify-section-{{ section.id }} .kf-care { max-width: 52rem; margin-inline: auto; display: grid; gap: var(--sp-3); grid-template-columns: 1fr; }
+  @media (min-width: 750px) { #shopify-section-{{ section.id }} .kf-care { grid-template-columns: repeat(2, 1fr); } }
+  #shopify-section-{{ section.id }} .kf-care li {
+    list-style: none; padding: var(--sp-4); border: 1px solid rgb(var(--color-border)); border-radius: var(--kf-r-tile);
+    color: rgb(var(--color-foreground) / 0.8); font-size: 0.9rem;
+  }
+  #shopify-section-{{ section.id }} .kf-care strong { color: rgb(var(--kf-ink)); }
+
+  /* ---- FAQ ---- */
+  #shopify-section-{{ section.id }} .kf-faq { max-width: 52rem; margin-inline: auto; }
+  #shopify-section-{{ section.id }} .kf-faq details {
+    border-bottom: 1px solid rgb(var(--color-border));
+  }
+  #shopify-section-{{ section.id }} .kf-faq summary {
+    cursor: pointer; padding: var(--sp-4) 0; font-weight: 600; list-style: none;
+    display: flex; justify-content: space-between; align-items: center; gap: var(--sp-4);
+  }
+  #shopify-section-{{ section.id }} .kf-faq summary::-webkit-details-marker { display: none; }
+  #shopify-section-{{ section.id }} .kf-faq summary::after {
+    content: '+'; font-size: 1.4rem; line-height: 1; color: rgb(var(--kf-ink)); flex: none;
+  }
+  #shopify-section-{{ section.id }} .kf-faq details[open] summary::after { content: '−'; }
+  #shopify-section-{{ section.id }} .kf-faq__answer { padding: 0 0 var(--sp-4); color: rgb(var(--color-foreground) / 0.75); font-size: 0.92rem; }
+</style>
+
+<div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
+  <div class="page-width relative">
+
+    {%- comment -%} ===== Breadcrumb ===== {%- endcomment -%}
+    {%- if section.settings.show_breadcrumb -%}
+      {%- assign kf_crumb_current = section.settings.heading | default: page.title -%}
+      <nav class="kf-breadcrumb" aria-label="Breadcrumb">
+        <ol class="kf-breadcrumb__list text-sm">
+          <li class="kf-breadcrumb__item">
+            <a href="{{ routes.root_url }}" class="kf-breadcrumb__link" aria-label="Home">{%- render 'icon', icon: 'home', size: 'sm' -%}</a>
+          </li>
+          {%- if section.settings.breadcrumb_parent_title != blank -%}
+            <li class="kf-breadcrumb__sep" aria-hidden="true">{%- render 'icon', icon: 'chevron-right', size: 'xs' -%}</li>
+            <li class="kf-breadcrumb__item">
+              {%- if section.settings.breadcrumb_parent_link != blank -%}
+                <a href="{{ section.settings.breadcrumb_parent_link }}" class="kf-breadcrumb__link">{{ section.settings.breadcrumb_parent_title }}</a>
+              {%- else -%}{{ section.settings.breadcrumb_parent_title }}{%- endif -%}
+            </li>
+          {%- endif -%}
+          <li class="kf-breadcrumb__sep" aria-hidden="true">{%- render 'icon', icon: 'chevron-right', size: 'xs' -%}</li>
+          <li class="kf-breadcrumb__item kf-breadcrumb__item--current" aria-current="page">{{ kf_crumb_current }}</li>
+        </ol>
+      </nav>
+    {%- endif -%}
+
+    {%- comment -%} ===== Intro / hero ===== {%- endcomment -%}
+    <div class="kf-intro">
+      {%- if section.settings.eyebrow != blank -%}<span class="kf-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+      {%- if section.settings.heading != blank -%}<h1 class="{{ section.settings.heading_size }}">{{ section.settings.heading }}</h1>{%- endif -%}
+      {%- if section.settings.subtext != blank -%}<div class="kf-intro__subtext subtext-md rte">{{ section.settings.subtext }}</div>{%- endif -%}
+    </div>
+
+    {%- comment -%} ===== Kettle types (core browse) — sits directly under the intro, no heading ===== {%- endcomment -%}
+    <div class="kf-block" id="kettle-types">
+      <div class="kf-types">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'kettle_type' -%}
+            <div class="kf-card" {{ block.shopify_attributes }}>
+              <div class="kf-card__media">
+                {%- if block.settings.image != blank -%}
+                  {{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy', widths: '300,400,500,600,700,800', sizes: '(min-width: 990px) 30vw, (min-width: 750px) 45vw, 90vw', alt: block.settings.title }}
+                {%- else -%}
+                  <span class="kf-card__glyph" aria-hidden="true">{{ block.settings.emoji | default: '🫖' }}</span>
+                {%- endif -%}
+                {%- if block.settings.badge != blank -%}<span class="kf-card__badge">{{ block.settings.badge }}</span>{%- endif -%}
+              </div>
+              <div class="kf-card__body">
+                {%- if block.settings.best_for != blank -%}<span class="kf-card__bestfor">Best for {{ block.settings.best_for }}</span>{%- endif -%}
+                {%- if block.settings.title != blank -%}<p class="kf-card__title title-sm">{{ block.settings.title }}</p>{%- endif -%}
+                {%- if block.settings.description != blank -%}<p class="kf-card__desc">{{ block.settings.description }}</p>{%- endif -%}
+                {%- if block.settings.link != blank -%}<a class="kf-card__link" href="{{ block.settings.link }}">{{ block.settings.link_label | default: 'Learn more →' }}</a>{%- endif -%}
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+
+    {%- comment -%} ===== Universal features ===== {%- endcomment -%}
+    {%- if section.settings.show_universal -%}
+      <div class="kf-block">
+        <div class="kf-block__head">
+          <h2 class="title-md">{{ section.settings.universal_heading }}</h2>
+          {%- if section.settings.universal_intro != blank -%}<div class="kf-block__intro rte">{{ section.settings.universal_intro }}</div>{%- endif -%}
+        </div>
+        <div class="kf-features">
+          <div class="kf-feature"><div class="kf-feature__icon" aria-hidden="true">{%- if section.settings.feat_icon_boil != blank -%}<img class="kf-feature__svg" src="{{ section.settings.feat_icon_boil }}" alt="" loading="lazy">{%- else -%}⚡{%- endif -%}</div><p class="kf-feature__title">Fast, powerful boiling</p><p class="kf-feature__text">Most models heat water in as little as 3 minutes.</p></div>
+          <div class="kf-feature"><div class="kf-feature__icon" aria-hidden="true">{%- if section.settings.feat_icon_cordless != blank -%}<img class="kf-feature__svg" src="{{ section.settings.feat_icon_cordless }}" alt="" loading="lazy">{%- else -%}🔌{%- endif -%}</div><p class="kf-feature__title">Cordless convenience</p><p class="kf-feature__text">Lifts off a 360° swivel base — carry it right to the mug.</p></div>
+          <div class="kf-feature"><div class="kf-feature__icon" aria-hidden="true">{%- if section.settings.feat_icon_safety != blank -%}<img class="kf-feature__svg" src="{{ section.settings.feat_icon_safety }}" alt="" loading="lazy">{%- else -%}🛡️{%- endif -%}</div><p class="kf-feature__title">Built-in safety</p><p class="kf-feature__text">Automatic shut-off and boil-dry protection on every model.</p></div>
+          <div class="kf-feature"><div class="kf-feature__icon" aria-hidden="true">{%- if section.settings.feat_icon_pour != blank -%}<img class="kf-feature__svg" src="{{ section.settings.feat_icon_pour }}" alt="" loading="lazy">{%- else -%}🫗{%- endif -%}</div><p class="kf-feature__title">Easy pour &amp; clean</p><p class="kf-feature__text">Drip-free spouts, cool-touch handles, lift-out lids.</p></div>
+          <div class="kf-feature"><div class="kf-feature__icon" aria-hidden="true">{%- if section.settings.feat_icon_peace != blank -%}<img class="kf-feature__svg" src="{{ section.settings.feat_icon_peace }}" alt="" loading="lazy">{%- else -%}✅{%- endif -%}</div><p class="kf-feature__title">Peace of mind</p><p class="kf-feature__text">cETL approved and backed by a 1-year Chefman assurance.</p></div>
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} ===== The 5 differences ===== {%- endcomment -%}
+    {%- if section.settings.show_differences -%}
+      <div class="kf-block">
+        <div class="kf-block__head">
+          <h2 class="title-md">{{ section.settings.differences_heading }}</h2>
+          {%- if section.settings.differences_intro != blank -%}<div class="kf-block__intro rte">{{ section.settings.differences_intro }}</div>{%- endif -%}
+        </div>
+        <div class="kf-diffs">
+          <div class="kf-diff"><span class="kf-diff__num">1</span><div><p class="kf-diff__title">Size (capacity)</p><p class="kf-diff__text">From a personal 0.8L (about 2–4 cups) up to a family-sized 2.0L. Bigger holds more; smaller heats a single cup faster.</p></div></div>
+          <div class="kf-diff"><span class="kf-diff__num">2</span><div><p class="kf-diff__title">Temperature control</p><p class="kf-diff__text">Basic kettles boil to 212°F and stop. Temperature-control kettles let you dial in a lower heat — key for green tea and pour-over.</p></div></div>
+          <div class="kf-diff"><span class="kf-diff__num">3</span><div><p class="kf-diff__title">Material</p><p class="kf-diff__text">Glass lets you watch the water; stainless steel is durable and opaque; double-wall glass stays cool to the touch.</p></div></div>
+          <div class="kf-diff"><span class="kf-diff__num">4</span><div><p class="kf-diff__title">Tea infuser</p><p class="kf-diff__text">A removable basket that steeps loose-leaf tea right inside the kettle — no separate teapot needed.</p></div></div>
+          <div class="kf-diff"><span class="kf-diff__num">5</span><div><p class="kf-diff__title">Spout</p><p class="kf-diff__text">A drip-free spout pours cleanly for everyday use. A gooseneck gives the slow, precise stream pour-over and matcha depend on.</p></div></div>
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} ===== Size guide ===== {%- endcomment -%}
+    {%- if section.settings.show_size_guide -%}
+      <div class="kf-block">
+        <div class="kf-block__head"><h2 class="title-md">{{ section.settings.size_heading }}</h2></div>
+        <div class="kf-size-wrap">
+          <table class="kf-size">
+            <thead><tr><th>Capacity</th><th>Roughly serves</th><th>Great for</th></tr></thead>
+            <tbody>
+              <tr><td>0.8L</td><td>2–4 cups</td><td>Solo drinkers, small kitchens, pour-over coffee, travel</td></tr>
+              <tr><td>1L – 1.2L</td><td>3–5 cups</td><td>One or two people, everyday tea &amp; coffee</td></tr>
+              <tr><td>1.5L – 1.7L</td><td>6–7 cups</td><td>Small households, entertaining a few guests</td></tr>
+              <tr><td>1.8L – 2.0L</td><td>A full pot</td><td>Families, big batches, hosting</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} ===== Shop the collection (live products) ===== {%- endcomment -%}
+    {%- if section.settings.show_shop -%}
+      {%- liquid
+        assign kettle_collection = section.settings.collection
+        if kettle_collection == blank
+          assign kettle_collection = collections['kettles-2']
+        endif
+      -%}
+      {%- if kettle_collection != blank and kettle_collection.products_count > 0 -%}
+        <div class="kf-block">
+          <div class="kf-block__head">
+            <h2 class="title-md">{{ section.settings.shop_heading }}</h2>
+            {%- if section.settings.shop_intro != blank -%}<div class="kf-block__intro rte">{{ section.settings.shop_intro }}</div>{%- endif -%}
+          </div>
+          <div class="product-grid card-grid card-grid--4 mobile:card-grid--2 grid">
+            {%- for product in kettle_collection.products limit: section.settings.product_limit -%}
+              {%- render 'product-card',
+                product: product,
+                product_id: product.id,
+                section_id: section.id,
+                lazy_load: true,
+                image_ratio: settings.product_image_ratio,
+                image_fill: settings.product_image_fill,
+                show_secondary_image: settings.product_secondary_image,
+                show_vendor: settings.product_vendor,
+                show_rating: settings.product_rating,
+                show_color_swatches: settings.product_color_swatches,
+                show_quick_add: settings.product_quick_add,
+                show_save_amount: settings.product_save_amount,
+                save_type: settings.product_save_type
+              -%}
+            {%- endfor -%}
+          </div>
+          <div class="kf-shop__cta">
+            <a class="button button--primary" href="{{ kettle_collection.url | default: '/collections/kettles-2' }}" is="hover-link">
+              <span class="btn-fill" data-fill></span>
+              <span class="btn-text">{{ section.settings.shop_button_label | default: 'Shop all kettles' }}</span>
+            </a>
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- comment -%} ===== Care tips ===== {%- endcomment -%}
+    {%- if section.settings.show_care -%}
+      <div class="kf-block">
+        <div class="kf-block__head"><h2 class="title-md">{{ section.settings.care_heading }}</h2></div>
+        <ul class="kf-care">
+          <li><strong>Descale monthly</strong> if you have hard water: boil a 50/50 water-and-white-vinegar mix, let sit 15–20 min, then rinse well.</li>
+          <li><strong>Hand-wash</strong> the kettle body and infuser — never submerge the electrical base.</li>
+          <li><strong>Fill between the min and max lines</strong> — never above max, and never run it empty.</li>
+          <li><strong>Let it cool</strong> before refilling a just-boiled kettle.</li>
+        </ul>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} ===== FAQ ===== {%- endcomment -%}
+    {%- if section.settings.show_faq -%}
+      <div class="kf-block">
+        <div class="kf-block__head"><h2 class="title-md">{{ section.settings.faq_heading }}</h2></div>
+        <div class="kf-faq">
+          <details><summary>Is an electric kettle really faster than the stovetop?</summary><div class="kf-faq__answer">Yes — Chefman kettles bring water to a boil in as little as 3 minutes, faster than a stovetop or microwave, and they shut off automatically when it's done.</div></details>
+          <details><summary>Do I need temperature control?</summary><div class="kf-faq__answer">If you only drink black tea, coffee, or instant drinks, a Fast-Boil kettle is all you need. If you enjoy green, white, or oolong tea — or brew pour-over coffee — temperature control makes a real difference in flavor.</div></details>
+          <details><summary>What's a gooseneck kettle for?</summary><div class="kf-faq__answer">The narrow, curved spout gives you a slow, precise pour, ideal for pour-over coffee and matcha. It's also just a very satisfying way to pour anything.</div></details>
+          <details><summary>Glass or stainless steel?</summary><div class="kf-faq__answer">Glass lets you watch the water and check the level at a glance; stainless steel is more durable and hides water spots. Double-wall glass gives you the glass look with a cool-touch exterior.</div></details>
+          <details><summary>Can I steep tea directly in the kettle?</summary><div class="kf-faq__answer">Yes — any model with a tea infuser includes a removable basket for loose-leaf or bagged tea.</div></details>
+          <details><summary>Are Chefman kettles safe?</summary><div class="kf-faq__answer">Every model has automatic shut-off and boil-dry protection, is cETL approved, and comes with a 1-year Chefman assurance. Cool-touch handles and cordless bases add everyday safety.</div></details>
+        </div>
+      </div>
+    {%- endif -%}
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Kettle finder",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "header", "content": "Breadcrumb" },
+    { "type": "checkbox", "id": "show_breadcrumb", "label": "Show breadcrumb", "default": true },
+    { "type": "text", "id": "breadcrumb_parent_title", "label": "Parent title", "default": "Kettles" },
+    { "type": "url", "id": "breadcrumb_parent_link", "label": "Parent link" },
+    { "type": "header", "content": "Intro" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Electric Kettle Guide" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Find your perfect kettle" },
+    {
+      "type": "select", "id": "heading_size", "label": "Heading size",
+      "options": [
+        { "value": "title-md", "label": "Medium" },
+        { "value": "title-lg tracking-heading", "label": "Large" },
+        { "value": "title-xl tracking-heading", "label": "Extra large" }
+      ],
+      "default": "title-lg tracking-heading"
+    },
+    { "type": "richtext", "id": "subtext", "label": "Intro text", "default": "<p>The fastest way to hot water in your home — for tea, pour-over coffee, and everything in between. Here's how our kettles differ, so you can pick with confidence.</p>" },
+    { "type": "header", "content": "Universal features section" },
+    { "type": "checkbox", "id": "show_universal", "label": "Show 'what every kettle gives you'", "default": true },
+    { "type": "text", "id": "universal_heading", "label": "Heading", "default": "What every Chefman kettle gives you" },
+    { "type": "richtext", "id": "universal_intro", "label": "Intro", "default": "<p>No matter which one you choose, you can count on these.</p>" },
+    { "type": "paragraph", "content": "Optional SVG icons (paste Shopify Files URLs). Leave blank to keep the emoji." },
+    { "type": "text", "id": "feat_icon_boil", "label": "Icon — Fast, powerful boiling" },
+    { "type": "text", "id": "feat_icon_cordless", "label": "Icon — Cordless convenience" },
+    { "type": "text", "id": "feat_icon_safety", "label": "Icon — Built-in safety" },
+    { "type": "text", "id": "feat_icon_pour", "label": "Icon — Easy pour & clean" },
+    { "type": "text", "id": "feat_icon_peace", "label": "Icon — Peace of mind" },
+    { "type": "header", "content": "The 5 differences section" },
+    { "type": "checkbox", "id": "show_differences", "label": "Show 'what makes kettles different'", "default": true },
+    { "type": "text", "id": "differences_heading", "label": "Heading", "default": "The 5 things that make kettles different" },
+    { "type": "richtext", "id": "differences_intro", "label": "Intro", "default": "<p>Now that you've seen the types, here's the vocabulary behind them — the five choices that separate one kettle from another.</p>" },
+    { "type": "header", "content": "Size guide section" },
+    { "type": "checkbox", "id": "show_size_guide", "label": "Show size guide", "default": true },
+    { "type": "text", "id": "size_heading", "label": "Heading", "default": "What size do I need?" },
+    { "type": "header", "content": "Shop the collection" },
+    { "type": "checkbox", "id": "show_shop", "label": "Show product grid", "default": true },
+    { "type": "collection", "id": "collection", "label": "Kettle collection" },
+    { "type": "range", "id": "product_limit", "min": 4, "max": 24, "step": 4, "label": "Products to show", "default": 12 },
+    { "type": "text", "id": "shop_heading", "label": "Heading", "default": "Shop the collection" },
+    { "type": "richtext", "id": "shop_intro", "label": "Intro", "default": "<p>These Chefman kettles are available now.</p>" },
+    { "type": "text", "id": "shop_button_label", "label": "Button label", "default": "Shop all kettles" },
+    { "type": "header", "content": "Care & FAQ" },
+    { "type": "checkbox", "id": "show_care", "label": "Show care tips", "default": true },
+    { "type": "text", "id": "care_heading", "label": "Care heading", "default": "Care & safety tips" },
+    { "type": "checkbox", "id": "show_faq", "label": "Show FAQ", "default": true },
+    { "type": "text", "id": "faq_heading", "label": "FAQ heading", "default": "Frequently asked questions" },
+    { "type": "header", "content": "Section" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Padding top", "default": 72 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Padding bottom", "default": 100 },
+    { "type": "checkbox", "id": "divider", "label": "Show divider", "default": false },
+    { "type": "checkbox", "id": "rounded", "label": "Rounded section", "default": false }
+  ],
+  "blocks": [
+    {
+      "type": "kettle_type",
+      "name": "Kettle type",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "emoji", "label": "Fallback emoji", "default": "🫖" },
+        { "type": "text", "id": "badge", "label": "Badge", "info": "Optional pill, e.g. \"New for 2026\"." },
+        { "type": "text", "id": "title", "label": "Title", "default": "Fast-Boil" },
+        { "type": "text", "id": "best_for", "label": "Best for", "default": "everyday speed & value" },
+        { "type": "textarea", "id": "description", "label": "Description", "default": "Fill, press, and you've got a rolling boil in about three minutes." },
+        { "type": "url", "id": "link", "label": "Link" },
+        { "type": "text", "id": "link_label", "label": "Link label", "default": "Learn more →" }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Kettle finder",
+      "blocks": [
+        { "type": "kettle_type", "settings": { "emoji": "⚡", "title": "Fast-Boil", "best_for": "everyday speed & value", "description": "Our most popular, most affordable kettles. Fill, press, and you've got a rolling boil in about three minutes — with a glass body and blue LEDs so you can watch it heat." } },
+        { "type": "kettle_type", "settings": { "emoji": "🍵", "title": "Tea Infuser", "best_for": "loose-leaf tea lovers", "description": "A removable stainless-steel basket drops in so you can boil and steep in one vessel — then lift the basket out. Great for a mug or a whole pot." } },
+        { "type": "kettle_type", "settings": { "emoji": "🌡️", "title": "Temperature Control", "best_for": "green, white & oolong tea", "description": "Boiling water can scorch delicate teas. Dial in the exact heat with digital presets or a variable dial — the upgrade that changes everything for tea and pour-over." } },
+        { "type": "kettle_type", "settings": { "emoji": "🔥", "title": "Keep-Warm", "best_for": "slow sippers", "description": "Holds your water hot for up to an hour after it boils, so your second and third cup are ready whenever you are — no waiting, no reheating." } },
+        { "type": "kettle_type", "settings": { "emoji": "☕", "title": "Gooseneck", "best_for": "pour-over coffee & matcha", "description": "The slow-control gooseneck spout delivers a thin, steady stream exactly where you want it — essential for saturating coffee grounds evenly, or whisking matcha." } },
+        { "type": "kettle_type", "settings": { "emoji": "⚡", "title": "Lightning™ 1750W", "best_for": "the fastest possible boil", "description": "1750 watts of power boils water up to 25% faster than a standard kettle — paired with digital temperature presets and status LEDs." } },
+        { "type": "kettle_type", "settings": { "emoji": "🧊", "title": "Double-Wall Glass", "best_for": "families with kids", "description": "A double layer of glass keeps the outside cool enough to touch even while the water inside is boiling — the safety of a shielded kettle with the beauty of glass." } },
+        { "type": "kettle_type", "settings": { "emoji": "🫙", "title": "Stainless Steel", "best_for": "a durable, classic look", "description": "Tough, timeless, and easy to wipe clean. Offered from 1.2L to 1.8L in classic and brushed finishes, with options like a water-level window and pop-up lid." } },
+        { "type": "kettle_type", "settings": { "emoji": "🌙", "badge": "New for 2026", "title": "reForm Collection", "best_for": "design-forward kitchens", "description": "A premium borosilicate-glass kettle in a matte 'midnight' finish, with a removable magnetic lid, tea infuser, and an extra-large 2.0L option." } },
+        { "type": "kettle_type", "settings": { "emoji": "🌙", "badge": "New for 2026", "title": "Performance Series", "best_for": "design-forward + digital", "description": "The digital counterpart to reForm — a temperature readout and presets on the base, keep-warm, magnetic lid, and infuser. Available up to 2.0L." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

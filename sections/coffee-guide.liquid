@@ -1,0 +1,530 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+    {%- render 'section-variables', section: section -%}
+  }
+
+  /* ---- Breadcrumb ---- */
+  #shopify-section-{{ section.id }} .cg-breadcrumb {
+    margin-bottom: var(--sp-8);
+  }
+  #shopify-section-{{ section.id }} .cg-breadcrumb__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--sp-2);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: rgb(var(--color-foreground) / 0.6);
+  }
+  #shopify-section-{{ section.id }} .cg-breadcrumb__item {
+    display: inline-flex;
+    align-items: center;
+  }
+  #shopify-section-{{ section.id }} .cg-breadcrumb__link {
+    color: rgb(var(--color-foreground) / 0.6);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+  }
+  #shopify-section-{{ section.id }} .cg-breadcrumb__link:hover,
+  #shopify-section-{{ section.id }} .cg-breadcrumb__link:focus-visible {
+    color: rgb(var(--color-foreground));
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
+  }
+  #shopify-section-{{ section.id }} .cg-breadcrumb__sep {
+    display: inline-flex;
+    align-items: center;
+    opacity: 0.5;
+  }
+  #shopify-section-{{ section.id }} .cg-breadcrumb__item--current {
+    color: rgb(var(--color-foreground));
+  }
+
+  /* ---- Hero ---- */
+  #shopify-section-{{ section.id }} .cg-hero {
+    max-width: 52rem;
+  }
+  #shopify-section-{{ section.id }} .cg-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgb(var(--color-foreground) / 0.6);
+    margin-bottom: var(--sp-3);
+  }
+  #shopify-section-{{ section.id }} .cg-hero__intro {
+    margin-top: var(--sp-5);
+    color: rgb(var(--color-foreground) / 0.78);
+  }
+  #shopify-section-{{ section.id }} .cg-hero__media {
+    margin-top: var(--sp-10);
+  }
+  #shopify-section-{{ section.id }} .cg-hero__image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 7;
+    object-fit: cover;
+    border-radius: var(--rounded-block);
+  }
+
+  /* ---- Body layout ---- */
+  #shopify-section-{{ section.id }} .cg-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-16);
+    margin-top: var(--sp-16);
+  }
+  #shopify-section-{{ section.id }} .cg-rte > * + * {
+    margin-top: var(--sp-4);
+  }
+  #shopify-section-{{ section.id }} .cg-rte h2,
+  #shopify-section-{{ section.id }} .cg-rte h3 {
+    margin-top: var(--sp-6);
+  }
+  #shopify-section-{{ section.id }} .cg-block h2.heading {
+    margin-bottom: var(--sp-4);
+  }
+
+  /* rich text + callout + cta sit in a readable centered column */
+  #shopify-section-{{ section.id }} .cg-rich,
+  #shopify-section-{{ section.id }} .cg-callout,
+  #shopify-section-{{ section.id }} .cg-cta {
+    max-width: 46rem;
+    margin-inline: auto;
+    width: 100%;
+  }
+  #shopify-section-{{ section.id }} .cg-rich--narrow {
+    max-width: 38rem;
+  }
+
+  /* single image */
+  #shopify-section-{{ section.id }} .cg-image {
+    margin: 0;
+  }
+  #shopify-section-{{ section.id }} .cg-image__img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--rounded-block);
+  }
+  #shopify-section-{{ section.id }} .cg-image--tall .cg-image__img {
+    aspect-ratio: 4 / 3;
+  }
+  #shopify-section-{{ section.id }} .cg-image--square .cg-image__img {
+    aspect-ratio: 1 / 1;
+  }
+  #shopify-section-{{ section.id }} .cg-image__caption {
+    margin-top: var(--sp-3);
+    text-align: center;
+    color: rgb(var(--color-foreground) / 0.6);
+  }
+
+  /* image + text split (the photo sections) */
+  #shopify-section-{{ section.id }} .cg-split {
+    display: grid;
+    gap: var(--sp-6);
+    align-items: center;
+  }
+  @media (min-width: 750px) {
+    #shopify-section-{{ section.id }} .cg-split {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-12);
+    }
+    #shopify-section-{{ section.id }} .cg-split--reverse .cg-split__media {
+      order: 2;
+    }
+  }
+  #shopify-section-{{ section.id }} .cg-split__img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--rounded-block);
+  }
+  #shopify-section-{{ section.id }} .cg-split__btn,
+  #shopify-section-{{ section.id }} .cg-cta__btn {
+    margin-top: var(--sp-6);
+  }
+
+  /* Secondary button hover: solid midnight + white text (legibility).
+     These buttons aren't is="hover-button", so the theme's JS fill-rise never
+     runs — set the hover background/text directly, with a smooth fade. */
+  #shopify-section-{{ section.id }} .button--secondary {
+    transition: background-color var(--animation-primary), color var(--animation-primary), border-color var(--animation-primary);
+  }
+  #shopify-section-{{ section.id }} .button--secondary:hover,
+  #shopify-section-{{ section.id }} .button--secondary:focus-visible {
+    background-color: #121e2a;
+    color: #ffffff;
+    border-color: #121e2a;
+  }
+  #shopify-section-{{ section.id }} .button--secondary:hover .btn-text,
+  #shopify-section-{{ section.id }} .button--secondary:focus-visible .btn-text {
+    color: #ffffff;
+  }
+  #shopify-section-{{ section.id }} .button--secondary:hover::after,
+  #shopify-section-{{ section.id }} .button--secondary:focus-visible::after {
+    border-color: #121e2a;
+  }
+
+  /* callout / tip */
+  #shopify-section-{{ section.id }} .cg-callout {
+    border: 1px solid rgb(var(--color-border));
+    border-radius: var(--rounded-block);
+    padding: var(--sp-8) var(--sp-10);
+    background: rgb(var(--color-foreground) / 0.04);
+  }
+  #shopify-section-{{ section.id }} .cg-callout__label {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: rgb(var(--color-foreground) / 0.55);
+    margin-bottom: var(--sp-3);
+  }
+  #shopify-section-{{ section.id }} .cg-callout .cg-rte {
+    color: rgb(var(--color-foreground) / 0.85);
+  }
+
+  /* closing CTA */
+  #shopify-section-{{ section.id }} .cg-cta {
+    text-align: center;
+    border: 1px solid rgb(var(--color-border));
+    border-radius: var(--rounded-block);
+    padding: var(--sp-12) var(--sp-6);
+    background: rgb(var(--color-background));
+  }
+</style>
+
+{%- liquid
+  assign guide_heading = section.settings.heading | default: page.title
+-%}
+
+<div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
+  <div class="page-width relative">
+
+    {%- comment -%} ===== BREADCRUMB ===== {%- endcomment -%}
+    {%- if section.settings.show_breadcrumb -%}
+      <nav class="cg-breadcrumb" aria-label="Breadcrumb">
+        <ol class="cg-breadcrumb__list text-sm">
+          <li class="cg-breadcrumb__item">
+            <a href="{{ routes.root_url }}" class="cg-breadcrumb__link" aria-label="Home">
+              {%- render 'icon', icon: 'home', size: 'sm' -%}
+            </a>
+          </li>
+          {%- if section.settings.breadcrumb_parent_title != blank -%}
+            <li class="cg-breadcrumb__sep" aria-hidden="true">{%- render 'icon', icon: 'chevron-right', size: 'xs' -%}</li>
+            <li class="cg-breadcrumb__item">
+              {%- if section.settings.breadcrumb_parent_link != blank -%}
+                <a href="{{ section.settings.breadcrumb_parent_link }}" class="cg-breadcrumb__link">{{ section.settings.breadcrumb_parent_title }}</a>
+              {%- else -%}
+                {{ section.settings.breadcrumb_parent_title }}
+              {%- endif -%}
+            </li>
+          {%- endif -%}
+          <li class="cg-breadcrumb__sep" aria-hidden="true">{%- render 'icon', icon: 'chevron-right', size: 'xs' -%}</li>
+          <li class="cg-breadcrumb__item cg-breadcrumb__item--current" aria-current="page">{{ guide_heading }}</li>
+        </ol>
+      </nav>
+    {%- endif -%}
+
+    {%- comment -%} ===== HERO ===== {%- endcomment -%}
+    {%- if section.settings.show_hero -%}
+      <header class="cg-hero">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="cg-eyebrow subtext-md">{{ section.settings.eyebrow }}</p>
+        {%- endif -%}
+        {%- comment -%} Use the explicit heading only — never fall back to page.title in the hero,
+            so a hero-less / CTA-only instance can't leak a sampled page title (e.g. "About Us"). {%- endcomment -%}
+        {%- if section.settings.heading != blank -%}
+          <h1 class="heading {{ section.settings.heading_size }}">{{ section.settings.heading }}</h1>
+        {%- endif -%}
+        {%- if section.settings.intro != blank -%}
+          <div class="cg-hero__intro text-lg rte">{{ section.settings.intro }}</div>
+        {%- endif -%}
+      </header>
+
+      {%- if section.settings.hero_image != blank -%}
+        <div class="cg-hero__media">
+          {{ section.settings.hero_image | image_url: width: 2000 | image_tag: loading: 'eager', fetchpriority: 'high', widths: '600,800,1000,1200,1400,1600,2000', sizes: '100vw', class: 'cg-hero__image' }}
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- comment -%} ===== BODY BLOCKS ===== {%- endcomment -%}
+    {%- if section.blocks.size > 0 -%}
+      <div class="cg-body">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+
+            {%- when 'rich_text' -%}
+              <section class="cg-block cg-rich{% if block.settings.narrow %} cg-rich--narrow{% endif %}" {{ block.shopify_attributes }}>
+                {%- if block.settings.eyebrow != blank -%}<p class="cg-eyebrow subtext-md">{{ block.settings.eyebrow }}</p>{%- endif -%}
+                {%- if block.settings.heading != blank -%}<h2 class="heading title-md">{{ block.settings.heading }}</h2>{%- endif -%}
+                {%- if block.settings.body != blank -%}<div class="cg-rte rte text-base">{{ block.settings.body }}</div>{%- endif -%}
+              </section>
+
+            {%- when 'image' -%}
+              <figure class="cg-block cg-image cg-image--{{ block.settings.aspect }}" {{ block.shopify_attributes }}>
+                {%- if block.settings.image != blank -%}
+                  {{ block.settings.image | image_url: width: 1600 | image_tag: loading: 'lazy', widths: '600,800,1000,1200,1400,1600', sizes: '100vw', class: 'cg-image__img', is: 'lazy-image' }}
+                {%- else -%}
+                  {{ 'image' | placeholder_svg_tag: 'cg-image__img placeholder' }}
+                {%- endif -%}
+                {%- if block.settings.caption != blank -%}<figcaption class="cg-image__caption text-sm">{{ block.settings.caption }}</figcaption>{%- endif -%}
+              </figure>
+
+            {%- when 'image_text' -%}
+              <section class="cg-block cg-split{% if block.settings.image_position == 'right' %} cg-split--reverse{% endif %}" {{ block.shopify_attributes }}>
+                <div class="cg-split__media">
+                  {%- if block.settings.image != blank -%}
+                    {{ block.settings.image | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '400,600,800,1000', sizes: '(min-width: 750px) 50vw, 100vw', class: 'cg-split__img', is: 'lazy-image' }}
+                  {%- else -%}
+                    {{ 'image' | placeholder_svg_tag: 'cg-split__img placeholder' }}
+                  {%- endif -%}
+                </div>
+                <div class="cg-split__content">
+                  {%- if block.settings.eyebrow != blank -%}<p class="cg-eyebrow subtext-md">{{ block.settings.eyebrow }}</p>{%- endif -%}
+                  {%- if block.settings.heading != blank -%}<h2 class="heading title-md">{{ block.settings.heading }}</h2>{%- endif -%}
+                  {%- if block.settings.body != blank -%}<div class="cg-rte rte text-base">{{ block.settings.body }}</div>{%- endif -%}
+                  {%- if block.settings.button_label != blank and block.settings.button_link != blank -%}
+                    <a class="button button--secondary cg-split__btn" href="{{ block.settings.button_link }}">
+                      <span class="btn-fill" data-fill></span>
+                      <span class="btn-text">{{ block.settings.button_label }}</span>
+                    </a>
+                  {%- endif -%}
+                </div>
+              </section>
+
+            {%- when 'callout' -%}
+              <aside class="cg-block cg-callout" {{ block.shopify_attributes }}>
+                {%- if block.settings.heading != blank -%}<p class="cg-callout__label">{{ block.settings.heading }}</p>{%- endif -%}
+                {%- if block.settings.body != blank -%}<div class="cg-rte rte text-lg">{{ block.settings.body }}</div>{%- endif -%}
+              </aside>
+
+            {%- when 'cta' -%}
+              <section class="cg-block cg-cta" {{ block.shopify_attributes }}>
+                {%- if block.settings.heading != blank -%}<h2 class="heading title-md">{{ block.settings.heading }}</h2>{%- endif -%}
+                {%- if block.settings.body != blank -%}<div class="cg-rte rte text-base">{{ block.settings.body }}</div>{%- endif -%}
+                {%- if block.settings.button_label != blank and block.settings.button_link != blank -%}
+                  <a class="button button--{{ block.settings.button_style | default: 'primary' }} cg-cta__btn" href="{{ block.settings.button_link }}">
+                    <span class="btn-fill" data-fill></span>
+                    <span class="btn-text">{{ block.settings.button_label }}</span>
+                  </a>
+                {%- endif -%}
+              </section>
+
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Coffee guide",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Breadcrumb"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_breadcrumb",
+      "label": "Show breadcrumb",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "breadcrumb_parent_title",
+      "label": "Parent label",
+      "default": "Find your perfect coffee maker"
+    },
+    {
+      "type": "url",
+      "id": "breadcrumb_parent_link",
+      "label": "Parent link"
+    },
+    {
+      "type": "header",
+      "content": "Hero"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_hero",
+      "label": "Show hero (title, intro, image)",
+      "info": "Turn off to use this section purely for content blocks (e.g. a closing call-to-action).",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Coffee guide"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Leave blank to use the page title."
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "title-md", "label": "Medium" },
+        { "value": "title-lg tracking-heading", "label": "Large" },
+        { "value": "title-xl tracking-heading", "label": "Extra large" }
+      ],
+      "default": "title-xl tracking-heading"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Intro"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image"
+    },
+    {
+      "type": "header",
+      "content": "Section"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 100
+    },
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "Show divider",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "rounded",
+      "label": "Rounded section",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "rich_text",
+      "name": "Text",
+      "settings": [
+        { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+        { "type": "text", "id": "heading", "label": "Heading" },
+        { "type": "richtext", "id": "body", "label": "Body" },
+        { "type": "checkbox", "id": "narrow", "label": "Narrow column", "default": false }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        {
+          "type": "select",
+          "id": "aspect",
+          "label": "Aspect ratio",
+          "options": [
+            { "value": "wide", "label": "Wide (16:9)" },
+            { "value": "tall", "label": "Tall (4:3)" },
+            { "value": "square", "label": "Square (1:1)" }
+          ],
+          "default": "wide"
+        },
+        { "type": "text", "id": "caption", "label": "Caption" }
+      ]
+    },
+    {
+      "type": "image_text",
+      "name": "Image with text",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        {
+          "type": "select",
+          "id": "image_position",
+          "label": "Image position",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "left"
+        },
+        { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+        { "type": "text", "id": "heading", "label": "Heading" },
+        { "type": "richtext", "id": "body", "label": "Body" },
+        { "type": "text", "id": "button_label", "label": "Button label" },
+        { "type": "url", "id": "button_link", "label": "Button link" }
+      ]
+    },
+    {
+      "type": "callout",
+      "name": "Tip / callout",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading", "default": "Pro tip" },
+        { "type": "richtext", "id": "body", "label": "Body" }
+      ]
+    },
+    {
+      "type": "cta",
+      "name": "Call to action",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading" },
+        { "type": "richtext", "id": "body", "label": "Body" },
+        { "type": "text", "id": "button_label", "label": "Button label" },
+        { "type": "url", "id": "button_link", "label": "Button link" },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "Button style",
+          "options": [
+            { "value": "primary", "label": "Primary" },
+            { "value": "secondary", "label": "Secondary" }
+          ],
+          "default": "primary"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Coffee guide",
+      "blocks": [
+        { "type": "rich_text" },
+        { "type": "image_text" },
+        { "type": "image_text", "settings": { "image_position": "right" } },
+        { "type": "callout" },
+        { "type": "cta" }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -4,6 +4,18 @@
     --section-padding-bottom: {{ section.settings.padding_bottom }}px;
     {%- render 'section-variables', section: section -%}
   }
+
+  {%- comment -%} Sit the card arrow next to the collection title instead of at the far right edge {%- endcomment -%}
+  #shopify-section-{{ section.id }} .media-card__content {
+    justify-content: flex-start;
+  }
+
+  {%- comment -%} Keep the View all button content-width instead of full-frame.
+     Matters on mobile, where the heading row is text-center (not items-center)
+     so the button would otherwise stretch to full width. {%- endcomment -%}
+  #shopify-section-{{ section.id }} .title-wrapper .button {
+    align-self: center;
+  }
 </style>
 
 <div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
@@ -20,9 +32,9 @@
         </a>
       {%- endif -%}
     {%- endcapture -%}
-    {%- capture indicators -%}
+    {%- capture nav_arrows -%}
       {%- if section.settings.carousel_on_desktop -%}
-        <div class="indicators hidden lg:flex gap-2d5">
+        <div class="indicators hidden lg:flex justify-center gap-2d5" style="margin-top: var(--sp-8);">
           <button class="button button--secondary" type="button" is="previous-button" aria-controls="Slider-{{ section.id }}" aria-label="{{ 'general.pagination.previous' | t | escape }}" disabled>
             <span class="btn-fill" data-fill></span>
             <span class="btn-text">
@@ -36,23 +48,23 @@
             </span>
           </button>
         </div>
-        <p class="lg:hidden">{{ view_all }}</p>
-      {%- else -%}
-        <p>{{ view_all }}</p>
       {%- endif -%}
     {%- endcapture -%}
-    {%- render 'section-heading', section: section, section_button: indicators -%}
+    {%- comment -%} Swapped: the View all button now sits under the heading; nav arrows move to the bottom {%- endcomment -%}
+    {%- render 'section-heading', section: section, section_button: view_all -%}
 
     <slider-element id="Slider-{{ section.id }}" class="grid slider{% if section.settings.carousel_on_desktop %} slider--desktop{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}" selector=".card-grid>.card">
       <motion-list class="card-grid card-grid--{{ section.settings.columns }} mobile:card-grid--{{ section.settings.columns_mobile }} grid">
         {%- for block in section.blocks -%}
           {%- assign collection = collections[block.settings.collection] -%}
+          {% capture wlm_check %}{% include 'wlm-collection' with collection %}{% endcapture %}{% unless wlm_check contains "Liquid error" %}{% include 'wlm-collection' with collection %}{% endunless %}
           {%- render 'collection-card',
             block: block,
             collection: collection,
             image_type: section.settings.image_type,
             image_ratio: section.settings.image_ratio,
             show_products_count: section.settings.show_products_count,
+            show_arrow: section.settings.show_arrow,
             position: forloop.index,
           -%}
         {%- endfor -%}
@@ -78,9 +90,8 @@
       {%- endif -%}
     </slider-element>
 
-    {%- if section.settings.carousel_on_desktop -%}
-      <p class="hidden lg:block">{{ view_all }}</p>
-    {%- endif -%}
+    {%- comment -%} Swapped: nav arrows now sit at the bottom (were under the heading) {%- endcomment -%}
+    {{ nav_arrows }}
   </div>
 </div>
 
@@ -153,6 +164,12 @@
       "id": "show_products_count",
       "default": true,
       "label": "t:sections.main-list-collections.settings.show_products_count.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrow",
+      "default": true,
+      "label": "Show arrow on cards"
     },
     {
       "type": "checkbox",
@@ -499,7 +516,7 @@
           "type": "color",
           "id": "color_overlay",
           "label": "t:sections.global.settings.color_overlay.label",
-          "default": "#000000"
+          "default": "#121e2a"
         },
         {
           "type": "range",

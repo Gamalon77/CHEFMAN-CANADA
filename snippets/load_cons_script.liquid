@@ -1,0 +1,33 @@
+<script type="text/javascript">
+  _iub.cons_instructions.push([
+    'load',
+    {
+      submitElement: document.getElementById('submit_button_contact'),
+      form: {
+        selector: document.getElementById('ContactForm'),
+        map: {
+          subject: {
+            full_name: 'contact[full_name]',
+            email: 'contact[email]',
+          }
+        },
+      },
+      consent: {
+        preferences: {
+          sell_my_info: false,
+        },
+        legal_notices: [
+          {
+            identifier: 'privacy_policy',
+          },
+          {
+            identifier: 'cookie_policy',
+          },
+          {
+            identifier: 'terms',
+          },
+        ],
+      },
+    },
+  ]);
+</script>

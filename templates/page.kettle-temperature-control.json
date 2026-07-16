@@ -1,0 +1,274 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "kettle_detail": {
+      "type": "kettle-detail",
+      "blocks": {
+        "why_1": {
+          "type": "reason",
+          "settings": {
+            "title": "Protect delicate flavor",
+            "text": "Boiling water (212°F) scorches green, white, and oolong tea and draws out bitterness. Dialing in a lower temperature keeps those teas smooth, sweet, and aromatic."
+          }
+        },
+        "why_2": {
+          "type": "reason",
+          "settings": {
+            "title": "Dial in the exact temperature",
+            "text": "Choose from 5 preset temperatures matched to different teas on preset models, or step up to advanced digital kettles with up to 7 presets for even finer control."
+          }
+        },
+        "why_3": {
+          "type": "reason",
+          "settings": {
+            "title": "Better pour-over coffee",
+            "text": "Pour-over and French press coffee taste best brewed around 195–205°F, just below boiling. Temperature control lets you hit that window every time for a cleaner, more even extraction."
+          }
+        },
+        "why_4": {
+          "type": "reason",
+          "settings": {
+            "title": "It stays ready when you are",
+            "text": "Many models keep your water hot for up to an hour after it heats, so your second and third cup are ready without waiting or re-boiling."
+          }
+        },
+        "feat_1": {
+          "type": "feature",
+          "settings": {
+            "icon": "🌡️",
+            "title": "Preset & variable temps",
+            "text": "Pick from 5 preset temperatures matched to different teas, or choose a variable setting — with advanced digital models offering up to 7 presets."
+          }
+        },
+        "feat_2": {
+          "type": "feature",
+          "settings": {
+            "icon": "⏲️",
+            "title": "Built-in steep timer",
+            "text": "Select advanced digital models include a steep timer, so your tea brews for exactly the right time — no guessing, no over-steeping."
+          }
+        },
+        "feat_3": {
+          "type": "feature",
+          "settings": {
+            "icon": "♨️",
+            "title": "Keep-warm function",
+            "text": "Many temperature-control kettles hold your set temperature for up to an hour after heating, so hot water is ready whenever you are."
+          }
+        },
+        "feat_4": {
+          "type": "feature",
+          "settings": {
+            "icon": "💡",
+            "title": "Color-coded status LEDs",
+            "text": "Tricolor lights show standby, heating, and ready at a glance, and some models beep the moment your water hits its target temperature."
+          }
+        },
+        "feat_5": {
+          "type": "feature",
+          "settings": {
+            "icon": "🫖",
+            "title": "Optional tea infuser",
+            "text": "Some models include a removable infuser basket, so you can heat to the perfect temperature and steep loose-leaf right in the kettle."
+          }
+        },
+        "feat_6": {
+          "type": "feature",
+          "settings": {
+            "icon": "🛡️",
+            "title": "Built-in safety",
+            "text": "Automatic shut-off, boil-dry protection, a 360° cordless swivel base, and cETL approval come standard, backed by a 1-year Chefman assurance."
+          }
+        },
+        "note_1": {
+          "type": "note",
+          "settings": {
+            "title": "Sizes & the flagship",
+            "text": "Most temperature-control models are 1.7–1.8L, including the 1.8L Cordless Glass Kettle — a great all-rounder for a tea-loving household with 5 presets from 160°F to 212°F and keep-warm for up to an hour. Digital options range from a compact 1.2L up to an extra-large 2.0L."
+          }
+        },
+        "note_2": {
+          "type": "note",
+          "settings": {
+            "title": "Temperature cheat-sheet",
+            "text": "As a guide: green tea ~170–180°F, white tea ~175–185°F, oolong ~185–200°F, black and herbal teas ~205–212°F (full boil), and pour-over or French press coffee ~195–205°F."
+          }
+        },
+        "note_3": {
+          "type": "note",
+          "settings": {
+            "title": "Glass, steel, or cool-touch",
+            "text": "Temperature control comes in stain-resistant borosilicate glass (watch it heat and check the level), durable stainless steel, and double-wall glass that stays cool to the touch even while heating."
+          }
+        },
+        "note_4": {
+          "type": "note",
+          "settings": {
+            "title": "Care & descaling",
+            "text": "If you have hard water, descale monthly: fill with a 50/50 mix of water and white vinegar, boil, let it sit 15–20 minutes, then rinse well. Hand-wash the body and infuser, and never submerge the electrical base."
+          }
+        },
+        "rel_1": {
+          "type": "related",
+          "settings": {
+            "label": "All kettle types",
+            "link": "/pages/find-your-perfect-electric-kettle-chefman"
+          }
+        },
+        "rel_2": {
+          "type": "related",
+          "settings": {
+            "label": "Fast-Boil",
+            "link": "/pages/fast-boil-electric-kettles-chefman"
+          }
+        },
+        "rel_3": {
+          "type": "related",
+          "settings": {
+            "label": "Tea Infuser",
+            "link": "/pages/tea-infuser-electric-kettles-chefman"
+          }
+        },
+        "rel_4": {
+          "type": "related",
+          "settings": {
+            "label": "Keep-Warm",
+            "link": "/pages/keep-warm-electric-kettles-chefman"
+          }
+        },
+        "rel_5": {
+          "type": "related",
+          "settings": {
+            "label": "Gooseneck",
+            "link": "/pages/gooseneck-electric-kettles-chefman"
+          }
+        },
+        "rel_6": {
+          "type": "related",
+          "settings": {
+            "label": "Stainless Steel",
+            "link": "/pages/stainless-steel-electric-kettles-chefman"
+          }
+        },
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "What temperature should I use for green tea?",
+            "answer": "<p>Green tea is best brewed around 170–180°F. Boiling water at 212°F scorches the delicate leaves and makes them bitter, so a temperature-control kettle lets you dial in the lower heat that keeps green tea smooth and sweet.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Do I really need a temperature-control kettle?",
+            "answer": "<p>If you only drink black tea, instant coffee, or just need hot water fast, a Fast-Boil kettle is all you need. But if you enjoy green, white, or oolong tea — or brew pour-over coffee — temperature control makes a real difference in flavor, since those drinks taste best below a full boil.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "What's the difference between preset and advanced digital temperature-control kettles?",
+            "answer": "<p>Preset kettles let you pick from 5 preset temperatures matched to different teas. Advanced digital models step up to as many as 7 presets, add a steep timer for perfect brewing, and include a keep-warm function that holds your water hot for up to an hour.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I still boil water all the way to 212°F?",
+            "answer": "<p>Yes. Temperature-control kettles include a full-boil option alongside their lower presets, so you can brew black or herbal tea, make instant coffee, or cook ramen and oatmeal at 212°F, then switch to a gentler setting for green or white tea.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq",
+          "settings": {
+            "question": "What temperature is best for pour-over coffee?",
+            "answer": "<p>Pour-over and French press coffee brew best around 195–205°F, just below boiling. A temperature-control kettle lets you hit that window consistently for a cleaner, more even extraction.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I clean and descale a temperature-control kettle?",
+            "answer": "<p>If you have hard water, descale monthly: fill the kettle with a 50/50 mix of water and white vinegar, boil, let it sit 15–20 minutes, then rinse well. Hand-wash the kettle body and any infuser basket, and never submerge the electrical base.</p>"
+          }
+        },
+        "faq_7": {
+          "type": "faq",
+          "settings": {
+            "question": "Are Chefman temperature-control kettles safe?",
+            "answer": "<p>Yes. Every model features automatic shut-off and boil-dry protection, lifts off a 360° cordless swivel base, is cETL approved, and is backed by a 1-year Chefman assurance. Cool-touch handles add everyday peace of mind.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "why_1",
+        "why_2",
+        "why_3",
+        "why_4",
+        "feat_1",
+        "feat_2",
+        "feat_3",
+        "feat_4",
+        "feat_5",
+        "feat_6",
+        "note_1",
+        "note_2",
+        "note_3",
+        "note_4",
+        "rel_1",
+        "rel_2",
+        "rel_3",
+        "rel_4",
+        "rel_5",
+        "rel_6",
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7"
+      ],
+      "settings": {
+        "show_breadcrumb": true,
+        "crumb1_title": "Kettles",
+        "crumb1_link": "shopify://collections/kettles-2",
+        "crumb2_title": "Find your kettle",
+        "crumb2_link": "/pages/find-your-perfect-electric-kettle-chefman",
+        "eyebrow": "Chefman Kettle Guide",
+        "heading": "Temperature-Control Kettles: The Right Heat for Every Cup",
+        "heading_size": "title-lg tracking-heading",
+        "intro": "<p>Boiling water can scorch delicate teas and turn them bitter. A temperature-control kettle lets you dial in the exact heat each cup deserves — then holds it there while you steep, sip, and pour.</p>",
+        "best_for": "delicate teas & pour-over coffee",
+        "what_heading": "What it is",
+        "what_it_is": "<p>A temperature-control kettle lets you choose a precise, sub-boiling water temperature instead of always heating to a rolling 212°F boil. You set the target with digital presets or a variable dial, and the kettle heats to that mark and stops — many then hold it steady with a keep-warm function. Color-coded LED lights show whether the kettle is on standby, heating, or ready, and some models beep to let you know it's time. That precision is exactly what separates a bright, sweet cup of green tea from a bitter one, and it's what makes pour-over coffee extract cleanly and evenly.</p>",
+        "why_heading": "Why choose a Temperature Control kettle",
+        "features_heading": "Key features",
+        "who_heading": "Who it's for",
+        "who_for": "<p>Temperature-control kettles are made for tea connoisseurs and pour-over coffee fans. If you drink green, white, or oolong tea — the delicate leaves that turn bitter in boiling water — this is the upgrade that changes everything. It's also ideal for anyone brewing pour-over coffee who wants repeatable results, and for households that want one kettle to handle it all, from a full 212°F boil for black tea to a gentle 170°F for a morning green. If you only drink black tea, instant coffee, or simply need hot water fast, a simpler Fast-Boil kettle may be all you need.</p>",
+        "notes_heading": "Good to know",
+        "product_handles": "1-8-liter-cordless-glass-electric-kettle",
+        "shop_heading": "Shop Temperature Control kettles",
+        "shop_button_label": "Shop all kettles",
+        "shop_button_link": "shopify://collections/kettles-2",
+        "related_heading": "Explore other kettle types",
+        "faq_heading": "Frequently asked questions",
+        "padding_top": 64,
+        "padding_bottom": 100,
+        "divider": false,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "kettle_detail"
+  ]
+}

@@ -11,6 +11,8 @@
   - show_rating: {Boolean} Show the product rating. Default: false
   - show_countdown: {Boolean} Show the countdown timer.
   - show_quick_add: {Boolean} Show the quick add button.
+  - quick_add_shop_link: {Boolean} With show_quick_add, render a link to the product page (labelled by quick_add_shop_label) instead of the add-to-cart form / choose-options button. Default: false (optional)
+  - quick_add_shop_label: {String} Label for the quick_add_shop_link button. Default: "Shop now" (optional)
   - show_quick_view: {Boolean} Show the quick view button.
   - show_color_swatches: {Boolean} Show the color swatches.
   - show_save_amount: {Boolean} Show save amount.
@@ -130,7 +132,18 @@
         {%- if product.available -%}
           {%- if show_quick_add -%}
             <div class="quick-add flex justify-end md:justify-center absolute w-full z-1 pointer-events-none">
-              {%- if product.variants.size == 1 -%}
+              {%- comment -%} Optional: force a "Shop now" link to the product page instead of add-to-cart (used by the coffee finder results). {%- endcomment -%}
+              {%- if quick_add_shop_link -%}
+                <a href="{{ product_url }}" class="button button--primary pointer-events-auto md:opacity-0" is="hover-link" aria-label="{{ quick_add_shop_label | default: 'Shop now' | escape }}">
+                  <span class="btn-fill" data-fill></span>
+                  <span class="btn-text">
+                    {%- render 'icon', icon: 'cart', size: 'sm', class: 'md:hidden' -%}
+                    <span class="hidden md:block">
+                      {{- quick_add_shop_label | default: 'Shop now' -}}
+                    </span>
+                  </span>
+                </a>
+              {%- elsif product.variants.size == 1 -%}
                 {%- capture product_form_id -%}QuickAddProductForm-{{ section_id }}-{{ product_id }}{%- endcapture -%}
                 {%- form 'product', product, is: 'product-form', id: product_form_id -%}
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" />
@@ -176,11 +189,30 @@
               {%- endif -%}
             </div>
           {%- endif -%}
-        {%- else -%}
-          <div class="quick-add flex justify-center absolute w-full z-1 pointer-events-none">
-            <button type="button" class="button button--secondary button--blur" disabled="disabled">
-              {{- 'products.product.sold_out' | t -}}
-            </button>
+        {%- elsif show_quick_add -%}
+          {%- comment -%}
+            Sold out: try to open the "Back in Stock" app (backinstock.org)
+            popup in place. If the app's site-wide script binds to this trigger
+            (.BIS_trigger, product read from data-product-data) it opens the
+            same popup the product page uses. If it doesn't, the href is a
+            graceful fallback to the product page, where the app popup works —
+            so the button always does something useful, and auto-upgrades to
+            the in-place popup if the app is later enabled for collection /
+            quick-view buttons.
+          {%- endcomment -%}
+          {%- assign bis_variant_id = product.selected_or_first_available_variant.id | default: product.variants.first.id -%}
+          <div class="quick-add flex justify-end md:justify-center absolute w-full z-1 pointer-events-none">
+            <a
+              href="{{ product_url }}"
+              class="button button--primary pointer-events-auto md:opacity-0 BIS_trigger bis-collection-button"
+              is="hover-link"
+              data-product-data="{{ product | json | escape }}"
+              data-variant-id="{{ bis_variant_id }}"
+              aria-label="{{ 'products.back_in_stock.form.send' | t | escape }}"
+            >
+              <span class="btn-fill" data-fill></span>
+              <span class="btn-text">{{ 'products.back_in_stock.form.send' | t }}</span>
+            </a>
           </div>
         {%- endif -%}
 

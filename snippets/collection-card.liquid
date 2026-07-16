@@ -6,6 +6,7 @@
   - image_type: {String} Type of the collection image card
   - image_ratio: {String} Size of the collection image card
   - block: {Object} Block object
+  - show_arrow: {Boolean} Show the card arrow (default true; pass false to hide)
 
   Usage:
   {% render 'collection-card' %}
@@ -72,7 +73,9 @@
             <p class="leading-none text-xs xl:text-sm">{{ collection_description }}</p>
           {%- endif -%}
         </div>
-        {%- render 'icon', icon: 'arrow-right', size: 'xs', class: 'transform shrink-0' -%}
+        {%- if show_arrow != false -%}
+          {%- render 'icon', icon: 'arrow-right', size: 'xs', class: 'transform shrink-0' -%}
+        {%- endif -%}
       </div>
     </a>
   {%- else -%}
@@ -92,7 +95,9 @@
             </span>
           </p>
         </div>
-        {%- render 'icon', icon: 'arrow-right', size: 'xs', class: 'transform shrink-0' -%}
+        {%- if show_arrow != false -%}
+          {%- render 'icon', icon: 'arrow-right', size: 'xs', class: 'transform shrink-0' -%}
+        {%- endif -%}
       </div>
     </a>
   {%- endif -%}
