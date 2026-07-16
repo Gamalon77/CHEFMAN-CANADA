@@ -1,0 +1,474 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_size": "title-xl tracking-heading",
+        "heading_alignment": "text-left",
+        "heading_tag": "h1",
+        "text_size": "text-base",
+        "padding_top": 72,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "video_with_text_overlay_RDp7qc": {
+      "type": "video-with-text-overlay",
+      "blocks": {
+        "subheading_WtkzJU": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "",
+            "subheading_size": "subtitle-sm",
+            "secondary_color": false
+          }
+        },
+        "heading_fKQz77": {
+          "type": "heading",
+          "settings": {
+            "heading": "Forging a Legacy",
+            "heading_size": "title-xl tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_WtkzJU",
+        "heading_fKQz77"
+      ],
+      "custom_css": [
+        ".play-button {display: none;}"
+      ],
+      "name": "t:sections.video-with-text-overlay.presets.name",
+      "settings": {
+        "transparent_header": true,
+        "video": "shopify:\/\/files\/videos\/About Page Banner-Low Bit Rate Fun_b1565226-7d8c-4348-8d22-b4802a31e1b5.mp4",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "image_height": "900px",
+        "content_width": "large",
+        "content_position": "md:items-center md:justify-center",
+        "text_alignment": "center",
+        "video_url_mobile": "",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-center justify-center",
+        "text_alignment_mobile": "center",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 50,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false
+      }
+    },
+    "rich_text_g4RPdD": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_HrUYHU": {
+          "type": "heading",
+          "settings": {
+            "heading": "Onwards and Upwards",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_GmWnaR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We're redefining culinary experiences, blurring the lines between art and function, and designing better products for a better tomorrow.<\/p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "heading",
+            "secondary_color": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HrUYHU",
+        "text_GmWnaR"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_width": "medium",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "linear-gradient(5deg, rgba(4, 72, 137, 1) 11%, rgba(160, 43, 191, 1) 81%)",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 100,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "portfolio": {
+      "type": "portfolio",
+      "blocks": {
+        "profile-1": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Performance-Collection-About.webp",
+            "heading": "Performance Series",
+            "text": "<p>Introducing the Chefman Performance Series - our flagship line of products designed to outperform and outlast, backed by a five year warranty. The Performance Series is engineered from the ground up, with every detail and facet honed to bring tier-one experiences to your home. Each product in the Performance Series is designed to go toe-to-toe with the best, consistently delivering superior value and extraordinary performance. <\/p>",
+            "color_text": "#ffffff",
+            "color_background": "#000000"
+          }
+        },
+        "profile-2": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/exactemp-tech-3.webp",
+            "heading": "ExacTemp™ Accuracy",
+            "text": "<p>Our ExacTemp™ line of appliances are equipped to deliver perfect results through easy to use cooking presets. Featuring a built-in cooking thermometer, you can rest at ease knowing your meals will be cooked just the way you like. ExacTemp™ offers pinpoint accuracy with unparalleled convenience, bar none.<\/p>",
+            "color_text": "#ffffff",
+            "color_background": "#000000"
+          }
+        },
+        "profile-3": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dc-motor-tech2.webp",
+            "heading": "DC Motor Technology",
+            "text": "<p>While most appliances use AC motors to move air for convection cooking and air frying, our DC line of supercharged products takes it to the next level, moving more cubic feet of air per second while using less energy. Its faster RPM and higher-temp range unlocks cooking that's 40% faster than traditional methods.<\/p>",
+            "color_text": "#ffffff",
+            "color_background": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "profile-1",
+        "profile-2",
+        "profile-3"
+      ],
+      "custom_css": [
+        "@media (max-width: 600px) {h5, h2 {text-align: center !important; }}",
+        "p {font-size: 24px;}",
+        "h5 {font-weight: 400; line-height: 1.5;}"
+      ],
+      "settings": {
+        "columns": 4,
+        "carousel_on_desktop": false,
+        "layout": "grid",
+        "image_ratio": "portrait",
+        "image_ratio_mobile": "portrait",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Bright Ideas. Brighter Future.",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left justify-start",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<h5>At Chefman, we're innovating at every turn, offering you the very best technology, performance and value.<\/h5>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "text",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "#ccd8b5",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 48,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "image_with_text_Gkhx9z": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_aktwwY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Built for You. <em>Built for Life.<\/em>",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_QBfrKd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our products are designed with you in mind, meticulously engineered inside and out, and ready to go the distance.<\/p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_aDJB4x": {
+          "type": "button",
+          "settings": {
+            "button_label": "Register Your Product",
+            "button_link": "https:\/\/portal.wholescale.net\/reviewform\/31251f4c-e347-4d2a-bf96-615e065bcc13?pt=Website",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": true,
+            "button_icon": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_aktwwY",
+        "text_QBfrKd",
+        "button_aDJB4x"
+      ],
+      "custom_css": [
+        "h2 {line-height: 1.1;}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/blt-for-lfe.webp",
+        "image_height": "500px",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "image_mobile": "shopify:\/\/shop_images\/home-banner-mobile-US.jpg",
+        "image_height_mobile": "400px",
+        "text_alignment_mobile": "center",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "linear-gradient(25deg, rgba(108, 74, 74, 1) 13%, rgba(226, 137, 51, 1) 86%)",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 48,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_pKVWMJ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_mEkyKh": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>The #1 Brand of Kettles<\/em>",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_yrEAeX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We're proud to be America's number one brand of electric kettles, offering stellar performance and innovation at every price point. <\/p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_EddwnD": {
+          "type": "button",
+          "settings": {
+            "button_label": "Explore Kettles",
+            "button_link": "shopify:\/\/collections\/kettles-2",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_mEkyKh",
+        "text_yrEAeX",
+        "button_EddwnD"
+      ],
+      "custom_css": [
+        "h2 {line-height: 1.1;}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Chefman-Gooseneck-Kettle.webp",
+        "image_height": "500px",
+        "image_width": "medium",
+        "layout": "text_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "image_mobile": "shopify:\/\/shop_images\/2025_02_24_Kettle_ECOM_RJ11-GN-P-BLACK-Lifestyle_1_1.jpg",
+        "image_height_mobile": "adapt",
+        "text_alignment_mobile": "center",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "linear-gradient(25deg, rgba(30, 103, 196, 1) 13%, rgba(83, 165, 210, 1) 86%)",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_overlay_Y3rRq6": {
+      "type": "image-with-text-overlay",
+      "custom_css": [],
+      "name": "t:sections.image-with-text-overlay.presets.name",
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify:\/\/shop_images\/chefman-family-v4.webp",
+        "image_height": "adapt",
+        "content_width": "small",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 48,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "rich_text_QDwrGY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ye6RdY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcome to the Family",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_nzz7Mm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From smart cooking to spring cleaning, the Chefman family has a little something for everyone. Chefman, CHEF iQ, Iceman and BUFF are entirely designed with you in mind. From our home to yours, thank you.<\/p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ye6RdY",
+        "text_nzz7Mm"
+      ],
+      "custom_css": [],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_width": "medium",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "linear-gradient(5deg, rgba(4, 72, 137, 1) 11%, rgba(160, 43, 191, 1) 81%)",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 100,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "video_with_text_overlay_RDp7qc",
+    "rich_text_g4RPdD",
+    "portfolio",
+    "image_with_text_Gkhx9z",
+    "image_with_text_pKVWMJ",
+    "image_with_text_overlay_Y3rRq6",
+    "rich_text_QDwrGY"
+  ]
+}

@@ -1,0 +1,352 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_size": "title-md",
+        "heading_alignment": "text-left",
+        "heading_tag": "h1",
+        "text_size": "text-base",
+        "padding_top": 72,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "rich_text_k6D9di": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_HwMg3X": {
+          "type": "heading",
+          "settings": {
+            "heading": "Caffeinator",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_x9YR83": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Descaling & Cleaning<\/p>",
+            "text_size": "subtext-xl",
+            "text_max_size": 32,
+            "text_font": "heading",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HwMg3X",
+        "text_x9YR83"
+      ],
+      "settings": {
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "image_with_text_overlay_rUGMib": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify:\/\/shop_images\/caffeinator-coffee.jpg",
+        "image_height": "700px",
+        "content_width": "small",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_height_mobile": "adapt",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 48,
+        "divider": false,
+        "full_width": false,
+        "rounded": true,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "faq_XfWmqx": {
+      "type": "faq",
+      "blocks": {
+        "question_M96gYA": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>1. Empty the water reservoir<\/strong>",
+            "text": "<p>Empty the water reservoir completely and return it to the base. Put the empty capsule receptacle in the brew chamber and close the lid.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_czVMga": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>2. Prepare Your Descaling Solution<\/strong>",
+            "text": "<p>Prepare a commercial descaler according to the package directions OR a 50\/50 mix of water and distilled vinegar. Fill the water reservoir completely with the mixture.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_9hFett": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>3. Position an empty cup<\/strong>",
+            "text": "<p>Plug in the unit. Place a large cup (at least 12 oz.) under the brew head.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_XENzpY": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>4. Run your first descaling cycle<\/strong>",
+            "text": "<p>Press the <strong>CLEAN <\/strong>button, then the <strong>BREW | STOP <\/strong>button. The unit will cycle the cleaning solution through its internal parts and dispense into the cup<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_gFf8C3": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>5. Remove water from cup<\/strong>",
+            "text": "<p>When the cycle has finished, discard the liquid in the cup and return the cup to the trivet. Press <strong>BREW | STOP <\/strong>again.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_hUfDAP": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>6. Repeat steps 4 and 5<\/strong>",
+            "text": "<p>Repeat until the <strong>LOW WATER <\/strong>light comes on<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_awNen6": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>7. Rinse water tank and refill<\/strong>",
+            "text": "<p>Rinse the water reservoir thoroughly. Return it to the base and refill with<br\/>fresh water.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_excKjA": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>8. Repeat until water runs low<\/strong>",
+            "text": "<p>Repeat the cleaning cycles, emptying the cup each time, until the <strong>LOW WATER <\/strong>light comes on.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_3Ej7WN": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>9. Return to Standby mode<\/strong>",
+            "text": "<p>Press <strong>CLEAN <\/strong>to return to Standby mode.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "question_M96gYA",
+        "question_czVMga",
+        "question_9hFett",
+        "question_XENzpY",
+        "question_gFf8C3",
+        "question_hUfDAP",
+        "question_awNen6",
+        "question_excKjA",
+        "question_3Ej7WN"
+      ],
+      "name": "t:sections.faq.presets.name",
+      "settings": {
+        "style": "with-border",
+        "heading": "Descaling Your Caffeinator",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": false,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "faq_87ATea": {
+      "type": "faq",
+      "blocks": {
+        "question_XKYa9J": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>1. Unplug the unit<\/strong>",
+            "text": "<p>Make sure the unit is unplugged and cooled.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_UrcU4r": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>2. Remove Coffee Pod<\/strong>",
+            "text": "<p>If a coffee pod was used, remove the capsule receptacle with the pod. Discard the pod.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_XkRbAP": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>3. Remove any coffee grounds<\/strong>",
+            "text": "<p>If coffee grounds were used, remove the reusable coffee filter. Discard the grounds, then rinse the niter with water, and dry completely.<br\/><br\/><strong>NOTE: <\/strong>Be sure to discard brewed coffee grounds promptly. If they sit in the brew chamber or coffee filter for an extended period of time, they may begin to mold.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_hkEim8": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>4. Empty and clean the water reservoir<\/strong>",
+            "text": "<p>For fresh-tasting coffee, empty the water reservoir between uses. Wash the reservoir as needed with warm, soapy water. Rinse and dry well.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_rwKNNL": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>5. Replace the water filter<\/strong>",
+            "text": "<p>Replace the charcoal water filter cartridge every 1 to 2 months, at a minimum, following the instructions on page 10, steps 4-6<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_xtLMA7": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>6. Rinse and wash trivet and drip tray<\/strong>",
+            "text": "<p>If necessary, rinse and wash the trivet and drip tray with a sponge and warm, soapy water.<\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_iQqmA8": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>7. Wipe down the base of the unit<\/strong>",
+            "text": "<p>Wipe down the base of the unit with a damp cloth or sponge, if needed. Dry completely. <em>Never immerse the coffee maker or its plug in water.<\/em><br\/><br\/><strong>NOTE:<\/strong> The coffee maker and its accessories are <strong>NOT<\/strong> <strong>dishwasher safe.<\/strong><\/p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "question_XKYa9J",
+        "question_UrcU4r",
+        "question_XkRbAP",
+        "question_hkEim8",
+        "question_rwKNNL",
+        "question_xtLMA7",
+        "question_iQqmA8"
+      ],
+      "name": "t:sections.faq.presets.name",
+      "settings": {
+        "style": "with-border",
+        "heading": "Cleaning Your Caffeinator",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": false,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "rich_text_k6D9di",
+    "image_with_text_overlay_rUGMib",
+    "faq_XfWmqx",
+    "faq_87ATea"
+  ]
+}
