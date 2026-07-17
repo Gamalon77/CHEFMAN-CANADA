@@ -6,8 +6,7 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */
-{
+ */{
   "sections": {
     "video_with_text_overlay_NHtQQY": {
       "type": "video-with-text-overlay",
@@ -49,7 +48,7 @@
         "subheading_9Y3LBj": {
           "type": "subheading",
           "settings": {
-            "subheading": "Built to Inspire",
+            "subheading": "Conçu pour inspirer",
             "subheading_size": "subtitle-lg",
             "secondary_color": false
           }
@@ -176,7 +175,7 @@
           "settings": {
             "column_size": 10,
             "row_size": 2,
-            "subheading": "Premium Capsule Brewer",
+            "subheading": "Cafetière à capsules haut de gamme",
             "heading": "Caffeinator",
             "link": "shopify://products/caffeinator-single-serve-coffee-maker",
             "invert_subheading_heading": true,
@@ -205,7 +204,7 @@
           "settings": {
             "column_size": 5,
             "row_size": 2,
-            "subheading": "High-Speed Blender",
+            "subheading": "Mélangeur à haute vitesse",
             "heading": "Obliterator",
             "link": "shopify://collections/blenders",
             "invert_subheading_heading": true,
@@ -234,7 +233,7 @@
           "settings": {
             "column_size": 5,
             "row_size": 2,
-            "subheading": "World-Class Air Fryer",
+            "subheading": "Friteuse à air de calibre mondial",
             "heading": "Crispinator",
             "link": "shopify://products/crispinator",
             "invert_subheading_heading": true,
@@ -276,12 +275,12 @@
         "image_radius": 10,
         "tile_ratio": "auto",
         "tile_background": "#121e2a",
-        "heading": "Power. Precision. Performance.",
+        "heading": "Puissance. Précision. Performance.",
         "heading_size": "title-md",
         "heading_alignment": "text-center md:items-center",
         "heading_tag": "h2",
         "subheading": "",
-        "description": "<p>Obsessively engineered inside and out,<br/>backed by a class-leading five year warranty.</p>",
+        "description": "<p>Conçu avec obsession de l'intérieur comme de l'extérieur,<br/>et soutenu par une garantie de cinq ans, la meilleure de sa catégorie.</p>",
         "button_label": "",
         "button_link": "",
         "button_external": false,
@@ -313,7 +312,7 @@
         "carousel_on_desktop": true,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "heading": "Recently Viewed",
+        "heading": "Récemment consultés",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
@@ -361,7 +360,7 @@
         "heading_8wd9Am": {
           "type": "heading",
           "settings": {
-            "heading": "Watch the Video",
+            "heading": "Regarder la vidéo",
             "heading_size": "title-sm",
             "heading_tag": "h2",
             "highlighted_text": "none",

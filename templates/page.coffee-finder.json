@@ -1,1 +1,178 @@
-{"sections":{"coffee_finder":{"type":"coffee-finder","blocks":{"type_drip":{"type":"coffee_type","settings":{"image":"shopify:\/\/shop_images\/caffeinator-drip-pour.jpg","title":"Drip Coffee","link":"https:\/\/chefman.com\/pages\/drip-coffee","description":"Ground coffee, hot water, a full carafe — drip machines are the reliable backbone of any kitchen. Set it, walk away, and pour cup after cup. Best when you value simplicity and volume over barista theatrics.","best_for":"Households that drink coffee by the pot and want fuss-free mornings."}},"type_capsule":{"type":"coffee_type","settings":{"image":"shopify:\/\/shop_images\/capsule-coffee-1.jpg","title":"Capsule \/ Single-Serve","link":"https:\/\/chefman.com\/pages\/capsule-single-serve-coffee","description":"Drop in a pod, press a button, done — no grinding, no measuring, no cleanup. You trade a little flavor range for unbeatable speed and consistency, every single time.","best_for":"Solo drinkers, busy mornings, and homes where everyone wants something different."}},"type_espresso":{"type":"coffee_type","settings":{"image":"shopify:\/\/shop_images\/pressure-pull-espresso.jpg","title":"Espresso","link":"https:\/\/chefman.com\/pages\/espresso","description":"Pressurized brewing pulls rich, concentrated shots — the foundation for lattes, cappuccinos, and flat whites at home. There's a small learning curve, but the payoff is genuine coffee-shop quality.","best_for":"Latte lovers and aspiring home baristas willing to dial it in."}}},"block_order":["type_drip","type_capsule","type_espresso"],"custom_css":["h2 {font-weight: bold;}"],"settings":{"show_breadcrumb":true,"breadcrumb_parent_title":"Coffee & Espresso","breadcrumb_parent_link":"shopify:\/\/collections\/coffee-espresso-makers","collection":"coffee-espresso-makers","capsule_pick":"Caffeinator","heading":"Find your perfect coffee maker","heading_size":"title-lg tracking-heading","subtext":"<p>Answer a few quick questions and we'll match you with the Chefman coffee maker that fits your taste, your kitchen, and your routine.<\/p>","type_cta_label":"Learn more","types_heading":"Not sure yet? Know the three types first","types_intro":"<p>Discover which Chefman coffee maker is perfect for you. Our quick two-minute quiz reveals your ideal match.<\/p>","show_comparison":false,"comparison_heading":"How the three compare","quiz_heading":"Take the 30-second quiz","padding_top":12,"padding_bottom":100,"divider":false,"rounded":false}},"image_with_text_overlay_WbBfrz":{"type":"image-with-text-overlay","disabled":true,"name":"t:sections.image-with-text-overlay.presets.name","settings":{"transparent_header":false,"image":"shopify:\/\/shop_images\/coffee-drinks-banner2.webp","image_height":"600px","content_width":"small","content_position":"md:items-end md:justify-start","text_alignment":"left","image_mobile":"shopify:\/\/shop_images\/coffee-banner-drinks-mobile.webp","image_height_mobile":"300px","content_position_mobile":"items-end justify-start","text_alignment_mobile":"left","color_text":"#ffffff","color_highlight":"#e0a580","gradient_highlight":"","color_button_text":"#121e2a","color_button_background":"#ffffff","color_button_gradient":"","color_overlay":"#121e2a","overlay_opacity":70,"padding_top":0,"padding_bottom":0,"divider":false,"full_width":true,"rounded":false,"enable_parallax":false,"parallax_direction":"vertical"}},"rich_text_wCcBrW":{"type":"rich-text","blocks":{"heading_YQXj8P":{"type":"heading","settings":{"heading":"Explore the whole collection","heading_size":"title-md","heading_tag":"h2","highlighted_text":"none","highlighted_scribble":"circle"}},"text_perTPw":{"type":"text","settings":{"text":"<p>From one-touch pods to café-quality espresso, every Chefman coffee maker is built to make better mornings easier. Take a look at the full range and pick your perfect brew.<\/p>","text_size":"subtext-md","text_max_size":32,"text_font":"body","secondary_color":false,"highlighted_text":"none","highlighted_scribble":"circle"}},"button_yzJULY":{"type":"button","settings":{"button_label":"Shop all coffee makers","button_link":"shopify:\/\/collections\/coffee-espresso-makers","button_style":"primary","button_size":"md","button_external":false,"button_icon":false}}},"block_order":["heading_YQXj8P","text_perTPw","button_yzJULY"],"name":"t:sections.rich-text.presets.name","settings":{"text_alignment":"center","text_alignment_mobile":"center","heading":"","heading_size":"title-sm","heading_alignment":"text-left md:items-end md:flex-row","heading_width":"small","heading_tag":"h2","subheading":"","description":"","button_label":"","button_link":"","button_external":false,"button_icon":false,"highlighted_text":"none","highlighted_scribble":"circle","color_text":"","color_background":"","gradient_background":"","color_highlight":"","gradient_highlight":"","color_button_text":"","color_button_background":"","color_button_gradient":"","padding_top":36,"padding_bottom":100,"divider":false,"narrow":true,"rounded":false}}},"order":["coffee_finder","image_with_text_overlay_WbBfrz","rich_text_wCcBrW"]}
+{
+  "sections": {
+    "coffee_finder": {
+      "type": "coffee-finder",
+      "blocks": {
+        "type_drip": {
+          "type": "coffee_type",
+          "settings": {
+            "image": "shopify://shop_images/caffeinator-drip-pour.jpg",
+            "title": "Café filtre",
+            "link": "https://chefman.com/pages/drip-coffee",
+            "description": "Du café moulu, de l'eau chaude, une carafe pleine — les cafetières filtre sont le pilier fiable de toute cuisine. Réglez-la, éloignez-vous et versez tasse après tasse. Idéales quand vous privilégiez la simplicité et le volume aux prouesses de barista.",
+            "best_for": "Les ménages qui boivent du café à la carafe et veulent des matins sans tracas."
+          }
+        },
+        "type_capsule": {
+          "type": "coffee_type",
+          "settings": {
+            "image": "shopify://shop_images/capsule-coffee-1.jpg",
+            "title": "Capsule / Portion individuelle",
+            "link": "https://chefman.com/pages/capsule-single-serve-coffee",
+            "description": "Insérez une capsule, appuyez sur un bouton, c'est fait — aucune mouture, aucun dosage, aucun nettoyage. Vous sacrifiez un peu de la palette de saveurs en échange d'une rapidité et d'une constance imbattables, à tout coup.",
+            "best_for": "Pour ceux qui boivent en solo, les matins pressés et les foyers où chacun veut quelque chose de différent."
+          }
+        },
+        "type_espresso": {
+          "type": "coffee_type",
+          "settings": {
+            "image": "shopify://shop_images/pressure-pull-espresso.jpg",
+            "title": "Espresso",
+            "link": "https://chefman.com/pages/espresso",
+            "description": "L'infusion sous pression permet de tirer des expressos riches et concentrés — la base des lattes, cappuccinos et flat whites à la maison. Il y a une petite courbe d'apprentissage, mais le résultat offre une véritable qualité digne des cafés.",
+            "best_for": "Les amateurs de latte et les baristas maison en herbe prêts à peaufiner les réglages."
+          }
+        }
+      },
+      "block_order": [
+        "type_drip",
+        "type_capsule",
+        "type_espresso"
+      ],
+      "custom_css": [
+        "h2 {font-weight: bold;}"
+      ],
+      "settings": {
+        "show_breadcrumb": true,
+        "breadcrumb_parent_title": "Café et espresso",
+        "breadcrumb_parent_link": "shopify://collections/coffee-espresso-makers",
+        "collection": "coffee-espresso-makers",
+        "capsule_pick": "Caffeinator",
+        "heading": "Trouvez votre cafetière idéale",
+        "heading_size": "title-lg tracking-heading",
+        "subtext": "<p>Répondez à quelques questions rapides et nous vous jumellerons avec la cafetière Chefman qui convient à vos goûts, à votre cuisine et à votre routine.</p>",
+        "type_cta_label": "Learn more",
+        "types_heading": "Not sure yet? Know the three types first",
+        "types_intro": "<p>Discover which Chefman coffee maker is perfect for you. Our quick two-minute quiz reveals your ideal match.</p>",
+        "show_comparison": false,
+        "comparison_heading": "Comparaison des trois",
+        "quiz_heading": "Faites le questionnaire de 30 secondes",
+        "padding_top": 12,
+        "padding_bottom": 100,
+        "divider": false,
+        "rounded": false
+      }
+    },
+    "image_with_text_overlay_WbBfrz": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "name": "t:sections.image-with-text-overlay.presets.name",
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/coffee-drinks-banner2.webp",
+        "image_height": "600px",
+        "content_width": "small",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/coffee-banner-drinks-mobile.webp",
+        "image_height_mobile": "300px",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#121e2a",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#121e2a",
+        "overlay_opacity": 70,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "rich_text_wCcBrW": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_YQXj8P": {
+          "type": "heading",
+          "settings": {
+            "heading": "Explorez toute la collection",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_perTPw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Des capsules en une touche à l'espresso de qualité café, chaque cafetière Chefman est conçue pour rendre vos matins meilleurs plus facilement. Parcourez toute la gamme et choisissez votre infusion parfaite.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_yzJULY": {
+          "type": "button",
+          "settings": {
+            "button_label": "Magasiner toutes les cafetières",
+            "button_link": "shopify://collections/coffee-espresso-makers",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_YQXj8P",
+        "text_perTPw",
+        "button_yzJULY"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "heading": "",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": false,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 36,
+        "padding_bottom": 100,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "coffee_finder",
+    "image_with_text_overlay_WbBfrz",
+    "rich_text_wCcBrW"
+  ]
+}

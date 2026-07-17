@@ -84,7 +84,7 @@
         "heading_W6EN68": {
           "type": "heading",
           "settings": {
-            "heading": "Download the User Guide",
+            "heading": "Télécharger le guide d'utilisation",
             "heading_size": "title-md",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -106,7 +106,7 @@
         "button_QU37Bj": {
           "type": "button",
           "settings": {
-            "button_label": "Download Now",
+            "button_label": "Télécharger maintenant",
             "button_link": "{{ page.metafields.custom.cookbook_download_link.value }}",
             "button_style": "primary",
             "button_size": "md",

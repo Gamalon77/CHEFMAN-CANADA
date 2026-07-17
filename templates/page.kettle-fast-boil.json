@@ -6,8 +6,7 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */
-{
+ */{
   "sections": {
     "kettle_detail": {
       "type": "kettle-detail",
@@ -15,196 +14,196 @@
         "why_1": {
           "type": "reason",
           "settings": {
-            "title": "Fast where it counts",
-            "text": "1500 watts of power bring water to a rolling boil in about three minutes — faster than the stovetop or microwave, so your first cup is ready before you've finished measuring the grounds."
+            "title": "Rapide là où ça compte",
+            "text": "1 500 watts de puissance amènent l'eau à pleine ébullition en environ trois minutes — plus rapidement que la cuisinière ou le micro-ondes, de sorte que votre première tasse est prête avant même que vous ayez fini de mesurer le café moulu."
           }
         },
         "why_2": {
           "type": "reason",
           "settings": {
-            "title": "Our best everyday value",
-            "text": "These are Chefman's most popular and most affordable kettles: all the essentials done well, without the premium features you'd pay more for and might never use."
+            "title": "Notre meilleur rapport qualité-prix au quotidien",
+            "text": "Ce sont les bouilloires les plus populaires et les plus abordables de Chefman : tous les essentiels bien exécutés, sans les fonctions haut de gamme que vous paieriez plus cher et n'utiliseriez peut-être jamais."
           }
         },
         "why_3": {
           "type": "reason",
           "settings": {
-            "title": "Refreshingly simple",
-            "text": "One switch, no menus. Fill, press, and pour — the easy pick for anyone who just wants hot water without a learning curve."
+            "title": "D'une simplicité rafraîchissante",
+            "text": "Un seul interrupteur, aucun menu. Remplissez, appuyez et versez — le choix facile pour quiconque veut simplement de l'eau chaude sans courbe d'apprentissage."
           }
         },
         "why_4": {
           "type": "reason",
           "settings": {
-            "title": "See every step",
-            "text": "The stain-resistant borosilicate glass body and warm blue LED glow let you watch the water heat and check the level at a glance."
+            "title": "Voyez chaque étape",
+            "text": "Le corps en verre borosilicate résistant aux taches et la douce lueur bleue des DEL vous permettent de regarder l'eau chauffer et de vérifier le niveau d'un coup d'œil."
           }
         },
         "feat_1": {
           "type": "feature",
           "settings": {
             "icon": "⚡",
-            "title": "1500W rapid heat",
-            "text": "1500 watts of power boil water in as little as three minutes — faster than the stovetop or microwave."
+            "title": "Chauffe rapide 1500W",
+            "text": "1 500 watts de puissance font bouillir l'eau en aussi peu que trois minutes — plus rapidement que la cuisinière ou le micro-ondes."
           }
         },
         "feat_2": {
           "type": "feature",
           "settings": {
             "icon": "🫖",
-            "title": "Glass body with blue LEDs",
-            "text": "A stain-resistant borosilicate glass body lights up with a blue glow so you can watch the water come to a boil."
+            "title": "Corps en verre avec DEL bleues",
+            "text": "Un corps en verre borosilicate résistant aux taches s'illumine d'une lueur bleue pour que vous puissiez regarder l'eau arriver à ébullition."
           }
         },
         "feat_3": {
           "type": "feature",
           "settings": {
             "icon": "💧",
-            "title": "Drip-free spout",
-            "text": "A drip-free spout pours cleanly every time — no dribbles down the side or on the counter."
+            "title": "Bec verseur anti-goutte",
+            "text": "Un bec verseur anti-goutte verse proprement à tout coup — aucune goutte sur le côté ni sur le comptoir."
           }
         },
         "feat_4": {
           "type": "feature",
           "settings": {
             "icon": "🔌",
-            "title": "360° cordless base",
-            "text": "The kettle lifts off its 360° swivel base, so you can carry it right to the mug or teapot."
+            "title": "Base sans fil 360°",
+            "text": "La bouilloire se soulève de sa base pivotante à 360°, ce qui vous permet de la transporter directement jusqu'à la tasse ou la théière."
           }
         },
         "feat_5": {
           "type": "feature",
           "settings": {
             "icon": "🔓",
-            "title": "Lift-out lid",
-            "text": "A removable lift-out lid makes filling, rinsing, and everyday cleaning quick and easy."
+            "title": "Couvercle amovible",
+            "text": "Un couvercle amovible rend le remplissage, le rinçage et le nettoyage quotidien rapides et faciles."
           }
         },
         "feat_6": {
           "type": "feature",
           "settings": {
             "icon": "🛡️",
-            "title": "Built-in safety",
-            "text": "Automatic shut-off and boil-dry protection, cETL approved and backed by a 1-year Chefman assurance."
+            "title": "Sécurité intégrée",
+            "text": "Arrêt automatique et protection contre l'ébullition à sec, approuvé cETL et soutenu par une garantie Chefman de 1 an."
           }
         },
         "note_1": {
           "type": "note",
           "settings": {
-            "title": "Sizes for every kitchen",
-            "text": "Fast-Boil kettles come in 1L (perfect for one or two cups, small spaces, and dorms), 1.2L (a compact everyday choice for a couple), and 1.8L (a full pot for the whole household)."
+            "title": "Des formats pour chaque cuisine",
+            "text": "Les bouilloires Fast-Boil sont offertes en formats 1 L (parfait pour une ou deux tasses, les petits espaces et les résidences étudiantes), 1,2 L (un choix compact pour le quotidien d'un couple) et 1,8 L (une pleine bouilloire pour toute la maisonnée)."
           }
         },
         "note_2": {
           "type": "note",
           "settings": {
-            "title": "Boil-only by design",
-            "text": "Fast-Boil kettles heat to a full rolling boil (212°F) and shut off — ideal for black and herbal tea, coffee, and instant drinks. If you drink green, white, or oolong tea and want a lower, precise temperature, consider a temperature-control kettle instead."
+            "title": "Conçue pour l'ébullition seulement",
+            "text": "Les bouilloires Fast-Boil chauffent jusqu'à pleine ébullition (100 °C) puis s'éteignent — idéales pour le thé noir et les tisanes, le café et les boissons instantanées. Si vous buvez du thé vert, blanc ou oolong et souhaitez une température plus basse et précise, optez plutôt pour une bouilloire à contrôle de température."
           }
         },
         "note_3": {
           "type": "note",
           "settings": {
-            "title": "Prefer loose-leaf?",
-            "text": "Every Fast-Boil size also comes in a tea-infuser version with a removable stainless-steel basket, so you can boil and steep in one vessel — no separate teapot needed."
+            "title": "Vous préférez le thé en feuilles?",
+            "text": "Chaque format Fast-Boil est aussi offert en version avec infuseur à thé doté d'un panier amovible en acier inoxydable, ce qui vous permet de faire bouillir et d'infuser dans un seul contenant — sans théière séparée."
           }
         },
         "note_4": {
           "type": "note",
           "settings": {
-            "title": "Easy care",
-            "text": "Hand-wash the glass body and lift-out lid, and never submerge the electrical base. In hard-water areas, descale monthly with a 50/50 water-and-white-vinegar mix to keep boil times fast and water tasting fresh."
+            "title": "Entretien facile",
+            "text": "Lavez à la main le corps en verre et le couvercle amovible, et n'immergez jamais la base électrique. Dans les régions où l'eau est dure, détartrez chaque mois avec un mélange moitié eau, moitié vinaigre blanc pour garder des temps d'ébullition rapides et une eau au goût frais."
           }
         },
         "rel_1": {
           "type": "related",
           "settings": {
-            "label": "All kettle types",
+            "label": "Tous les types de bouilloires",
             "link": "/pages/find-your-perfect-electric-kettle-chefman"
           }
         },
         "rel_2": {
           "type": "related",
           "settings": {
-            "label": "Tea Infuser",
+            "label": "Infuseur à thé",
             "link": "/pages/tea-infuser-electric-kettles-chefman"
           }
         },
         "rel_3": {
           "type": "related",
           "settings": {
-            "label": "Temperature Control",
+            "label": "Contrôle de la température",
             "link": "/pages/temperature-control-electric-kettles-chefman"
           }
         },
         "rel_4": {
           "type": "related",
           "settings": {
-            "label": "Keep-Warm",
+            "label": "Maintien au chaud",
             "link": "/pages/keep-warm-electric-kettles-chefman"
           }
         },
         "rel_5": {
           "type": "related",
           "settings": {
-            "label": "Gooseneck",
+            "label": "Col de cygne",
             "link": "/pages/gooseneck-electric-kettles-chefman"
           }
         },
         "rel_6": {
           "type": "related",
           "settings": {
-            "label": "Stainless Steel",
+            "label": "Acier inoxydable",
             "link": "/pages/stainless-steel-electric-kettles-chefman"
           }
         },
         "faq_1": {
           "type": "faq",
           "settings": {
-            "question": "How fast does a Fast-Boil kettle boil water?",
-            "answer": "<p>Chefman Fast-Boil kettles use 1500 watts of power to bring water to a full rolling boil in as little as three minutes — faster than a stovetop or microwave. They shut off automatically as soon as the water is ready.</p>"
+            "question": "À quelle vitesse une bouilloire Fast-Boil fait-elle bouillir l'eau?",
+            "answer": "<p>Les bouilloires Fast-Boil de Chefman utilisent 1500 watts de puissance pour porter l'eau à pleine ébullition en aussi peu que trois minutes — plus rapidement qu'une cuisinière ou un micro-ondes. Elles s'éteignent automatiquement dès que l'eau est prête.</p>"
           }
         },
         "faq_2": {
           "type": "faq",
           "settings": {
-            "question": "What's the difference between a Fast-Boil kettle and a temperature-control kettle?",
-            "answer": "<p>A Fast-Boil kettle heats water to a full boil (212°F) and stops, which is all you need for black tea, herbal tea, coffee, and instant drinks. A temperature-control kettle lets you dial in a lower, exact temperature, which matters for delicate green, white, and oolong teas that can turn bitter at a full boil. If you just want hot water fast, Fast-Boil is the simpler, more affordable choice.</p>"
+            "question": "Quelle est la différence entre une bouilloire à ébullition rapide et une bouilloire à contrôle de température?",
+            "answer": "<p>Une bouilloire à ébullition rapide chauffe l'eau jusqu'à pleine ébullition (100 °C) puis s'arrête, ce qui est tout ce qu'il vous faut pour le thé noir, les tisanes, le café et les boissons instantanées. Une bouilloire à contrôle de température vous permet de régler une température plus basse et précise, ce qui compte pour les thés verts, blancs et oolong délicats qui peuvent devenir amers à pleine ébullition. Si vous voulez simplement de l'eau chaude rapidement, l'ébullition rapide est le choix le plus simple et le plus abordable.</p>"
           }
         },
         "faq_3": {
           "type": "faq",
           "settings": {
-            "question": "What size Fast-Boil kettle should I buy?",
-            "answer": "<p>Chefman Fast-Boil kettles come in three sizes: 1L for one or two cups, small spaces, and dorms; 1.2L as a compact everyday choice for a couple; and 1.8L for a full pot to serve the whole household. Choose the smallest size that covers how much you pour at once — smaller kettles take up less counter space and heat a single cup faster.</p>"
+            "question": "Quelle taille de bouilloire à ébullition rapide devrais-je acheter?",
+            "answer": "<p>Les bouilloires Fast-Boil de Chefman sont offertes en trois formats : 1 L pour une ou deux tasses, les petits espaces et les résidences étudiantes ; 1,2 L comme choix compact pour tous les jours pour un couple ; et 1,8 L pour une pleine bouilloire au service de toute la maisonnée. Choisissez le plus petit format qui couvre la quantité que vous versez à la fois — les bouilloires plus petites prennent moins de place sur le comptoir et chauffent une seule tasse plus rapidement.</p>"
           }
         },
         "faq_4": {
           "type": "faq",
           "settings": {
-            "question": "Can I make loose-leaf tea in a Fast-Boil kettle?",
-            "answer": "<p>Yes. Every Fast-Boil size also comes in a tea-infuser version with a removable stainless-steel basket, so you can boil water and steep loose-leaf or bagged tea in one vessel. The standard Fast-Boil models are boil-only and pair nicely with a separate teapot or infuser.</p>"
+            "question": "Puis-je préparer du thé en feuilles dans une bouilloire à ébullition rapide?",
+            "answer": "<p>Oui. Chaque format Fast-Boil est aussi offert dans une version avec infuseur à thé dotée d'un panier amovible en acier inoxydable, de sorte que vous pouvez faire bouillir de l'eau et infuser du thé en feuilles ou en sachet dans un seul récipient. Les modèles Fast-Boil standard sont à ébullition seulement et s'accordent bien avec une théière ou un infuseur séparé.</p>"
           }
         },
         "faq_5": {
           "type": "faq",
           "settings": {
-            "question": "How do I clean and descale a Fast-Boil kettle?",
-            "answer": "<p>Hand-wash the glass body and lift-out lid, and never submerge the electrical base. If you have hard water, descale monthly: fill the kettle with a 50/50 mix of water and white vinegar, bring it to a boil, let it sit 15–20 minutes, then rinse well. Regular descaling keeps boil times fast and water tasting fresh.</p>"
+            "question": "Comment nettoyer et détartrer une bouilloire Fast-Boil?",
+            "answer": "<p>Lavez à la main le corps en verre et le couvercle amovible, et n'immergez jamais la base électrique. Si votre eau est dure, détartrez chaque mois : remplissez la bouilloire d'un mélange 50/50 d'eau et de vinaigre blanc, portez à ébullition, laissez reposer de 15 à 20 minutes, puis rincez bien. Un détartrage régulier maintient des temps d'ébullition rapides et une eau au goût frais.</p>"
           }
         },
         "faq_6": {
           "type": "faq",
           "settings": {
-            "question": "Are Chefman Fast-Boil kettles safe to use?",
-            "answer": "<p>Yes. Every Chefman kettle has automatic shut-off that turns it off once the water boils and boil-dry protection that keeps it from powering on empty. They're cETL approved, sit on a 360° cordless base, have a cool-touch handle, and are backed by a 1-year Chefman assurance.</p>"
+            "question": "Les bouilloires Chefman Fast-Boil sont-elles sécuritaires à utiliser?",
+            "answer": "<p>Oui. Chaque bouilloire Chefman est dotée d'un arrêt automatique qui l'éteint une fois l'eau bouillie et d'une protection contre l'ébullition à sec qui l'empêche de s'allumer à vide. Elles sont approuvées cETL, reposent sur une base sans fil à 360°, possèdent une poignée qui reste froide au toucher et sont appuyées par une garantie Chefman d'un an.</p>"
           }
         },
         "faq_7": {
           "type": "faq",
           "settings": {
-            "question": "Do Fast-Boil kettles keep water warm after boiling?",
-            "answer": "<p>Fast-Boil kettles bring water to a full boil and then shut off automatically — they don't hold it at temperature afterward, which is ideal if you pour your cup right when it's ready. If you tend to sip slowly or come back for refills without wanting to re-boil, Chefman also makes Keep-Warm kettles that hold hot water for up to an hour. For most everyday tea and coffee drinkers, a Fast-Boil kettle is all you need.</p>"
+            "question": "Les bouilloires à ébullition rapide gardent-elles l'eau au chaud après l'ébullition?",
+            "answer": "<p>Les bouilloires à ébullition rapide portent l'eau à pleine ébullition puis s'éteignent automatiquement — elles ne la maintiennent pas au chaud ensuite, ce qui est idéal si vous versez votre tasse dès qu'elle est prête. Si vous avez tendance à siroter lentement ou à revenir vous resservir sans vouloir refaire bouillir, Chefman fabrique aussi des bouilloires à maintien au chaud qui gardent l'eau chaude jusqu'à une heure. Pour la plupart des amateurs de thé et de café de tous les jours, une bouilloire à ébullition rapide suffit amplement.</p>"
           }
         }
       },
@@ -239,28 +238,28 @@
       ],
       "settings": {
         "show_breadcrumb": true,
-        "crumb1_title": "Kettles",
+        "crumb1_title": "Bouilloires",
         "crumb1_link": "shopify://collections/kettles-2",
-        "crumb2_title": "Find your kettle",
+        "crumb2_title": "Trouvez votre bouilloire",
         "crumb2_link": "/pages/find-your-perfect-electric-kettle-chefman",
-        "eyebrow": "The Chefman Fast-Boil Collection",
-        "heading": "Fast-Boil Electric Kettles",
+        "eyebrow": "La collection Fast-Boil de Chefman",
+        "heading": "Bouilloires électriques Fast-Boil",
         "heading_size": "title-lg tracking-heading",
-        "intro": "<p>Fill, press, and you've got a rolling boil in about three minutes — no dials, no settings, just hot water fast. Fast-Boil kettles are our most popular and most affordable way to heat water for tea, coffee, and everything in between.</p>",
-        "best_for": "everyday speed & value",
-        "what_heading": "What it is",
-        "what_it_is": "<p>A Fast-Boil kettle is the essential electric kettle: a stain-resistant borosilicate glass body powered by 1500 watts that brings water to a full rolling boil in as little as three minutes — quicker than the stovetop or the microwave. There's nothing to program. You fill it between the min and max lines, press the switch, and blue LEDs glow while the water heats so you can watch it come to a boil. When it's ready the kettle shuts off automatically, and it lifts right off its 360° cordless base so you can carry it straight to your mug or teapot.</p>",
-        "why_heading": "Why choose a Fast-Boil kettle",
-        "features_heading": "Key features",
-        "who_heading": "Who it's for",
-        "who_for": "<p>Fast-Boil kettles are for everyday tea and coffee drinkers who want speed and value without extra features. If you brew black or herbal tea, instant coffee, hot chocolate, oatmeal, ramen, or the occasional pour-over — and you'd rather press one button than scroll through settings — this is your kettle. It's an easy pick for busy households, first apartments, dorms, offices, and anyone who simply wants hot water, fast, at the best price.</p>",
-        "notes_heading": "Good to know",
+        "intro": "<p>Remplissez, appuyez et vous obtenez une ébullition franche en environ trois minutes — pas de molettes, pas de réglages, juste de l'eau chaude rapidement. Les bouilloires à ébullition rapide sont notre façon la plus populaire et la plus abordable de chauffer l'eau pour le thé, le café et tout le reste.</p>",
+        "best_for": "rapidité et valeur au quotidien",
+        "what_heading": "Ce que c'est",
+        "what_it_is": "<p>Une bouilloire à ébullition rapide est la bouilloire électrique par excellence : un corps en verre borosilicaté résistant aux taches, alimenté par 1 500 watts, qui amène l'eau à pleine ébullition en aussi peu que trois minutes — plus vite que la cuisinière ou le micro-ondes. Il n'y a rien à programmer. Vous la remplissez entre les repères min et max, appuyez sur l'interrupteur, et des DEL bleues s'allument pendant que l'eau chauffe afin que vous puissiez la voir arriver à ébullition. Lorsqu'elle est prête, la bouilloire s'éteint automatiquement, et elle se soulève directement de sa base sans fil 360° pour que vous puissiez la transporter directement jusqu'à votre tasse ou votre théière.</p>",
+        "why_heading": "Pourquoi choisir une bouilloire à ébullition rapide",
+        "features_heading": "Caractéristiques principales",
+        "who_heading": "À qui ça s'adresse",
+        "who_for": "<p>Les bouilloires à ébullition rapide sont conçues pour les amateurs de thé et de café de tous les jours qui recherchent la vitesse et la valeur sans fonctions supplémentaires. Si vous préparez du thé noir ou des tisanes, du café instantané, du chocolat chaud, du gruau, des ramen ou un café filtre à la main à l'occasion — et que vous préférez appuyer sur un seul bouton plutôt que de parcourir des réglages — c'est la bouilloire qu'il vous faut. C'est un choix facile pour les ménages occupés, les premiers appartements, les résidences étudiantes, les bureaux et quiconque veut simplement de l'eau chaude, rapidement, au meilleur prix.</p>",
+        "notes_heading": "Bon à savoir",
         "product_handles": "fast-boil-1-8l-electric-kettle, 1-2l-electric-tea-kettle-with-removable-lid",
-        "shop_heading": "Shop Fast-Boil kettles",
-        "shop_button_label": "Shop all kettles",
+        "shop_heading": "Magasiner les bouilloires à ébullition rapide",
+        "shop_button_label": "Magasiner toutes les bouilloires",
         "shop_button_link": "shopify://collections/kettles-2",
         "related_heading": "Explore other kettle types",
-        "faq_heading": "Frequently asked questions",
+        "faq_heading": "Questions fréquentes",
         "padding_top": 64,
         "padding_bottom": 100,
         "divider": false,

@@ -1,1 +1,1155 @@
-{"sections":{"video_with_text_overlay_nY9Xrc":{"type":"video-with-text-overlay","blocks":{"spacing_NRN7qm":{"type":"spacing","settings":{"height":40,"height_mobile":28}},"subheading_kPy4re":{"type":"subheading","settings":{"subheading":"Introducing","subheading_size":"subtitle-sm","secondary_color":false}},"heading_imxXHM":{"type":"heading","settings":{"heading":"Caffeinator","heading_size":"title-lg tracking-heading","heading_tag":"h1","highlighted_text":"none","highlighted_scribble":"circle"}},"button_GifqB4":{"type":"button","settings":{"button_label":"Shop Now","button_link":"shopify:\/\/products\/caffeinator-single-serve-coffee-maker","button_style":"secondary","button_size":"md","button_external":false,"button_icon":false}},"text_cdp8kR":{"type":"text","disabled":true,"settings":{"text":"<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>","text_size":"subtext-md","text_max_size":32,"text_font":"body","secondary_color":false,"highlighted_text":"none","highlighted_scribble":"circle"}}},"block_order":["spacing_NRN7qm","subheading_kPy4re","heading_imxXHM","button_GifqB4","text_cdp8kR"],"custom_css":[".button--secondary {margin-top: 17px;}",".play-button {display: none;}"],"settings":{"transparent_header":true,"video":"shopify:\/\/files\/videos\/RJ14-DB Caffeinator_Shopify_1080.mp4","video_url":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","description":"","enable_video_autoplay":true,"enable_video_looping":true,"image_height":"900px","content_width":"small","content_position":"md:items-center md:justify-center","text_alignment":"center","video_url_mobile":"","image_height_mobile":"auto","content_position_mobile":"items-center justify-center","text_alignment_mobile":"center","color_text":"#ffffff","color_highlight":"#e0a580","gradient_highlight":"","color_button_text":"#171717","color_button_background":"#ffffff","color_button_gradient":"","color_overlay":"#171717","overlay_opacity":45,"padding_top":0,"padding_bottom":0,"divider":false,"full_width":true,"rounded":false}},"image_with_text_overlay_HNHphW":{"type":"image-with-text-overlay","blocks":{"spacing_N3mVAa":{"type":"spacing","settings":{"height":72,"height_mobile":32}},"subheading_LLKLXh":{"type":"subheading","settings":{"subheading":"Introducing","subheading_size":"subtitle-sm","secondary_color":false}},"heading_3BGRbC":{"type":"heading","settings":{"heading":"Caffeinator","heading_size":"title-lg tracking-heading","heading_tag":"h1","highlighted_text":"none","highlighted_scribble":"circle"}},"button_gWtXyA":{"type":"button","settings":{"button_label":"Shop Now","button_link":"shopify:\/\/products\/caffeinator-single-serve-coffee-maker","button_style":"secondary","button_size":"md","button_external":false,"button_icon":false}},"text_iNMckP":{"type":"text","disabled":true,"settings":{"text":"<p>Coffee every way you like it.<\/p>","text_size":"subtext-md","text_max_size":32,"text_font":"body","secondary_color":false,"highlighted_text":"none","highlighted_scribble":"circle"}}},"block_order":["spacing_N3mVAa","subheading_LLKLXh","heading_3BGRbC","button_gWtXyA","text_iNMckP"],"disabled":true,"custom_css":[".button--secondary {margin-top: 16px;}"],"settings":{"transparent_header":true,"image":"shopify:\/\/shop_images\/CF-website-showcase-ultrablue.webp","image_height":"900px","content_width":"large","content_position":"md:items-start md:justify-center","text_alignment":"center","image_mobile":"shopify:\/\/shop_images\/CF-website-showcase-mobile-2.webp","image_height_mobile":"adapt","content_position_mobile":"items-start justify-center","text_alignment_mobile":"center","color_text":"#ffffff","color_highlight":"#e0a580","gradient_highlight":"","color_button_text":"#171717","color_button_background":"#ffffff","color_button_gradient":"","color_overlay":"#171717","overlay_opacity":0,"padding_top":0,"padding_bottom":0,"divider":false,"full_width":true,"rounded":false,"enable_parallax":false,"parallax_direction":"vertical"}},"image_with_text_overlay_BEFg6D":{"type":"image-with-text-overlay","blocks":{"spacing_AUChnY":{"type":"spacing","settings":{"height":72,"height_mobile":32}},"heading_YdaVmE":{"type":"heading","settings":{"heading":"Built for Life","heading_size":"title-lg tracking-heading","heading_tag":"h1","highlighted_text":"none","highlighted_scribble":"circle"}},"text_bbgggg":{"type":"text","settings":{"text":"<p>Meticulously designed. Engineered to endure.<\/p>","text_size":"subtext-md","text_max_size":32,"text_font":"body","secondary_color":false,"highlighted_text":"none","highlighted_scribble":"circle"}},"button_BUEczT":{"type":"button","disabled":true,"settings":{"button_label":"Shop Now","button_link":"","button_style":"secondary","button_size":"md","button_external":false,"button_icon":true}}},"block_order":["spacing_AUChnY","heading_YdaVmE","text_bbgggg","button_BUEczT"],"disabled":true,"settings":{"transparent_header":true,"image":"shopify:\/\/shop_images\/chefman--crispinator-banner-home.webp","image_height":"900px","content_width":"large","content_position":"md:items-start md:justify-center","text_alignment":"center","image_mobile":"shopify:\/\/shop_images\/mobile-homepage-banner-crispinator.jpg","image_height_mobile":"auto","content_position_mobile":"items-start justify-center","text_alignment_mobile":"center","color_text":"#ffffff","color_highlight":"#e0a580","gradient_highlight":"","color_button_text":"#171717","color_button_background":"#ffffff","color_button_gradient":"","color_overlay":"#171717","overlay_opacity":0,"padding_top":0,"padding_bottom":0,"divider":false,"full_width":true,"rounded":false,"enable_parallax":false,"parallax_direction":"vertical"}},"collection_list_MHHqMR":{"type":"collection-list","blocks":{"collection_4hjYrG":{"type":"collection","settings":{"collection":"performance-series","image":"shopify:\/\/shop_images\/PF-Chefman-Collection.jpg","title":"Performance Series","description":"","overlay_content":false,"color_text":"#ffffff","color_overlay":"#000000","overlay_opacity":30}},"collection_G76R4e":{"type":"collection","settings":{"collection":"air-fryers-1","image":"shopify:\/\/shop_images\/RJ38-8-T-BLACK_ECOM_LIFESTYLE_2_200C.jpg","title":"","description":"","overlay_content":false,"color_text":"#ffffff","color_overlay":"#000000","overlay_opacity":30}},"collection_zBVc3a":{"type":"collection","settings":{"collection":"kettles-2","image":"shopify:\/\/shop_images\/KT-Collection-2.jpg","title":"Kettles","description":"","overlay_content":false,"color_text":"#ffffff","color_overlay":"#000000","overlay_opacity":30}},"collection_bbcUfQ":{"type":"collection","settings":{"collection":"coffee-espresso-makers","image":"shopify:\/\/shop_images\/espresso-collection.jpg","title":"Coffee","description":"","overlay_content":false,"color_text":"#ffffff","color_overlay":"#000000","overlay_opacity":30}},"collection_G6R4Qp":{"type":"collection","settings":{"collection":"toasters","image":"shopify:\/\/shop_images\/breakfast-collection.jpg","title":"Toasters","description":"","overlay_content":false,"color_text":"#ffffff","color_overlay":"#000000","overlay_opacity":30}},"collection_FhLD9f":{"type":"collection","disabled":true,"settings":{"collection":"blenders","image":"shopify:\/\/shop_images\/blender-category.webp","title":"","description":"","overlay_content":false,"color_text":"#ffffff","color_overlay":"#000000","overlay_opacity":30}},"collection_HdD9FY":{"type":"collection","disabled":true,"settings":{"collection":"deep-fryers-1","image":"shopify:\/\/shop_images\/deep-fryer-collection.jpg","title":"","description":"","overlay_content":false,"color_text":"#ffffff","color_overlay":"#000000","overlay_opacity":30}},"collection_DpnnnC":{"type":"collection","settings":{"collection":"microwaves","image":"shopify:\/\/shop_images\/RJ55-SS-7-CK_ECOM__Microwave_with_hand.png","title":"","description":"","overlay_content":false,"color_text":"#ffffff","color_overlay":"#000000","overlay_opacity":30}},"collection_WLcUgT":{"type":"collection","settings":{"collection":"indoor-pizza-ovens","image":"shopify:\/\/shop_images\/RJ25-PO12-SS_ISOMETRIC-Lifestyle_1x1_8c65037c-c650-4b22-8ca8-e6725da2fc89.jpg","title":"","description":"","overlay_content":false,"color_text":"#ffffff","color_overlay":"#000000","overlay_opacity":30}},"collection_LmtQ6n":{"type":"collection","disabled":true,"settings":{"collection":"panini-presses","image":"shopify:\/\/shop_images\/panini-collection.jpg","title":"","description":"","overlay_content":false,"color_text":"#ffffff","color_overlay":"#000000","overlay_opacity":30}},"collection_TarnKX":{"type":"collection","disabled":true,"settings":{"collection":"warming-trays","image":"shopify:\/\/shop_images\/warming-tray-collection.jpg","title":"","description":"","overlay_content":false,"color_text":"#ffffff","color_overlay":"#000000","overlay_opacity":30}}},"block_order":["collection_4hjYrG","collection_G76R4e","collection_zBVc3a","collection_bbcUfQ","collection_G6R4Qp","collection_FhLD9f","collection_HdD9FY","collection_DpnnnC","collection_WLcUgT","collection_LmtQ6n","collection_TarnKX"],"settings":{"columns":4,"carousel_on_desktop":true,"image_type":"collection","image_ratio":"square","show_products_count":false,"show_view_all":true,"columns_mobile":"1","swipe_on_mobile":true,"heading":"Shop Our Collections","heading_size":"title-md","heading_alignment":"text-center md:items-center","heading_tag":"h2","subheading":"","description":"","highlighted_text":"none","highlighted_scribble":"circle","color_text":"","color_background":"#ffffff","gradient_background":"","color_highlight":"","gradient_highlight":"","color_button_text":"","color_button_background":"","color_button_gradient":"","padding_top":72,"padding_bottom":72,"divider":false,"full_width":true,"rounded":false}},"image_with_text_overlay_prKi6X":{"type":"image-with-text-overlay","blocks":{"image_BH8nQM":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/red-dot-award-winner.svg","image_width":"custom","image_max_width":170,"image_max_width_mobile":50}},"heading_Q8kezJ":{"type":"heading","settings":{"heading":"Performance Series","heading_size":"title-md","heading_tag":"h2","highlighted_text":"none","highlighted_scribble":"circle"}},"text_YW4QrN":{"type":"text","settings":{"text":"<p>Our award-winning products set the standard for culinary excellence.<\/p>","text_size":"subtext-md","text_max_size":32,"text_font":"body","secondary_color":true,"highlighted_text":"none","highlighted_scribble":"circle"}},"button_ibKpKn":{"type":"button","settings":{"button_label":"Shop Now","button_link":"shopify:\/\/collections\/performance-series","button_style":"primary","button_size":"md","button_external":false,"button_icon":false}}},"block_order":["image_BH8nQM","heading_Q8kezJ","text_YW4QrN","button_ibKpKn"],"custom_css":["@media (max-width: 768px) {.banner {display: none; }}"],"settings":{"transparent_header":false,"image":"shopify:\/\/shop_images\/performance-series-banner2.jpg","image_height":"900px","content_width":"medium","content_position":"md:items-center md:justify-start","text_alignment":"left","image_mobile":"shopify:\/\/shop_images\/mobile-performance-collection3_1.jpg","image_height_mobile":"auto","content_position_mobile":"items-end justify-start","text_alignment_mobile":"left","color_text":"#030906","color_highlight":"#e0a580","gradient_highlight":"","color_button_text":"#ffffff","color_button_background":"#030906","color_button_gradient":"","color_overlay":"#171717","overlay_opacity":0,"padding_top":0,"padding_bottom":0,"divider":false,"full_width":true,"rounded":false,"enable_parallax":false,"parallax_direction":"vertical"}},"video_with_text_chUftC":{"type":"video-with-text","blocks":{"heading_CjQqQm":{"type":"heading","settings":{"heading":"<em>Fry Healthier<\/em>","heading_size":"title-lg tracking-heading","heading_tag":"h2","highlighted_text":"text","highlighted_scribble":"circle"}},"text_DhBUqG":{"type":"text","settings":{"text":"<p>Cook your favorite meals using up to 90% less oil, and shop our wide range of beloved air fryers to crisp up foods faster and healthier.<\/p>","text_size":"subtext-md","text_max_size":32,"text_font":"body","secondary_color":true,"highlighted_text":"none","highlighted_scribble":"circle"}},"button_qXBtFC":{"type":"button","settings":{"button_label":"Shop Air Fryers","button_link":"shopify:\/\/collections\/air-fryers-1","button_style":"primary","button_size":"md","button_external":false,"button_icon":false}}},"block_order":["heading_CjQqQm","text_DhBUqG","button_qXBtFC"],"settings":{"video":"shopify:\/\/files\/videos\/air fryer banner - mobile- shopify-Low Bit Rate Fun.mp4","video_url":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","description":"","enable_video_autoplay":true,"enable_video_looping":true,"image_height":"500px","video_width":"medium","layout":"video_first","text_alignment":"left","content_position":"align-self-center","video_url_mobile":"","image_height_mobile":"auto","text_alignment_mobile":"center","color_text":"","color_background":"#ffffff","gradient_background":"","color_background_2":"","gradient_background_2":"","color_highlight":"","gradient_highlight":"linear-gradient(8deg, rgba(77, 124, 15, 1) 11%, rgba(0, 191, 54, 1) 79%)","color_button_text":"","color_button_background":"","color_button_gradient":"","padding_top":72,"padding_bottom":72,"divider":false,"full_width":false,"rounded":false,"enable_parallax":false,"parallax_direction":"vertical"}},"image_with_text_overlay_CXbJa7":{"type":"image-with-text-overlay","blocks":{"image_hkywML":{"type":"image","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/tier_1_chefman_black.png","image_width":"custom","image_max_width":170,"image_max_width_mobile":120}},"heading_LhTfrF":{"type":"heading","settings":{"heading":"Performance Series","heading_size":"title-md","heading_tag":"h2","highlighted_text":"none","highlighted_scribble":"circle"}},"text_XcEQbE":{"type":"text","settings":{"text":"<p>Our award-winning products set the standard for culinary excellence<\/p>","text_size":"subtext-md","text_max_size":32,"text_font":"body","secondary_color":false,"highlighted_text":"none","highlighted_scribble":"circle"}},"button_xL7E4f":{"type":"button","settings":{"button_label":"Shop Now","button_link":"shopify:\/\/collections\/performance-series","button_style":"secondary","button_size":"md","button_external":false,"button_icon":true}}},"block_order":["image_hkywML","heading_LhTfrF","text_XcEQbE","button_xL7E4f"],"custom_css":["@media (min-width: 767px) {.banner {display: none; }}"],"settings":{"transparent_header":false,"image":"shopify:\/\/shop_images\/caffeinator-banner.jpg","image_height":"900px","content_width":"medium","content_position":"md:items-center md:justify-start","text_alignment":"left","image_mobile":"shopify:\/\/shop_images\/mobile-performance-collection3_1.jpg","image_height_mobile":"auto","content_position_mobile":"items-end justify-start","text_alignment_mobile":"center","color_text":"#030906","color_highlight":"#e0a580","gradient_highlight":"","color_button_text":"#ffffff","color_button_background":"#030906","color_button_gradient":"","color_overlay":"#171717","overlay_opacity":0,"padding_top":0,"padding_bottom":0,"divider":false,"full_width":true,"rounded":false,"enable_parallax":false,"parallax_direction":"vertical"}},"video_with_text_CBamex":{"type":"video-with-text","blocks":{"heading_YjKdMU":{"type":"heading","settings":{"heading":"<em>Boil Faster<\/em>","heading_size":"title-lg tracking-heading","heading_tag":"h2","highlighted_text":"text","highlighted_scribble":"circle"}},"text_9wxmV6":{"type":"text","settings":{"text":"<p>From gooseneck kettles for pour-over coffee to our high-wattage Lightning kettles, it's easy to see why Chefman is America's #1 brand of electric kettles.<\/p>","text_size":"subtext-md","text_max_size":32,"text_font":"body","secondary_color":true,"highlighted_text":"none","highlighted_scribble":"circle"}},"button_BEphGh":{"type":"button","settings":{"button_label":"Shop Kettles","button_link":"shopify:\/\/collections\/kettles-2","button_style":"primary","button_size":"md","button_external":false,"button_icon":false}}},"block_order":["heading_YjKdMU","text_9wxmV6","button_BEphGh"],"settings":{"video":"shopify:\/\/files\/videos\/Air Fryer Promo video - chefman site-Low Bit Rate Fun_76d7400c-f794-494e-8c8d-4944a49a82f2.mp4","video_url":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","description":"","enable_video_autoplay":true,"enable_video_looping":true,"image_height":"500px","video_width":"medium","layout":"text_first","text_alignment":"left","content_position":"align-self-center","video_url_mobile":"","image_height_mobile":"auto","text_alignment_mobile":"center","color_text":"","color_background":"#ffffff","gradient_background":"","color_background_2":"","gradient_background_2":"","color_highlight":"","gradient_highlight":"linear-gradient(89deg, rgba(37, 100, 228, 1) 7%, rgba(88, 173, 255, 1) 94%)","color_button_text":"","color_button_background":"","color_button_gradient":"","padding_top":72,"padding_bottom":72,"divider":false,"full_width":false,"rounded":false,"enable_parallax":false,"parallax_direction":"vertical"}},"image_with_text_overlay_7rWB6D":{"type":"image-with-text-overlay","blocks":{"heading_dc7gxG":{"type":"heading","settings":{"heading":"Brew Like a Barista","heading_size":"title-md","heading_tag":"h2","highlighted_text":"none","highlighted_scribble":"circle"}},"text_cByMzb":{"type":"text","settings":{"text":"<p>Shop our gourmet espresso machines and premium capsule brewers.<\/p>","text_size":"subtext-md","text_max_size":32,"text_font":"body","secondary_color":true,"highlighted_text":"none","highlighted_scribble":"circle"}},"button_7FjmDD":{"type":"button","settings":{"button_label":"Shop Now","button_link":"shopify:\/\/collections\/coffee-espresso-makers","button_style":"primary","button_size":"md","button_external":false,"button_icon":false}}},"block_order":["heading_dc7gxG","text_cByMzb","button_7FjmDD"],"settings":{"transparent_header":false,"image":"shopify:\/\/shop_images\/espresso-on-the-top.webp","image_height":"700px","content_width":"small","content_position":"md:items-center md:justify-start","text_alignment":"left","image_mobile":"shopify:\/\/shop_images\/espresso-on-the-go.webp","image_height_mobile":"adapt","content_position_mobile":"items-end justify-start","text_alignment_mobile":"center","color_text":"#000000","color_highlight":"#e0a580","gradient_highlight":"","color_button_text":"#ffffff","color_button_background":"#000000","color_button_gradient":"","color_overlay":"#171717","overlay_opacity":0,"padding_top":0,"padding_bottom":0,"divider":false,"full_width":true,"rounded":false,"enable_parallax":false,"parallax_direction":"vertical"}},"video_with_text_overlay_FVAC7U":{"type":"video-with-text-overlay","custom_css":[".play-button {display: none;}"],"settings":{"transparent_header":false,"video":"shopify:\/\/files\/videos\/RJ23-SG-PL Accu-grill_60 sec_FINAL-Low Bit Rate Fun.mp4","video_url":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","description":"","enable_video_autoplay":true,"enable_video_looping":true,"image_height":"700px","content_width":"small","content_position":"md:items-center md:justify-center","text_alignment":"center","video_url_mobile":"","image_height_mobile":"400px","content_position_mobile":"items-center justify-center","text_alignment_mobile":"center","color_text":"#ffffff","color_highlight":"#e0a580","gradient_highlight":"","color_button_text":"#171717","color_button_background":"#ffffff","color_button_gradient":"","color_overlay":"#171717","overlay_opacity":0,"padding_top":72,"padding_bottom":0,"divider":false,"full_width":false,"rounded":true}},"image_with_text_overlay_iN3qHP":{"type":"image-with-text-overlay","disabled":true,"settings":{"transparent_header":false,"image":"shopify:\/\/shop_images\/Chefman-family.jpg","image_height":"850px","content_width":"small","content_position":"md:items-end md:justify-start","text_alignment":"left","image_height_mobile":"300px","content_position_mobile":"items-end justify-start","text_alignment_mobile":"left","color_text":"#ffffff","color_highlight":"#e0a580","gradient_highlight":"","color_button_text":"#171717","color_button_background":"#ffffff","color_button_gradient":"","color_overlay":"#171717","overlay_opacity":70,"padding_top":72,"padding_bottom":0,"divider":false,"full_width":false,"rounded":true,"enable_parallax":false,"parallax_direction":"zoom"}},"rich_text_cAqH9T":{"type":"rich-text","blocks":{"heading_FBYHrJ":{"type":"heading","settings":{"heading":"Built for You","heading_size":"title-lg tracking-heading","heading_tag":"h2","highlighted_text":"none","highlighted_scribble":"circle"}},"text_wDLxnj":{"type":"text","settings":{"text":"<p>Our vision is to boldly reimagine the kitchen space as a testament to the union of art and utility, combining passion and innovation to make the home-cooking experience exceptional.<\/p>","text_size":"subtext-md","text_max_size":32,"text_font":"body","secondary_color":true,"highlighted_text":"none","highlighted_scribble":"circle"}},"button_gqbMdH":{"type":"button","settings":{"button_label":"Learn More","button_link":"shopify:\/\/pages\/about-us","button_style":"primary","button_size":"md","button_external":false,"button_icon":false}}},"block_order":["heading_FBYHrJ","text_wDLxnj","button_gqbMdH"],"settings":{"text_alignment":"center","text_alignment_mobile":"center","heading":"","heading_size":"title-md","heading_alignment":"text-left md:items-end md:flex-row","heading_width":"small","heading_tag":"h2","subheading":"","description":"","button_label":"","button_link":"","button_external":false,"button_icon":true,"highlighted_text":"none","highlighted_scribble":"circle","color_text":"","color_background":"","gradient_background":"","color_highlight":"","gradient_highlight":"","color_button_text":"","color_button_background":"","color_button_gradient":"","padding_top":72,"padding_bottom":100,"divider":false,"narrow":true,"rounded":false}},"rich_text_bxdhL7":{"type":"rich-text","blocks":{"heading_fggpKf":{"type":"heading","settings":{"heading":"Explore Our Other Brands","heading_size":"title-md","heading_tag":"h2","highlighted_text":"none","highlighted_scribble":"circle"}}},"block_order":["heading_fggpKf"],"disabled":true,"settings":{"text_alignment":"center","text_alignment_mobile":"center","heading":"","heading_size":"title-md","heading_alignment":"text-left md:items-end md:flex-row","heading_width":"small","heading_tag":"h2","subheading":"","description":"","button_label":"","button_link":"","button_external":false,"button_icon":true,"highlighted_text":"none","highlighted_scribble":"circle","color_text":"","color_background":"#ffffff","gradient_background":"","color_highlight":"","gradient_highlight":"","color_button_text":"","color_button_background":"","color_button_gradient":"","padding_top":72,"padding_bottom":0,"divider":false,"narrow":true,"rounded":false}},"custom_liquid_ph7yTP":{"type":"custom-liquid","disabled":true,"settings":{"liquid":"","color_text":"","color_background":"","gradient_background":"","color_button_text":"","color_button_background":"","color_button_gradient":"","padding_top":72,"padding_bottom":72,"divider":false,"narrow":false,"rounded":false}},"slideshow_8WFyzH":{"type":"slideshow","blocks":{"image_cLLW3E":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/iq-banner-4.webp","image_mobile":"shopify:\/\/shop_images\/iceman-banner-mobile-phone.webp","heading":"","heading_size":"title-lg tracking-heading","heading_tag":"h2","button_label":"","button_link":"https:\/\/chefiq.com\/","button_style":"primary","button_external":false,"button_icon":false}},"image_xDdWTa":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/ICEMAN-BANNER-4.webp","image_mobile":"shopify:\/\/shop_images\/iceman-banner-mobile.webp","heading":"","heading_size":"title-lg tracking-heading","heading_tag":"h2","button_label":"","button_link":"https:\/\/chillwithiceman.com\/","button_style":"primary","button_external":false,"button_icon":false}},"image_qymhfX":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/buff-banne2.webp","image_mobile":"shopify:\/\/shop_images\/buff-banner-mobile.webp","heading":"","heading_size":"title-lg tracking-heading","heading_tag":"h2","button_label":"","button_link":"https:\/\/buffclean.com\/","button_style":"primary","button_external":false,"button_icon":false}}},"block_order":["image_cLLW3E","image_xDdWTa","image_qymhfX"],"disabled":true,"custom_css":[],"settings":{"autoplay":true,"autoplay_speed":7,"show_navigation":true,"image_height":"650px","content_width":"medium","image_height_mobile":"500px","color_text":"#ffffff","color_background":"#ffffff","gradient_background":"","color_button_text":"#171717","color_button_background":"#ffffff","color_button_gradient":"","color_overlay":"#171717","overlay_opacity":0,"padding_top":72,"padding_bottom":120,"divider":false,"full_width":false,"rounded":true,"enable_parallax":false,"parallax_direction":"vertical"}}},"order":["video_with_text_overlay_nY9Xrc","image_with_text_overlay_HNHphW","image_with_text_overlay_BEFg6D","collection_list_MHHqMR","image_with_text_overlay_prKi6X","video_with_text_chUftC","image_with_text_overlay_CXbJa7","video_with_text_CBamex","image_with_text_overlay_7rWB6D","video_with_text_overlay_FVAC7U","image_with_text_overlay_iN3qHP","rich_text_cAqH9T","rich_text_bxdhL7","custom_liquid_ph7yTP","slideshow_8WFyzH"]}
+{
+  "sections": {
+    "video_with_text_overlay_nY9Xrc": {
+      "type": "video-with-text-overlay",
+      "blocks": {
+        "spacing_NRN7qm": {
+          "type": "spacing",
+          "settings": {
+            "height": 40,
+            "height_mobile": 28
+          }
+        },
+        "subheading_kPy4re": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Découvrez",
+            "subheading_size": "subtitle-sm",
+            "secondary_color": false
+          }
+        },
+        "heading_imxXHM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Caffeinator",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h1",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_GifqB4": {
+          "type": "button",
+          "settings": {
+            "button_label": "Magasiner maintenant",
+            "button_link": "shopify://products/caffeinator-single-serve-coffee-maker",
+            "button_style": "secondary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": false
+          }
+        },
+        "text_cdp8kR": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Associez du texte à une image pour mettre en valeur le produit, la collection ou l'article de blogue de votre choix. Ajoutez des détails sur la disponibilité, le style, ou même fournissez un avis.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "spacing_NRN7qm",
+        "subheading_kPy4re",
+        "heading_imxXHM",
+        "button_GifqB4",
+        "text_cdp8kR"
+      ],
+      "custom_css": [
+        ".button--secondary {margin-top: 17px;}",
+        ".play-button {display: none;}"
+      ],
+      "settings": {
+        "transparent_header": true,
+        "video": "shopify://files/videos/RJ14-DB Caffeinator_Shopify_1080.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "image_height": "900px",
+        "content_width": "small",
+        "content_position": "md:items-center md:justify-center",
+        "text_alignment": "center",
+        "video_url_mobile": "",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-center justify-center",
+        "text_alignment_mobile": "center",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 45,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false
+      }
+    },
+    "image_with_text_overlay_HNHphW": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "spacing_N3mVAa": {
+          "type": "spacing",
+          "settings": {
+            "height": 72,
+            "height_mobile": 32
+          }
+        },
+        "subheading_LLKLXh": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Découvrez",
+            "subheading_size": "subtitle-sm",
+            "secondary_color": false
+          }
+        },
+        "heading_3BGRbC": {
+          "type": "heading",
+          "settings": {
+            "heading": "Caffeinator",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h1",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_gWtXyA": {
+          "type": "button",
+          "settings": {
+            "button_label": "Magasiner maintenant",
+            "button_link": "shopify://products/caffeinator-single-serve-coffee-maker",
+            "button_style": "secondary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": false
+          }
+        },
+        "text_iNMckP": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Le café comme vous l'aimez, de toutes les façons.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "spacing_N3mVAa",
+        "subheading_LLKLXh",
+        "heading_3BGRbC",
+        "button_gWtXyA",
+        "text_iNMckP"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".button--secondary {margin-top: 16px;}"
+      ],
+      "settings": {
+        "transparent_header": true,
+        "image": "shopify://shop_images/CF-website-showcase-ultrablue.webp",
+        "image_height": "900px",
+        "content_width": "large",
+        "content_position": "md:items-start md:justify-center",
+        "text_alignment": "center",
+        "image_mobile": "shopify://shop_images/CF-website-showcase-mobile-2.webp",
+        "image_height_mobile": "adapt",
+        "content_position_mobile": "items-start justify-center",
+        "text_alignment_mobile": "center",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_overlay_BEFg6D": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "spacing_AUChnY": {
+          "type": "spacing",
+          "settings": {
+            "height": 72,
+            "height_mobile": 32
+          }
+        },
+        "heading_YdaVmE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Conçu pour la vie",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h1",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_bbgggg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Conçue méticuleusement. Fabriquée pour durer.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_BUEczT": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Magasiner maintenant",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "spacing_AUChnY",
+        "heading_YdaVmE",
+        "text_bbgggg",
+        "button_BUEczT"
+      ],
+      "disabled": true,
+      "settings": {
+        "transparent_header": true,
+        "image": "shopify://shop_images/chefman--crispinator-banner-home.webp",
+        "image_height": "900px",
+        "content_width": "large",
+        "content_position": "md:items-start md:justify-center",
+        "text_alignment": "center",
+        "image_mobile": "shopify://shop_images/mobile-homepage-banner-crispinator.jpg",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-start justify-center",
+        "text_alignment_mobile": "center",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "collection_list_MHHqMR": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_4hjYrG": {
+          "type": "collection",
+          "settings": {
+            "collection": "performance-series",
+            "image": "shopify://shop_images/PF-Chefman-Collection.jpg",
+            "title": "Série Performance",
+            "description": "",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_G76R4e": {
+          "type": "collection",
+          "settings": {
+            "collection": "air-fryers-1",
+            "image": "shopify://shop_images/RJ38-8-T-BLACK_ECOM_LIFESTYLE_2_200C.jpg",
+            "title": "",
+            "description": "",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_zBVc3a": {
+          "type": "collection",
+          "settings": {
+            "collection": "kettles-2",
+            "image": "shopify://shop_images/KT-Collection-2.jpg",
+            "title": "Bouilloires",
+            "description": "",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_bbcUfQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "coffee-espresso-makers",
+            "image": "shopify://shop_images/espresso-collection.jpg",
+            "title": "Café",
+            "description": "",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_G6R4Qp": {
+          "type": "collection",
+          "settings": {
+            "collection": "toasters",
+            "image": "shopify://shop_images/breakfast-collection.jpg",
+            "title": "Grille-pain",
+            "description": "",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_FhLD9f": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "blenders",
+            "image": "shopify://shop_images/blender-category.webp",
+            "title": "",
+            "description": "",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_HdD9FY": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "deep-fryers-1",
+            "image": "shopify://shop_images/deep-fryer-collection.jpg",
+            "title": "",
+            "description": "",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_DpnnnC": {
+          "type": "collection",
+          "settings": {
+            "collection": "microwaves",
+            "image": "shopify://shop_images/RJ55-SS-7-CK_ECOM__Microwave_with_hand.png",
+            "title": "",
+            "description": "",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_WLcUgT": {
+          "type": "collection",
+          "settings": {
+            "collection": "indoor-pizza-ovens",
+            "image": "shopify://shop_images/RJ25-PO12-SS_ISOMETRIC-Lifestyle_1x1_8c65037c-c650-4b22-8ca8-e6725da2fc89.jpg",
+            "title": "",
+            "description": "",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_LmtQ6n": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "panini-presses",
+            "image": "shopify://shop_images/panini-collection.jpg",
+            "title": "",
+            "description": "",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_TarnKX": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "warming-trays",
+            "image": "shopify://shop_images/warming-tray-collection.jpg",
+            "title": "",
+            "description": "",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "collection_4hjYrG",
+        "collection_G76R4e",
+        "collection_zBVc3a",
+        "collection_bbcUfQ",
+        "collection_G6R4Qp",
+        "collection_FhLD9f",
+        "collection_HdD9FY",
+        "collection_DpnnnC",
+        "collection_WLcUgT",
+        "collection_LmtQ6n",
+        "collection_TarnKX"
+      ],
+      "settings": {
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "image_type": "collection",
+        "image_ratio": "square",
+        "show_products_count": false,
+        "show_view_all": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Magasiner nos collections",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": true,
+        "rounded": false
+      }
+    },
+    "image_with_text_overlay_prKi6X": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "image_BH8nQM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/red-dot-award-winner.svg",
+            "image_width": "custom",
+            "image_max_width": 170,
+            "image_max_width_mobile": 50
+          }
+        },
+        "heading_Q8kezJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Série Performance",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_YW4QrN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Nos produits primés établissent la norme en matière d'excellence culinaire.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_ibKpKn": {
+          "type": "button",
+          "settings": {
+            "button_label": "Magasiner maintenant",
+            "button_link": "shopify://collections/performance-series",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": false
+          }
+        }
+      },
+      "block_order": [
+        "image_BH8nQM",
+        "heading_Q8kezJ",
+        "text_YW4QrN",
+        "button_ibKpKn"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {.banner {display: none; }}"
+      ],
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/performance-series-banner2.jpg",
+        "image_height": "900px",
+        "content_width": "medium",
+        "content_position": "md:items-center md:justify-start",
+        "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/mobile-performance-collection3_1.jpg",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#030906",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#ffffff",
+        "color_button_background": "#030906",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "video_with_text_chUftC": {
+      "type": "video-with-text",
+      "blocks": {
+        "heading_CjQqQm": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>Friture plus santé</em>",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_DhBUqG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Cuisinez vos plats préférés en utilisant jusqu'à 90 % moins d'huile, et magasinez notre vaste gamme de friteuses à air adorées pour rendre vos aliments croustillants plus rapidement et plus sainement.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_qXBtFC": {
+          "type": "button",
+          "settings": {
+            "button_label": "Magasiner les friteuses à air",
+            "button_link": "shopify://collections/air-fryers-1",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_CjQqQm",
+        "text_DhBUqG",
+        "button_qXBtFC"
+      ],
+      "settings": {
+        "video": "shopify://files/videos/air fryer banner - mobile- shopify-Low Bit Rate Fun.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "image_height": "500px",
+        "video_width": "medium",
+        "layout": "video_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "video_url_mobile": "",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "center",
+        "color_text": "",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "linear-gradient(8deg, rgba(77, 124, 15, 1) 11%, rgba(0, 191, 54, 1) 79%)",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_overlay_CXbJa7": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "image_hkywML": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/tier_1_chefman_black.png",
+            "image_width": "custom",
+            "image_max_width": 170,
+            "image_max_width_mobile": 120
+          }
+        },
+        "heading_LhTfrF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Série Performance",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_XcEQbE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Nos produits primés établissent la norme en matière d'excellence culinaire</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_xL7E4f": {
+          "type": "button",
+          "settings": {
+            "button_label": "Magasiner maintenant",
+            "button_link": "shopify://collections/performance-series",
+            "button_style": "secondary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "image_hkywML",
+        "heading_LhTfrF",
+        "text_XcEQbE",
+        "button_xL7E4f"
+      ],
+      "custom_css": [
+        "@media (min-width: 767px) {.banner {display: none; }}"
+      ],
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/caffeinator-banner.jpg",
+        "image_height": "900px",
+        "content_width": "medium",
+        "content_position": "md:items-center md:justify-start",
+        "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/mobile-performance-collection3_1.jpg",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "center",
+        "color_text": "#030906",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#ffffff",
+        "color_button_background": "#030906",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "video_with_text_CBamex": {
+      "type": "video-with-text",
+      "blocks": {
+        "heading_YjKdMU": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>Faites bouillir plus vite</em>",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_9wxmV6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Des bouilloires à col de cygne pour le café filtre à la main à nos bouilloires Lightning à haute puissance, il est facile de comprendre pourquoi Chefman est la marque no 1 de bouilloires électriques en Amérique.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_BEphGh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Magasiner les bouilloires",
+            "button_link": "shopify://collections/kettles-2",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_YjKdMU",
+        "text_9wxmV6",
+        "button_BEphGh"
+      ],
+      "settings": {
+        "video": "shopify://files/videos/Air Fryer Promo video - chefman site-Low Bit Rate Fun_76d7400c-f794-494e-8c8d-4944a49a82f2.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "image_height": "500px",
+        "video_width": "medium",
+        "layout": "text_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "video_url_mobile": "",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "center",
+        "color_text": "",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "linear-gradient(89deg, rgba(37, 100, 228, 1) 7%, rgba(88, 173, 255, 1) 94%)",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_overlay_7rWB6D": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_dc7gxG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Préparez votre café comme un barista",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_cByMzb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Magasinez nos machines à espresso gastronomiques et nos cafetières à capsules haut de gamme.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_7FjmDD": {
+          "type": "button",
+          "settings": {
+            "button_label": "Magasiner maintenant",
+            "button_link": "shopify://collections/coffee-espresso-makers",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_dc7gxG",
+        "text_cByMzb",
+        "button_7FjmDD"
+      ],
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/espresso-on-the-top.webp",
+        "image_height": "700px",
+        "content_width": "small",
+        "content_position": "md:items-center md:justify-start",
+        "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/espresso-on-the-go.webp",
+        "image_height_mobile": "adapt",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "center",
+        "color_text": "#000000",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#ffffff",
+        "color_button_background": "#000000",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "video_with_text_overlay_FVAC7U": {
+      "type": "video-with-text-overlay",
+      "custom_css": [
+        ".play-button {display: none;}"
+      ],
+      "settings": {
+        "transparent_header": false,
+        "video": "shopify://files/videos/RJ23-SG-PL Accu-grill_60 sec_FINAL-Low Bit Rate Fun.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "image_height": "700px",
+        "content_width": "small",
+        "content_position": "md:items-center md:justify-center",
+        "text_alignment": "center",
+        "video_url_mobile": "",
+        "image_height_mobile": "400px",
+        "content_position_mobile": "items-center justify-center",
+        "text_alignment_mobile": "center",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 72,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": false,
+        "rounded": true
+      }
+    },
+    "image_with_text_overlay_iN3qHP": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/Chefman-family.jpg",
+        "image_height": "850px",
+        "content_width": "small",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_height_mobile": "300px",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 70,
+        "padding_top": 72,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": false,
+        "rounded": true,
+        "enable_parallax": false,
+        "parallax_direction": "zoom"
+      }
+    },
+    "rich_text_cAqH9T": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FBYHrJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Conçu pour vous",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_wDLxnj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Notre vision est de réimaginer audacieusement l'espace cuisine comme un témoignage de l'union entre l'art et l'utilité, en alliant passion et innovation pour rendre l'expérience de la cuisine maison exceptionnelle.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_gqbMdH": {
+          "type": "button",
+          "settings": {
+            "button_label": "En savoir plus",
+            "button_link": "shopify://pages/about-us",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_FBYHrJ",
+        "text_wDLxnj",
+        "button_gqbMdH"
+      ],
+      "settings": {
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 100,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "rich_text_bxdhL7": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fggpKf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Découvrez nos autres marques",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fggpKf"
+      ],
+      "disabled": true,
+      "settings": {
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 0,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "custom_liquid_ph7yTP": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "liquid": "",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    },
+    "slideshow_8WFyzH": {
+      "type": "slideshow",
+      "blocks": {
+        "image_cLLW3E": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/iq-banner-4.webp",
+            "image_mobile": "shopify://shop_images/iceman-banner-mobile-phone.webp",
+            "heading": "",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "button_label": "",
+            "button_link": "https://chefiq.com/",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false
+          }
+        },
+        "image_xDdWTa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ICEMAN-BANNER-4.webp",
+            "image_mobile": "shopify://shop_images/iceman-banner-mobile.webp",
+            "heading": "",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "button_label": "",
+            "button_link": "https://chillwithiceman.com/",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false
+          }
+        },
+        "image_qymhfX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/buff-banne2.webp",
+            "image_mobile": "shopify://shop_images/buff-banner-mobile.webp",
+            "heading": "",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "button_label": "",
+            "button_link": "https://buffclean.com/",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false
+          }
+        }
+      },
+      "block_order": [
+        "image_cLLW3E",
+        "image_xDdWTa",
+        "image_qymhfX"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "show_navigation": true,
+        "image_height": "650px",
+        "content_width": "medium",
+        "image_height_mobile": "500px",
+        "color_text": "#ffffff",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 72,
+        "padding_bottom": 120,
+        "divider": false,
+        "full_width": false,
+        "rounded": true,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    }
+  },
+  "order": [
+    "video_with_text_overlay_nY9Xrc",
+    "image_with_text_overlay_HNHphW",
+    "image_with_text_overlay_BEFg6D",
+    "collection_list_MHHqMR",
+    "image_with_text_overlay_prKi6X",
+    "video_with_text_chUftC",
+    "image_with_text_overlay_CXbJa7",
+    "video_with_text_CBamex",
+    "image_with_text_overlay_7rWB6D",
+    "video_with_text_overlay_FVAC7U",
+    "image_with_text_overlay_iN3qHP",
+    "rich_text_cAqH9T",
+    "rich_text_bxdhL7",
+    "custom_liquid_ph7yTP",
+    "slideshow_8WFyzH"
+  ]
+}

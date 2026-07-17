@@ -6,8 +6,7 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */
-{
+ */{
   "sections": {
     "coffee_guide": {
       "type": "coffee-guide",
@@ -16,8 +15,8 @@
           "type": "rich_text",
           "settings": {
             "eyebrow": "",
-            "heading": "What is espresso?",
-            "body": "<p>Espresso isn't a bean or a roast — it's a method. A pump drives hot water through finely-ground, tightly-packed coffee at high pressure (around nine bars), extracting a concentrated ounce or two topped with a layer of golden <em>crema</em>. That intensity is what makes espresso the building block for milk drinks and long blacks alike.</p>",
+            "heading": "Qu'est-ce que l'espresso?",
+            "body": "<p>L'espresso n'est ni un grain ni une torréfaction — c'est une méthode. Une pompe pousse de l'eau chaude à travers un café finement moulu et bien tassé à haute pression (environ neuf bars), extrayant 30 à 60 mL concentrés coiffés d'une couche de <em>crema</em> dorée. C'est cette intensité qui fait de l'espresso la base des boissons lactées comme des cafés allongés.</p>",
             "narrow": false
           }
         },
@@ -26,10 +25,10 @@
           "settings": {
             "image": "shopify://shop_images/pressure-pull-espresso.jpg",
             "image_position": "left",
-            "eyebrow": "How it works",
-            "heading": "Pressure is everything",
-            "body": "<p>Where drip relies on gravity, espresso relies on force. The machine heats water to the ideal temperature and pushes it through the grounds in about 25–30 seconds. The result is a small, syrupy shot with far more flavor and body than regular coffee.</p>",
-            "button_label": "Shop espresso machines",
+            "eyebrow": "Comment ça fonctionne",
+            "heading": "La pression fait toute la différence",
+            "body": "<p>Là où la cafetière filtre s'appuie sur la gravité, l'espresso s'appuie sur la force. La machine chauffe l'eau à la température idéale et la pousse à travers la mouture en environ 25 à 30 secondes. Le résultat est une petite dose sirupeuse offrant beaucoup plus de saveur et de corps qu'un café ordinaire.</p>",
+            "button_label": "Magasiner les machines à espresso",
             "button_link": "shopify://collections/coffee-espresso-makers"
           }
         },
@@ -38,9 +37,9 @@
           "settings": {
             "image": "shopify://shop_images/espresso-drinks.jpg",
             "image_position": "right",
-            "eyebrow": "The drinks",
-            "heading": "One shot, endless drinks",
-            "body": "<p>Master the shot and you've unlocked an entire menu:</p><ul><li><strong>Latte</strong> — espresso plus lots of steamed milk</li><li><strong>Cappuccino</strong> — equal parts espresso, steamed milk, and foam</li><li><strong>Flat white</strong> — espresso plus velvety microfoam</li><li><strong>Americano</strong> — espresso plus hot water</li></ul>",
+            "eyebrow": "Les boissons",
+            "heading": "Une dose, une infinité de boissons",
+            "body": "<p>Maîtrisez l'extraction et vous débloquez tout un menu :</p><ul><li><strong>Latté</strong> — espresso avec beaucoup de lait vapeur</li><li><strong>Cappuccino</strong> — parts égales d'espresso, de lait vapeur et de mousse</li><li><strong>Flat white</strong> — espresso avec une micromousse veloutée</li><li><strong>Americano</strong> — espresso avec de l'eau chaude</li></ul>",
             "button_label": "",
             "button_link": ""
           }
@@ -49,16 +48,16 @@
           "type": "rich_text",
           "settings": {
             "eyebrow": "",
-            "heading": "Manual, semi-automatic, or automatic?",
-            "body": "<p>Espresso machines range from hands-on to hands-off:</p><ul><li><strong>Semi-automatic</strong> — you control the shot, the machine controls pressure. The sweet spot for most home baristas.</li><li><strong>Automatic</strong> — one-touch shots and milk for café drinks with less practice.</li><li><strong>Built-in grinder</strong> — grind fresh beans right into the portafilter for the best possible flavor.</li></ul>",
+            "heading": "Manuelle, semi-automatique ou automatique?",
+            "body": "<p>Les machines à espresso vont du plus manuel au plus automatisé :</p><ul><li><strong>Semi-automatique</strong> — vous contrôlez l'extraction, la machine contrôle la pression. Le point idéal pour la plupart des baristas maison.</li><li><strong>Automatique</strong> — cafés et lait en une touche pour des boissons de café avec moins de pratique.</li><li><strong>Broyeur intégré</strong> — moulez des grains frais directement dans le porte-filtre pour la meilleure saveur possible.</li></ul>",
             "narrow": false
           }
         },
         "b5_callout": {
           "type": "callout",
           "settings": {
-            "heading": "Pro tip",
-            "body": "<p>Fresh, evenly-ground beans and a good tamp matter more than any single setting. If your shot pulls too fast and tastes sour, grind finer; too slow and bitter, grind coarser. Small tweaks, big difference.</p>"
+            "heading": "Conseil de pro",
+            "body": "<p>Des grains frais, moulus uniformément, et un bon tassage comptent plus que n'importe quel réglage. Si votre café s'extrait trop vite et goûte acide, moulez plus fin; trop lentement et amer, moulez plus grossier. De petits ajustements, une grande différence.</p>"
           }
         },
         "b6_image_text": {
@@ -66,9 +65,9 @@
           "settings": {
             "image": "shopify://shop_images/cappuccino-chefman-espresso.jpg",
             "image_position": "left",
-            "eyebrow": "Milk drinks",
-            "heading": "Steam, froth, repeat",
-            "body": "<p>A built-in steam wand or automatic frother turns cold milk into silky microfoam for lattes and cappuccinos. It's the difference between a plain shot and a proper coffee-shop drink at home.</p>",
+            "eyebrow": "Boissons lactées",
+            "heading": "Vaporisez, faites mousser, recommencez",
+            "body": "<p>Une buse vapeur intégrée ou un mousseur automatique transforme le lait froid en micromousse soyeuse pour les lattes et les cappuccinos. C'est ce qui fait la différence entre un simple espresso et une véritable boisson de café-boutique à la maison.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -77,16 +76,16 @@
           "type": "rich_text",
           "settings": {
             "eyebrow": "",
-            "heading": "What to look for",
-            "body": "<ul><li><strong>Pressure</strong> — a pump that delivers consistent pressure for a proper extraction.</li><li><strong>Milk system</strong> — a steam wand for control, or an automatic frother for convenience.</li><li><strong>Grinder</strong> — built-in saves counter space and keeps grounds fresh.</li><li><strong>Footprint</strong> — espresso machines run larger, so measure your counter first.</li></ul>",
+            "heading": "Ce qu'il faut rechercher",
+            "body": "<ul><li><strong>Pression</strong> — une pompe qui offre une pression constante pour une extraction adéquate.</li><li><strong>Système à lait</strong> — une buse vapeur pour le contrôle, ou un mousseur automatique pour la commodité.</li><li><strong>Moulin</strong> — intégré, il économise de l'espace sur le comptoir et garde le café moulu frais.</li><li><strong>Encombrement</strong> — les machines à espresso sont plus grosses, alors mesurez votre comptoir d'abord.</li></ul>",
             "narrow": false
           }
         },
         "b8_callout": {
           "type": "callout",
           "settings": {
-            "heading": "Good to know",
-            "body": "<p>Espresso has the steepest learning curve of the three — but also the highest ceiling. Give yourself a week of practice and you'll be pulling shots you'd happily pay five dollars for.</p>"
+            "heading": "Bon à savoir",
+            "body": "<p>L'espresso a la courbe d'apprentissage la plus abrupte des trois — mais aussi le plus grand potentiel. Accordez-vous une semaine de pratique et vous tirerez des cafés que vous paieriez volontiers cinq dollars.</p>"
           }
         }
       },
@@ -102,13 +101,13 @@
       ],
       "settings": {
         "show_breadcrumb": true,
-        "breadcrumb_parent_title": "Find your perfect coffee maker",
+        "breadcrumb_parent_title": "Trouvez votre cafetière idéale",
         "breadcrumb_parent_link": "shopify://pages/find-your-perfect-coffee-maker",
         "show_hero": true,
-        "eyebrow": "Coffee guide",
-        "heading": "Espresso, explained",
+        "eyebrow": "Guide du café",
+        "heading": "L'espresso, expliqué",
         "heading_size": "title-xl tracking-heading",
-        "intro": "<p>The foundation of café culture at home. Espresso machines use pressure to pull a small, intense shot of coffee — the rich base for everything from a morning cappuccino to an afternoon americano.</p>",
+        "intro": "<p>Le fondement de la culture du café à la maison. Les machines à espresso utilisent la pression pour extraire une petite dose de café intense — la base riche de tout, du cappuccino du matin à l'americano de l'après-midi.</p>",
         "padding_top": 48,
         "padding_bottom": 100,
         "divider": false,
@@ -121,8 +120,8 @@
         "q1": {
           "type": "question",
           "settings": {
-            "title": "What exactly is espresso, and how is it different from regular coffee?",
-            "text": "<p>Espresso is a concentrated coffee made by forcing hot water through finely ground beans under high pressure, which produces a small, intense shot topped with a layer of golden foam called crema. Regular drip coffee uses coarser grounds and gravity instead of pressure, so it's larger and milder; espresso is also the base for drinks like lattes and cappuccinos.</p>",
+            "title": "Qu'est-ce que l'espresso exactement, et en quoi diffère-t-il du café ordinaire?",
+            "text": "<p>L'espresso est un café concentré obtenu en forçant de l'eau chaude à travers des grains finement moulus sous haute pression, ce qui produit une petite tasse intense coiffée d'une couche de mousse dorée appelée crema. Le café filtre ordinaire utilise une mouture plus grossière et la gravité plutôt que la pression, il est donc plus volumineux et plus doux; l'espresso sert aussi de base à des boissons comme les lattes et les cappuccinos.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -130,8 +129,8 @@
         "q2": {
           "type": "question",
           "settings": {
-            "title": "What do the 'bars' of pressure mean on an espresso machine?",
-            "text": "<p>A bar is a unit of pressure, and espresso is traditionally brewed at around 9 bars at the coffee itself, which is the sweet spot for balanced flavor and good crema. Machines often advertise 15 or 20 bars, but that refers to the pump's maximum output before it passes through the machine, so a higher number isn't automatically better.</p>",
+            "title": "Que signifient les « bars » de pression sur une machine à espresso?",
+            "text": "<p>Le bar est une unité de pression, et l'espresso est traditionnellement extrait à environ 9 bars au niveau du café lui-même, ce qui constitue le point idéal pour une saveur équilibrée et une belle crema. Les machines annoncent souvent 15 ou 20 bars, mais cela renvoie au débit maximal de la pompe avant qu'il ne passe dans la machine; un chiffre plus élevé n'est donc pas automatiquement meilleur.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -139,8 +138,8 @@
         "q3": {
           "type": "question",
           "settings": {
-            "title": "What's the difference between semi-automatic, automatic, and super-automatic machines?",
-            "text": "<p>A semi-automatic machine handles the pressure and temperature but lets you control the shot timing, giving you more hands-on involvement. Automatic machines stop the shot for you, while super-automatic machines grind, dose, and brew at the touch of a button, trading some control for added convenience.</p>",
+            "title": "Quelle est la différence entre les machines semi-automatiques, automatiques et super-automatiques?",
+            "text": "<p>Une machine semi-automatique gère la pression et la température, mais vous laisse contrôler la durée de l'extraction, pour une expérience plus manuelle. Les machines automatiques arrêtent l'extraction à votre place, tandis que les machines super-automatiques moulent, dosent et infusent d'une simple pression sur un bouton, échangeant une part de contrôle contre plus de commodité.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -148,8 +147,8 @@
         "q4": {
           "type": "question",
           "settings": {
-            "title": "Do I need a separate grinder, or should I get a machine with one built in?",
-            "text": "<p>Freshly ground beans make a noticeable difference for espresso, so you'll need either a built-in grinder or a separate one if you brew from whole beans. If you'd rather skip grinding, you can use pre-ground coffee labeled specifically for espresso or a machine that takes pods, which require no grinder at all.</p>",
+            "title": "Ai-je besoin d'un moulin séparé, ou devrais-je opter pour une machine avec moulin intégré?",
+            "text": "<p>Des grains fraîchement moulus font une différence notable pour l'espresso, vous aurez donc besoin d'un broyeur intégré ou d'un broyeur séparé si vous infusez à partir de grains entiers. Si vous préférez éviter la mouture, vous pouvez utiliser du café pré-moulu portant la mention espresso ou une machine qui accepte les capsules, qui ne nécessitent aucun broyeur.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -157,8 +156,8 @@
         "q5": {
           "type": "question",
           "settings": {
-            "title": "How does milk frothing work for lattes and cappuccinos?",
-            "text": "<p>Many espresso machines include a steam wand, which injects steam into milk to heat it and create microfoam for drinks like lattes and cappuccinos. It takes a little practice to position the wand and texture the milk well, but most people get the hang of it within a few tries.</p>",
+            "title": "Comment fonctionne le moussage du lait pour les lattes et les cappuccinos?",
+            "text": "<p>De nombreuses machines à espresso comprennent une buse à vapeur, qui injecte de la vapeur dans le lait pour le chauffer et créer une micromousse pour des boissons comme les lattés et les cappuccinos. Il faut un peu de pratique pour positionner la buse et bien texturer le lait, mais la plupart des gens y arrivent après quelques essais.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -166,8 +165,8 @@
         "q6": {
           "type": "question",
           "settings": {
-            "title": "What beans and grind size should I use?",
-            "text": "<p>You can use any roast you enjoy, though medium to dark roasts are popular for espresso because of their fuller body. The grind matters most: espresso needs a fine, consistent grind, so look for beans or pre-ground coffee labeled for espresso, and adjust finer if shots run too fast or coarser if they run too slow.</p>",
+            "title": "Quels grains et quelle mouture devrais-je utiliser?",
+            "text": "<p>Vous pouvez utiliser n'importe quelle torréfaction que vous appréciez, bien que les torréfactions moyennes à foncées soient populaires pour l'espresso en raison de leur corps plus prononcé. La mouture est ce qui compte le plus : l'espresso nécessite une mouture fine et uniforme, alors recherchez des grains ou du café prémoulu portant la mention espresso, et ajustez plus fin si les doses coulent trop vite ou plus grossier si elles coulent trop lentement.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -175,8 +174,8 @@
         "q7": {
           "type": "question",
           "settings": {
-            "title": "How do I clean and descale my espresso machine?",
-            "text": "<p>Wipe and purge the steam wand after every use to keep milk from drying inside it, and rinse the portafilter and basket regularly. Periodically descale the machine with a descaling solution or diluted white vinegar to remove mineral buildup, following your machine's instructions and the hardness of your local water.</p>",
+            "title": "Comment nettoyer et détartrer ma machine à espresso?",
+            "text": "<p>Essuyez et purgez la buse à vapeur après chaque utilisation pour empêcher le lait de sécher à l'intérieur, et rincez régulièrement le porte-filtre et le panier. Détartrez périodiquement la machine avec une solution de détartrage ou du vinaigre blanc dilué pour éliminer les dépôts minéraux, en suivant les instructions de votre machine et selon la dureté de l'eau de votre région.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -184,8 +183,8 @@
         "q8": {
           "type": "question",
           "settings": {
-            "title": "Is there a learning curve, and is espresso hard to make at home?",
-            "text": "<p>There is a modest learning curve, since dialing in the grind, dose, and shot timing takes some experimentation at first. Most beginners improve quickly with practice, and machines with more automation can simplify the process if you'd prefer fewer variables to manage.</p>",
+            "title": "Y a-t-il une courbe d'apprentissage, et est-il difficile de préparer un espresso à la maison?",
+            "text": "<p>Il y a une légère courbe d'apprentissage, puisque le réglage de la mouture, de la dose et du temps d'extraction demande un peu d'expérimentation au départ. La plupart des débutants s'améliorent rapidement avec la pratique, et les machines plus automatisées peuvent simplifier le processus si vous préférez avoir moins de variables à gérer.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -203,7 +202,7 @@
       ],
       "settings": {
         "style": "with-border",
-        "heading": "Frequently asked questions",
+        "heading": "Questions fréquentes",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
@@ -238,9 +237,9 @@
         "cta": {
           "type": "cta",
           "settings": {
-            "heading": "Ready to find yours?",
-            "body": "<p>Explore our espresso machines, or take the quiz and we'll match you to the right one for your skill level and space.</p>",
-            "button_label": "Shop all coffee makers",
+            "heading": "Prêt à trouver la vôtre?",
+            "body": "<p>Explorez nos machines à espresso, ou faites le questionnaire et nous vous jumellerons à celle qui convient à votre niveau et à votre espace.</p>",
+            "button_label": "Magasiner toutes les cafetières",
             "button_link": "shopify://collections/coffee-espresso-makers",
             "button_style": "primary"
           }
@@ -251,7 +250,7 @@
       ],
       "settings": {
         "show_breadcrumb": false,
-        "breadcrumb_parent_title": "Find your perfect coffee maker",
+        "breadcrumb_parent_title": "Trouvez votre cafetière idéale",
         "breadcrumb_parent_link": "",
         "show_hero": true,
         "eyebrow": "",

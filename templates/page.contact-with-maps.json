@@ -20,7 +20,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Contact Us",
+            "heading": "Nous joindre",
             "heading_size": "title-xl tracking-heading",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -30,7 +30,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>We'd love to hear from you. Our team is here to help.<\/p>",
+            "text": "<p>Nous aimerions avoir de vos nouvelles. Notre équipe est là pour vous aider.</p>",
             "text_size": "subtext-lg",
             "text_max_size": 32,
             "text_font": "body",
@@ -91,8 +91,8 @@
             "map_address": "620 King St W, Toronto, ON M5V 1M7, Canada",
             "heading": "620 King St",
             "text": "",
-            "liquid": "<p class=\"banner__subheading heading uppercase leading-none tracking-widest text-xs banner__text--colored\">Opening hours<\/p>\n<table>\n  <tr>\n    <td>Mon - Fri<\/td>\n    <td>8:30am - 10:30pm<\/td>\n  <\/tr>\n  <tr>\n    <td>Saturday<\/td>\n    <td>8:30am - 10:30pm<\/td>\n  <\/tr>\n  <tr>\n    <td>Sunday<\/td>\n    <td>8:30am - 10:30pm<\/td>\n  <\/tr>\n<\/table>",
-            "button_label": "Get directions",
+            "liquid": "<p class=\"banner__subheading heading uppercase leading-none tracking-widest text-xs banner__text--colored\">Opening hours</p>\n<table>\n  <tr>\n    <td>Mon - Fri</td>\n    <td>8:30am - 10:30pm</td>\n  </tr>\n  <tr>\n    <td>Saturday</td>\n    <td>8:30am - 10:30pm</td>\n  </tr>\n  <tr>\n    <td>Sunday</td>\n    <td>8:30am - 10:30pm</td>\n  </tr>\n</table>",
+            "button_label": "Obtenir l'itinéraire",
             "button_link": "",
             "button_style": "primary",
             "button_size": "sm",
@@ -106,8 +106,8 @@
             "map_address": "151 O'Connor Street, Ottawa ON K2P 2L8, Canada",
             "heading": "151 O'Connor St",
             "text": "",
-            "liquid": "<p class=\"banner__subheading heading uppercase leading-none tracking-widest text-xs banner__text--colored\">Opening hours<\/p>\n<table>\n  <tr>\n    <td>Mon - Fri<\/td>\n    <td>8:30am - 10:30pm<\/td>\n  <\/tr>\n  <tr>\n    <td>Saturday<\/td>\n    <td>8:30am - 10:30pm<\/td>\n  <\/tr>\n  <tr>\n    <td>Sunday<\/td>\n    <td>8:30am - 10:30pm<\/td>\n  <\/tr>\n<\/table>",
-            "button_label": "Get directions",
+            "liquid": "<p class=\"banner__subheading heading uppercase leading-none tracking-widest text-xs banner__text--colored\">Opening hours</p>\n<table>\n  <tr>\n    <td>Mon - Fri</td>\n    <td>8:30am - 10:30pm</td>\n  </tr>\n  <tr>\n    <td>Saturday</td>\n    <td>8:30am - 10:30pm</td>\n  </tr>\n  <tr>\n    <td>Sunday</td>\n    <td>8:30am - 10:30pm</td>\n  </tr>\n</table>",
+            "button_label": "Obtenir l'itinéraire",
             "button_link": "",
             "button_style": "primary",
             "button_size": "sm",
@@ -121,8 +121,8 @@
             "map_address": "131 Greene Street, New York, NY 10012, USA",
             "heading": "131 Greene St",
             "text": "",
-            "liquid": "<p class=\"banner__subheading heading uppercase leading-none tracking-widest text-xs banner__text--colored\">Opening hours<\/p>\n<table>\n  <tr>\n    <td>Mon - Fri<\/td>\n    <td>8:30am - 10:30pm<\/td>\n  <\/tr>\n  <tr>\n    <td>Saturday<\/td>\n    <td>8:30am - 10:30pm<\/td>\n  <\/tr>\n  <tr>\n    <td>Sunday<\/td>\n    <td>8:30am - 10:30pm<\/td>\n  <\/tr>\n<\/table>",
-            "button_label": "Get directions",
+            "liquid": "<p class=\"banner__subheading heading uppercase leading-none tracking-widest text-xs banner__text--colored\">Opening hours</p>\n<table>\n  <tr>\n    <td>Mon - Fri</td>\n    <td>8:30am - 10:30pm</td>\n  </tr>\n  <tr>\n    <td>Saturday</td>\n    <td>8:30am - 10:30pm</td>\n  </tr>\n  <tr>\n    <td>Sunday</td>\n    <td>8:30am - 10:30pm</td>\n  </tr>\n</table>",
+            "button_label": "Obtenir l'itinéraire",
             "button_link": "",
             "button_style": "primary",
             "button_size": "sm",
@@ -148,7 +148,7 @@
         "content_position_mobile": "image_first",
         "image_height_mobile": "400px",
         "text_alignment_mobile": "left",
-        "heading": "Find Our Stores",
+        "heading": "Trouver nos magasins",
         "heading_size": "text-2xl lg:text-3xl",
         "heading_tag": "h2",
         "highlighted_text": "none",
@@ -176,39 +176,39 @@
         "contact-1": {
           "type": "contact",
           "settings": {
-            "heading": "Address",
-            "text": "<p><a href=\"#\" title=\"mailto:shop@yourstore.com\">shop@yourstore.com<\/a><\/p>"
+            "heading": "Adresse",
+            "text": "<p><a href=\"#\" title=\"mailto:shop@yourstore.com\">shop@yourstore.com</a></p>"
           }
         },
         "contact-2": {
           "type": "contact",
           "settings": {
-            "heading": "Email",
-            "text": "<p><a href=\"#\" title=\"mailto:contact@yourstore.com\">contact@yourstore.com<\/a><br\/><a href=\"#\" title=\"mailto:sales@yourstore.com\">sales@yourstore.com<\/a><\/p>"
+            "heading": "Courriel",
+            "text": "<p><a href=\"#\" title=\"mailto:contact@yourstore.com\">contact@yourstore.com</a><br/><a href=\"#\" title=\"mailto:sales@yourstore.com\">sales@yourstore.com</a></p>"
           }
         },
         "contact-3": {
           "type": "contact",
           "settings": {
-            "heading": "Phone",
-            "text": "<p><a href=\"#\" title=\"tel:+33 (0) 31-305-210\">+33 (0) 31-305-210<br\/><\/a>mo – fri: 09:00 – 17:00<\/p>"
+            "heading": "Téléphone",
+            "text": "<p><a href=\"#\" title=\"tel:+33 (0) 31-305-210\">+33 (0) 31-305-210<br/></a>lun – ven : 9 h – 17 h</p>"
           }
         },
         "media": {
           "type": "media",
           "settings": {
-            "heading": "Follow us"
+            "heading": "Suivez-nous"
           }
         },
         "custom_field-1": {
           "type": "custom_field",
           "settings": {
             "type": "text",
-            "title": "Phone number",
+            "title": "Numéro de téléphone",
             "required": false,
             "full_width": false,
-            "checked_value": "Yes",
-            "unchecked_value": "No",
+            "checked_value": "Oui",
+            "unchecked_value": "Non",
             "radio_options": "",
             "select_options": ""
           }
@@ -217,13 +217,13 @@
           "type": "custom_field",
           "settings": {
             "type": "select",
-            "title": "Subject",
+            "title": "Objet",
             "required": false,
             "full_width": false,
-            "checked_value": "Yes",
-            "unchecked_value": "No",
+            "checked_value": "Oui",
+            "unchecked_value": "Non",
             "radio_options": "",
-            "select_options": "Product, Order, Press, Other"
+            "select_options": "Produit, Commande, Presse, Autre"
           }
         }
       },
@@ -241,7 +241,7 @@
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
         "subheading": "",
-        "description": "<p>Let your customers get in touch with you by filling out the email form below.<\/p>",
+        "description": "<p>Permettez à vos clients de vous joindre en remplissant le formulaire de courriel ci-dessous.</p>",
         "button_label": "",
         "button_link": "",
         "button_icon": true,

@@ -52,9 +52,9 @@
         "share": {
           "type": "share",
           "settings": {
-            "share_label": "Share",
+            "share_label": "Partager",
             "show_help_desk": true,
-            "help_label": "Need help?",
+            "help_label": "Besoin d'aide?",
             "help_type": "drawer",
             "help_page": ""
           }
@@ -94,8 +94,8 @@
           "type": "content",
           "settings": {
             "icon": "rocket",
-            "heading": "Shipping Information",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
+            "heading": "Renseignements sur la livraison",
+            "text": "<p>Utilisez ce texte pour répondre aux questions de vos clients avec le plus de détails possible.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle",
             "color_text": "#b45309",
@@ -109,8 +109,8 @@
           "type": "content",
           "settings": {
             "icon": "headphone",
-            "heading": "Customer Support",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
+            "heading": "Soutien à la clientèle",
+            "text": "<p>Utilisez ce texte pour répondre aux questions de vos clients avec le plus de détails possible.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle",
             "color_text": "#0369a1",
@@ -124,8 +124,8 @@
           "type": "content",
           "settings": {
             "icon": "chat_bubble",
-            "heading": "FAQ’s",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
+            "heading": "FAQ",
+            "text": "<p>Utilisez ce texte pour répondre aux questions de vos clients avec le plus de détails possible.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle",
             "color_text": "#be123c",
@@ -139,8 +139,8 @@
           "type": "content",
           "settings": {
             "icon": "phone",
-            "heading": "Contact Us",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
+            "heading": "Nous joindre",
+            "text": "<p>Utilisez ce texte pour répondre aux questions de vos clients avec le plus de détails possible.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle",
             "color_text": "#4d7c0f",
@@ -158,8 +158,8 @@
         "content-4"
       ],
       "settings": {
-        "heading": "Need help?",
-        "description": "<p>If you have any questions, you are always welcome to contact us. We'll get back to you as soon as possible, within 24 hours on weekdays.<\/p>"
+        "heading": "Besoin d'aide?",
+        "description": "<p>Si vous avez des questions, n'hésitez jamais à nous contacter. Nous vous répondrons dès que possible, dans les 24 heures les jours de semaine.</p>"
       }
     },
     "product-recommendations": {
@@ -171,7 +171,7 @@
         "carousel_on_desktop": true,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "heading": "You may also like",
+        "heading": "Vous aimerez peut-être aussi",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
@@ -202,7 +202,7 @@
         "carousel_on_desktop": true,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "heading": "Recently Viewed",
+        "heading": "Récemment consultés",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",

@@ -21,7 +21,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Add a tagline<\/p>",
+            "text": "<p>Ajouter un slogan</p>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -33,7 +33,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Tel your story",
+            "heading": "Racontez votre histoire",
             "heading_size": "title-xl tracking-heading",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -88,7 +88,7 @@
             "image_ratio": "adapt",
             "heading": "",
             "heading_size": "text-lg-2xl",
-            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p><p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "text": "<p>Utilisez ce texte pour communiquer de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p><p>Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
             "button_label": "",
             "button_link": "",
             "button_icon": true,
@@ -105,7 +105,7 @@
             "image_ratio": "adapt",
             "heading": "",
             "heading_size": "text-lg-2xl",
-            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p><p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "text": "<p>Utilisez ce texte pour communiquer de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p><p>Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
             "button_label": "",
             "button_link": "",
             "button_icon": true,
@@ -166,7 +166,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Give customers details about the banner image(s) or content on the template.",
+            "heading": "Donnez aux clients des détails sur l'image (ou les images) de la bannière ou sur le contenu du modèle.",
             "heading_size": "title-sm",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -176,7 +176,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p><em>— Add a tagline<\/em><\/p>",
+            "text": "<p><em>— Ajouter un slogan</em></p>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -226,7 +226,7 @@
         "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "heading": "Featured collection",
+        "heading": "Collection en vedette",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",

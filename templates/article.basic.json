@@ -6,7 +6,7 @@
         "share": {
           "type": "share",
           "settings": {
-            "share_label": "Share",
+            "share_label": "Partager",
             "show_comments": true
           }
         },
@@ -61,7 +61,7 @@
         "show_comments": true,
         "show_author": false,
         "show_excerpt": true,
-        "heading": "Latest Stories",
+        "heading": "Derniers articles",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",

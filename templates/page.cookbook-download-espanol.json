@@ -84,7 +84,7 @@
         "heading_W6EN68": {
           "type": "heading",
           "settings": {
-            "heading": "Consigue el libro de cocina",
+            "heading": "Obtenez le livre de cuisine",
             "heading_size": "title-md",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -94,7 +94,7 @@
         "text_GnYtHJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Descargue una copia digital del libro de cocina de forma gratuita.<\/p>",
+            "text": "<p>Téléchargez gratuitement une copie numérique du livre de cuisine.</p>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -106,7 +106,7 @@
         "button_QU37Bj": {
           "type": "button",
           "settings": {
-            "button_label": "Descargar Ahora",
+            "button_label": "Télécharger maintenant",
             "button_link": "{{ page.metafields.custom.cookbook_download_link.value }}",
             "button_style": "primary",
             "button_size": "md",

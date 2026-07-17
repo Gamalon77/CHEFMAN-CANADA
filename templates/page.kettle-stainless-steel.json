@@ -6,8 +6,7 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */
-{
+ */{
   "sections": {
     "kettle_detail": {
       "type": "kettle-detail",
@@ -15,111 +14,111 @@
         "why_1": {
           "type": "reason",
           "settings": {
-            "title": "Built to last",
-            "text": "Solid stainless-steel construction is tougher than glass and stands up to busy, everyday use, so your kettle keeps performing (and looking good) for years."
+            "title": "Conçu pour durer",
+            "text": "La construction en acier inoxydable massif est plus résistante que le verre et supporte un usage quotidien intensif, pour que votre bouilloire continue de bien fonctionner (et d'avoir belle allure) pendant des années."
           }
         },
         "why_2": {
           "type": "reason",
           "settings": {
-            "title": "Classic looks that hide the mess",
-            "text": "The opaque metal body hides water spots far better than see-through glass and wipes clean in seconds. Pick a classic or brushed finish to suit your kitchen."
+            "title": "Un style classique qui cache les dégâts",
+            "text": "Le corps en métal opaque cache les taches d'eau bien mieux que le verre transparent et se nettoie en quelques secondes. Choisissez un fini classique ou brossé pour s'harmoniser à votre cuisine."
           }
         },
         "why_3": {
           "type": "reason",
           "settings": {
-            "title": "Fast, safe boiling",
-            "text": "Rapid-heat power brings water to a boil quickly, faster than the stovetop or microwave, while automatic shut-off and boil-dry protection handle safety for you."
+            "title": "Ébullition rapide et sécuritaire",
+            "text": "La puissance de chauffe rapide amène l'eau à ébullition rapidement, plus vite que la cuisinière ou le micro-ondes, tandis que l'arrêt automatique et la protection contre l'ébullition à sec veillent à votre sécurité."
           }
         },
         "why_4": {
           "type": "reason",
           "settings": {
-            "title": "Options for every routine",
-            "text": "From simple boil-only kettles to digital versions with temperature presets and keep-warm, there's a stainless model for casual coffee drinkers and dialed-in tea lovers alike."
+            "title": "Des options pour chaque routine",
+            "text": "Des simples bouilloires qui ne font que bouillir aux versions numériques dotées de préréglages de température et du maintien au chaud, il y a un modèle en acier inoxydable pour les amateurs de café occasionnels comme pour les passionnés de thé aguerris."
           }
         },
         "feat_1": {
           "type": "feature",
           "settings": {
             "icon": "🛡️",
-            "title": "Durable steel body",
-            "text": "Rugged, opaque stainless steel resists dings and hides water spots, built for daily use and easy to keep looking clean."
+            "title": "Corps en acier durable",
+            "text": "L'acier inoxydable opaque et robuste résiste aux chocs et masque les taches d'eau; conçu pour un usage quotidien et facile à garder propre."
           }
         },
         "feat_2": {
           "type": "feature",
           "settings": {
             "icon": "💧",
-            "title": "Easy-view water window",
-            "text": "Select models add an easy-view water-level window, so you can fill to just the right amount at a glance."
+            "title": "Fenêtre de niveau d'eau facile à lire",
+            "text": "Certains modèles ajoutent une fenêtre de niveau d'eau facile à lire, pour que vous puissiez remplir jusqu'à la quantité idéale d'un coup d'œil."
           }
         },
         "feat_3": {
           "type": "feature",
           "settings": {
             "icon": "🌡️",
-            "title": "Digital temperature presets",
-            "text": "Select digital stainless models let you choose the ideal heat for green, white, and oolong tea or pour-over coffee, not just a full boil."
+            "title": "Préréglages de température numériques",
+            "text": "Certains modèles numériques en acier inoxydable vous permettent de choisir la chaleur idéale pour le thé vert, blanc et oolong ou pour le café filtre, et pas seulement la pleine ébullition."
           }
         },
         "feat_4": {
           "type": "feature",
           "settings": {
             "icon": "♨️",
-            "title": "Keep-warm function",
-            "text": "Select models hold your water hot for up to an hour after boiling, so your next cup is ready without reheating."
+            "title": "Fonction de maintien au chaud",
+            "text": "Certains modèles gardent votre eau chaude jusqu'à une heure après l'ébullition, pour que votre prochaine tasse soit prête sans réchauffage."
           }
         },
         "feat_5": {
           "type": "feature",
           "settings": {
             "icon": "⬆️",
-            "title": "Automatic pop-up lid",
-            "text": "Choose a brushed-steel model with an automatic pop-up lid for one-press, no-fuss refilling."
+            "title": "Couvercle à ouverture automatique",
+            "text": "Choisissez un modèle en acier brossé avec couvercle escamotable automatique pour un remplissage sans tracas d'une seule pression."
           }
         },
         "feat_6": {
           "type": "feature",
           "settings": {
             "icon": "🔌",
-            "title": "Cordless & protected",
-            "text": "Lifts off a 360° swivel base for cordless pouring, with auto shut-off, boil-dry protection, and cETL approval on every model."
+            "title": "Sans fil et protégée",
+            "text": "Se soulève d'une base pivotante à 360° pour un versement sans fil, avec arrêt automatique, protection contre l'ébullition à sec et homologation cETL sur chaque modèle."
           }
         },
         "note_1": {
           "type": "note",
           "settings": {
-            "title": "Sizes available",
-            "text": "Chefman's stainless-steel kettles range from 1.2L up to 1.8L, enough for a couple of cups or a full pot for the whole household. The 1.8L is the family-sized workhorse of the line."
+            "title": "Formats offerts",
+            "text": "Les bouilloires en acier inoxydable de Chefman vont de 1,2 L à 1,8 L, assez pour environ 500 mL ou une pleine théière pour toute la maisonnée. Le format de 1,8 L est le cheval de bataille familial de la gamme."
           }
         },
         "note_2": {
           "type": "note",
           "settings": {
-            "title": "Temperature guidance",
-            "text": "A full 212°F boil is perfect for black and herbal teas, instant coffee, and ramen. If you drink green (~170–180°F), white (~175–185°F), or oolong (~185–200°F) tea, or brew pour-over coffee (~195–205°F), choose a digital stainless model with temperature presets."
+            "title": "Conseils de température",
+            "text": "Une ébullition complète à 100 °C est parfaite pour les thés noirs et les tisanes, le café instantané et les ramen. Si vous buvez du thé vert (~77–82 °C), blanc (~79–85 °C) ou oolong (~85–93 °C), ou si vous préparez du café filtre par infusion lente (~91–96 °C), choisissez un modèle numérique en acier inoxydable avec préréglages de température."
           }
         },
         "note_3": {
           "type": "note",
           "settings": {
-            "title": "Easy care",
-            "text": "Wipe the exterior with a damp cloth and hand-wash the interior; never submerge the electrical base. If you have hard water, descale about once a month with a 50/50 water-and-white-vinegar mix to keep boil times fast and water tasting fresh."
+            "title": "Entretien facile",
+            "text": "Essuyez l'extérieur avec un linge humide et lavez l'intérieur à la main; ne submergez jamais la base électrique. Si votre eau est dure, détartrez environ une fois par mois avec un mélange 50/50 d'eau et de vinaigre blanc pour garder des temps d'ébullition rapides et une eau au goût frais."
           }
         },
         "note_4": {
           "type": "note",
           "settings": {
-            "title": "Glass vs. steel",
-            "text": "Prefer to watch the water and check the level at a glance? A glass kettle may suit you better. Stainless trades visibility for extra durability and a spot-hiding finish."
+            "title": "Verre ou acier",
+            "text": "Vous préférez voir l'eau et vérifier le niveau d'un coup d'œil? Une bouilloire en verre pourrait mieux vous convenir. L'acier inoxydable troque la visibilité contre une durabilité accrue et un fini qui masque les taches."
           }
         },
         "rel_1": {
           "type": "related",
           "settings": {
-            "label": "All kettle types",
+            "label": "Tous les types de bouilloires",
             "link": "/pages/find-your-perfect-electric-kettle-chefman"
           }
         },
@@ -133,78 +132,78 @@
         "rel_3": {
           "type": "related",
           "settings": {
-            "label": "Tea Infuser",
+            "label": "Infuseur à thé",
             "link": "/pages/tea-infuser-electric-kettles-chefman"
           }
         },
         "rel_4": {
           "type": "related",
           "settings": {
-            "label": "Temperature Control",
+            "label": "Contrôle de la température",
             "link": "/pages/temperature-control-electric-kettles-chefman"
           }
         },
         "rel_5": {
           "type": "related",
           "settings": {
-            "label": "Keep-Warm",
+            "label": "Maintien au chaud",
             "link": "/pages/keep-warm-electric-kettles-chefman"
           }
         },
         "rel_6": {
           "type": "related",
           "settings": {
-            "label": "Gooseneck",
+            "label": "Col de cygne",
             "link": "/pages/gooseneck-electric-kettles-chefman"
           }
         },
         "faq_1": {
           "type": "faq",
           "settings": {
-            "question": "Are stainless-steel electric kettles better than glass?",
-            "answer": "<p>It depends on what you value. Stainless steel is more durable, hides water spots, and gives you a classic metal look, but you can't see the water inside. Glass lets you watch the water boil and check the level at a glance. Chefman offers both, so you can pick the trade-off that fits your kitchen.</p>"
+            "question": "Les bouilloires électriques en acier inoxydable sont-elles meilleures que celles en verre?",
+            "answer": "<p>Cela dépend de ce qui compte pour vous. L'acier inoxydable est plus durable, dissimule les traces d'eau et offre un look métallique classique, mais vous ne pouvez pas voir l'eau à l'intérieur. Le verre vous permet de regarder l'eau bouillir et de vérifier le niveau d'un coup d'œil. Chefman propose les deux, vous pouvez donc choisir le compromis qui convient à votre cuisine.</p>"
           }
         },
         "faq_2": {
           "type": "faq",
           "settings": {
-            "question": "What size stainless-steel kettle should I buy?",
-            "answer": "<p>Chefman's stainless-steel kettles range from 1.2L to 1.8L. A 1.2L is great for one or two people and smaller spaces, while a 1.8L holds a full pot, making it ideal for families, entertaining, or anyone who refills often throughout the day.</p>"
+            "question": "Quelle taille de bouilloire en acier inoxydable devrais-je acheter?",
+            "answer": "<p>Les bouilloires en acier inoxydable de Chefman vont de 1,2 L à 1,8 L. Un format 1,2 L est idéal pour une ou deux personnes et les espaces plus restreints, tandis qu'un format 1,8 L contient une pleine bouilloire, ce qui le rend idéal pour les familles, pour recevoir ou pour quiconque fait le plein souvent tout au long de la journée.</p>"
           }
         },
         "faq_3": {
           "type": "faq",
           "settings": {
-            "question": "Can a stainless-steel kettle control the temperature for tea?",
-            "answer": "<p>Select Chefman stainless-steel models are digital and offer temperature presets, so you can dial in the right heat for green, white, or oolong tea and pour-over coffee. Simpler boil-only stainless kettles heat to a full 212°F boil, which is ideal for black tea, instant coffee, and ramen.</p>"
+            "question": "Une bouilloire en acier inoxydable peut-elle contrôler la température pour le thé?",
+            "answer": "<p>Certains modèles Chefman en acier inoxydable sont numériques et offrent des préréglages de température, ce qui vous permet de choisir la chaleur idéale pour le thé vert, blanc ou oolong et le café à infusion lente. Les bouilloires en acier inoxydable plus simples, à ébullition seulement, chauffent jusqu'à une pleine ébullition de 100 °C, ce qui est parfait pour le thé noir, le café instantané et les ramen.</p>"
           }
         },
         "faq_4": {
           "type": "faq",
           "settings": {
-            "question": "How do I clean and descale a stainless-steel kettle?",
-            "answer": "<p>Wipe the exterior with a damp cloth and hand-wash the interior; never submerge the electrical base. If you have hard water, descale about once a month by boiling a 50/50 mix of water and white vinegar, letting it sit 15–20 minutes, then rinsing well. This keeps boil times fast and the water tasting fresh.</p>"
+            "question": "Comment nettoyer et détartrer une bouilloire en acier inoxydable?",
+            "answer": "<p>Essuyez l'extérieur avec un chiffon humide et lavez l'intérieur à la main; n'immergez jamais la base électrique. Si votre eau est dure, détartrez environ une fois par mois en faisant bouillir un mélange moitié-moitié d'eau et de vinaigre blanc, en laissant reposer de 15 à 20 minutes, puis en rinçant bien. Cela permet de garder des temps d'ébullition rapides et une eau au goût frais.</p>"
           }
         },
         "faq_5": {
           "type": "faq",
           "settings": {
-            "question": "Does a stainless-steel kettle keep water warm?",
-            "answer": "<p>Select Chefman stainless-steel models include a keep-warm function that holds water hot for up to an hour after boiling, so your second or third cup is ready without reheating. Boil-only models don't keep warm, so check a model's features if this matters to you.</p>"
+            "question": "Une bouilloire en acier inoxydable garde-t-elle l'eau au chaud?",
+            "answer": "<p>Certains modèles Chefman en acier inoxydable comprennent une fonction de maintien au chaud qui garde l'eau chaude jusqu'à une heure après l'ébullition, de sorte que votre deuxième ou troisième tasse est prête sans réchauffage. Les modèles à ébullition seulement ne maintiennent pas au chaud, alors vérifiez les caractéristiques d'un modèle si cela compte pour vous.</p>"
           }
         },
         "faq_6": {
           "type": "faq",
           "settings": {
-            "question": "Are Chefman stainless-steel kettles safe to use?",
-            "answer": "<p>Yes. Every Chefman kettle has automatic shut-off and boil-dry protection, lifts off a 360° cordless swivel base, is cETL approved, and is backed by a 1-year Chefman assurance. Stay-cool handles add everyday peace of mind.</p>"
+            "question": "Les bouilloires en acier inoxydable Chefman sont-elles sécuritaires à utiliser?",
+            "answer": "<p>Oui. Chaque bouilloire Chefman comprend un arrêt automatique et une protection contre l'ébullition à sec, se soulève d'une base pivotante sans fil à 360°, est approuvée cETL et est appuyée par une garantie Chefman d'un an. Les poignées qui restent froides ajoutent une tranquillité d'esprit au quotidien.</p>"
           }
         },
         "faq_7": {
           "type": "faq",
           "settings": {
-            "question": "Is a stainless-steel kettle good for pour-over coffee?",
-            "answer": "<p>A standard stainless kettle pours cleanly for everyday coffee and tea. For pour-over, the slow, precise stream comes from a gooseneck spout, so if that's your main use, consider a gooseneck kettle, or choose a digital stainless model with presets when you want temperature control.</p>"
+            "question": "Une bouilloire en acier inoxydable est-elle bonne pour le café filtre?",
+            "answer": "<p>Une bouilloire en acier inoxydable standard verse proprement pour le café et le thé de tous les jours. Pour l'infusion à la verseuse, le jet lent et précis provient d'un bec en col de cygne ; donc si c'est votre usage principal, envisagez une bouilloire à col de cygne, ou optez pour un modèle numérique en acier inoxydable avec préréglages lorsque vous souhaitez contrôler la température.</p>"
           }
         }
       },
@@ -239,28 +238,28 @@
       ],
       "settings": {
         "show_breadcrumb": true,
-        "crumb1_title": "Kettles",
+        "crumb1_title": "Bouilloires",
         "crumb1_link": "shopify://collections/kettles-2",
-        "crumb2_title": "Find your kettle",
+        "crumb2_title": "Trouvez votre bouilloire",
         "crumb2_link": "/pages/find-your-perfect-electric-kettle-chefman",
-        "eyebrow": "Sleek & Sturdy",
-        "heading": "Stainless-Steel Electric Kettles",
+        "eyebrow": "Élégant et robuste",
+        "heading": "Bouilloires électriques en acier inoxydable",
         "heading_size": "title-lg tracking-heading",
-        "intro": "<p>Tough, timeless, and easy to wipe clean, a stainless-steel kettle brings a classic metal look to your counter along with the fast, safe boil Chefman is known for. It's the durable pick for shoppers who don't need to watch the water.</p>",
-        "best_for": "a durable, classic metal look",
-        "what_heading": "What it is",
-        "what_it_is": "<p>A stainless-steel kettle swaps the see-through glass body for durable, opaque metal that shrugs off daily use and hides water spots. You fill it, set it on the 360° swivel base, and rapid-heat power brings the water to a rolling boil in minutes, then automatic shut-off takes over. Because the exterior is solid steel, it's built to last and simple to keep looking sharp, whether you choose a classic or brushed finish. Chefman offers stainless kettles from 1.2L up to 1.8L, ranging from straightforward one-touch boilers to digital models with temperature presets and a keep-warm function.</p>",
-        "why_heading": "Why choose a Stainless Steel kettle",
-        "features_heading": "Key features",
-        "who_heading": "Who it's for",
-        "who_for": "<p>Stainless steel is for shoppers who want a durable, classic metal kettle and don't need to see the water inside. It's a great fit if you value longevity and a tidy, spot-hiding finish, if you have a busy household that puts appliances through their paces, or if you simply prefer the timeless look of metal on the counter. Boil-only models suit everyday coffee and black-tea drinkers, while digital versions with presets and keep-warm reward anyone who likes to fine-tune their brew.</p>",
-        "notes_heading": "Good to know",
+        "intro": "<p>Robuste, intemporelle et facile à essuyer, une bouilloire en acier inoxydable apporte une allure métallique classique à votre comptoir, en plus de l'ébullition rapide et sécuritaire pour laquelle Chefman est reconnue. C'est le choix durable pour les acheteurs qui n'ont pas besoin de surveiller l'eau.</p>",
+        "best_for": "une allure métallique classique et durable",
+        "what_heading": "Ce que c'est",
+        "what_it_is": "<p>Une bouilloire en acier inoxydable remplace le corps en verre transparent par un métal opaque et durable qui résiste à l'usage quotidien et masque les traces d'eau. Vous la remplissez, la placez sur la base pivotante à 360°, et la puissance de chauffe rapide porte l'eau à pleine ébullition en quelques minutes, puis l'arrêt automatique prend le relais. Comme l'extérieur est en acier massif, elle est conçue pour durer et facile à garder impeccable, que vous choisissiez un fini classique ou brossé. Chefman offre des bouilloires en acier inoxydable de 1,2 L à 1,8 L, allant des simples bouilloires à une touche aux modèles numériques dotés de préréglages de température et d'une fonction de maintien au chaud.</p>",
+        "why_heading": "Pourquoi choisir une bouilloire en acier inoxydable",
+        "features_heading": "Caractéristiques principales",
+        "who_heading": "À qui ça s'adresse",
+        "who_for": "<p>L'acier inoxydable s'adresse aux acheteurs qui veulent une bouilloire en métal durable et classique et qui n'ont pas besoin de voir l'eau à l'intérieur. C'est un excellent choix si vous accordez de l'importance à la longévité et à un fini soigné qui camoufle les traces, si vous avez un ménage occupé qui met les appareils à rude épreuve, ou si vous préférez simplement l'allure intemporelle du métal sur le comptoir. Les modèles à ébullition seulement conviennent aux amateurs de café et de thé noir au quotidien, tandis que les versions numériques avec préréglages et maintien au chaud récompensent quiconque aime peaufiner son infusion.</p>",
+        "notes_heading": "Bon à savoir",
         "product_handles": "1-8l-stainless-steel-electric-kettle",
-        "shop_heading": "Shop Stainless Steel kettles",
-        "shop_button_label": "Shop all kettles",
+        "shop_heading": "Magasiner les bouilloires en acier inoxydable",
+        "shop_button_label": "Magasiner toutes les bouilloires",
         "shop_button_link": "shopify://collections/kettles-2",
         "related_heading": "Explore other kettle types",
-        "faq_heading": "Frequently asked questions",
+        "faq_heading": "Questions fréquentes",
         "padding_top": 64,
         "padding_bottom": 100,
         "divider": false,

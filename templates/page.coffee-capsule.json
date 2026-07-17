@@ -6,8 +6,7 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */
-{
+ */{
   "sections": {
     "coffee_guide": {
       "type": "coffee-guide",
@@ -16,8 +15,8 @@
           "type": "rich_text",
           "settings": {
             "eyebrow": "",
-            "heading": "What is single-serve coffee?",
-            "body": "<p>Capsule and single-serve machines brew one cup at a time from a pre-measured pod. The machine pierces the capsule, forces hot water through it, and delivers a consistent cup straight into your mug. Every cup is identical, and there's nothing to clean but the spent pod.</p>",
+            "heading": "Qu'est-ce que le café à portion individuelle?",
+            "body": "<p>Les machines à capsules et à portion individuelle infusent une tasse à la fois à partir d'une capsule prédosée. La machine perce la capsule, y fait passer de l'eau chaude sous pression et livre une tasse constante directement dans votre tasse. Chaque tasse est identique, et il n'y a rien à nettoyer, sauf la capsule usée.</p>",
             "narrow": false
           }
         },
@@ -26,10 +25,10 @@
           "settings": {
             "image": "shopify://shop_images/capsule-coffee-1.jpg",
             "image_position": "left",
-            "eyebrow": "How it works",
-            "heading": "One cup, on demand",
-            "body": "<p>Drop in a pod, choose your cup size, and brew. Because each capsule is sealed and pre-portioned, you get the same great cup every time — and everyone in the house can have a different flavor.</p><ul><li>Ready in under a minute</li><li>Zero measuring or grinding</li><li>Cleanup is just tossing the pod</li></ul>",
-            "button_label": "Shop single-serve",
+            "eyebrow": "Comment ça fonctionne",
+            "heading": "Une tasse, sur demande",
+            "body": "<p>Insérez une capsule, choisissez la taille de votre tasse et lancez l'infusion. Comme chaque capsule est scellée et pré-dosée, vous obtenez la même excellente tasse à tous les coups — et chacun dans la maison peut choisir une saveur différente.</p><ul><li>Prête en moins d'une minute</li><li>Aucun dosage ni mouture</li><li>Le nettoyage se résume à jeter la capsule</li></ul>",
+            "button_label": "Magasiner les cafetières à portion individuelle",
             "button_link": "shopify://collections/coffee-espresso-makers"
           }
         },
@@ -38,9 +37,9 @@
           "settings": {
             "image": "shopify://shop_images/capsule-coffee-2.jpg",
             "image_position": "right",
-            "eyebrow": "Choosing one",
-            "heading": "What to look for",
-            "body": "<ul><li><strong>Pod compatibility</strong> — make sure it works with the capsules you like, or reusable pods for your own grounds.</li><li><strong>Cup sizes</strong> — from a concentrated shot to a tall travel mug.</li><li><strong>Footprint</strong> — most are compact enough for the smallest counter or office desk.</li></ul>",
+            "eyebrow": "En choisir une",
+            "heading": "Ce qu'il faut rechercher",
+            "body": "<ul><li><strong>Compatibilité des capsules</strong> — assurez-vous que la machine fonctionne avec les capsules que vous aimez, ou avec des capsules réutilisables pour votre propre café moulu.</li><li><strong>Formats de tasse</strong> — de la portion concentrée à la grande tasse de voyage.</li><li><strong>Encombrement</strong> — la plupart sont assez compactes pour le plus petit comptoir ou bureau.</li></ul>",
             "button_label": "",
             "button_link": ""
           }
@@ -49,16 +48,16 @@
           "type": "rich_text",
           "settings": {
             "eyebrow": "",
-            "heading": "Who it's for",
-            "body": "<p>Single-serve shines for solo drinkers, busy mornings, and households where everyone wants something different. If speed, consistency, and zero cleanup matter more than dialing in every variable, this is your machine.</p>",
+            "heading": "À qui ça s'adresse",
+            "body": "<p>La portion individuelle est idéale pour les buveurs en solo, les matins pressés et les ménages où chacun veut quelque chose de différent. Si la rapidité, la constance et l'absence de nettoyage comptent plus que le réglage de chaque variable, c'est la machine qu'il vous faut.</p>",
             "narrow": false
           }
         },
         "b4_callout": {
           "type": "callout",
           "settings": {
-            "heading": "Good to know",
-            "body": "<p>Love the convenience but want less waste? Many single-serve machines accept refillable pods, so you can use your own coffee and skip the disposable capsules entirely.</p>"
+            "heading": "Bon à savoir",
+            "body": "<p>Vous aimez la commodité, mais souhaitez réduire le gaspillage? De nombreuses machines à portion individuelle acceptent des capsules réutilisables, ce qui vous permet d'utiliser votre propre café et d'éviter entièrement les capsules jetables.</p>"
           }
         }
       },
@@ -71,13 +70,13 @@
       ],
       "settings": {
         "show_breadcrumb": true,
-        "breadcrumb_parent_title": "Find your perfect coffee maker",
+        "breadcrumb_parent_title": "Trouvez votre cafetière idéale",
         "breadcrumb_parent_link": "shopify://pages/find-your-perfect-coffee-maker",
         "show_hero": true,
-        "eyebrow": "Coffee guide",
-        "heading": "Capsule & single-serve, explained",
+        "eyebrow": "Guide du café",
+        "heading": "Les capsules et portions individuelles, expliquées",
         "heading_size": "title-xl tracking-heading",
-        "intro": "<p>The fastest path from craving to cup. Pop in a pod, press a button, and you've got a fresh single serving in under a minute — no grinding, no measuring, no mess.</p>",
+        "intro": "<p>Le chemin le plus rapide de l'envie à la tasse. Insérez une capsule, appuyez sur un bouton et vous obtenez une portion individuelle fraîche en moins d'une minute — sans mouture, sans mesure, sans dégât.</p>",
         "padding_top": 48,
         "padding_bottom": 100,
         "divider": false,
@@ -90,8 +89,8 @@
         "q1": {
           "type": "question",
           "settings": {
-            "title": "How does a single-serve coffee maker work?",
-            "text": "<p>A single-serve coffee maker brews one cup at a time by piercing a pre-filled pod and forcing hot water through the coffee grounds inside, sending fresh coffee straight into your mug. Because each cup is brewed on demand, there's no waiting on a full pot and no leftover coffee going to waste.</p>",
+            "title": "Comment fonctionne une cafetière à portion individuelle?",
+            "text": "<p>Une cafetière à portion individuelle infuse une tasse à la fois en perçant une capsule préremplie et en faisant passer de l'eau chaude à travers le café moulu qu'elle contient, envoyant du café frais directement dans votre tasse. Comme chaque tasse est infusée à la demande, il n'y a pas d'attente pour une pleine cafetière ni de café gaspillé.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -99,8 +98,8 @@
         "q2": {
           "type": "question",
           "settings": {
-            "title": "What kinds of pods can I use?",
-            "text": "<p>Many single-serve machines are designed to accept popular single-cup pod styles, such as the common K-Cup style sold by lots of different coffee brands. It's always smart to check your machine's instructions for the pod size and shape it supports, since not every pod format fits every brewer.</p>",
+            "title": "Quels types de capsules puis-je utiliser?",
+            "text": "<p>De nombreuses machines à portion individuelle sont conçues pour accepter les styles de capsules à tasse unique populaires, comme le style K-Cup courant vendu par de nombreuses marques de café différentes. Il est toujours judicieux de consulter les instructions de votre machine pour connaître la taille et la forme des capsules qu'elle prend en charge, car tous les formats de capsules ne conviennent pas à toutes les cafetières.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -108,8 +107,8 @@
         "q3": {
           "type": "question",
           "settings": {
-            "title": "Can I use my own coffee instead of buying pods?",
-            "text": "<p>Yes, many single-serve brewers either include or are compatible with a reusable refillable pod that you fill with your own ground coffee. This lets you choose any roast or blend you like, often saves money over pre-filled pods, and reduces single-use waste. A medium grind, similar to what you'd use for drip coffee, usually works best.</p>",
+            "title": "Puis-je utiliser mon propre café au lieu d'acheter des capsules?",
+            "text": "<p>Oui, de nombreuses cafetières à portion individuelle comprennent ou sont compatibles avec une capsule réutilisable et rechargeable que vous remplissez de votre propre café moulu. Cela vous permet de choisir la torréfaction ou le mélange que vous aimez, permet souvent d'économiser par rapport aux capsules préremplies et réduit les déchets à usage unique. Une mouture moyenne, semblable à celle que vous utiliseriez pour le café filtre, donne habituellement les meilleurs résultats.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -117,8 +116,8 @@
         "q4": {
           "type": "question",
           "settings": {
-            "title": "Can I choose different cup sizes?",
-            "text": "<p>Most single-serve machines let you select from a few brew sizes, so you can make anything from a small, strong cup to a larger, milder travel mug. Keep in mind that the same pod brewed at a larger size produces a more diluted cup, so smaller sizes generally taste bolder.</p>",
+            "title": "Puis-je choisir différents formats de tasse?",
+            "text": "<p>La plupart des machines à portion individuelle vous permettent de choisir parmi quelques formats d'infusion, ce qui vous permet de préparer aussi bien une petite tasse corsée qu'une grande tasse de voyage plus douce. N'oubliez pas que la même capsule infusée dans un plus grand format produit une tasse plus diluée, alors les plus petits formats ont généralement un goût plus prononcé.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -126,8 +125,8 @@
         "q5": {
           "type": "question",
           "settings": {
-            "title": "How do I clean and descale my single-serve coffee maker?",
-            "text": "<p>Regularly wash the removable parts like the drip tray and pod holder, and run a descaling cycle every few months to remove mineral buildup from the water that can affect taste and performance. You can use a store-bought descaling solution or a diluted white vinegar rinse, always followed by a few cycles of fresh water. Descaling more often helps if you have hard water.</p>",
+            "title": "Comment nettoyer et détartrer ma cafetière à portion individuelle?",
+            "text": "<p>Lavez régulièrement les pièces amovibles comme le plateau d'égouttement et le porte-capsule, et effectuez un cycle de détartrage tous les quelques mois pour éliminer les dépôts minéraux de l'eau qui peuvent nuire au goût et au rendement. Vous pouvez utiliser une solution de détartrage vendue en magasin ou un rinçage au vinaigre blanc dilué, toujours suivi de quelques cycles à l'eau fraîche. Un détartrage plus fréquent est utile si votre eau est dure.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -135,8 +134,8 @@
         "q6": {
           "type": "question",
           "settings": {
-            "title": "Are coffee pods recyclable, and what about the waste?",
-            "text": "<p>It depends on the pod's materials and your local recycling rules; some plastic or aluminum pods can be recycled if you separate the lid, empty the grounds, and follow your area's guidelines, and certain brands offer their own take-back programs. If reducing waste is a priority, a reusable refillable pod is the simplest way to cut down on single-use packaging.</p>",
+            "title": "Les capsules de café sont-elles recyclables, et qu'en est-il des déchets?",
+            "text": "<p>Cela dépend des matériaux de la capsule et des règles de recyclage de votre région; certaines capsules en plastique ou en aluminium peuvent être recyclées si vous séparez le couvercle, videz le café moulu et suivez les directives de votre région, et certaines marques offrent leurs propres programmes de reprise. Si la réduction des déchets est une priorité, une capsule réutilisable et rechargeable est la façon la plus simple de réduire les emballages à usage unique.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -144,8 +143,8 @@
         "q7": {
           "type": "question",
           "settings": {
-            "title": "Can a single-serve machine make a full pot or carafe?",
-            "text": "<p>Single-serve machines are built to brew one cup at a time rather than a full carafe, which is part of what makes them so compact and quick. If you regularly need to serve several people at once, a traditional drip coffee maker or a hybrid machine that offers both single-cup and carafe brewing may suit you better.</p>",
+            "title": "Une machine à portion individuelle peut-elle préparer une pleine cafetière ou carafe?",
+            "text": "<p>Les machines à portion individuelle sont conçues pour infuser une tasse à la fois plutôt qu'une carafe entière, ce qui contribue à les rendre aussi compactes et rapides. Si vous devez régulièrement servir plusieurs personnes à la fois, une cafetière filtre traditionnelle ou une machine hybride offrant à la fois l'infusion à la tasse et à la carafe pourrait mieux vous convenir.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -162,7 +161,7 @@
       ],
       "settings": {
         "style": "with-border",
-        "heading": "Frequently asked questions",
+        "heading": "Questions fréquentes",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
@@ -197,9 +196,9 @@
         "cta": {
           "type": "cta",
           "settings": {
-            "heading": "Ready to find yours?",
-            "body": "<p>Browse our single-serve makers, or take the quiz to get matched in 60 seconds.</p>",
-            "button_label": "Shop all coffee makers",
+            "heading": "Prêt à trouver la vôtre?",
+            "body": "<p>Parcourez nos cafetières à portion individuelle, ou faites le questionnaire pour être jumelé en 60 secondes.</p>",
+            "button_label": "Magasiner toutes les cafetières",
             "button_link": "shopify://collections/coffee-espresso-makers",
             "button_style": "primary"
           }
@@ -210,7 +209,7 @@
       ],
       "settings": {
         "show_breadcrumb": false,
-        "breadcrumb_parent_title": "Find your perfect coffee maker",
+        "breadcrumb_parent_title": "Trouvez votre cafetière idéale",
         "breadcrumb_parent_link": "",
         "show_hero": false,
         "eyebrow": "",

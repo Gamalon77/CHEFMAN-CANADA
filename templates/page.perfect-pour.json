@@ -1,1 +1,24 @@
-{"sections":{"perfect_pour":{"type":"perfect-pour","custom_css":["h1 {font-weight: bold}"],"settings":{"heading":"Perfect Pour","heading_size":"title-md","intro":"<p>Think you can pull the perfect shot? Stop the pour in the crema zone.<\/p>","play_label":"Play","shop_label":"Caffeinate for real → Shop coffee makers","shop_link":"shopify:\/\/collections\/coffee-espresso-makers","padding_top":56,"padding_bottom":80,"divider":false}}},"order":["perfect_pour"]}
+{
+  "sections": {
+    "perfect_pour": {
+      "type": "perfect-pour",
+      "custom_css": [
+        "h1 {font-weight: bold}"
+      ],
+      "settings": {
+        "heading": "Versement parfait",
+        "heading_size": "title-md",
+        "intro": "<p>Vous pensez pouvoir extraire la dose parfaite? Arrêtez le versement dans la zone de la crema.</p>",
+        "play_label": "Lire",
+        "shop_label": "Faites le plein de caféine → Magasinez les cafetières",
+        "shop_link": "shopify://collections/coffee-espresso-makers",
+        "padding_top": 56,
+        "padding_bottom": 80,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "perfect_pour"
+  ]
+}

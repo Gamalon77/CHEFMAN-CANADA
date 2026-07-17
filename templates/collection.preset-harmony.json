@@ -66,9 +66,9 @@
             "position": 8,
             "image": "",
             "icon": "",
-            "heading": "Example heading",
-            "content": "<p>Share information about your brand with your customers.<\/p>",
-            "button_label": "Shop now",
+            "heading": "En-tête d'exemple",
+            "content": "<p>Communiquez de l'information sur votre marque à vos clients.</p>",
+            "button_label": "Magasiner maintenant",
             "button_link": "",
             "content_position": "md:items-center",
             "text_alignment": "center",
@@ -126,7 +126,7 @@
         "subheading": {
           "type": "subheading",
           "settings": {
-            "subheading": "Tagline",
+            "subheading": "Slogan",
             "subheading_size": "subtitle-md",
             "secondary_color": true
           }
@@ -134,7 +134,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Example heading",
+            "heading": "En-tête d'exemple",
             "heading_size": "title-md",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -144,7 +144,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Give customers details about the banner image(s) or content on the template.<\/p>",
+            "text": "<p>Donnez aux clients des détails sur la ou les images de la bannière ou le contenu du modèle.</p>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -197,7 +197,7 @@
         "carousel_on_desktop": true,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "heading": "Recently Viewed",
+        "heading": "Récemment consultés",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",

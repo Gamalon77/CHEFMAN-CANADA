@@ -31,7 +31,7 @@
         "text_x9YR83": {
           "type": "text",
           "settings": {
-            "text": "<p>Descaling & Cleaning<\/p>",
+            "text": "<p>Détartrage et nettoyage</p>",
             "text_size": "subtext-xl",
             "text_max_size": 32,
             "text_font": "heading",
@@ -80,7 +80,7 @@
       "type": "image-with-text-overlay",
       "settings": {
         "transparent_header": false,
-        "image": "shopify:\/\/shop_images\/caffeinator-coffee.jpg",
+        "image": "shopify://shop_images/caffeinator-coffee.jpg",
         "image_height": "700px",
         "content_width": "small",
         "content_position": "md:items-end md:justify-start",
@@ -111,8 +111,8 @@
         "question_M96gYA": {
           "type": "question",
           "settings": {
-            "title": "<strong>1. Empty the water reservoir<\/strong>",
-            "text": "<p>Empty the water reservoir completely and return it to the base. Put the empty capsule receptacle in the brew chamber and close the lid.<\/p>",
+            "title": "<strong>1. Videz le réservoir d'eau</strong>",
+            "text": "<p>Videz complètement le réservoir d'eau et remettez-le sur la base. Placez le réceptacle à capsule vide dans la chambre d'infusion et fermez le couvercle.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -120,8 +120,8 @@
         "question_czVMga": {
           "type": "question",
           "settings": {
-            "title": "<strong>2. Prepare Your Descaling Solution<\/strong>",
-            "text": "<p>Prepare a commercial descaler according to the package directions OR a 50\/50 mix of water and distilled vinegar. Fill the water reservoir completely with the mixture.<\/p>",
+            "title": "<strong>2. Préparez votre solution de détartrage</strong>",
+            "text": "<p>Préparez un détartrant commercial selon les directives de l'emballage OU un mélange 50/50 d'eau et de vinaigre distillé. Remplissez complètement le réservoir d'eau avec le mélange.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -129,8 +129,8 @@
         "question_9hFett": {
           "type": "question",
           "settings": {
-            "title": "<strong>3. Position an empty cup<\/strong>",
-            "text": "<p>Plug in the unit. Place a large cup (at least 12 oz.) under the brew head.<\/p>",
+            "title": "<strong>3. Placez une tasse vide</strong>",
+            "text": "<p>Branchez l'appareil. Placez une grande tasse (d'au moins 355 mL) sous la tête d'infusion.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -138,8 +138,8 @@
         "question_XENzpY": {
           "type": "question",
           "settings": {
-            "title": "<strong>4. Run your first descaling cycle<\/strong>",
-            "text": "<p>Press the <strong>CLEAN <\/strong>button, then the <strong>BREW | STOP <\/strong>button. The unit will cycle the cleaning solution through its internal parts and dispense into the cup<\/p>",
+            "title": "<strong>4. Lancez votre premier cycle de détartrage</strong>",
+            "text": "<p>Appuyez sur le bouton <strong>CLEAN </strong>, puis sur le bouton <strong>BREW | STOP </strong>. L'appareil fera circuler la solution de nettoyage dans ses composants internes et la versera dans la tasse</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -147,8 +147,8 @@
         "question_gFf8C3": {
           "type": "question",
           "settings": {
-            "title": "<strong>5. Remove water from cup<\/strong>",
-            "text": "<p>When the cycle has finished, discard the liquid in the cup and return the cup to the trivet. Press <strong>BREW | STOP <\/strong>again.<\/p>",
+            "title": "<strong>5. Videz l'eau de la tasse</strong>",
+            "text": "<p>Une fois le cycle terminé, jetez le liquide dans la tasse et remettez la tasse sur le support. Appuyez de nouveau sur <strong>BREW | STOP </strong>.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -156,8 +156,8 @@
         "question_hUfDAP": {
           "type": "question",
           "settings": {
-            "title": "<strong>6. Repeat steps 4 and 5<\/strong>",
-            "text": "<p>Repeat until the <strong>LOW WATER <\/strong>light comes on<\/p>",
+            "title": "<strong>6. Répétez les étapes 4 et 5</strong>",
+            "text": "<p>Répétez jusqu'à ce que le voyant <strong>LOW WATER </strong>s'allume</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -165,8 +165,8 @@
         "question_awNen6": {
           "type": "question",
           "settings": {
-            "title": "<strong>7. Rinse water tank and refill<\/strong>",
-            "text": "<p>Rinse the water reservoir thoroughly. Return it to the base and refill with<br\/>fresh water.<\/p>",
+            "title": "<strong>7. Rincer le réservoir d'eau et le remplir</strong>",
+            "text": "<p>Rincez soigneusement le réservoir d'eau. Replacez-le sur la base et remplissez-le d'eau<br/>fraîche.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -174,8 +174,8 @@
         "question_excKjA": {
           "type": "question",
           "settings": {
-            "title": "<strong>8. Repeat until water runs low<\/strong>",
-            "text": "<p>Repeat the cleaning cycles, emptying the cup each time, until the <strong>LOW WATER <\/strong>light comes on.<\/p>",
+            "title": "<strong>8. Répéter jusqu'à ce qu'il reste peu d'eau</strong>",
+            "text": "<p>Répétez les cycles de nettoyage, en vidant la tasse à chaque fois, jusqu'à ce que le voyant <strong>NIVEAU D'EAU BAS </strong>s'allume.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -183,8 +183,8 @@
         "question_3Ej7WN": {
           "type": "question",
           "settings": {
-            "title": "<strong>9. Return to Standby mode<\/strong>",
-            "text": "<p>Press <strong>CLEAN <\/strong>to return to Standby mode.<\/p>",
+            "title": "<strong>9. Revenir au mode Veille</strong>",
+            "text": "<p>Appuyez sur <strong>CLEAN </strong>pour revenir en mode veille.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -204,7 +204,7 @@
       "name": "t:sections.faq.presets.name",
       "settings": {
         "style": "with-border",
-        "heading": "Descaling Your Caffeinator",
+        "heading": "Détartrer votre Caffeinator",
         "heading_size": "title-md",
         "heading_alignment": "text-center md:items-center",
         "heading_tag": "h2",
@@ -239,8 +239,8 @@
         "question_XKYa9J": {
           "type": "question",
           "settings": {
-            "title": "<strong>1. Unplug the unit<\/strong>",
-            "text": "<p>Make sure the unit is unplugged and cooled.<\/p>",
+            "title": "<strong>1. Débranchez l'appareil</strong>",
+            "text": "<p>Assurez-vous que l'appareil est débranché et refroidi.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -248,8 +248,8 @@
         "question_UrcU4r": {
           "type": "question",
           "settings": {
-            "title": "<strong>2. Remove Coffee Pod<\/strong>",
-            "text": "<p>If a coffee pod was used, remove the capsule receptacle with the pod. Discard the pod.<\/p>",
+            "title": "<strong>2. Retirez la capsule de café</strong>",
+            "text": "<p>Si une capsule de café a été utilisée, retirez le réceptacle à capsule avec la capsule. Jetez la capsule.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -257,8 +257,8 @@
         "question_XkRbAP": {
           "type": "question",
           "settings": {
-            "title": "<strong>3. Remove any coffee grounds<\/strong>",
-            "text": "<p>If coffee grounds were used, remove the reusable coffee filter. Discard the grounds, then rinse the niter with water, and dry completely.<br\/><br\/><strong>NOTE: <\/strong>Be sure to discard brewed coffee grounds promptly. If they sit in the brew chamber or coffee filter for an extended period of time, they may begin to mold.<\/p>",
+            "title": "<strong>3. Retirez tout résidu de café moulu</strong>",
+            "text": "<p>Si du café moulu a été utilisé, retirez le filtre à café réutilisable. Jetez le café moulu, puis rincez le filtre à l'eau et séchez complètement.<br/><br/><strong>NOTE : </strong>Assurez-vous de jeter rapidement le café moulu infusé. S'il reste dans la chambre d'infusion ou le filtre à café pendant une période prolongée, il pourrait commencer à moisir.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -266,8 +266,8 @@
         "question_hkEim8": {
           "type": "question",
           "settings": {
-            "title": "<strong>4. Empty and clean the water reservoir<\/strong>",
-            "text": "<p>For fresh-tasting coffee, empty the water reservoir between uses. Wash the reservoir as needed with warm, soapy water. Rinse and dry well.<\/p>",
+            "title": "<strong>4. Videz et nettoyez le réservoir d'eau</strong>",
+            "text": "<p>Pour un café au goût frais, videz le réservoir d'eau entre les utilisations. Lavez le réservoir au besoin à l'eau chaude savonneuse. Rincez et séchez bien.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -275,8 +275,8 @@
         "question_rwKNNL": {
           "type": "question",
           "settings": {
-            "title": "<strong>5. Replace the water filter<\/strong>",
-            "text": "<p>Replace the charcoal water filter cartridge every 1 to 2 months, at a minimum, following the instructions on page 10, steps 4-6<\/p>",
+            "title": "<strong>5. Remplacez le filtre à eau</strong>",
+            "text": "<p>Remplacez la cartouche de filtre à eau au charbon tous les 1 à 2 mois, au minimum, en suivant les instructions à la page 10, étapes 4 à 6</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -284,8 +284,8 @@
         "question_xtLMA7": {
           "type": "question",
           "settings": {
-            "title": "<strong>6. Rinse and wash trivet and drip tray<\/strong>",
-            "text": "<p>If necessary, rinse and wash the trivet and drip tray with a sponge and warm, soapy water.<\/p>",
+            "title": "<strong>6. Rincer et laver le support et le plateau d'égouttement</strong>",
+            "text": "<p>Au besoin, rincez et lavez le support et le plateau d'égouttement avec une éponge et de l'eau chaude savonneuse.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -293,8 +293,8 @@
         "question_iQqmA8": {
           "type": "question",
           "settings": {
-            "title": "<strong>7. Wipe down the base of the unit<\/strong>",
-            "text": "<p>Wipe down the base of the unit with a damp cloth or sponge, if needed. Dry completely. <em>Never immerse the coffee maker or its plug in water.<\/em><br\/><br\/><strong>NOTE:<\/strong> The coffee maker and its accessories are <strong>NOT<\/strong> <strong>dishwasher safe.<\/strong><\/p>",
+            "title": "<strong>7. Essuyer la base de l'appareil</strong>",
+            "text": "<p>Essuyez la base de l'appareil avec un chiffon humide ou une éponge, au besoin. Séchez complètement. <em>N'immergez jamais la cafetière ni sa fiche dans l'eau.</em><br/><br/><strong>REMARQUE :</strong> La cafetière et ses accessoires ne vont <strong>PAS</strong> <strong>au lave-vaisselle.</strong></p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -312,7 +312,7 @@
       "name": "t:sections.faq.presets.name",
       "settings": {
         "style": "with-border",
-        "heading": "Cleaning Your Caffeinator",
+        "heading": "Nettoyer votre Caffeinator",
         "heading_size": "title-md",
         "heading_alignment": "text-center md:items-center",
         "heading_tag": "h2",

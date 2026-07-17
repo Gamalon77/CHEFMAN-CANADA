@@ -6,8 +6,7 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */
-{
+ */{
   "sections": {
     "kettle_detail": {
       "type": "kettle-detail",
@@ -15,104 +14,104 @@
         "why_1": {
           "type": "reason",
           "settings": {
-            "title": "Boil and steep in one vessel",
-            "text": "The removable stainless-steel infuser basket lets you brew loose-leaf or bagged tea right inside the kettle — no separate teapot, no extra strainer, and fewer dishes to wash afterward."
+            "title": "Faites bouillir et infuser dans un seul contenant",
+            "text": "Le panier-infuseur amovible en acier inoxydable vous permet d'infuser du thé en feuilles ou en sachet directement dans la bouilloire — pas de théière séparée, pas de passoire supplémentaire et moins de vaisselle à laver ensuite."
           }
         },
         "why_2": {
           "type": "reason",
           "settings": {
-            "title": "Watch every brew",
-            "text": "The stain-resistant borosilicate glass body and glowing blue LEDs let you see the water come to a boil and keep an eye on the level at a glance."
+            "title": "Observez chaque infusion",
+            "text": "Le corps en verre borosilicate résistant aux taches et les DEL bleues lumineuses vous permettent de voir l'eau arriver à ébullition et de garder un œil sur le niveau d'un coup d'œil."
           }
         },
         "why_3": {
           "type": "reason",
           "settings": {
-            "title": "Fast where it counts",
-            "text": "With 1500W of rapid-heat power, these kettles reach a rolling boil in about three minutes — quicker than the stovetop or microwave, so your tea is ready sooner."
+            "title": "Rapide là où ça compte",
+            "text": "Avec 1500 W de puissance de chauffe rapide, ces bouilloires atteignent de gros bouillons en environ trois minutes — plus rapide que la cuisinière ou le micro-ondes, pour que votre thé soit prêt plus tôt."
           }
         },
         "why_4": {
           "type": "reason",
           "settings": {
-            "title": "A size for every table",
-            "text": "From a compact, travel-friendly 1L for a solo mug up to a full-pot 1.8L for the household, there's a tea infuser kettle to match how much you brew."
+            "title": "Un format pour chaque table",
+            "text": "D'une bouilloire compacte et pratique en voyage de 1 L pour une seule tasse jusqu'à une pleine bouilloire de 1,8 L pour toute la maisonnée, il y a une bouilloire à infuseur à thé adaptée à la quantité que vous infusez."
           }
         },
         "feat_1": {
           "type": "feature",
           "settings": {
             "icon": "🫖",
-            "title": "Removable infuser basket",
-            "text": "A stainless-steel basket lifts right in and out for loose-leaf or bagged tea — steep to your preferred strength, then remove the leaves so the brew never turns bitter."
+            "title": "Panier-infuseur amovible",
+            "text": "Un panier en acier inoxydable s'insère et se retire facilement pour le thé en feuilles ou en sachet — infusez jusqu'à l'intensité désirée, puis retirez les feuilles pour que l'infusion ne devienne jamais amère."
           }
         },
         "feat_2": {
           "type": "feature",
           "settings": {
             "icon": "⚡",
-            "title": "1500W fast boil",
-            "text": "Rapid-heat technology brings water to a rolling boil in as little as three minutes, faster than a stovetop or microwave."
+            "title": "Ébullition rapide 1500W",
+            "text": "La technologie de chauffe rapide amène l'eau à gros bouillons en aussi peu que trois minutes, plus vite qu'une cuisinière ou un micro-ondes."
           }
         },
         "feat_3": {
           "type": "feature",
           "settings": {
             "icon": "💙",
-            "title": "Glass body with blue LEDs",
-            "text": "Stain-resistant borosilicate glass glows blue while heating, so you can watch it brew and check the water level at a glance."
+            "title": "Corps en verre avec DEL bleues",
+            "text": "Le verre borosilicate résistant aux taches s'illumine en bleu pendant le chauffage, ce qui vous permet de suivre l'infusion et de vérifier le niveau d'eau d'un coup d'œil."
           }
         },
         "feat_4": {
           "type": "feature",
           "settings": {
             "icon": "🔌",
-            "title": "360° cordless swivel base",
-            "text": "The kettle lifts off its swivel base so you can carry it cord-free straight to your mug, pot, or table."
+            "title": "Base pivotante sans fil 360°",
+            "text": "La bouilloire se soulève de sa base pivotante, ce qui vous permet de la transporter sans fil directement jusqu'à votre tasse, votre théière ou votre table."
           }
         },
         "feat_5": {
           "type": "feature",
           "settings": {
             "icon": "☕",
-            "title": "Drip-free spout & cool-touch handle",
-            "text": "A clean-pouring spout, stay-cool handle, and lift-out lid make filling, pouring, and rinsing simple and mess-free."
+            "title": "Bec verseur anti-goutte et poignée qui reste froide au toucher",
+            "text": "Un bec verseur net, une poignée qui reste froide et un couvercle amovible rendent le remplissage, le versage et le rinçage simples et sans dégâts."
           }
         },
         "feat_6": {
           "type": "feature",
           "settings": {
             "icon": "🛡️",
-            "title": "Built-in safety",
-            "text": "Automatic shut-off turns the kettle off once the water's ready, and boil-dry protection keeps it from powering on empty."
+            "title": "Sécurité intégrée",
+            "text": "L'arrêt automatique éteint la bouilloire une fois l'eau prête, et la protection contre l'ébullition à sec l'empêche de se mettre en marche à vide."
           }
         },
         "note_1": {
           "type": "note",
           "settings": {
-            "title": "Sizes for every routine",
-            "text": "Chefman tea infuser kettles come in 1L, 1.2L, 1.7L, and 1.8L. The 1L is a compact, travel-friendly favorite for one or two cups, while the 1.7L and 1.8L brew a full pot for households or guests."
+            "title": "Des formats pour chaque routine",
+            "text": "Les bouilloires à infuseur à thé Chefman sont offertes en 1 L, 1,2 L, 1,7 L et 1,8 L. Le format de 1 L est un choix compact et pratique pour les déplacements, idéal pour environ 250 à 500 mL, tandis que les formats de 1,7 L et 1,8 L préparent une pleine théière pour la maisonnée ou les invités."
           }
         },
         "note_2": {
           "type": "note",
           "settings": {
-            "title": "Best for black and herbal teas",
-            "text": "These are Fast-Boil kettles that heat to a full boil (212°F), ideal for black and herbal blends. For delicate green, white, or oolong teas, let the water cool slightly off the boil before steeping — or step up to a Chefman temperature-control kettle to dial in an exact lower heat."
+            "title": "Idéal pour les thés noirs et les tisanes",
+            "text": "Ce sont des bouilloires Fast-Boil qui chauffent jusqu'à pleine ébullition (100 °C), idéales pour les mélanges noirs et les tisanes. Pour les thés verts, blancs ou oolong délicats, laissez l'eau refroidir légèrement après l'ébullition avant d'infuser — ou optez pour une bouilloire à contrôle de température Chefman pour régler une chaleur plus basse et précise."
           }
         },
         "note_3": {
           "type": "note",
           "settings": {
-            "title": "Easy to clean",
-            "text": "Hand-wash the kettle body and the infuser basket, and never submerge the electrical base. If you have hard water, descale about once a month with a 50/50 water-and-white-vinegar mix to keep boil times fast and water tasting fresh."
+            "title": "Facile à nettoyer",
+            "text": "Lavez à la main le corps de la bouilloire et le panier-infuseur, et n'immergez jamais la base électrique. Si votre eau est dure, détartrez environ une fois par mois avec un mélange moitié eau, moitié vinaigre blanc pour garder des temps d'ébullition rapides et une eau au goût frais."
           }
         },
         "rel_1": {
           "type": "related",
           "settings": {
-            "label": "All kettle types",
+            "label": "Tous les types de bouilloires",
             "link": "/pages/find-your-perfect-electric-kettle-chefman"
           }
         },
@@ -126,78 +125,78 @@
         "rel_3": {
           "type": "related",
           "settings": {
-            "label": "Temperature Control",
+            "label": "Contrôle de la température",
             "link": "/pages/temperature-control-electric-kettles-chefman"
           }
         },
         "rel_4": {
           "type": "related",
           "settings": {
-            "label": "Keep-Warm",
+            "label": "Maintien au chaud",
             "link": "/pages/keep-warm-electric-kettles-chefman"
           }
         },
         "rel_5": {
           "type": "related",
           "settings": {
-            "label": "Gooseneck",
+            "label": "Col de cygne",
             "link": "/pages/gooseneck-electric-kettles-chefman"
           }
         },
         "rel_6": {
           "type": "related",
           "settings": {
-            "label": "Stainless Steel",
+            "label": "Acier inoxydable",
             "link": "/pages/stainless-steel-electric-kettles-chefman"
           }
         },
         "faq_1": {
           "type": "faq",
           "settings": {
-            "question": "What is a tea infuser kettle?",
-            "answer": "<p>A tea infuser kettle is an electric kettle with a removable stainless-steel basket that sits inside the pot, so you can boil water and steep loose-leaf or bagged tea in the same vessel. When the tea has brewed to your taste, you simply lift the basket out — no separate teapot or strainer needed. Chefman's tea infuser kettles pair this with a fast 1500W boil and a glass body so you can watch the water heat.</p>"
+            "question": "Qu'est-ce qu'une bouilloire avec infuseur à thé?",
+            "answer": "<p>Une bouilloire à infuseur à thé est une bouilloire électrique dotée d'un panier amovible en acier inoxydable qui se loge à l'intérieur du récipient, ce qui vous permet de faire bouillir l'eau et d'infuser du thé en feuilles ou en sachet dans le même récipient. Lorsque le thé est infusé à votre goût, il suffit de retirer le panier — sans théière ni passoire séparée. Les bouilloires à infuseur à thé de Chefman associent cela à une ébullition rapide de 1500 W et à un corps en verre qui vous laisse voir l'eau chauffer.</p>"
           }
         },
         "faq_2": {
           "type": "faq",
           "settings": {
-            "question": "Can I use both loose-leaf tea and tea bags in the infuser?",
-            "answer": "<p>Yes. The removable stainless-steel infuser basket holds loose-leaf tea for full-flavored brewing, and it works just as well with tea bags when that's what you have on hand. Because the basket lifts right out, you can steep to your preferred strength and remove the leaves before the tea turns bitter.</p>"
+            "question": "Puis-je utiliser à la fois du thé en feuilles et des sachets de thé dans l'infuseur?",
+            "answer": "<p>Oui. Le panier-infuseur amovible en acier inoxydable contient du thé en feuilles pour une infusion pleine de saveur, et il fonctionne tout aussi bien avec des sachets de thé lorsque c'est ce que vous avez sous la main. Comme le panier se retire facilement, vous pouvez infuser à l'intensité que vous préférez et retirer les feuilles avant que le thé ne devienne amer.</p>"
           }
         },
         "faq_3": {
           "type": "faq",
           "settings": {
-            "question": "What sizes do Chefman tea infuser kettles come in?",
-            "answer": "<p>Chefman offers tea infuser kettles in 1L, 1.2L, 1.7L, and 1.8L. The 1L is a compact, travel-friendly pick for one or two cups, while the 1.7L and 1.8L brew a full pot to share — a good fit for households or entertaining.</p>"
+            "question": "En quels formats les bouilloires avec infuseur à thé Chefman sont-elles offertes?",
+            "answer": "<p>Chefman offre des bouilloires à infuseur à thé de 1 L, 1,2 L, 1,7 L et 1,8 L. Le format 1 L est un choix compact et facile à transporter pour une ou deux tasses, tandis que les formats 1,7 L et 1,8 L infusent une pleine bouilloire à partager — un bon choix pour les ménages ou pour recevoir.</p>"
           }
         },
         "faq_4": {
           "type": "faq",
           "settings": {
-            "question": "Can I brew green or white tea in a tea infuser kettle?",
-            "answer": "<p>You can, with a small adjustment. Tea infuser kettles are Fast-Boil models that heat to a full 212°F, which is perfect for black and herbal teas. Delicate green, white, and oolong teas taste best below the boil, so let the water cool briefly off the boil before steeping — or choose a Chefman temperature-control kettle that lets you dial in an exact, lower temperature.</p>"
+            "question": "Puis-je préparer du thé vert ou blanc dans une bouilloire à infuseur à thé?",
+            "answer": "<p>Vous le pouvez, avec un petit ajustement. Les bouilloires avec infuseur à thé sont des modèles Fast-Boil qui chauffent jusqu'à une pleine ébullition de 100 °C, ce qui est parfait pour les thés noirs et les tisanes. Les thés verts, blancs et oolong délicats sont meilleurs en deçà de l'ébullition, alors laissez l'eau refroidir brièvement après l'ébullition avant d'infuser — ou choisissez une bouilloire Chefman à contrôle de température qui vous permet de régler une température exacte et plus basse.</p>"
           }
         },
         "faq_5": {
           "type": "faq",
           "settings": {
-            "question": "How do I clean a tea infuser kettle?",
-            "answer": "<p>Hand-wash the kettle body and the infuser basket, and never submerge the electrical base. If you have hard water, descale about once a month by boiling a 50/50 mix of water and white vinegar, letting it sit for 15 to 20 minutes, then rinsing well. This keeps boil times fast and your water tasting fresh.</p>"
+            "question": "Comment nettoyer une bouilloire à infuseur à thé?",
+            "answer": "<p>Lavez à la main le corps de la bouilloire et le panier-infuseur, et n'immergez jamais la base électrique. Si votre eau est dure, détartrez environ une fois par mois en faisant bouillir un mélange 50/50 d'eau et de vinaigre blanc, en le laissant reposer de 15 à 20 minutes, puis en rinçant bien. Cela maintient des temps d'ébullition rapides et une eau au goût frais.</p>"
           }
         },
         "faq_6": {
           "type": "faq",
           "settings": {
-            "question": "Are Chefman tea infuser kettles safe to use?",
-            "answer": "<p>Yes. Every Chefman kettle has automatic shut-off and boil-dry protection, lifts off a 360° cordless swivel base, and features a cool-touch handle. All models are cETL approved and backed by a 1-year Chefman assurance.</p>"
+            "question": "Les bouilloires à infuseur à thé Chefman sont-elles sécuritaires à utiliser?",
+            "answer": "<p>Oui. Chaque bouilloire Chefman comprend un arrêt automatique et une protection contre l'ébullition à sec, se soulève d'une base pivotante sans fil à 360° et est dotée d'une poignée qui reste froide au toucher. Tous les modèles sont approuvés cETL et appuyés par une garantie Chefman d'un an.</p>"
           }
         },
         "faq_7": {
           "type": "faq",
           "settings": {
-            "question": "Which Chefman tea infuser kettle is best for me?",
-            "answer": "<p>If you mostly brew for yourself or want something travel-friendly, the 1L Tea Infuser Kettle is a compact, top-rated favorite loved by thousands of tea drinkers. If you brew for a household or guests, step up to the 1.7L or 1.8L for a full pot in one go. All of them share the same removable stainless-steel infuser, 1500W fast boil, and see-through glass body.</p>"
+            "question": "Quelle bouilloire avec infuseur à thé Chefman me convient le mieux?",
+            "answer": "<p>Si vous préparez surtout du thé pour vous-même ou que vous voulez quelque chose de facile à emporter, la bouilloire à infuseur de thé de 1 L est une favorite compacte et très bien cotée, adorée par des milliers d'amateurs de thé. Si vous infusez pour toute la maisonnée ou des invités, optez pour le modèle de 1,7 L ou 1,8 L pour une pleine théière d'un seul coup. Toutes partagent le même infuseur amovible en acier inoxydable, l'ébullition rapide de 1500 W et le corps en verre transparent.</p>"
           }
         }
       },
@@ -231,28 +230,28 @@
       ],
       "settings": {
         "show_breadcrumb": true,
-        "crumb1_title": "Kettles",
+        "crumb1_title": "Bouilloires",
         "crumb1_link": "shopify://collections/kettles-2",
-        "crumb2_title": "Find your kettle",
+        "crumb2_title": "Trouvez votre bouilloire",
         "crumb2_link": "/pages/find-your-perfect-electric-kettle-chefman",
-        "eyebrow": "Chefman Tea Infuser Kettles",
-        "heading": "Tea Infuser Kettles",
+        "eyebrow": "Bouilloires à infuseur à thé Chefman",
+        "heading": "Bouilloires avec infuseur à thé",
         "heading_size": "title-lg tracking-heading",
-        "intro": "<p>Brew loose-leaf tea right in the pot. Chefman tea infuser kettles nest a removable stainless-steel basket inside a fast-boiling glass kettle, so you can heat, steep, and pour without ever reaching for a separate teapot.</p>",
-        "best_for": "loose-leaf tea lovers",
-        "what_heading": "What it is",
-        "what_it_is": "<p>A tea infuser kettle is a fast-boil electric kettle with a removable stainless-steel basket that drops right into the pot. Fill the kettle, add your loose-leaf or bagged tea to the basket, and press to boil — then let the leaves steep in the freshly boiled water inside the same vessel. When the tea has brewed to your taste, lift the basket out and pour. It's the entire loose-leaf ritual in one kettle, with the same 1500W rapid boil, watch-it-brew glass body, and cordless convenience as our classic Fast-Boil kettles.</p>",
-        "why_heading": "Why choose a Tea Infuser kettle",
-        "features_heading": "Key features",
-        "who_heading": "Who it's for",
-        "who_for": "<p>Tea infuser kettles are made for loose-leaf and bagged-tea lovers who want fewer dishes and less fuss. If you'd rather not juggle a kettle, a teapot, and a separate strainer — or you simply want to brew a quick mug without extra cleanup — this is your kettle. It suits everyone from the solo sipper reaching for a compact 1L on a small counter to the household that wants a full pot to share, and it's just as happy with a bag of everyday black tea as with a spoonful of premium loose-leaf.</p>",
-        "notes_heading": "Good to know",
+        "intro": "<p>Infusez le thé en feuilles directement dans la bouilloire. Les bouilloires à infuseur à thé de Chefman logent un panier amovible en acier inoxydable à l'intérieur d'une bouilloire en verre à ébullition rapide, ce qui vous permet de chauffer, d'infuser et de verser sans jamais avoir à sortir une théière séparée.</p>",
+        "best_for": "amateurs de thé en feuilles",
+        "what_heading": "Ce que c'est",
+        "what_it_is": "<p>Une bouilloire à infuseur à thé est une bouilloire électrique à ébullition rapide dotée d'un panier amovible en acier inoxydable qui se glisse directement dans le récipient. Remplissez la bouilloire, ajoutez votre thé en feuilles ou en sachet dans le panier, puis appuyez pour faire bouillir — laissez ensuite les feuilles infuser dans l'eau fraîchement bouillie à l'intérieur du même récipient. Lorsque le thé est infusé à votre goût, retirez le panier et versez. C'est tout le rituel du thé en feuilles dans une seule bouilloire, avec la même ébullition rapide de 1500 W, le même corps en verre qui laisse voir l'infusion et la même commodité sans fil que nos bouilloires classiques Fast-Boil.</p>",
+        "why_heading": "Pourquoi choisir une bouilloire avec infuseur à thé",
+        "features_heading": "Caractéristiques principales",
+        "who_heading": "À qui ça s'adresse",
+        "who_for": "<p>Les bouilloires avec infuseur à thé sont conçues pour les amateurs de thé en feuilles et en sachet qui veulent moins de vaisselle et moins de tracas. Si vous préférez ne pas jongler avec une bouilloire, une théière et une passoire séparée — ou si vous voulez simplement infuser rapidement une tasse sans nettoyage supplémentaire — c'est la bouilloire qu'il vous faut. Elle convient à tout le monde, du buveur en solo qui opte pour un modèle compact de 1 L sur un petit comptoir jusqu'au ménage qui veut une pleine théière à partager, et elle se prête aussi bien à un sachet de thé noir de tous les jours qu'à une cuillerée de thé en feuilles haut de gamme.</p>",
+        "notes_heading": "Bon à savoir",
         "product_handles": "rj11-10-gmrl-ti, fast-boil-1-7l-electric-glass-kettle-w-tea-infuser, fast-boil-1-8l-electric-kettle-w-tea-infuser",
-        "shop_heading": "Shop Tea Infuser kettles",
-        "shop_button_label": "Shop all kettles",
+        "shop_heading": "Magasiner les bouilloires avec infuseur à thé",
+        "shop_button_label": "Magasiner toutes les bouilloires",
         "shop_button_link": "shopify://collections/kettles-2",
         "related_heading": "Explore other kettle types",
-        "faq_heading": "Frequently asked questions",
+        "faq_heading": "Questions fréquentes",
         "padding_top": 64,
         "padding_bottom": 100,
         "divider": false,

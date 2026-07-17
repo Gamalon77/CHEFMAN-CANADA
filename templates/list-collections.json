@@ -11,7 +11,7 @@
         "show_products_count": false,
         "columns": 4,
         "columns_mobile": "1",
-        "heading": "All Products",
+        "heading": "Tous les produits",
         "heading_size": "title-lg tracking-heading",
         "heading_alignment": "text-center",
         "heading_tag": "h1",
