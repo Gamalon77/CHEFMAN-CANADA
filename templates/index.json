@@ -274,7 +274,7 @@
           "settings": {
             "collection": "performance-series",
             "image": "shopify://shop_images/PF-Chefman-Collection.jpg",
-            "title": "Série Performance",
+            "title": "reForm Collection",
             "description": "",
             "overlay_content": false,
             "color_text": "#ffffff",
@@ -477,7 +477,7 @@
         "heading_Q8kezJ": {
           "type": "heading",
           "settings": {
-            "heading": "Série Performance",
+            "heading": "reForm Collection",
             "heading_size": "title-md",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -636,7 +636,7 @@
         "heading_LhTfrF": {
           "type": "heading",
           "settings": {
-            "heading": "Série Performance",
+            "heading": "reForm Collection",
             "heading_size": "title-md",
             "heading_tag": "h2",
             "highlighted_text": "none",
