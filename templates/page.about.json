@@ -29,7 +29,7 @@
         "heading_fKQz77": {
           "type": "heading",
           "settings": {
-            "heading": "Forger un héritage",
+            "heading": "Forging a Legacy",
             "heading_size": "title-xl tracking-heading",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -47,8 +47,8 @@
       "name": "t:sections.video-with-text-overlay.presets.name",
       "settings": {
         "transparent_header": true,
-        "video": "shopify://files/videos/About Page Banner-Low Bit Rate Fun_b1565226-7d8c-4348-8d22-b4802a31e1b5.mp4",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video": "shopify:\/\/files\/videos\/About Page Banner-Low Bit Rate Fun_b1565226-7d8c-4348-8d22-b4802a31e1b5.mp4",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "enable_video_autoplay": true,
         "enable_video_looping": true,
@@ -81,7 +81,7 @@
         "heading_HrUYHU": {
           "type": "heading",
           "settings": {
-            "heading": "Toujours plus haut",
+            "heading": "Onwards and Upwards",
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
             "highlighted_text": "text",
@@ -91,7 +91,7 @@
         "text_GmWnaR": {
           "type": "text",
           "settings": {
-            "text": "<p>Nous redéfinissons les expériences culinaires, brouillant les frontières entre l'art et la fonction, et concevant de meilleurs produits pour un avenir meilleur.</p>",
+            "text": "<p>We're redefining culinary experiences, blurring the lines between art and function, and designing better products for a better tomorrow.<\/p>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "heading",
@@ -143,9 +143,9 @@
         "profile-1": {
           "type": "profile",
           "settings": {
-            "image": "shopify://shop_images/Performance-Collection-About.webp",
+            "image": "shopify:\/\/shop_images\/Performance-Collection-About.webp",
             "heading": "reForm Collection",
-            "text": "<p>Voici la reForm Collection de Chefman — notre gamme phare de produits conçus pour surpasser et durer, appuyée par une garantie de cinq ans. La reForm Collection est conçue de fond en comble, chaque détail et chaque facette peaufinés pour apporter des expériences de premier ordre à votre foyer. Chaque produit de la reForm Collection est conçu pour rivaliser avec les meilleurs, offrant constamment une valeur supérieure et des performances extraordinaires. </p>",
+            "text": "<p>Introducing the Chefman reForm Collection - our flagship line of products designed to outperform and outlast, backed by a five year warranty. The reForm Collection is engineered from the ground up, with every detail and facet honed to bring tier-one experiences to your home. Each product in the reForm Collection is designed to go toe-to-toe with the best, consistently delivering superior value and extraordinary performance. <\/p>",
             "color_text": "#ffffff",
             "color_background": "#000000"
           }
@@ -153,9 +153,9 @@
         "profile-2": {
           "type": "profile",
           "settings": {
-            "image": "shopify://shop_images/exactemp-tech-3.webp",
-            "heading": "Précision ExacTemp™",
-            "text": "<p>Notre gamme d'appareils ExacTemp™ est équipée pour offrir des résultats parfaits grâce à des programmes de cuisson faciles à utiliser. Dotée d'un thermomètre de cuisson intégré, elle vous permet d'avoir l'esprit tranquille en sachant que vos plats seront cuits exactement comme vous les aimez. ExacTemp™ offre une précision extrême avec une commodité inégalée, sans exception.</p>",
+            "image": "shopify:\/\/shop_images\/exactemp-tech-3.webp",
+            "heading": "ExacTemp™ Accuracy",
+            "text": "<p>Our ExacTemp™ line of appliances are equipped to deliver perfect results through easy to use cooking presets. Featuring a built-in cooking thermometer, you can rest at ease knowing your meals will be cooked just the way you like. ExacTemp™ offers pinpoint accuracy with unparalleled convenience, bar none.<\/p>",
             "color_text": "#ffffff",
             "color_background": "#000000"
           }
@@ -163,9 +163,9 @@
         "profile-3": {
           "type": "profile",
           "settings": {
-            "image": "shopify://shop_images/dc-motor-tech2.webp",
-            "heading": "Technologie de moteur à courant continu",
-            "text": "<p>Alors que la plupart des appareils utilisent des moteurs à courant alternatif pour déplacer l'air lors de la cuisson à convection et de la friture à air, notre gamme de produits suralimentés à courant continu passe au niveau supérieur en déplaçant un plus grand volume d'air par seconde tout en consommant moins d'énergie. Son régime plus élevé et sa plage de températures plus étendue permettent une cuisson 40 % plus rapide que les méthodes traditionnelles.</p>",
+            "image": "shopify:\/\/shop_images\/dc-motor-tech2.webp",
+            "heading": "DC Motor Technology",
+            "text": "<p>While most appliances use AC motors to move air for convection cooking and air frying, our DC line of supercharged products takes it to the next level, moving more cubic feet of air per second while using less energy. Its faster RPM and higher-temp range unlocks cooking that's 40% faster than traditional methods.<\/p>",
             "color_text": "#ffffff",
             "color_background": "#000000"
           }
@@ -189,12 +189,12 @@
         "image_ratio_mobile": "portrait",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "heading": "Des idées brillantes. Un avenir encore plus brillant.",
+        "heading": "Bright Ideas. Brighter Future.",
         "heading_size": "title-md",
         "heading_alignment": "text-left justify-start",
         "heading_tag": "h2",
         "subheading": "",
-        "description": "<h5>Chez Chefman, nous innovons à chaque instant afin de vous offrir la meilleure technologie, la meilleure performance et le meilleur rapport qualité-prix.</h5>",
+        "description": "<h5>At Chefman, we're innovating at every turn, offering you the very best technology, performance and value.<\/h5>",
         "button_label": "",
         "button_link": "",
         "button_external": false,
@@ -222,7 +222,7 @@
         "heading_aktwwY": {
           "type": "heading",
           "settings": {
-            "heading": "Conçu pour vous. <em>Conçu pour la vie.</em>",
+            "heading": "Built for You. <em>Built for Life.<\/em>",
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
             "highlighted_text": "text",
@@ -232,7 +232,7 @@
         "text_QBfrKd": {
           "type": "text",
           "settings": {
-            "text": "<p>Nos produits sont conçus en pensant à vous, méticuleusement fabriqués de l'intérieur comme de l'extérieur, et prêts à tenir la distance.</p>",
+            "text": "<p>Our products are designed with you in mind, meticulously engineered inside and out, and ready to go the distance.<\/p>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -244,8 +244,8 @@
         "button_aDJB4x": {
           "type": "button",
           "settings": {
-            "button_label": "Enregistrez votre produit",
-            "button_link": "https://portal.wholescale.net/reviewform/31251f4c-e347-4d2a-bf96-615e065bcc13?pt=Website",
+            "button_label": "Register Your Product",
+            "button_link": "https:\/\/portal.wholescale.net\/reviewform\/31251f4c-e347-4d2a-bf96-615e065bcc13?pt=Website",
             "button_style": "primary",
             "button_size": "md",
             "button_external": true,
@@ -263,13 +263,13 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/blt-for-lfe.webp",
+        "image": "shopify:\/\/shop_images\/blt-for-lfe.webp",
         "image_height": "500px",
         "image_width": "medium",
         "layout": "image_first",
         "text_alignment": "left",
         "content_position": "align-self-center",
-        "image_mobile": "shopify://shop_images/home-banner-mobile-US.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/home-banner-mobile-US.jpg",
         "image_height_mobile": "400px",
         "text_alignment_mobile": "center",
         "color_text": "",
@@ -297,7 +297,7 @@
         "heading_mEkyKh": {
           "type": "heading",
           "settings": {
-            "heading": "<em>La marque de bouilloires n° 1</em>",
+            "heading": "<em>The #1 Brand of Kettles<\/em>",
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
             "highlighted_text": "text",
@@ -307,7 +307,7 @@
         "text_yrEAeX": {
           "type": "text",
           "settings": {
-            "text": "<p>Nous sommes fiers d'être la marque numéro un de bouilloires électriques en Amérique, offrant une performance et une innovation exceptionnelles à tous les prix. </p>",
+            "text": "<p>We're proud to be America's number one brand of electric kettles, offering stellar performance and innovation at every price point. <\/p>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -319,8 +319,8 @@
         "button_EddwnD": {
           "type": "button",
           "settings": {
-            "button_label": "Explorer les bouilloires",
-            "button_link": "shopify://collections/kettles-2",
+            "button_label": "Explore Kettles",
+            "button_link": "shopify:\/\/collections\/kettles-2",
             "button_style": "primary",
             "button_size": "md",
             "button_external": false,
@@ -338,13 +338,13 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Chefman-Gooseneck-Kettle.webp",
+        "image": "shopify:\/\/shop_images\/Chefman-Gooseneck-Kettle.webp",
         "image_height": "500px",
         "image_width": "medium",
         "layout": "text_first",
         "text_alignment": "left",
         "content_position": "align-self-center",
-        "image_mobile": "shopify://shop_images/2025_02_24_Kettle_ECOM_RJ11-GN-P-BLACK-Lifestyle_1_1.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/2025_02_24_Kettle_ECOM_RJ11-GN-P-BLACK-Lifestyle_1_1.jpg",
         "image_height_mobile": "adapt",
         "text_alignment_mobile": "center",
         "color_text": "",
@@ -372,7 +372,7 @@
       "name": "t:sections.image-with-text-overlay.presets.name",
       "settings": {
         "transparent_header": false,
-        "image": "shopify://shop_images/chefman-family-v4.webp",
+        "image": "shopify:\/\/shop_images\/chefman-family-v4.webp",
         "image_height": "adapt",
         "content_width": "small",
         "content_position": "md:items-end md:justify-start",
@@ -403,7 +403,7 @@
         "heading_ye6RdY": {
           "type": "heading",
           "settings": {
-            "heading": "Bienvenue dans la famille",
+            "heading": "Welcome to the Family",
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
             "highlighted_text": "text",
@@ -413,7 +413,7 @@
         "text_nzz7Mm": {
           "type": "text",
           "settings": {
-            "text": "<p>De la cuisine intelligente au grand ménage du printemps, la famille Chefman a un petit quelque chose pour tout le monde. Chefman, CHEF iQ, Iceman et BUFF sont entièrement conçus en pensant à vous. De notre maison à la vôtre, merci.</p>",
+            "text": "<p>From smart cooking to spring cleaning, the Chefman family has a little something for everyone. Chefman, CHEF iQ, Iceman and BUFF are entirely designed with you in mind. From our home to yours, thank you.<\/p>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",

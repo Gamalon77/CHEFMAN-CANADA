@@ -21,7 +21,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Ajouter un slogan</p>",
+            "text": "<p>Add a tagline<\/p>",
             "text_size": "subtext-lg",
             "text_max_size": 32,
             "text_font": "body",
@@ -33,7 +33,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image avec texte superposé",
+            "heading": "Image with text overlay",
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -47,7 +47,7 @@
       ],
       "settings": {
         "transparent_header": false,
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "enable_video_autoplay": true,
         "enable_video_looping": true,
@@ -80,7 +80,7 @@
         "text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Utilisez ce texte pour communiquer de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p><p>Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p><p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -92,7 +92,7 @@
         "text-2": {
           "type": "text",
           "settings": {
-            "text": "<p>Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
+            "text": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -109,7 +109,7 @@
       "settings": {
         "text_alignment": "left",
         "text_alignment_mobile": "left",
-        "heading": "<em>Parlez de votre marque</em>",
+        "heading": "<em>Talk about your brand<\/em>",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_width": "small",
@@ -143,8 +143,8 @@
           "type": "profile",
           "settings": {
             "image": "",
-            "heading": "Titre d'exemple",
-            "text": "<p>Utilisez ce texte pour communiquer de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.<br/><br/>Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique. Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
+            "heading": "Example title",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br\/><br\/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "color_text": "#ffffff",
             "color_background": "#000000"
           }
@@ -153,8 +153,8 @@
           "type": "profile",
           "settings": {
             "image": "",
-            "heading": "Titre d'exemple",
-            "text": "<p>Utilisez ce texte pour communiquer de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.<br/><br/>Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique. Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
+            "heading": "Example title",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br\/><br\/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "color_text": "#ffffff",
             "color_background": "#000000"
           }
@@ -163,8 +163,8 @@
           "type": "profile",
           "settings": {
             "image": "",
-            "heading": "Titre d'exemple",
-            "text": "<p>Utilisez ce texte pour communiquer de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.<br/><br/>Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique. Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
+            "heading": "Example title",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br\/><br\/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "color_text": "#ffffff",
             "color_background": "#000000"
           }
@@ -215,7 +215,7 @@
         "text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Utilisez ce texte pour communiquer de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -227,7 +227,7 @@
         "text-2": {
           "type": "text",
           "settings": {
-            "text": "<p>Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique. Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
+            "text": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -244,13 +244,13 @@
       "settings": {
         "text_alignment": "left",
         "text_alignment_mobile": "left",
-        "heading": "En-tête d'exemple",
+        "heading": "Example heading",
         "heading_size": "title-sm",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_width": "medium",
         "heading_tag": "h2",
         "subheading": "",
-        "description": "<p>Utilisez cette zone de texte pour parler à vos clients de votre marque et de votre vision. Vous pouvez la modifier dans l'éditeur de thème.</p>",
+        "description": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.<\/p>",
         "button_label": "",
         "button_link": "",
         "button_icon": true,
@@ -277,7 +277,7 @@
         "counter-1": {
           "type": "counter",
           "settings": {
-            "title": "Titre d'exemple",
+            "title": "Example title",
             "number": "150",
             "unit": "K+",
             "duration": 2
@@ -286,7 +286,7 @@
         "counter-2": {
           "type": "counter",
           "settings": {
-            "title": "Titre d'exemple",
+            "title": "Example title",
             "number": "16",
             "unit": "",
             "duration": 2
@@ -295,7 +295,7 @@
         "counter-3": {
           "type": "counter",
           "settings": {
-            "title": "Titre d'exemple",
+            "title": "Example title",
             "number": "95",
             "unit": "%",
             "duration": 2
@@ -304,7 +304,7 @@
         "counter-4": {
           "type": "counter",
           "settings": {
-            "title": "Titre d'exemple",
+            "title": "Example title",
             "number": "32",
             "unit": "",
             "duration": 2
@@ -350,7 +350,7 @@
         "text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Associez du texte à une image pour mettre en valeur le produit, la collection ou l'article de blogue de votre choix. Ajoutez des détails sur la disponibilité, le style, ou même fournissez un avis.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "text_size": "subtext-xl",
             "text_max_size": 32,
             "text_font": "heading",
@@ -362,7 +362,7 @@
         "text-2": {
           "type": "text",
           "settings": {
-            "text": "<p><em>— Ajouter un slogan</em></p>",
+            "text": "<p><em>— Add a tagline<\/em><\/p>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -413,9 +413,9 @@
           "settings": {
             "image": "",
             "subheading": "2019",
-            "heading": "Image avec texte",
+            "heading": "Image with text",
             "heading_tag": "h2",
-            "text": "<p>Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
+            "text": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "button_label": "",
             "button_link": "",
             "button_icon": true,
@@ -428,9 +428,9 @@
           "settings": {
             "image": "",
             "subheading": "2020",
-            "heading": "Image avec texte",
+            "heading": "Image with text",
             "heading_tag": "h2",
-            "text": "<p>Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
+            "text": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "button_label": "",
             "button_link": "",
             "button_icon": true,
@@ -443,9 +443,9 @@
           "settings": {
             "image": "",
             "subheading": "2021",
-            "heading": "Image avec texte",
+            "heading": "Image with text",
             "heading_tag": "h2",
-            "text": "<p>Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
+            "text": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "button_label": "",
             "button_link": "",
             "button_icon": true,
@@ -458,9 +458,9 @@
           "settings": {
             "image": "",
             "subheading": "2022",
-            "heading": "Image avec texte",
+            "heading": "Image with text",
             "heading_tag": "h2",
-            "text": "<p>Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
+            "text": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "button_label": "",
             "button_link": "",
             "button_icon": true,
@@ -473,9 +473,9 @@
           "settings": {
             "image": "",
             "subheading": "2024",
-            "heading": "Image avec texte",
+            "heading": "Image with text",
             "heading_tag": "h2",
-            "text": "<p>Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
+            "text": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "button_label": "",
             "button_link": "",
             "button_icon": true,
@@ -494,7 +494,7 @@
       "settings": {
         "image_ratio": "portrait",
         "image_ratio_mobile": "square",
-        "heading": "En-tête d'exemple",
+        "heading": "Example heading",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
@@ -524,8 +524,8 @@
           "type": "profile",
           "settings": {
             "image": "",
-            "heading": "Titre d'exemple",
-            "text": "<p>Utilisez ce texte pour communiquer de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.<br/><br/>Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique. Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
+            "heading": "Example title",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br\/><br\/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "color_text": "#ffffff",
             "color_background": "#000000"
           }
@@ -534,8 +534,8 @@
           "type": "profile",
           "settings": {
             "image": "",
-            "heading": "Titre d'exemple",
-            "text": "<p>Utilisez ce texte pour communiquer de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.<br/><br/>Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique. Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
+            "heading": "Example title",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br\/><br\/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "color_text": "#ffffff",
             "color_background": "#000000"
           }
@@ -544,8 +544,8 @@
           "type": "profile",
           "settings": {
             "image": "",
-            "heading": "Titre d'exemple",
-            "text": "<p>Utilisez ce texte pour communiquer de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.<br/><br/>Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique. Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
+            "heading": "Example title",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br\/><br\/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "color_text": "#ffffff",
             "color_background": "#000000"
           }
@@ -554,8 +554,8 @@
           "type": "profile",
           "settings": {
             "image": "",
-            "heading": "Titre d'exemple",
-            "text": "<p>Utilisez ce texte pour communiquer de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.<br/><br/>Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique. Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
+            "heading": "Example title",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br\/><br\/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "color_text": "#ffffff",
             "color_background": "#000000"
           }
@@ -564,8 +564,8 @@
           "type": "profile",
           "settings": {
             "image": "",
-            "heading": "Titre d'exemple",
-            "text": "<p>Utilisez ce texte pour communiquer de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.<br/><br/>Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique. Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
+            "heading": "Example title",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br\/><br\/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "color_text": "#ffffff",
             "color_background": "#000000"
           }
@@ -574,8 +574,8 @@
           "type": "profile",
           "settings": {
             "image": "",
-            "heading": "Titre d'exemple",
-            "text": "<p>Utilisez ce texte pour communiquer de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.<br/><br/>Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique. Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
+            "heading": "Example title",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br\/><br\/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "color_text": "#ffffff",
             "color_background": "#000000"
           }
@@ -584,8 +584,8 @@
           "type": "profile",
           "settings": {
             "image": "",
-            "heading": "Titre d'exemple",
-            "text": "<p>Utilisez ce texte pour communiquer de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.<br/><br/>Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique. Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
+            "heading": "Example title",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br\/><br\/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "color_text": "#ffffff",
             "color_background": "#000000"
           }
@@ -594,8 +594,8 @@
           "type": "profile",
           "settings": {
             "image": "",
-            "heading": "Titre d'exemple",
-            "text": "<p>Utilisez ce texte pour communiquer de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.<br/><br/>Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique. Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
+            "heading": "Example title",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br\/><br\/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "color_text": "#ffffff",
             "color_background": "#000000"
           }
@@ -613,13 +613,13 @@
       ],
       "settings": {
         "image_ratio": "portrait",
-        "heading": "<em>Exemple de titre</em>",
+        "heading": "<em>Example heading<\/em>",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
         "subheading": "",
-        "description": "<p>Utilisez cette zone de texte pour parler à vos clients de votre marque et de votre vision. Vous pouvez la modifier dans l'éditeur de thème.</p>",
-        "button_label": "Tout voir",
+        "description": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.<\/p>",
+        "button_label": "View all",
         "button_link": "",
         "button_icon": true,
         "highlighted_text": "text",

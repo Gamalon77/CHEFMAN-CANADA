@@ -21,7 +21,7 @@
       "name": "t:sections.image-with-text-overlay.presets.name",
       "settings": {
         "transparent_header": false,
-        "image": "shopify://shop_images/chefman-family-v4.webp",
+        "image": "shopify:\/\/shop_images\/chefman-family-v4.webp",
         "image_height": "adapt",
         "content_width": "small",
         "content_position": "md:items-end md:justify-start",
@@ -52,7 +52,7 @@
         "heading_EqjWnN": {
           "type": "heading",
           "settings": {
-            "heading": "Enregistrement du produit",
+            "heading": "Product Registration",
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -62,8 +62,8 @@
         "button_C4Vyei": {
           "type": "button",
           "settings": {
-            "button_label": "Enregistrez votre produit",
-            "button_link": "https://portal.wholescale.net/reviewform/31251f4c-e347-4d2a-bf96-615e065bcc13?pt=Website",
+            "button_label": "Register Your Product",
+            "button_link": "https:\/\/portal.wholescale.net\/reviewform\/31251f4c-e347-4d2a-bf96-615e065bcc13?pt=Website",
             "button_style": "primary",
             "button_size": "md",
             "button_external": true,
@@ -114,7 +114,7 @@
           "type": "heading",
           "disabled": true,
           "settings": {
-            "heading": "Comment trouver le numéro de modèle de votre produit Chefman :",
+            "heading": "How to locate your Chefman product model number:",
             "heading_size": "title-sm",
             "heading_tag": "h6",
             "highlighted_text": "none",
@@ -125,7 +125,7 @@
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "<p>Comment trouver le numéro de modèle de votre produit Chefman :</p>",
+            "text": "<p>How to locate your Chefman product model number:<\/p>",
             "text_size": "subtext-xl",
             "text_max_size": 32,
             "text_font": "body",

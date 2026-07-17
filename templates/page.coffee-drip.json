@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "coffee_guide": {
       "type": "coffee-guide",
@@ -15,8 +16,8 @@
           "type": "rich_text",
           "settings": {
             "eyebrow": "",
-            "heading": "Qu'est-ce que le café filtre?",
-            "body": "<p>L'infusion goutte à goutte porte bien son nom : l'eau chaude est répartie uniformément sur un lit de café moulu, puis s'écoule à travers un filtre jusque dans la carafe en dessous. C'est la méthode derrière le classique café américain — doux, équilibré et facile à préparer en pleine carafe.</p><p>Comme la machine contrôle la température et le débit de l'eau pour vous, le café filtre est merveilleusement reproductible. La tasse que vous aimez aujourd'hui aura le même goût demain.</p>",
+            "heading": "What is drip coffee?",
+            "body": "<p>Drip brewing is exactly what it sounds like: hot water is showered evenly over a bed of ground coffee, then drips through a filter into the carafe below. It's the method behind the classic American cup — smooth, balanced, and easy to make by the potful.</p><p>Because the machine controls the water temperature and flow for you, drip coffee is wonderfully repeatable. The cup you love today tastes the same tomorrow.</p>",
             "narrow": false
           }
         },
@@ -25,10 +26,10 @@
           "settings": {
             "image": "shopify://shop_images/caffeinator-drip-pour.jpg",
             "image_position": "left",
-            "eyebrow": "Comment ça fonctionne",
-            "heading": "Réglez et oubliez",
-            "body": "<p>Remplissez le réservoir, ajoutez un filtre, versez votre café moulu et lancez l'infusion. Quelques minutes plus tard, vous avez de quoi remplir d'une seule tasse à une carafe complète de douze tasses.</p><ul><li>Peu de manipulation</li><li>Prépare de grandes quantités d'un coup</li><li>Nettoyage simple et rapide</li></ul>",
-            "button_label": "Magasiner les cafetières à filtre",
+            "eyebrow": "How it works",
+            "heading": "Set it and forget it",
+            "body": "<p>Fill the reservoir, add a filter, scoop in your grounds, and hit brew. A few minutes later you've got anywhere from a single mug to a full twelve-cup carafe.</p><ul><li>Minimal hands-on time</li><li>Brews large batches at once</li><li>Simple, quick cleanup</li></ul>",
+            "button_label": "Shop drip makers",
             "button_link": "shopify://collections/coffee-espresso-makers"
           }
         },
@@ -37,9 +38,9 @@
           "settings": {
             "image": "shopify://shop_images/caffeinator-drip-concrete.jpg",
             "image_position": "right",
-            "eyebrow": "En choisir une",
-            "heading": "Ce qu'il faut rechercher",
-            "body": "<p>Pensez à la quantité que vous buvez et à la façon dont vous aimez la savourer :</p><ul><li><strong>Capacité</strong> — une carafe de 12 tasses pour un ménage occupé, ou un format compact pour les plus petites cuisines.</li><li><strong>Minuterie programmable</strong> — réveillez-vous devant une carafe déjà infusée.</li><li><strong>Carafe thermale</strong> — garde le café chaud pendant des heures sans qu'une plaque chauffante en altère la saveur.</li></ul>",
+            "eyebrow": "Choosing one",
+            "heading": "What to look for",
+            "body": "<p>Think about how much you drink and how you like it served:</p><ul><li><strong>Capacity</strong> — a 12-cup carafe for a busy household, or a compact size for smaller kitchens.</li><li><strong>Programmable timer</strong> — wake up to a pot that's already brewed.</li><li><strong>Thermal carafe</strong> — keeps coffee hot for hours without a hot plate scorching the flavor.</li></ul>",
             "button_label": "",
             "button_link": ""
           }
@@ -47,16 +48,16 @@
         "b4_callout": {
           "type": "callout",
           "settings": {
-            "heading": "Conseil de pro",
-            "body": "<p>Pour la meilleure carafe, utilisez environ deux cuillères à soupe de café pour 180 mL d'eau, et rincez votre machine au vinaigre chaque mois pour empêcher les dépôts minéraux d'atténuer la saveur.</p>"
+            "heading": "Pro tip",
+            "body": "<p>For the best-tasting pot, use about two tablespoons of coffee per six ounces of water, and give your machine a vinegar rinse every month to keep mineral buildup from dulling the flavor.</p>"
           }
         },
         "b5_rich_text": {
           "type": "rich_text",
           "settings": {
             "eyebrow": "",
-            "heading": "À qui ça s'adresse",
-            "body": "<p>Le café filtre est le bon choix si vous buvez votre café à la tasse ou à la carafe, si vous privilégiez la simplicité aux acrobaties de barista et si vous voulez quelque chose que toute la maisonnée peut utiliser sans mode d'emploi. C'est la façon la plus simple de garder tout le monde bien caféiné.</p>",
+            "heading": "Who it's for",
+            "body": "<p>Drip is the right call if you drink coffee by the cup or the pot, value simplicity over barista theatrics, and want something the whole household can use without a lesson. It's the most fuss-free way to keep everyone caffeinated.</p>",
             "narrow": false
           }
         }
@@ -70,12 +71,12 @@
       ],
       "settings": {
         "show_breadcrumb": true,
-        "breadcrumb_parent_title": "Trouvez votre cafetière idéale",
+        "breadcrumb_parent_title": "Find your perfect coffee maker",
         "breadcrumb_parent_link": "shopify://pages/find-your-perfect-coffee-maker",
-        "eyebrow": "Guide du café",
-        "heading": "Le café filtre, expliqué",
+        "eyebrow": "Coffee guide",
+        "heading": "Drip coffee, explained",
         "heading_size": "title-xl tracking-heading",
-        "intro": "<p>Le pilier fiable du monde du café. Les cafetières filtres infusent une pleine carafe de café propre et constant presque sans effort — il suffit d'ajouter la mouture et l'eau, d'appuyer sur un bouton et de vaquer à vos occupations.</p>",
+        "intro": "<p>The trusty workhorse of the coffee world. Drip machines brew a full pot of clean, consistent coffee with almost no effort — just add grounds and water, press a button, and walk away.</p>",
         "padding_top": 48,
         "padding_bottom": 100,
         "divider": false,
@@ -88,50 +89,50 @@
         "q1": {
           "type": "question",
           "settings": {
-            "title": "Comment fonctionne une cafetière à filtre?",
-            "text": "<p>Une cafetière à filtre chauffe l'eau dans un réservoir, puis l'asperge uniformément sur le café moulu retenu dans un panier-filtre. La gravité entraîne le café infusé à travers le filtre jusque dans la carafe située en dessous; il ne vous reste donc qu'à ajouter de l'eau et du café moulu, puis à appuyer sur le bouton de mise en marche.</p>"
+            "title": "How does a drip coffee maker work?",
+            "text": "<p>A drip coffee maker heats water in a reservoir and then evenly showers it over ground coffee held in a filter basket. Gravity pulls the brewed coffee down through the filter and into the carafe below, so all you do is add water, grounds, and press start.</p>"
           }
         },
         "q2": {
           "type": "question",
           "settings": {
-            "title": "Quelle quantité de café et d'eau devrais-je utiliser?",
-            "text": "<p>Un bon point de départ est d'environ 1 à 2 cuillères à soupe de café moulu pour chaque 180 mL d'eau, ce que vous pouvez ajuster selon votre goût. Gardez à l'esprit que la « tasse » indiquée sur une cafetière correspond habituellement à environ 150 à 180 mL plutôt qu'à une grande tasse pleine de 240 mL; mesurez donc votre eau en conséquence.</p>"
+            "title": "How much coffee and water should I use?",
+            "text": "<p>A common starting point is about 1 to 2 tablespoons of ground coffee for every 6 ounces of water, which you can adjust to taste. Keep in mind that a coffee maker's marked 'cup' is usually around 5 to 6 ounces rather than a full 8-ounce mug, so measure your water accordingly.</p>"
           }
         },
         "q3": {
           "type": "question",
           "settings": {
-            "title": "Quelle mouture convient le mieux dans une cafetière à filtre?",
-            "text": "<p>Une mouture moyenne, à peu près de la texture du sable, convient le mieux à la plupart des cafetières à filtre automatiques. Une mouture trop fine peut boucher le filtre et causer de l'amertume, tandis qu'une mouture trop grossière peut donner un café fade et aqueux.</p>"
+            "title": "What grind size works best in a drip coffee maker?",
+            "text": "<p>A medium grind, roughly the texture of sand, works best for most automatic drip machines. Too fine a grind can clog the filter and cause bitterness, while too coarse a grind can make the coffee taste weak and watery.</p>"
           }
         },
         "q4": {
           "type": "question",
           "settings": {
-            "title": "À quelle fréquence devrais-je nettoyer et détartrer ma cafetière?",
-            "text": "<p>Lavez la carafe, le panier-filtre et le couvercle après chaque utilisation, et détartrez la machine environ une fois par mois si vous infusez tous les jours, ou plus souvent si votre eau est dure. Vous pouvez détartrer avec une solution de détartrage commerciale ou un mélange à parts égales de vinaigre blanc et d'eau, suivi de deux cycles d'eau fraîche pour rincer.</p>"
+            "title": "How often should I clean and descale my coffee maker?",
+            "text": "<p>Wash the carafe, filter basket, and lid after each use, and descale the machine roughly once a month if you brew daily, or more often with hard water. You can descale with a commercial descaling solution or a mix of equal parts white vinegar and water, followed by two cycles of fresh water to rinse.</p>"
           }
         },
         "q5": {
           "type": "question",
           "settings": {
-            "title": "Devrais-je utiliser des filtres en papier ou un filtre réutilisable?",
-            "text": "<p>Les filtres en papier retiennent plus d'huiles et de fines particules de mouture, ce qui donne une tasse plus nette et plus vive, et ils facilitent le nettoyage. Les filtres en maille réutilisables réduisent le gaspillage et laissent passer plus d'huiles pour un corps plus riche, alors le meilleur choix dépend vraiment de vos préférences en matière de goût et de commodité.</p>"
+            "title": "Should I use paper filters or a reusable filter?",
+            "text": "<p>Paper filters trap more oils and fine grounds, giving a cleaner, brighter cup, and they make cleanup easy. Reusable mesh filters cut down on waste and let more oils through for a fuller body, so the best choice really comes down to your taste and convenience preferences.</p>"
           }
         },
         "q6": {
           "type": "question",
           "settings": {
-            "title": "Qu'est-ce qu'une minuterie programmable et comment l'utiliser?",
-            "text": "<p>Une minuterie programmable vous permet de remplir la cafetière de café et d'eau la veille et de régler l'heure à laquelle la machine commencera à infuser automatiquement. C'est une fonction populaire pour se réveiller avec du café frais, bien que, pour une meilleure saveur, il demeure préférable d'utiliser du café fraîchement moulu peu avant l'infusion.</p>"
+            "title": "What is a programmable timer and how do I use it?",
+            "text": "<p>A programmable timer lets you load coffee and water the night before and set a time for the machine to start brewing automatically. It's a popular feature for waking up to fresh coffee, though for the best flavor it's still a good idea to use freshly ground coffee close to brew time.</p>"
           }
         },
         "q7": {
           "type": "question",
           "settings": {
-            "title": "Vaut-il mieux une carafe thermique ou une carafe en verre?",
-            "text": "<p>Une carafe en verre repose sur une plaque chauffante pour rester chaude, ce qui est idéal si vous terminez le café rapidement, mais un maintien au chaud prolongé peut finir par rendre le café amer. Une carafe thermique est isolée et garde le café chaud pendant des heures sans source de chaleur, ce qui aide à préserver la saveur d'origine; c'est donc une belle option si vous sirotez lentement tout au long de la matinée.</p>"
+            "title": "Is a thermal carafe or a glass carafe better?",
+            "text": "<p>A glass carafe sits on a warming plate to stay hot, which is great if you finish the pot quickly, but extended warming can eventually make coffee taste bitter. A thermal carafe is insulated and keeps coffee hot for hours without a heat source, helping preserve the original flavor, so it's a nice option if you sip slowly throughout the morning.</p>"
           }
         }
       },
@@ -146,7 +147,7 @@
       ],
       "settings": {
         "style": "with-border",
-        "heading": "Questions fréquentes",
+        "heading": "Frequently asked questions",
         "heading_size": "title-md",
         "heading_tag": "h2",
         "narrow": true,
@@ -161,9 +162,9 @@
         "cta": {
           "type": "cta",
           "settings": {
-            "heading": "Prêt à trouver la vôtre?",
-            "body": "<p>Parcourez notre gamme de cafetières à filtre, ou faites le questionnaire et laissez-nous vous jumeler avec la machine parfaite.</p>",
-            "button_label": "Magasiner toutes les cafetières",
+            "heading": "Ready to find yours?",
+            "body": "<p>Browse our drip lineup, or take the quiz and let us match you to the perfect machine.</p>",
+            "button_label": "Shop all coffee makers",
             "button_link": "shopify://collections/coffee-espresso-makers",
             "button_style": "primary"
           }

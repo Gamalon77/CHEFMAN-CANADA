@@ -84,7 +84,7 @@
         "heading_W6EN68": {
           "type": "heading",
           "settings": {
-            "heading": "Procurez-vous le livre de recettes",
+            "heading": "Get the Cookbook",
             "heading_size": "title-md",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -94,7 +94,7 @@
         "text_GnYtHJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Téléchargez le livre de cuisine numérique pour découvrir des recettes créées par des chefs, de l'inspiration culinaire et bien plus.</p>",
+            "text": "<p>Download the digital cookbook to explore chef-crafted recipes, culinary inspiration, and more.<\/p>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -106,7 +106,7 @@
         "button_QU37Bj": {
           "type": "button",
           "settings": {
-            "button_label": "Télécharger maintenant",
+            "button_label": "Download Now",
             "button_link": "{{ page.metafields.custom.cookbook_download_link.value }}",
             "button_style": "primary",
             "button_size": "md",

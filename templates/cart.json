@@ -18,7 +18,7 @@
           "type": "cart_note",
           "disabled": true,
           "settings": {
-            "heading": "Ajouter une note à votre commande"
+            "heading": "Add a note to your order"
           }
         },
         "buttons": {
@@ -57,7 +57,7 @@
         "carousel_on_desktop": true,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "heading": "Vous aimerez peut-être aussi",
+        "heading": "You may also like",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",

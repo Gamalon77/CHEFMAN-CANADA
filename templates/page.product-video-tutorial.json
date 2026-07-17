@@ -68,7 +68,7 @@
       "settings": {
         "transparent_header": false,
         "video": "{{ page.metafields.custom.video.value }}",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "enable_video_autoplay": false,
         "enable_video_looping": false,
@@ -87,7 +87,7 @@
         "button_QU37Bj": {
           "type": "button",
           "settings": {
-            "button_label": "Regarder sur YouTube",
+            "button_label": "Watch on YouTube",
             "button_link": "{{ page.metafields.custom.cookbook_download_link.value }}",
             "button_style": "primary",
             "button_size": "md",

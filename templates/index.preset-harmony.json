@@ -8,10 +8,10 @@
           "settings": {
             "image": "",
             "image_mobile": "",
-            "heading": "DIAPOSITIVE IMAGE 1",
+            "heading": "IMAGE SLIDE 1",
             "heading_size": "title-md",
             "heading_tag": "h2",
-            "button_label": "Magasiner maintenant",
+            "button_label": "Shop Now",
             "button_link": "",
             "button_style": "primary",
             "button_icon": false
@@ -22,10 +22,10 @@
           "settings": {
             "image": "",
             "image_mobile": "",
-            "heading": "DIAPOSITIVE IMAGE 2",
+            "heading": "IMAGE SLIDE 2",
             "heading_size": "title-md",
             "heading_tag": "h2",
-            "button_label": "Magasiner maintenant",
+            "button_label": "Shop Now",
             "button_link": "",
             "button_style": "primary",
             "button_icon": false
@@ -34,13 +34,13 @@
         "slide-3": {
           "type": "video",
           "settings": {
-            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
             "description": "",
             "video_url_mobile": "",
-            "heading": "DIAPOSITIVE VIDÉO",
+            "heading": "VIDEO SLIDE",
             "heading_size": "title-md",
             "heading_tag": "h2",
-            "button_label": "Magasiner maintenant",
+            "button_label": "Shop Now",
             "button_link": "",
             "button_style": "primary",
             "button_icon": false
@@ -81,7 +81,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Utilisez ce texte pour communiquer de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.<br/><br/>Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique. Communiquez de l'information sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue aux clients dans votre boutique.</p>",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br\/><br\/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -97,13 +97,13 @@
       "settings": {
         "text_alignment": "left",
         "text_alignment_mobile": "left",
-        "heading": "Parlez de votre <em>marque</em>",
+        "heading": "Talk about your <em>brand<\/em>",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
         "subheading": "",
         "description": "",
-        "button_label": "Notre histoire",
+        "button_label": "Our Story",
         "button_link": "",
         "button_icon": true,
         "highlighted_text": "scribble",
@@ -131,8 +131,8 @@
           "settings": {
             "collection": "",
             "image": "",
-            "title": "Tous les produits",
-            "description": "Découvrez tous nos produits",
+            "title": "All products",
+            "description": "Check out all our products",
             "overlay_content": true,
             "color_text": "#ffffff",
             "color_overlay": "#000000",
@@ -145,7 +145,7 @@
             "collection": "",
             "image": "",
             "title": "Collection 1",
-            "description": "Description de la collection",
+            "description": "Collection description",
             "overlay_content": false,
             "color_text": "#ffffff",
             "color_overlay": "#000000",
@@ -158,7 +158,7 @@
             "collection": "",
             "image": "",
             "title": "Collection 2",
-            "description": "Description de la collection",
+            "description": "Collection description",
             "overlay_content": false,
             "color_text": "#ffffff",
             "color_overlay": "#000000",
@@ -171,7 +171,7 @@
             "collection": "",
             "image": "",
             "title": "Collection 3",
-            "description": "Description de la collection",
+            "description": "Collection description",
             "overlay_content": false,
             "color_text": "#ffffff",
             "color_overlay": "#000000",
@@ -184,7 +184,7 @@
             "collection": "",
             "image": "",
             "title": "Collection 4",
-            "description": "Description de la collection",
+            "description": "Collection description",
             "overlay_content": false,
             "color_text": "#ffffff",
             "color_overlay": "#000000",
@@ -197,7 +197,7 @@
             "collection": "",
             "image": "",
             "title": "Collection 5",
-            "description": "Description de la collection",
+            "description": "Collection description",
             "overlay_content": false,
             "color_text": "#ffffff",
             "color_overlay": "#000000",
@@ -251,7 +251,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Vidéo avec texte en surimpression",
+            "heading": "Video with text overlay",
             "heading_size": "title-md",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -261,7 +261,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Donnez aux clients des détails sur la ou les images de la bannière ou le contenu du modèle.</p>",
+            "text": "<p>Give customers details about the banner image(s) or content on the template.<\/p>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -273,7 +273,7 @@
         "button": {
           "type": "button",
           "settings": {
-            "button_label": "Magasiner maintenant",
+            "button_label": "Shop Now",
             "button_link": "",
             "button_style": "primary",
             "button_size": "md",
@@ -288,7 +288,7 @@
       ],
       "settings": {
         "transparent_header": false,
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "enable_video_autoplay": true,
         "enable_video_looping": true,
@@ -342,8 +342,8 @@
         "countdown": {
           "type": "countdown",
           "settings": {
-            "heading": "Faites vite!",
-            "subheading": "La vente se termine dans :",
+            "heading": "Hurry up!",
+            "subheading": "Sale end in:",
             "color_text": "#e11d48",
             "color_background": "#fff1f2",
             "gradient_background": ""
@@ -382,9 +382,9 @@
         "share": {
           "type": "share",
           "settings": {
-            "share_label": "Partager",
+            "share_label": "Share",
             "show_help_desk": true,
-            "help_label": "Besoin d'aide?",
+            "help_label": "Need help?",
             "help_page": ""
           }
         },
@@ -395,7 +395,7 @@
         "spinning_text": {
           "type": "spinning_text",
           "settings": {
-            "text": "Produit en vedette"
+            "text": "Featured product"
           }
         }
       },
@@ -442,7 +442,7 @@
           "settings": {
             "image": "",
             "subheading": "",
-            "heading": "Image avant",
+            "heading": "Before image",
             "content_position": "end",
             "color_text": "#ffffff"
           }
@@ -452,7 +452,7 @@
           "settings": {
             "image": "",
             "subheading": "",
-            "heading": "Image après",
+            "heading": "After image",
             "content_position": "end",
             "color_text": "#ffffff"
           }
@@ -466,11 +466,11 @@
         "layout": "horizontal",
         "image_height": "750px",
         "image_height_mobile": "300px",
-        "heading": "<em>Comparaison d'images</em>",
+        "heading": "<em>Image comparison<\/em>",
         "heading_size": "title-md",
         "heading_alignment": "text-center md:items-center",
         "heading_tag": "h2",
-        "subheading": "Ajouter un slogan",
+        "subheading": "Add a tagline",
         "description": "",
         "button_label": "",
         "button_link": "",
@@ -497,13 +497,13 @@
       "settings": {
         "text_alignment": "left",
         "text_alignment_mobile": "left",
-        "heading": "Composez votre <em>ensemble</em>",
+        "heading": "Build your <em>Bundle<\/em>",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_width": "large",
         "heading_tag": "h2",
         "subheading": "",
-        "description": "<p>Le choix vous appartient. Grâce à notre créateur d'ensembles, vous pouvez sélectionner n'importe quelle combinaison parmi notre gamme de produits. La façon la plus simple de plaire à tout le monde.</p>",
+        "description": "<p>The choice is yours. With our bundle builder, you can select any combination from our range of products. The easiest way to keep everyone happy.<\/p>",
         "button_label": "",
         "button_link": "",
         "button_external": false,
@@ -548,12 +548,12 @@
         "picker_type": "button",
         "enable_color_swatches": true,
         "color_swatch_type": "color",
-        "heading": "Votre ensemble",
+        "heading": "Your bundle",
         "heading_size": "lg:text-5xl text-2xl",
         "heading_alignment": "text-left",
         "heading_tag": "h2",
         "subheading": "",
-        "description": "<p>Ajoutez au moins 3 produits pour continuer et économisez 30 %</p>",
+        "description": "<p>Add at least 3 products to proceed and Save 30%<\/p>",
         "highlighted_text": "none",
         "highlighted_scribble": "circle",
         "color_text": "",
@@ -577,7 +577,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<em><strong>Livraison et retours gratuits</strong></em>",
+            "text": "<em><strong>Free shipping and returns<\/strong><\/em>",
             "text_size": 160,
             "text_font": "body",
             "highlighted_text": "stencil",
@@ -609,7 +609,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Compte à rebours</p>",
+            "text": "<p>Countdown timer<\/p>",
             "text_size": "subtext-custom",
             "text_max_size": 32,
             "text_font": "body",
@@ -641,7 +641,7 @@
         "button": {
           "type": "button",
           "settings": {
-            "button_label": "Magasiner maintenant",
+            "button_label": "Shop Now",
             "button_link": "",
             "button_style": "secondary",
             "button_size": "md",
@@ -727,11 +727,11 @@
       ],
       "settings": {
         "image": "",
-        "heading": "Magasinez le <em>style</em>",
+        "heading": "Shop the <em>look<\/em>",
         "heading_size": "title-sm",
         "heading_alignment": "text-center md:items-center",
         "heading_tag": "h2",
-        "subheading": "Ajouter un slogan",
+        "subheading": "Add a tagline",
         "description": "",
         "button_label": "",
         "button_link": "",
@@ -762,8 +762,8 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>Ajoutez des avis et des témoignages de clients pour mettre en valeur les clients satisfaits de votre boutique.</p>",
-            "author": "Nom de l'auteur",
+            "text": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "author": "Author's name",
             "image": "",
             "image_ratio": "rounded",
             "highlighted_text": "none",
@@ -774,8 +774,8 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>Ajoutez des avis et des témoignages de clients pour mettre en valeur les clients satisfaits de votre boutique.</p>",
-            "author": "Nom de l'auteur",
+            "text": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "author": "Author's name",
             "image": "",
             "image_ratio": "rounded",
             "highlighted_text": "none",
@@ -786,8 +786,8 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>Ajoutez des avis et des témoignages de clients pour mettre en valeur les clients satisfaits de votre boutique.</p>",
-            "author": "Nom de l'auteur",
+            "text": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "author": "Author's name",
             "image": "",
             "image_ratio": "rounded",
             "highlighted_text": "none",
@@ -860,7 +860,7 @@
         "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "heading": "Meilleurs vendeurs",
+        "heading": "Best Sellers",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
@@ -972,7 +972,7 @@
         "show_comments": true,
         "show_author": false,
         "show_excerpt": true,
-        "heading": "Derniers articles",
+        "heading": "Latest Stories",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",

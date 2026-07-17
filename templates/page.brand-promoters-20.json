@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "main-page": {
       "type": "main-page",
@@ -62,7 +63,7 @@
         "subheading_pkfijP": {
           "type": "subheading",
           "settings": {
-            "subheading": "Vu dans les médias",
+            "subheading": "As Seen On",
             "subheading_size": "subtitle-lg",
             "secondary_color": false
           }
@@ -239,9 +240,9 @@
           "type": "share",
           "disabled": true,
           "settings": {
-            "share_label": "Partager",
+            "share_label": "Share",
             "show_help_desk": true,
-            "help_label": "Besoin d'aide?",
+            "help_label": "Need help?",
             "help_page": ""
           }
         },
@@ -417,9 +418,9 @@
           "type": "share",
           "disabled": true,
           "settings": {
-            "share_label": "Partager",
+            "share_label": "Share",
             "show_help_desk": true,
-            "help_label": "Besoin d'aide?",
+            "help_label": "Need help?",
             "help_page": ""
           }
         },
@@ -519,7 +520,7 @@
         "heading_W6EN68": {
           "type": "heading",
           "settings": {
-            "heading": "Télécharger le guide d'utilisation",
+            "heading": "Download the User Guide",
             "heading_size": "title-sm",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -529,7 +530,7 @@
         "text_GnYtHJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Découvrez des astuces rapides, la configuration initiale, et plus encore</p>",
+            "text": "<p>Explore quick tips, initial setup, and more</p>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -541,7 +542,7 @@
         "button_QU37Bj": {
           "type": "button",
           "settings": {
-            "button_label": "Télécharger maintenant",
+            "button_label": "Download Now",
             "button_link": "{{ page.metafields.custom.user_guide.value }}",
             "button_style": "primary",
             "button_size": "md",
@@ -651,9 +652,9 @@
           "type": "share",
           "disabled": true,
           "settings": {
-            "share_label": "Partager",
+            "share_label": "Share",
             "show_help_desk": true,
-            "help_label": "Besoin d'aide?",
+            "help_label": "Need help?",
             "help_page": ""
           }
         },

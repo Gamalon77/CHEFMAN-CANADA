@@ -21,7 +21,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Nous joindre",
+            "heading": "Contact Us",
             "heading_size": "title-xl tracking-heading",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -31,7 +31,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Nous aimerions avoir de vos nouvelles. Notre équipe est là pour vous aider. <br/></p><p>Courriel : <a href=\"mailto:support@chefman.com\" target=\"_blank\" title=\"mailto:support@chefman.com\"><strong>support@chefman.com</strong></a></p><p>Appel sans frais : <a href=\"tel:1-888-315-6553\" title=\"tel:1-888-315-6553\">1-888-315-6553</a></p><p>Lun – jeu : 09 h 00 – 17 h 00 (HNE)<br/>Ven : 09 h 00 - 14 h 00 (HNE)<br/>Sam et dim : Fermé</p>",
+            "text": "<p>We'd love to hear from you. Our team is here to help. <br\/><\/p><p>Email: <a href=\"mailto:support@chefman.com\" target=\"_blank\" title=\"mailto:support@chefman.com\"><strong>support@chefman.com<\/strong><\/a><\/p><p>Call Toll Free: <a href=\"tel:1-888-315-6553\" title=\"tel:1-888-315-6553\">1-888-315-6553<\/a><\/p><p>Mon – Thurs: 09:00 – 17:00 (EST)<br\/>Fri: 09:00 - 14:00 (EST)<br\/>Sat & Sun: Closed<\/p>",
             "text_size": "subtext-lg",
             "text_max_size": 32,
             "text_font": "body",
@@ -86,9 +86,9 @@
             "text_alignment": "center",
             "text_alignment_mobile": "left",
             "image_ratio": "adapt",
-            "heading": "Courriel",
+            "heading": "Email",
             "heading_size": "text-lg-2xl",
-            "text": "<p><a href=\"mailto:support@chefman.com\" target=\"_blank\" title=\"mailto:support@chefman.com\">support@chefman.com</a></p>",
+            "text": "<p><a href=\"mailto:support@chefman.com\" target=\"_blank\" title=\"mailto:support@chefman.com\">support@chefman.com<\/a><\/p>",
             "button_label": "",
             "button_link": "",
             "button_style": "secondary",
@@ -105,9 +105,9 @@
             "text_alignment": "center",
             "text_alignment_mobile": "left",
             "image_ratio": "adapt",
-            "heading": "Appelez-nous sans frais",
+            "heading": "Call us toll free",
             "heading_size": "text-lg-2xl",
-            "text": "<p><a href=\"tel:1-888-315-6553\" title=\"tel:1-888-315-6553\">1-888-315-6553</a></p>",
+            "text": "<p><a href=\"tel:1-888-315-6553\" title=\"tel:1-888-315-6553\">1-888-315-6553<\/a><\/p>",
             "button_label": "",
             "button_link": "",
             "button_style": "secondary",
@@ -161,12 +161,12 @@
       "name": "t:sections.image-with-text-overlay.presets.name",
       "settings": {
         "transparent_header": false,
-        "image": "shopify://shop_images/performance-series-banner2.jpg",
+        "image": "shopify:\/\/shop_images\/performance-series-banner2.jpg",
         "image_height": "450px",
         "content_width": "small",
         "content_position": "md:items-end md:justify-start",
         "text_alignment": "left",
-        "image_mobile": "shopify://shop_images/performance-series-collection.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/performance-series-collection.jpg",
         "image_height_mobile": "auto",
         "content_position_mobile": "items-end justify-start",
         "text_alignment_mobile": "left",
@@ -193,7 +193,7 @@
         "heading_fexfJK": {
           "type": "heading",
           "settings": {
-            "heading": "Documentation du produit",
+            "heading": "Product Documentation",
             "heading_size": "title-md",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -203,7 +203,7 @@
         "text_zwb499": {
           "type": "text",
           "settings": {
-            "text": "<p>Cliquez ci-dessous pour trouver la documentation de votre produit</p>",
+            "text": "<p>Click below to find product documentation for your product<\/p>",
             "text_size": "subtext-lg",
             "text_max_size": 32,
             "text_font": "body",
@@ -215,8 +215,8 @@
         "button_98D6Qp": {
           "type": "button",
           "settings": {
-            "button_label": "Voir la documentation",
-            "button_link": "shopify://pages/document-library-catalog",
+            "button_label": "View Documentation",
+            "button_link": "shopify:\/\/pages\/document-library-catalog",
             "button_style": "primary",
             "button_size": "md",
             "button_external": true,

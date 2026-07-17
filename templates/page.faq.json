@@ -20,7 +20,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "FAQ",
+            "heading": "FAQ's",
             "heading_size": "title-xl tracking-heading",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -30,7 +30,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Bienvenue dans notre FAQ, nous sommes très heureux de vous accueillir ici et de vous compter parmi nos clients. <br/>Nous avons tenté de répondre aux questions les plus courantes.</p>",
+            "text": "<p>Welcome to our FAQ, we are so happy to have you here and as a client. <br\/>We have tried to answer the most common questions.<\/p>",
             "text_size": "subtext-md",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -85,8 +85,8 @@
         "rich-text-1": {
           "type": "rich-text",
           "settings": {
-            "heading": "Livraison et retours",
-            "text": "<p>Voici quelques questions fréquentes concernant l'expédition, les retours et les échanges</p>",
+            "heading": "Shipping & Returns",
+            "text": "<p>Below are some common questions about shipping, returns, and exchanges<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -94,8 +94,8 @@
         "question-1": {
           "type": "question",
           "settings": {
-            "title": "Question fréquente",
-            "text": "<p>Utilisez ce texte pour répondre aux questions de vos clients avec le plus de détails possible.</p>",
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -103,8 +103,8 @@
         "question-2": {
           "type": "question",
           "settings": {
-            "title": "Question fréquente",
-            "text": "<p>Utilisez ce texte pour répondre aux questions de vos clients avec le plus de détails possible.</p>",
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -112,8 +112,8 @@
         "question-4": {
           "type": "question",
           "settings": {
-            "title": "Question fréquente",
-            "text": "<p>Utilisez ce texte pour répondre aux questions de vos clients avec le plus de détails possible.</p>",
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -121,8 +121,8 @@
         "question-5": {
           "type": "question",
           "settings": {
-            "title": "Question fréquente",
-            "text": "<p>Utilisez ce texte pour répondre aux questions de vos clients avec le plus de détails possible.</p>",
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -130,8 +130,8 @@
         "rich-text-2": {
           "type": "rich-text",
           "settings": {
-            "heading": "Commandes",
-            "text": "<p>Voici quelques questions fréquentes concernant les commandes</p>",
+            "heading": "Orders",
+            "text": "<p>Below are some of are common questions about orders<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -139,8 +139,8 @@
         "question-6": {
           "type": "question",
           "settings": {
-            "title": "Question fréquente",
-            "text": "<p>Utilisez ce texte pour répondre aux questions de vos clients avec le plus de détails possible.</p>",
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -148,8 +148,8 @@
         "question-7": {
           "type": "question",
           "settings": {
-            "title": "Question fréquente",
-            "text": "<p>Utilisez ce texte pour répondre aux questions de vos clients avec le plus de détails possible.</p>",
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -157,8 +157,8 @@
         "question-8": {
           "type": "question",
           "settings": {
-            "title": "Question fréquente",
-            "text": "<p>Utilisez ce texte pour répondre aux questions de vos clients avec le plus de détails possible.</p>",
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -166,8 +166,8 @@
         "question-9": {
           "type": "question",
           "settings": {
-            "title": "Question fréquente",
-            "text": "<p>Utilisez ce texte pour répondre aux questions de vos clients avec le plus de détails possible.</p>",
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -175,8 +175,8 @@
         "rich-text-3": {
           "type": "rich-text",
           "settings": {
-            "heading": "Produits",
-            "text": "<p>Voici quelques questions fréquentes au sujet de nos produits</p>",
+            "heading": "Products",
+            "text": "<p>Below are some common questions about our products<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -184,8 +184,8 @@
         "question-10": {
           "type": "question",
           "settings": {
-            "title": "Question fréquente",
-            "text": "<p>Utilisez ce texte pour répondre aux questions de vos clients avec le plus de détails possible.</p>",
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -193,8 +193,8 @@
         "question-11": {
           "type": "question",
           "settings": {
-            "title": "Question fréquente",
-            "text": "<p>Utilisez ce texte pour répondre aux questions de vos clients avec le plus de détails possible.</p>",
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -202,8 +202,8 @@
         "question-12": {
           "type": "question",
           "settings": {
-            "title": "Question fréquente",
-            "text": "<p>Utilisez ce texte pour répondre aux questions de vos clients avec le plus de détails possible.</p>",
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -211,8 +211,8 @@
         "contact": {
           "type": "contact",
           "settings": {
-            "heading": "Vous n'avez pas trouvé votre réponse?",
-            "text": "<p>N'hésitez pas à communiquer avec nous</p>",
+            "heading": "Didn’t find your answer?",
+            "text": "<p>Don't hestitate to contact us<\/p>",
             "show_phone": false,
             "avatar_height": 60,
             "highlighted_text": "none",

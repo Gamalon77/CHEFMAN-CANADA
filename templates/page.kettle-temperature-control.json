@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "kettle_detail": {
       "type": "kettle-detail",
@@ -14,111 +15,111 @@
         "why_1": {
           "type": "reason",
           "settings": {
-            "title": "Protégez les saveurs délicates",
-            "text": "L'eau bouillante (100 °C) brûle les thés verts, blancs et oolong et en fait ressortir l'amertume. Régler une température plus basse garde ces thés doux, sucrés et aromatiques."
+            "title": "Protect delicate flavor",
+            "text": "Boiling water (212°F) scorches green, white, and oolong tea and draws out bitterness. Dialing in a lower temperature keeps those teas smooth, sweet, and aromatic."
           }
         },
         "why_2": {
           "type": "reason",
           "settings": {
-            "title": "Réglez la température exacte",
-            "text": "Choisissez parmi 5 températures préréglées adaptées à différents thés sur les modèles à préréglages, ou optez pour des bouilloires numériques avancées offrant jusqu'à 7 préréglages pour un contrôle encore plus précis."
+            "title": "Dial in the exact temperature",
+            "text": "Choose from 5 preset temperatures matched to different teas on preset models, or step up to advanced digital kettles with up to 7 presets for even finer control."
           }
         },
         "why_3": {
           "type": "reason",
           "settings": {
-            "title": "Un meilleur café filtre",
-            "text": "Le café filtre et le café à la cafetière à piston révèlent leur meilleur goût lorsqu'ils sont infusés autour de 91–96 °C, juste sous le point d'ébullition. Le contrôle de la température vous permet d'atteindre cette plage à tout coup, pour une extraction plus propre et plus uniforme."
+            "title": "Better pour-over coffee",
+            "text": "Pour-over and French press coffee taste best brewed around 195–205°F, just below boiling. Temperature control lets you hit that window every time for a cleaner, more even extraction."
           }
         },
         "why_4": {
           "type": "reason",
           "settings": {
-            "title": "Elle reste prête quand vous l'êtes",
-            "text": "De nombreux modèles gardent votre eau chaude jusqu'à une heure après le chauffage, de sorte que votre deuxième et votre troisième tasse sont prêtes sans attente ni nouvelle ébullition."
+            "title": "It stays ready when you are",
+            "text": "Many models keep your water hot for up to an hour after it heats, so your second and third cup are ready without waiting or re-boiling."
           }
         },
         "feat_1": {
           "type": "feature",
           "settings": {
             "icon": "🌡️",
-            "title": "Températures préréglées et variables",
-            "text": "Choisissez parmi 5 températures préréglées adaptées à différents thés, ou optez pour un réglage variable — les modèles numériques avancés offrant jusqu'à 7 préréglages."
+            "title": "Preset & variable temps",
+            "text": "Pick from 5 preset temperatures matched to different teas, or choose a variable setting — with advanced digital models offering up to 7 presets."
           }
         },
         "feat_2": {
           "type": "feature",
           "settings": {
             "icon": "⏲️",
-            "title": "Minuterie d'infusion intégrée",
-            "text": "Certains modèles numériques avancés comprennent une minuterie d'infusion, de sorte que votre thé infuse exactement le temps requis — sans deviner et sans surinfusion."
+            "title": "Built-in steep timer",
+            "text": "Select advanced digital models include a steep timer, so your tea brews for exactly the right time — no guessing, no over-steeping."
           }
         },
         "feat_3": {
           "type": "feature",
           "settings": {
             "icon": "♨️",
-            "title": "Fonction de maintien au chaud",
-            "text": "De nombreuses bouilloires à contrôle de température maintiennent la température réglée jusqu'à une heure après le chauffage, de sorte que l'eau chaude est prête quand vous l'êtes."
+            "title": "Keep-warm function",
+            "text": "Many temperature-control kettles hold your set temperature for up to an hour after heating, so hot water is ready whenever you are."
           }
         },
         "feat_4": {
           "type": "feature",
           "settings": {
             "icon": "💡",
-            "title": "Voyants DEL d'état à code de couleur",
-            "text": "Des voyants tricolores indiquent d'un coup d'œil la veille, le chauffage et l'état prêt, et certains modèles émettent un bip dès que votre eau atteint sa température cible."
+            "title": "Color-coded status LEDs",
+            "text": "Tricolor lights show standby, heating, and ready at a glance, and some models beep the moment your water hits its target temperature."
           }
         },
         "feat_5": {
           "type": "feature",
           "settings": {
             "icon": "🫖",
-            "title": "Infuseur à thé en option",
-            "text": "Certains modèles comprennent un panier-infuseur amovible, ce qui vous permet de chauffer à la température parfaite et d'infuser du thé en feuilles directement dans la bouilloire."
+            "title": "Optional tea infuser",
+            "text": "Some models include a removable infuser basket, so you can heat to the perfect temperature and steep loose-leaf right in the kettle."
           }
         },
         "feat_6": {
           "type": "feature",
           "settings": {
             "icon": "🛡️",
-            "title": "Sécurité intégrée",
-            "text": "L'arrêt automatique, la protection contre l'ébullition à sec, une base pivotante sans fil à 360° et l'approbation cETL sont de série, le tout soutenu par une garantie Chefman de 1 an."
+            "title": "Built-in safety",
+            "text": "Automatic shut-off, boil-dry protection, a 360° cordless swivel base, and cETL approval come standard, backed by a 1-year Chefman assurance."
           }
         },
         "note_1": {
           "type": "note",
           "settings": {
-            "title": "Les formats et le modèle phare",
-            "text": "La plupart des modèles à contrôle de température font de 1,7 à 1,8 L, y compris la bouilloire en verre sans fil de 1,8 L — une excellente polyvalente pour un foyer amateur de thé, avec 5 préréglages de 71 °C à 100 °C et un maintien au chaud jusqu'à une heure. Les options numériques vont d'une version compacte de 1,2 L jusqu'à une très grande de 2,0 L."
+            "title": "Sizes & the flagship",
+            "text": "Most temperature-control models are 1.7–1.8L, including the 1.8L Cordless Glass Kettle — a great all-rounder for a tea-loving household with 5 presets from 160°F to 212°F and keep-warm for up to an hour. Digital options range from a compact 1.2L up to an extra-large 2.0L."
           }
         },
         "note_2": {
           "type": "note",
           "settings": {
-            "title": "Aide-mémoire des températures",
-            "text": "À titre indicatif : thé vert ~77–82 °C, thé blanc ~79–85 °C, oolong ~85–93 °C, thés noirs et tisanes ~96–100 °C (ébullition complète), et café filtre ou à piston ~91–96 °C."
+            "title": "Temperature cheat-sheet",
+            "text": "As a guide: green tea ~170–180°F, white tea ~175–185°F, oolong ~185–200°F, black and herbal teas ~205–212°F (full boil), and pour-over or French press coffee ~195–205°F."
           }
         },
         "note_3": {
           "type": "note",
           "settings": {
-            "title": "Verre, acier ou surface froide au toucher",
-            "text": "Le contrôle de la température est offert en verre borosilicate résistant aux taches (regardez l'eau chauffer et vérifiez le niveau), en acier inoxydable durable et en verre à double paroi qui reste froid au toucher même pendant le chauffage."
+            "title": "Glass, steel, or cool-touch",
+            "text": "Temperature control comes in stain-resistant borosilicate glass (watch it heat and check the level), durable stainless steel, and double-wall glass that stays cool to the touch even while heating."
           }
         },
         "note_4": {
           "type": "note",
           "settings": {
-            "title": "Entretien et détartrage",
-            "text": "Si vous avez de l'eau dure, détartrez tous les mois : remplissez avec un mélange 50/50 d'eau et de vinaigre blanc, faites bouillir, laissez reposer de 15 à 20 minutes, puis rincez bien. Lavez le corps et l'infuseur à la main, et ne submergez jamais la base électrique."
+            "title": "Care & descaling",
+            "text": "If you have hard water, descale monthly: fill with a 50/50 mix of water and white vinegar, boil, let it sit 15–20 minutes, then rinse well. Hand-wash the body and infuser, and never submerge the electrical base."
           }
         },
         "rel_1": {
           "type": "related",
           "settings": {
-            "label": "Tous les types de bouilloires",
+            "label": "All kettle types",
             "link": "/pages/find-your-perfect-electric-kettle-chefman"
           }
         },
@@ -132,78 +133,78 @@
         "rel_3": {
           "type": "related",
           "settings": {
-            "label": "Infuseur à thé",
+            "label": "Tea Infuser",
             "link": "/pages/tea-infuser-electric-kettles-chefman"
           }
         },
         "rel_4": {
           "type": "related",
           "settings": {
-            "label": "Maintien au chaud",
+            "label": "Keep-Warm",
             "link": "/pages/keep-warm-electric-kettles-chefman"
           }
         },
         "rel_5": {
           "type": "related",
           "settings": {
-            "label": "Col de cygne",
+            "label": "Gooseneck",
             "link": "/pages/gooseneck-electric-kettles-chefman"
           }
         },
         "rel_6": {
           "type": "related",
           "settings": {
-            "label": "Acier inoxydable",
+            "label": "Stainless Steel",
             "link": "/pages/stainless-steel-electric-kettles-chefman"
           }
         },
         "faq_1": {
           "type": "faq",
           "settings": {
-            "question": "Quelle température devrais-je utiliser pour le thé vert?",
-            "answer": "<p>Le thé vert s'infuse idéalement autour de 77–82 °C. L'eau bouillante à 100 °C brûle les feuilles délicates et les rend amères; une bouilloire à contrôle de température vous permet donc de régler la chaleur plus basse qui garde le thé vert doux et sucré.</p>"
+            "question": "What temperature should I use for green tea?",
+            "answer": "<p>Green tea is best brewed around 170–180°F. Boiling water at 212°F scorches the delicate leaves and makes them bitter, so a temperature-control kettle lets you dial in the lower heat that keeps green tea smooth and sweet.</p>"
           }
         },
         "faq_2": {
           "type": "faq",
           "settings": {
-            "question": "Ai-je vraiment besoin d'une bouilloire à contrôle de température?",
-            "answer": "<p>Si vous ne buvez que du thé noir, du café instantané ou que vous avez simplement besoin d'eau chaude rapidement, une bouilloire à ébullition rapide suffit amplement. Mais si vous appréciez le thé vert, blanc ou oolong — ou que vous préparez du café filtre à la main — le contrôle de température fait une vraie différence de saveur, puisque ces boissons sont meilleures en dessous de la pleine ébullition.</p>"
+            "question": "Do I really need a temperature-control kettle?",
+            "answer": "<p>If you only drink black tea, instant coffee, or just need hot water fast, a Fast-Boil kettle is all you need. But if you enjoy green, white, or oolong tea — or brew pour-over coffee — temperature control makes a real difference in flavor, since those drinks taste best below a full boil.</p>"
           }
         },
         "faq_3": {
           "type": "faq",
           "settings": {
-            "question": "Quelle est la différence entre les bouilloires à contrôle de température préréglées et les modèles numériques avancés?",
-            "answer": "<p>Les bouilloires à préréglages vous permettent de choisir parmi 5 températures préréglées adaptées à différents thés. Les modèles numériques avancés vont jusqu'à 7 préréglages, ajoutent une minuterie d'infusion pour une infusion parfaite et comprennent une fonction de maintien au chaud qui garde votre eau chaude jusqu'à une heure.</p>"
+            "question": "What's the difference between preset and advanced digital temperature-control kettles?",
+            "answer": "<p>Preset kettles let you pick from 5 preset temperatures matched to different teas. Advanced digital models step up to as many as 7 presets, add a steep timer for perfect brewing, and include a keep-warm function that holds your water hot for up to an hour.</p>"
           }
         },
         "faq_4": {
           "type": "faq",
           "settings": {
-            "question": "Puis-je quand même faire bouillir l'eau jusqu'à 100 °C?",
-            "answer": "<p>Oui. Les bouilloires à contrôle de température comprennent une option de pleine ébullition en plus de leurs préréglages plus bas, de sorte que vous pouvez infuser du thé noir ou des tisanes, préparer du café instantané ou cuire des ramen et du gruau à 100 °C, puis passer à un réglage plus doux pour le thé vert ou blanc.</p>"
+            "question": "Can I still boil water all the way to 212°F?",
+            "answer": "<p>Yes. Temperature-control kettles include a full-boil option alongside their lower presets, so you can brew black or herbal tea, make instant coffee, or cook ramen and oatmeal at 212°F, then switch to a gentler setting for green or white tea.</p>"
           }
         },
         "faq_5": {
           "type": "faq",
           "settings": {
-            "question": "Quelle température convient le mieux au café filtre manuel?",
-            "answer": "<p>Le café filtre et le café à piston infusent le mieux autour de 91–96 °C, juste sous le point d'ébullition. Une bouilloire à contrôle de température vous permet d'atteindre cette plage de façon constante pour une extraction plus nette et plus uniforme.</p>"
+            "question": "What temperature is best for pour-over coffee?",
+            "answer": "<p>Pour-over and French press coffee brew best around 195–205°F, just below boiling. A temperature-control kettle lets you hit that window consistently for a cleaner, more even extraction.</p>"
           }
         },
         "faq_6": {
           "type": "faq",
           "settings": {
-            "question": "Comment nettoyer et détartrer une bouilloire à contrôle de température?",
-            "answer": "<p>Si votre eau est dure, détartrez chaque mois : remplissez la bouilloire d'un mélange 50/50 d'eau et de vinaigre blanc, faites bouillir, laissez reposer de 15 à 20 minutes, puis rincez bien. Lavez à la main le corps de la bouilloire et tout panier-infuseur, et n'immergez jamais la base électrique.</p>"
+            "question": "How do I clean and descale a temperature-control kettle?",
+            "answer": "<p>If you have hard water, descale monthly: fill the kettle with a 50/50 mix of water and white vinegar, boil, let it sit 15–20 minutes, then rinse well. Hand-wash the kettle body and any infuser basket, and never submerge the electrical base.</p>"
           }
         },
         "faq_7": {
           "type": "faq",
           "settings": {
-            "question": "Les bouilloires à contrôle de température Chefman sont-elles sécuritaires?",
-            "answer": "<p>Oui. Chaque modèle est doté d'un arrêt automatique et d'une protection contre l'ébullition à sec, se soulève d'une base pivotante sans fil à 360°, est approuvé cETL et est appuyé par une garantie Chefman d'un an. Les poignées qui restent froides ajoutent une tranquillité d'esprit au quotidien.</p>"
+            "question": "Are Chefman temperature-control kettles safe?",
+            "answer": "<p>Yes. Every model features automatic shut-off and boil-dry protection, lifts off a 360° cordless swivel base, is cETL approved, and is backed by a 1-year Chefman assurance. Cool-touch handles add everyday peace of mind.</p>"
           }
         }
       },
@@ -238,28 +239,28 @@
       ],
       "settings": {
         "show_breadcrumb": true,
-        "crumb1_title": "Bouilloires",
+        "crumb1_title": "Kettles",
         "crumb1_link": "shopify://collections/kettles-2",
-        "crumb2_title": "Trouvez votre bouilloire",
+        "crumb2_title": "Find your kettle",
         "crumb2_link": "/pages/find-your-perfect-electric-kettle-chefman",
-        "eyebrow": "Guide des bouilloires Chefman",
-        "heading": "Bouilloires à contrôle de température : la bonne chaleur pour chaque tasse",
+        "eyebrow": "Chefman Kettle Guide",
+        "heading": "Temperature-Control Kettles: The Right Heat for Every Cup",
         "heading_size": "title-lg tracking-heading",
-        "intro": "<p>L'eau bouillante peut brûler les thés délicats et les rendre amers. Une bouilloire à contrôle de température vous permet d'ajuster précisément la chaleur que mérite chaque tasse — puis la maintient pendant que vous infusez, savourez et versez.</p>",
-        "best_for": "thés délicats et café filtre manuel",
-        "what_heading": "Ce que c'est",
-        "what_it_is": "<p>Une bouilloire à contrôle de température vous permet de choisir une température d'eau précise, inférieure à l'ébullition, au lieu de toujours chauffer jusqu'à une pleine ébullition à 100 °C. Vous réglez la cible à l'aide de préréglages numériques ou d'un cadran variable, et la bouilloire chauffe jusqu'à ce repère puis s'arrête — plusieurs la maintiennent ensuite à température stable grâce à une fonction de maintien au chaud. Des voyants DEL à code de couleur indiquent si la bouilloire est en veille, en chauffe ou prête, et certains modèles émettent un bip pour vous prévenir. Cette précision est exactement ce qui distingue une tasse de thé vert vive et douce d'une tasse amère, et c'est ce qui permet au café à la verseuse de s'extraire proprement et uniformément.</p>",
-        "why_heading": "Pourquoi choisir une bouilloire à contrôle de température",
-        "features_heading": "Caractéristiques principales",
-        "who_heading": "À qui ça s'adresse",
-        "who_for": "<p>Les bouilloires à contrôle de température sont conçues pour les connaisseurs de thé et les amateurs de café à infusion lente. Si vous buvez du thé vert, blanc ou oolong — ces feuilles délicates qui deviennent amères dans l'eau bouillante — c'est l'amélioration qui change tout. Elle est aussi idéale pour quiconque prépare du café à infusion lente et souhaite des résultats reproductibles, et pour les ménages qui veulent une seule bouilloire pour tout faire, d'une pleine ébullition à 100 °C pour le thé noir à un doux 77 °C pour un thé vert du matin. Si vous ne buvez que du thé noir, du café instantané, ou si vous avez simplement besoin d'eau chaude rapidement, une bouilloire Fast-Boil plus simple pourrait suffire à vos besoins.</p>",
-        "notes_heading": "Bon à savoir",
+        "intro": "<p>Boiling water can scorch delicate teas and turn them bitter. A temperature-control kettle lets you dial in the exact heat each cup deserves — then holds it there while you steep, sip, and pour.</p>",
+        "best_for": "delicate teas & pour-over coffee",
+        "what_heading": "What it is",
+        "what_it_is": "<p>A temperature-control kettle lets you choose a precise, sub-boiling water temperature instead of always heating to a rolling 212°F boil. You set the target with digital presets or a variable dial, and the kettle heats to that mark and stops — many then hold it steady with a keep-warm function. Color-coded LED lights show whether the kettle is on standby, heating, or ready, and some models beep to let you know it's time. That precision is exactly what separates a bright, sweet cup of green tea from a bitter one, and it's what makes pour-over coffee extract cleanly and evenly.</p>",
+        "why_heading": "Why choose a Temperature Control kettle",
+        "features_heading": "Key features",
+        "who_heading": "Who it's for",
+        "who_for": "<p>Temperature-control kettles are made for tea connoisseurs and pour-over coffee fans. If you drink green, white, or oolong tea — the delicate leaves that turn bitter in boiling water — this is the upgrade that changes everything. It's also ideal for anyone brewing pour-over coffee who wants repeatable results, and for households that want one kettle to handle it all, from a full 212°F boil for black tea to a gentle 170°F for a morning green. If you only drink black tea, instant coffee, or simply need hot water fast, a simpler Fast-Boil kettle may be all you need.</p>",
+        "notes_heading": "Good to know",
         "product_handles": "1-8-liter-cordless-glass-electric-kettle",
-        "shop_heading": "Magasiner les bouilloires à contrôle de la température",
-        "shop_button_label": "Magasiner toutes les bouilloires",
+        "shop_heading": "Shop Temperature Control kettles",
+        "shop_button_label": "Shop all kettles",
         "shop_button_link": "shopify://collections/kettles-2",
         "related_heading": "Explore other kettle types",
-        "faq_heading": "Questions fréquentes",
+        "faq_heading": "Frequently asked questions",
         "padding_top": 64,
         "padding_bottom": 100,
         "divider": false,

@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "kettle_detail": {
       "type": "kettle-detail",
@@ -14,118 +15,118 @@
         "why_1": {
           "type": "reason",
           "settings": {
-            "title": "Versez exactement où vous le souhaitez",
-            "text": "Le bec col-de-cygne à débit contrôlé caractéristique offre un filet fin et constant plutôt qu'un jet rapide, ce qui vous permet de saturer uniformément la mouture pour un café filtre manuel ou de verser un jet fluide et contrôlé tout en fouettant le matcha."
+            "title": "Pour exactly where you want",
+            "text": "The signature slow-control gooseneck spout delivers a thin, steady stream instead of a rushing pour, so you can saturate coffee grounds evenly for pour-over or pour a smooth, controlled stream while whisking matcha."
           }
         },
         "why_2": {
           "type": "reason",
           "settings": {
-            "title": "Compacte et prête pour le comptoir",
-            "text": "Avec son format personnel de 0,8 L (environ 2 à 4 tasses) et son fini mat élégant, elle prend peu de place et ressemble à un objet design — idéale pour ceux qui boivent seuls, les petites cuisines et les voyages."
+            "title": "Compact and counter-ready",
+            "text": "At a personal 0.8L (about 2–4 cups) with a sleek matte finish, it takes up little space and looks like a designed object — ideal for solo drinkers, small kitchens, and travel."
           }
         },
         "why_3": {
           "type": "reason",
           "settings": {
-            "title": "Commodité rapide et sans fil",
-            "text": "L'eau chauffe rapidement, puis la bouilloire se soulève de sa base pivotante à 360°, ce qui vous permet de la transporter directement jusqu'à votre goutteur ou votre bol — sans fil dans le chemin."
+            "title": "Fast, cordless convenience",
+            "text": "Water heats quickly, then the kettle lifts off its 360° swivel base so you can carry it straight to your dripper or bowl — no cord in the way."
           }
         },
         "why_4": {
           "type": "reason",
           "settings": {
-            "title": "Sécurité intégrée",
-            "text": "L'arrêt automatique et la protection contre l'ébullition à sec sont de série, chaque modèle est approuvé cETL, et chacun est soutenu par une garantie Chefman de 1 an."
+            "title": "Safety built in",
+            "text": "Automatic shut-off and boil-dry protection are standard, every model is cETL approved, and each one is backed by a 1-year Chefman assurance."
           }
         },
         "why_5": {
           "type": "reason",
           "settings": {
-            "title": "Un col de cygne pour chaque niveau",
-            "text": "Il y a un modèle à col-de-cygne pour chaque niveau : commencez avec une bouilloire simple à une touche, ou choisissez un modèle avec préréglages de température pour régler la chaleur idéale pour le café filtre manuel, le matcha et les thés délicats."
+            "title": "A gooseneck for every level",
+            "text": "There's a gooseneck for every level: start with a straightforward one-touch boiler, or choose a model with temperature presets for dialing in the ideal heat for pour-over coffee, matcha, and delicate teas."
           }
         },
         "feat_1": {
           "type": "feature",
           "settings": {
             "icon": "🦢",
-            "title": "Bec col-de-cygne à débit contrôlé",
-            "text": "Un long bec courbé verse un filet mince et régulier exactement là où vous le dirigez."
+            "title": "Slow-control gooseneck spout",
+            "text": "A long, curved spout pours a thin, steady stream exactly where you aim it."
           }
         },
         "feat_2": {
           "type": "feature",
           "settings": {
             "icon": "☕",
-            "title": "Conçue pour le café filtre et le matcha",
-            "text": "Saturez le café moulu uniformément pour une tasse plus propre, ou versez un filet régulier pour fouetter le matcha."
+            "title": "Made for pour-over & matcha",
+            "text": "Saturate grounds evenly for a cleaner cup, or pour a smooth stream for whisking matcha."
           }
         },
         "feat_3": {
           "type": "feature",
           "settings": {
             "icon": "🔌",
-            "title": "Base sans fil à 360°",
-            "text": "Soulevez la bouilloire de sa base pivotante et apportez-la directement à votre cône d'infusion ou à votre bol."
+            "title": "Cordless 360° base",
+            "text": "Lift the kettle off its swivel base and carry it right to your dripper or bowl."
           }
         },
         "feat_4": {
           "type": "feature",
           "settings": {
             "icon": "🛡️",
-            "title": "Arrêt automatique et protection contre l'ébullition à sec",
-            "text": "Sécurité de série sur chaque modèle, et approuvé cETL pour votre tranquillité d'esprit."
+            "title": "Auto shut-off & boil-dry protection",
+            "text": "Standard safety on every model, and cETL approved for peace of mind."
           }
         },
         "feat_5": {
           "type": "feature",
           "settings": {
             "icon": "🌡️",
-            "title": "Préréglages de température sur certains modèles",
-            "text": "Les modèles haut de gamme vous permettent de choisir la bonne température pour le café, le matcha ou les thés délicats."
+            "title": "Temperature presets on select models",
+            "text": "Higher-end models let you choose the right heat for coffee, matcha, or delicate teas."
           }
         },
         "feat_6": {
           "type": "feature",
           "settings": {
             "icon": "💧",
-            "title": "Fenêtre de niveau d'eau facile à lire",
-            "text": "Voyez exactement la quantité d'eau que vous chauffez et versez."
+            "title": "Easy-view water window",
+            "text": "See exactly how much water you're heating and pouring."
           }
         },
         "note_1": {
           "type": "note",
           "settings": {
-            "title": "Format compact de 0,8 L",
-            "text": "Les bouilloires à col de cygne Chefman offrent une capacité personnelle de 0,8 L — environ 500 à 1 000 mL — ce qui les rend idéales pour l'infusion en solo, les petites cuisines et les déplacements, et permettent de chauffer rapidement une portion individuelle."
+            "title": "Compact 0.8L size",
+            "text": "Chefman gooseneck kettles come in a personal 0.8L capacity — about 2–4 cups — which makes them ideal for solo brewing, small kitchens, and travel, and quick to heat a single serving."
           }
         },
         "note_2": {
           "type": "note",
           "settings": {
-            "title": "Conseils de température",
-            "text": "Le café filtre s'infuse généralement autour de 91–96 °C, tandis que le matcha et les thés verts délicats se préparent mieux avec une eau qui n'a pas atteint la pleine ébullition. Les modèles dotés de préréglages de température facilitent l'atteinte de la bonne plage."
+            "title": "Temperature guidance",
+            "text": "Pour-over coffee is typically brewed around 195–205°F, while matcha and delicate green teas do best with water below a full boil. Models with temperature presets make hitting the right range simple."
           }
         },
         "note_3": {
           "type": "note",
           "settings": {
-            "title": "Nettoyage et détartrage",
-            "text": "Si vous avez de l'eau dure, détartrez environ une fois par mois avec un mélange 50/50 d'eau et de vinaigre blanc : faites bouillir, laissez reposer de 15 à 20 minutes, puis rincez bien. Lavez le corps à la main, ne submergez jamais la base électrique et remplissez uniquement entre les lignes min et max."
+            "title": "Cleaning & descaling",
+            "text": "If you have hard water, descale about once a month with a 50/50 mix of water and white vinegar: boil, let it sit 15–20 minutes, then rinse well. Hand-wash the body, never submerge the electrical base, and fill only between the min and max lines."
           }
         },
         "note_4": {
           "type": "note",
           "settings": {
-            "title": "Options de conception et de fabrication",
-            "text": "Un fini mat élégant garde un look minimaliste et prêt à trôner sur le comptoir, et une fenêtre d'eau facile à consulter indique exactement la quantité que vous chauffez et versez. Chaque modèle se soulève d'une base pivotante sans fil à 360°, pour que vous puissiez le transporter directement vers votre cône d'infusion, votre tasse ou votre bol à matcha."
+            "title": "Design & build options",
+            "text": "A sleek matte finish keeps the look minimal and counter-ready, and an easy-view water window shows exactly how much you're heating and pouring. Every model lifts off a 360° cordless swivel base, so you can carry it straight to your dripper, mug, or matcha bowl."
           }
         },
         "rel_1": {
           "type": "related",
           "settings": {
-            "label": "Tous les types de bouilloires",
+            "label": "All kettle types",
             "link": "/pages/find-your-perfect-electric-kettle-chefman"
           }
         },
@@ -139,78 +140,78 @@
         "rel_3": {
           "type": "related",
           "settings": {
-            "label": "Infuseur à thé",
+            "label": "Tea Infuser",
             "link": "/pages/tea-infuser-electric-kettles-chefman"
           }
         },
         "rel_4": {
           "type": "related",
           "settings": {
-            "label": "Contrôle de la température",
+            "label": "Temperature Control",
             "link": "/pages/temperature-control-electric-kettles-chefman"
           }
         },
         "rel_5": {
           "type": "related",
           "settings": {
-            "label": "Maintien au chaud",
+            "label": "Keep-Warm",
             "link": "/pages/keep-warm-electric-kettles-chefman"
           }
         },
         "rel_6": {
           "type": "related",
           "settings": {
-            "label": "Acier inoxydable",
+            "label": "Stainless Steel",
             "link": "/pages/stainless-steel-electric-kettles-chefman"
           }
         },
         "faq_1": {
           "type": "faq",
           "settings": {
-            "question": "À quoi sert une bouilloire à col de cygne?",
-            "answer": "<p>Une bouilloire à col de cygne sert à verser un filet lent et précis d'eau chaude, ce qui la rend idéale pour le café par infusion (pour-over) et le matcha. Le bec étroit et courbé vous permet de saturer le café moulu uniformément pour une extraction équilibrée, ou de verser un filet contrôlé tout en fouettant le matcha — et c'est une façon agréable de verser n'importe quoi.</p>"
+            "question": "What is a gooseneck kettle used for?",
+            "answer": "<p>A gooseneck kettle is used to pour a slow, precise stream of hot water, which makes it ideal for pour-over coffee and matcha. The narrow, curved spout lets you saturate coffee grounds evenly for a balanced extraction, or pour a controlled stream while whisking matcha — and it's a satisfying way to pour anything.</p>"
           }
         },
         "faq_2": {
           "type": "faq",
           "settings": {
-            "question": "Quelle est la différence entre une bouilloire à col de cygne et une bouilloire électrique ordinaire?",
-            "answer": "<p>La principale différence est le bec. Une bouilloire électrique ordinaire est dotée d'un bec anti-goutte standard conçu pour un versement rapide au quotidien, tandis qu'une bouilloire à col de cygne possède un bec long, étroit et courbé qui verse un filet lent et précis. C'est ce contrôle qui rend le col de cygne idéal pour le café à infusion lente et le matcha, où la façon de verser façonne le résultat. Les bouilloires à col de cygne Chefman sont aussi offertes dans un format compact de 0,8 L, ce qui les rend parfaites pour les buveurs en solo et les petites cuisines.</p>"
+            "question": "What's the difference between a gooseneck kettle and a regular electric kettle?",
+            "answer": "<p>The main difference is the spout. A regular electric kettle has a standard drip-free spout made for quick, everyday pouring, while a gooseneck kettle has a long, narrow, curved spout that pours a slow, precise stream. That control is what makes a gooseneck ideal for pour-over coffee and matcha, where the way you pour shapes the result. Chefman gooseneck kettles also come in a compact 0.8L size, so they suit solo brewers and small kitchens.</p>"
           }
         },
         "faq_3": {
           "type": "faq",
           "settings": {
-            "question": "Puis-je utiliser une bouilloire à col de cygne pour le matcha?",
-            "answer": "<p>Oui. Une bouilloire à col de cygne est excellente pour le matcha, car le filet précis vous aide à ajouter l'eau graduellement tout en fouettant. Le matcha et les autres thés verts délicats sont meilleurs avec une eau en deçà d'une pleine ébullition, alors un modèle avec préréglages de température facilite l'atteinte de la bonne chaleur.</p>"
+            "question": "Can I use a gooseneck kettle for matcha?",
+            "answer": "<p>Yes. A gooseneck kettle is great for matcha because the precise stream helps you add water gradually while whisking. Matcha and other delicate green teas taste best with water below a full boil, so a model with temperature presets makes it easy to reach the right heat.</p>"
           }
         },
         "faq_4": {
           "type": "faq",
           "settings": {
-            "question": "Quelle est la taille des bouilloires à col de cygne Chefman?",
-            "answer": "<p>Les bouilloires à col de cygne de Chefman offrent une capacité compacte de 0,8 L, soit environ 2 à 4 tasses. Ce format personnel est parfait pour les amateurs de café et de thé en solo, les petites cuisines et les voyages, et il chauffe une seule portion rapidement.</p>"
+            "question": "What size are Chefman gooseneck kettles?",
+            "answer": "<p>Chefman gooseneck kettles come in a compact 0.8L capacity, which is roughly 2–4 cups. That personal size is perfect for solo coffee and tea drinkers, small kitchens, and travel, and it heats a single serving quickly.</p>"
           }
         },
         "faq_5": {
           "type": "faq",
           "settings": {
-            "question": "Les bouilloires à col de cygne ont-elles un contrôle de température?",
-            "answer": "<p>Cela dépend du modèle. Chefman propose une bouilloire à col de cygne pour tous les niveaux — d'une simple bouilloire à une touche à des modèles dotés de préréglages de température pour ajuster la chaleur idéale pour le café, le matcha ou les thés délicats. Consultez les détails du modèle précis qui vous intéresse.</p>"
+            "question": "Do gooseneck kettles have temperature control?",
+            "answer": "<p>It depends on the model. Chefman offers a gooseneck for every level — from a simple one-touch boiler to models with temperature presets for dialing in the ideal heat for coffee, matcha, or delicate teas. Check the details on the specific model you're considering.</p>"
           }
         },
         "faq_6": {
           "type": "faq",
           "settings": {
-            "question": "Comment nettoyer et détartrer une bouilloire à col de cygne?",
-            "answer": "<p>Pour que les temps d'ébullition restent rapides et que l'eau garde un goût frais, détartrez environ une fois par mois si votre eau est dure : remplissez d'un mélange moitié-moitié d'eau et de vinaigre blanc, faites bouillir, laissez reposer de 15 à 20 minutes, puis rincez bien. Lavez le corps à la main et n'immergez jamais la base électrique.</p>"
+            "question": "How do I clean and descale a gooseneck kettle?",
+            "answer": "<p>To keep boil times fast and water tasting fresh, descale about once a month if you have hard water: fill with a 50/50 mix of water and white vinegar, boil, let it sit 15–20 minutes, then rinse well. Hand-wash the body and never submerge the electrical base.</p>"
           }
         },
         "faq_7": {
           "type": "faq",
           "settings": {
-            "question": "Les bouilloires à col de cygne Chefman sont-elles sécuritaires à utiliser?",
-            "answer": "<p>Oui. Chaque bouilloire à col de cygne Chefman comprend un arrêt automatique et une protection contre l'ébullition à sec, se soulève d'une base pivotante sans fil à 360°, est approuvée cETL et est appuyée par une garantie Chefman d'un an.</p>"
+            "question": "Are Chefman gooseneck kettles safe to use?",
+            "answer": "<p>Yes. Every Chefman gooseneck kettle includes automatic shut-off and boil-dry protection, lifts off a 360° cordless swivel base, is cETL approved, and is backed by a 1-year Chefman assurance.</p>"
           }
         }
       },
@@ -246,28 +247,28 @@
       ],
       "settings": {
         "show_breadcrumb": true,
-        "crumb1_title": "Bouilloires",
+        "crumb1_title": "Kettles",
         "crumb1_link": "shopify://collections/kettles-2",
-        "crumb2_title": "Trouvez votre bouilloire",
+        "crumb2_title": "Find your kettle",
         "crumb2_link": "/pages/find-your-perfect-electric-kettle-chefman",
-        "eyebrow": "Guide des bouilloires Chefman",
-        "heading": "Bouilloires électriques à col de cygne",
+        "eyebrow": "Chefman Kettle Guide",
+        "heading": "Electric Gooseneck Kettles",
         "heading_size": "title-lg tracking-heading",
-        "intro": "<p>Découvrez la bouilloire conçue pour la versée parfaite. Les bouilloires à col de cygne Chefman vous offrent le débit lent et contrôlé dont dépendent le café filtre et le matcha — dans un design compact aussi beau sur le comptoir qu'il est performant.</p>",
-        "best_for": "café filtre manuel et matcha",
-        "what_heading": "Ce que c'est",
-        "what_it_is": "<p>Une bouilloire à col de cygne se définit par son bec — un col long, mince et courbé qui verse un filet fin, régulier et lentement contrôlé plutôt qu'un jet brusque. C'est précisément cette précision dont dépendent le café par infusion (pour-over) et le matcha : vous pouvez saturer le café moulu uniformément pour une extraction équilibrée, ou verser un filet fluide et mesuré tout en fouettant. La bouilloire à col de cygne de Chefman est compacte, avec une capacité de 0,8 L (environ 500 mL à 1 L) et un fini mat élégant aussi beau sur le comptoir qu'il est performant. Elle se soulève d'une base sans fil 360°, possède une fenêtre de niveau d'eau facile à lire et un versement sans goutte, et s'éteint automatiquement une fois l'eau prête. Certains modèles ajoutent des préréglages de température, ce qui vous permet de régler la chaleur idéale pour le café, le matcha et les thés délicats.</p>",
-        "why_heading": "Pourquoi choisir une bouilloire à col de cygne",
-        "features_heading": "Caractéristiques principales",
-        "who_heading": "À qui ça s'adresse",
-        "who_for": "<p>Les bouilloires à col de cygne sont conçues pour les amateurs de café filtre à la main, les buveurs de matcha et quiconque met un point d'honneur à réussir un versement soigné et maîtrisé. Le format compact de 0,8 L (environ 2 à 4 tasses) est parfait pour les buveurs solitaires, les petites cuisines et les voyages, tandis que le bec précis récompense quiconque peaufine son rituel matinal. Si vous voulez un contrôle de qualité café à la maison — ou que vous appréciez simplement la sensation satisfaisante d'un versement lent et posé — c'est la bouilloire qu'il vous faut.</p>",
-        "notes_heading": "Bon à savoir",
+        "intro": "<p>Meet the kettle built for the perfect pour. Chefman gooseneck kettles give you the slow, controlled stream that pour-over coffee and matcha depend on — in a compact design that looks as good on the counter as it performs.</p>",
+        "best_for": "pour-over coffee & matcha",
+        "what_heading": "What it is",
+        "what_it_is": "<p>A gooseneck kettle is defined by its spout — a long, slender, curved neck that pours a thin, steady, slow-controlled stream instead of a rushing gush. That precision is exactly what pour-over coffee and matcha depend on: you can saturate the grounds evenly for a balanced extraction, or pour a smooth, measured stream as you whisk. Chefman's gooseneck is compact at 0.8L (about 2–4 cups) with a sleek matte finish that looks as good on the counter as it performs. It lifts off a 360° cordless base, has an easy-view water-level window and a drip-free pour, and shuts off automatically once the water's ready. Select models add temperature presets, so you can dial in the ideal heat for coffee, matcha, and delicate teas.</p>",
+        "why_heading": "Why choose a Gooseneck kettle",
+        "features_heading": "Key features",
+        "who_heading": "Who it's for",
+        "who_for": "<p>Gooseneck kettles are made for pour-over coffee lovers, matcha drinkers, and anyone who takes pride in a beautiful, controlled pour. The compact 0.8L size (about 2–4 cups) is perfect for solo brewers, small kitchens, and travel, while the precise spout rewards anyone dialing in their morning ritual. If you want café-quality control at home — or simply enjoy the satisfying feel of a slow, deliberate pour — this is your kettle.</p>",
+        "notes_heading": "Good to know",
         "product_handles": "0-8l-electric-gooseneck-kettle, fast-boil-0-8l-gooseneck-kettle",
-        "shop_heading": "Magasiner les bouilloires à col-de-cygne",
-        "shop_button_label": "Magasiner toutes les bouilloires",
+        "shop_heading": "Shop Gooseneck kettles",
+        "shop_button_label": "Shop all kettles",
         "shop_button_link": "shopify://collections/kettles-2",
         "related_heading": "Explore other kettle types",
-        "faq_heading": "Questions fréquentes",
+        "faq_heading": "Frequently asked questions",
         "padding_top": 64,
         "padding_bottom": 100,
         "divider": false,

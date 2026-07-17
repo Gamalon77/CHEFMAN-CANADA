@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "image_with_text_overlay_qHjwDh": {
       "type": "image-with-text-overlay",
@@ -14,7 +15,7 @@
         "subheading_yAqwPj": {
           "type": "subheading",
           "settings": {
-            "subheading": "Magasiner la vente",
+            "subheading": "Shop the sale",
             "subheading_size": "subtitle-md",
             "secondary_color": false
           }
@@ -33,7 +34,7 @@
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "<p>Magasinez les soldes!</p>",
+            "text": "<p>Shop the Sale!</p>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -156,7 +157,7 @@
         "carousel_on_desktop": true,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "heading": "Récemment consultés",
+        "heading": "Recently Viewed",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
