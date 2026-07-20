@@ -80,7 +80,6 @@ layered on via Translate & Adapt. No theme code can swap baked content by locale
 | File | Why |
 |------|-----|
 | `snippets/header-logo.liquid` | US version **hardcodes US logo SVGs** — kept CA logos. |
-| `sections/footer.liquid` | US version hardcodes a US asset (`Chefman-Arcade.svg`). |
 | `snippets/social-icons.liquid` | US version hardcodes a cross‑store WhatsApp image. |
 | `sections/collage.liquid`, `collage-grid.liquid` | US redesign needs US‑only `theme.css` rules. |
 | `assets/theme.css`, `theme.js`, other assets | Kept per the "safe" strategy (US assets carried store‑specific assumptions). |
@@ -90,6 +89,15 @@ layered on via Translate & Adapt. No theme code can swap baked content by locale
 
 ## 5. Behavior / content to verify on the test theme
 
+- **Footer** now uses the chefman.com two‑column layout (`sections/footer.liquid`
+  ported; `footer-group.json` reordered so the logo/links row sits on top; navy
+  `#121e2a` background). **Kept CA:** logo (`chefman-salt.webp`), the About +
+  Customer Support menus, and the international link. **Dropped:** the US
+  "bean‑catcher" arcade easter egg (linked to US‑only game pages / a US‑store
+  image). **Left as‑is (still disabled):** the *Customer service / Free Shipping /
+  Refer‑a‑friend / Secure payment* row and the *Call toll‑free* contact block —
+  both carry **US‑specific claims** (e.g. "$150 free shipping", "15% referral",
+  US toll‑free number). Turn them on only after the copy is set to Canadian terms.
 - **Product cards — sold‑out items:** the ported `product-card` shows a
   "Notify / Back in Stock" button (US design) instead of a disabled "Sold out"
   button; it needs the *Back in Stock* app or falls back to the product page.

@@ -4,6 +4,77 @@
     --section-padding-bottom: {{ section.settings.padding_bottom }}px;
     {%- render 'section-variables', section: section -%}
   }
+
+  {%- comment -%}
+    Two-column footer: logo on the left, everything else (menus, then the
+    divider + international/socials/follow) in a right column that starts at
+    the Support menu's left edge. --footer-indent is shared on :root so the
+    separate Manage Cookies + copyright sections can align to the same edge.
+  {%- endcomment -%}
+  :root { --footer-indent: 0px; }
+
+  #shopify-section-{{ section.id }} .footer {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(var(--sp-12), 4vw, var(--sp-16));
+  }
+
+  #shopify-section-{{ section.id }} .footer__bottom {
+    border-block-start: 1px solid rgb(var(--color-foreground)/ 0.115);
+    padding-block-start: clamp(var(--sp-12), 4vw, var(--sp-16));
+  }
+
+  {%- comment -%} socials row {%- endcomment -%}
+  #shopify-section-{{ section.id }} .footer__socials {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--sp-7);
+    {%- comment -%} Override the theme's default .footer__socials { align-self: flex-end } {%- endcomment -%}
+    align-self: flex-start;
+  }
+
+  @media screen and (min-width: 768px) {
+    {%- comment -%} Logo-column width = the indent to the Support edge {%- endcomment -%}
+    :root { --footer-indent: clamp(200px, 16vw, 280px); }
+
+    #shopify-section-{{ section.id }} .footer {
+      grid-template-columns: var(--footer-indent) minmax(0, 1fr);
+      column-gap: 0;
+      row-gap: clamp(var(--sp-12), 4vw, var(--sp-16));
+      align-items: start;
+    }
+    #shopify-section-{{ section.id }} .footer__logo-col { grid-column: 1; grid-row: 1; }
+    #shopify-section-{{ section.id }} .footer__menus { grid-column: 2; grid-row: 1; }
+    #shopify-section-{{ section.id }} .footer__bottom { grid-column: 2; grid-row: 2; }
+
+    {%- comment -%} International block: static (not a dropdown) on desktop {%- endcomment -%}
+    #shopify-section-{{ section.id }} .footer__international .details__summary { pointer-events: none; padding-block-start: 0; }
+    #shopify-section-{{ section.id }} .footer__international .details__summary svg { display: none; }
+
+    {%- comment -%} Bottom row: international at Support edge (col 1), socials/follow at Privacy edge (col 2) {%- endcomment -%}
+    #shopify-section-{{ section.id }} .footer__bottom-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 0;
+      align-items: start;
+    }
+
+    {%- comment -%} Manage Cookies aligns to the Support edge {%- endcomment -%}
+    .cookie-link { display: inline-block; margin-inline-start: var(--footer-indent); }
+
+    {%- comment -%}
+      Copyright: credit/Powered-by text at the logo edge (col 1 starts at 0),
+      payment icons at the Privacy edge (col 1 width = 50% + half the indent).
+    {%- endcomment -%}
+    .footer-copyright {
+      display: grid;
+      grid-template-columns: calc(50% + var(--footer-indent) / 2) 1fr;
+      column-gap: 0;
+      align-items: center;
+    }
+    .footer-copyright .credits { grid-column: 1; text-align: start; }
+    .footer-copyright .payment-icons { grid-column: 2; justify-self: start; }
+  }
 </style>
 
 {%- liquid
@@ -15,36 +86,42 @@
 
 <div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded{% endif %}"{% if section.settings.enable_parallax %} is="footer-parallax"{% endif %}>
   <footer class="footer{% if enable_footer_info %}{% if section.settings.invert_newsletter_others %} footer--inverted{% endif %}{% else %} footer--no-info{% endif %} page-width{% if section.settings.full_width %} page-width--full{% endif %} relative grid">
-    {%- if section.blocks.size > 0 -%}
-      <div class="footer__left flex flex-col md:flex-row gap-10">
-        {%- liquid
-          assign block = section.blocks | where: "type", "logo_social" | first
-          if block
-            render 'footer-logo', block: block
-          endif
-        -%}
+    {%- liquid
+      assign logo_block = section.blocks | where: 'type', 'logo_social' | first
+      assign intl_block = section.blocks | where: 'type', 'text' | first
+      assign show_follow = false
+      if shop.features.follow_on_shop? and section.settings.enable_follow_on_shop
+        assign show_follow = true
+      endif
+    -%}
 
-        <div class="footer__accordions flex flex-wrap flex-col md:flex-row md:grow md:gap-12">
-          {%- liquid
-            for block in section.blocks
-              case block.type
-                when 'link_list'
-                  render 'footer-menu', block: block
-
-                when 'text'
-                  render 'footer-text', block: block
-
-                when 'brand_information'
-                  render 'footer-contact', block: block
-              endcase
-            endfor
-          -%}
-        </div>
+    {%- comment -%} Logo: left column {%- endcomment -%}
+    {%- if logo_block -%}
+      <div class="footer__logo-col">
+        {%- render 'footer-logo', block: logo_block -%}
       </div>
     {%- endif -%}
 
-    {%- if section.settings.enable_newsletter or section.settings.show_social or shop.features.follow_on_shop? and section.settings.enable_follow_on_shop -%}
-      <div class="footer__right grid gap-10">
+    {%- comment -%} Menu columns: right column, top row {%- endcomment -%}
+    {%- if section.blocks.size > 0 -%}
+      <div class="footer__accordions footer__menus flex flex-wrap flex-col md:flex-row md:gap-12">
+        {%- liquid
+          for block in section.blocks
+            case block.type
+              when 'link_list'
+                render 'footer-menu', block: block
+
+              when 'brand_information'
+                render 'footer-contact', block: block
+            endcase
+          endfor
+        -%}
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} Bottom: right column under a divider — International sites + socials + follow {%- endcomment -%}
+    {%- if intl_block or section.settings.enable_newsletter or section.settings.show_social or show_follow -%}
+      <div class="footer__bottom flex flex-col gap-10">
         {%- if section.settings.enable_newsletter -%}
           <div class="footer__newsletter grid gap-6">
             {%- if section.settings.newsletter_logo -%}
@@ -68,17 +145,29 @@
           </div>
         {%- endif -%}
 
-        {%- if section.settings.show_social -%}
-          <div class="footer__socials flex justify-start md:justify-end xl:justify-start">
-            {%- render 'social-icons', size: 'lg', gap: '7' -%}
-          </div>
-        {%- endif -%}
+        <div class="footer__bottom-row flex flex-col gap-8">
+          {%- if intl_block -%}
+            <div class="footer__international">
+              {%- render 'footer-text', block: intl_block -%}
+            </div>
+          {%- endif -%}
 
-        {%- if shop.features.follow_on_shop? and section.settings.enable_follow_on_shop -%}
-          <div class="follow-on-shop">
-            {{- shop | login_button: action: 'follow' -}}
-          </div>
-        {%- endif -%}
+          {%- if section.settings.show_social or show_follow -%}
+            <div class="footer__bottom-actions flex flex-col items-start gap-6">
+              {%- if section.settings.show_social -%}
+                <div class="footer__socials">
+                  {%- render 'social-icons', size: 'lg', gap: '7' -%}
+                </div>
+              {%- endif -%}
+
+              {%- if show_follow -%}
+                <div class="follow-on-shop">
+                  {{- shop | login_button: action: 'follow' -}}
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </div>
       </div>
     {%- endif -%}
   </footer>
@@ -198,7 +287,7 @@
       "type": "color",
       "id": "color_background",
       "label": "t:sections.global.settings.color_background.label",
-      "default": "#1f1f1f"
+      "default": "#121e2a"
     },
     {
       "type": "color_background",
@@ -209,7 +298,7 @@
       "type": "color",
       "id": "color_button_text",
       "label": "t:sections.global.settings.color_button_text.label",
-      "default": "#000000"
+      "default": "#121e2a"
     },
     {
       "type": "color",
