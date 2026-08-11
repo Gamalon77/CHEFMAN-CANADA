@@ -3,11 +3,18 @@
 A mobile-first, bilingual product showcase built for the Canadian Tire
 presentation (accessed at the event by QR code).
 
-**Files**
+**Files — use the `ct-showcase` pair.** The original `canadian-tire` /
+`partner-product-showcase` pair stopped receiving section updates on the
+test-bench theme (the theme kept serving a stale copy), so the page was
+re-issued under fresh filenames that no stale theme-side copy can shadow. The
+old pair is superseded and can be deleted once the new one is confirmed
+working.
+
 | File | What it is |
 |------|------------|
-| `sections/partner-product-showcase.liquid` | The section (grid + cards + partner logo) |
-| `templates/page.canadian-tire.json` | The page template, pre-loaded with all 12 cards |
+| `sections/ct-showcase.liquid` | The section (grid + cards + partner logo) — identical to the old one, fresh name |
+| `templates/page.ct-showcase.json` | The page template, pre-loaded with all 12 cards + full bilingual copy |
+| `sections/partner-product-showcase.liquid`, `templates/page.canadian-tire.json` | Superseded originals |
 | `locales/en.default.json` → `canadian_tire.*` | English copy |
 | `locales/fr.json` → `canadian_tire.*` | Canadian French copy |
 
@@ -19,7 +26,7 @@ presentation (accessed at the event by QR code).
 2. Title it (e.g. *Canadian Tire*). The title is **not** shown on the page — the
    heading comes from the locale files so it can be bilingual — so the title only
    affects the URL.
-3. On the right, under **Theme template**, choose **`canadian-tire`**.
+3. On the right, under **Theme template**, choose **`ct-showcase`**.
 4. **Save.** The page lives at `/pages/canadian-tire` (or whatever handle you set);
    French is served at the market's French URL, e.g. `/fr/pages/canadian-tire`.
 5. Point the QR code at that URL.

@@ -1,0 +1,919 @@
+{%- comment -%}
+  Partner product showcase — a mobile-first product grid built for in-person /
+  QR-code events (originally the Canadian Tire presentation page).
+
+  Mobile: one card per row (a single vertical line of cards).
+  Tablet (>=640px): two columns. Desktop (>=1024px): four columns — 12 cards = 3 rows of 4.
+
+  Copy strategy: each card's title/blurb can come from three places, in order:
+    1. the block's own `title` / `blurb` setting (typed in the theme editor)
+    2. a locale key, `canadian_tire.cards.<key>.title` / `.blurb`
+    3. the linked product's title
+  The locale route (2) is what makes this page bilingual the moment the
+  language toggle is flipped — the strings live in locales/en.default.json and
+  locales/fr.json, which travel with the theme code. Nothing needs to be
+  registered in Translate & Adapt.
+
+  All layout CSS is scoped and self-contained (plain CSS grid + clamp), so it
+  does not depend on utility classes that may not exist in the compiled
+  theme.css (e.g. md:grid-cols-4 is not in this theme).
+{%- endcomment -%}
+
+{%- liquid
+  # Which language is being served. Used so a card's editor overrides only apply
+  # to the language they were written in. Matches "fr" and "fr-CA".
+  assign is_fr = false
+  if request.locale.iso_code contains 'fr'
+    assign is_fr = true
+  endif
+
+  # Heading and intro follow the same pattern as the cards: a per-language
+  # setting first (so the real text is visible and editable in the theme
+  # editor), then the locale file as a fallback.
+  if is_fr
+    assign heading = section.settings.heading_fr
+  else
+    assign heading = section.settings.heading
+  endif
+  if heading == blank
+    assign heading = 'canadian_tire.heading' | t
+    if heading contains 'Translation missing'
+      assign heading = ''
+    endif
+  endif
+  if heading == blank
+    if is_fr
+      assign heading = "La gamme Chefman"
+    else
+      assign heading = "The Chefman Lineup"
+    endif
+  endif
+
+  if is_fr
+    assign intro = section.settings.intro_fr
+  else
+    assign intro = section.settings.intro
+  endif
+  if intro == blank
+    assign intro = 'canadian_tire.intro' | t
+    if intro contains 'Translation missing'
+      assign intro = ''
+    endif
+  endif
+  if intro == blank
+    if is_fr
+      assign intro = "Un aperçu des produits que nous présentons à Canadian Tire."
+    else
+      assign intro = "A closer look at the products we're bringing to Canadian Tire."
+    endif
+  endif
+
+  assign button_label = section.settings.button_label
+  if button_label == blank
+    assign button_label = 'canadian_tire.learn_more' | t
+    if button_label contains 'Translation missing'
+      assign button_label = 'Learn more'
+    endif
+  endif
+-%}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+    {%- render 'section-variables', section: section -%}
+  }
+
+  {%- comment -%}
+    Set the text colour explicitly from the section setting rather than relying
+    on rgb(var(--color-foreground)). The theme's base h1-h6 rule colours
+    headings from that variable, so if it ever fails to resolve in this scope the
+    headings inherit and can end up invisible against the card background, while
+    body copy still shows. Hard-coding it here removes that failure mode.
+  {%- endcomment -%}
+  #shopify-section-{{ section.id }} .partner-showcase__header,
+  #shopify-section-{{ section.id }} .partner-showcase__heading,
+  #shopify-section-{{ section.id }} .partner-showcase__intro,
+  #shopify-section-{{ section.id }} .partner-card,
+  #shopify-section-{{ section.id }} .partner-card__title,
+  #shopify-section-{{ section.id }} .partner-card__title a,
+  #shopify-section-{{ section.id }} .partner-card__blurb {
+    color: {{ section.settings.color_text | default: '#121e2a' }};
+  }
+
+  {%- comment -%} Header: partner lockup + heading, centred and mobile-first {%- endcomment -%}
+  #shopify-section-{{ section.id }} .partner-showcase__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: clamp(0.75rem, 2.5vw, 1.25rem);
+    margin-block-end: clamp(2rem, 6vw, 3.5rem);
+  }
+
+  #shopify-section-{{ section.id }} .partner-showcase__logo {
+    display: block;
+    width: auto;
+    height: {{ section.settings.partner_logo_height }}px;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  #shopify-section-{{ section.id }} .partner-showcase__label {
+    font-size: 0.8125rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  #shopify-section-{{ section.id }} .partner-showcase__intro {
+    max-width: 46ch;
+  }
+
+  {%- comment -%} Mobile-first grid: 1 col -> 2 col -> 4 col {%- endcomment -%}
+  #shopify-section-{{ section.id }} .partner-showcase__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(1.75rem, 5vw, 2.5rem);
+  }
+
+  @media screen and (min-width: 640px) {
+    #shopify-section-{{ section.id }} .partner-showcase__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    #shopify-section-{{ section.id }} .partner-showcase__grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  #shopify-section-{{ section.id }} .partner-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 0.75rem;
+  }
+
+  {%- comment -%}
+    Product shots sit on a light plate. `contain` shows the whole frame (nothing
+    cropped); `cover` fills the card and crops the edges — useful when a source
+    photo is composed wide and leaves dead space in a portrait card.
+  {%- endcomment -%}
+  #shopify-section-{{ section.id }} .partner-card__media {
+    position: relative;
+    {%- if section.settings.image_ratio != 'natural' %}
+    aspect-ratio: {{ section.settings.image_ratio }};
+    {%- endif %}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: var(--rounded-block, 12px);
+    background-color: {{ section.settings.card_image_background }};
+  }
+
+  #shopify-section-{{ section.id }} .partner-card__media img {
+    width: 100%;
+    {%- if section.settings.image_ratio != 'natural' %}
+    height: 100%;
+    {%- endif %}
+    object-fit: {{ section.settings.image_fit }};
+    object-position: {{ section.settings.image_position }};
+  }
+
+  #shopify-section-{{ section.id }} .partner-card__media--empty {
+    border: 1px dashed rgb(var(--color-foreground) / 0.25);
+  }
+
+  #shopify-section-{{ section.id }} .partner-card__title {
+    margin: 0;
+    font-size: clamp(1rem, 2.2vw, 1.125rem);
+    line-height: 1.25;
+    font-weight: 600;
+  }
+
+  #shopify-section-{{ section.id }} .partner-card__meta {
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+
+  #shopify-section-{{ section.id }} .partner-card__blurb {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    opacity: 0.85;
+  }
+
+  {%- comment -%} Push the button to the bottom so cards line up in a row {%- endcomment -%}
+  #shopify-section-{{ section.id }} .partner-card__cta {
+    margin-block-start: auto;
+    padding-block-start: 0.5rem;
+  }
+
+  {%- comment -%} Full-width tap target on mobile; hugs content from tablet up {%- endcomment -%}
+  #shopify-section-{{ section.id }} .partner-card__cta .button {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 640px) {
+    #shopify-section-{{ section.id }} .partner-card__cta .button {
+      width: auto;
+    }
+  }
+</style>
+
+<!-- ct-showcase v8 -->
+<div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded{% endif %}">
+  <div class="page-width{% if section.settings.full_width %} page-width--full{% endif %}">
+    {%- liquid
+      assign has_logo = false
+      if section.settings.partner_logo != blank or section.settings.partner_logo_url != blank
+        assign has_logo = true
+      endif
+    -%}
+
+    {%- if has_logo or heading != blank or intro != blank -%}
+      <div class="partner-showcase__header">
+        {%- if section.settings.partner_label != blank -%}
+          <p class="partner-showcase__label">{{ section.settings.partner_label | escape }}</p>
+        {%- endif -%}
+
+        {%- if has_logo -%}
+          {%- if section.settings.partner_logo != blank -%}
+            {{-
+              section.settings.partner_logo
+              | image_url: width: 800
+              | image_tag:
+                class: 'partner-showcase__logo',
+                widths: '200,400,600,800',
+                loading: 'eager',
+                alt: section.settings.partner_logo_alt
+            -}}
+          {%- else -%}
+            <img
+              class="partner-showcase__logo"
+              src="{{ section.settings.partner_logo_url }}"
+              alt="{{ section.settings.partner_logo_alt | escape }}"
+              height="{{ section.settings.partner_logo_height }}"
+              loading="eager"
+            >
+          {%- endif -%}
+        {%- endif -%}
+
+        {%- if heading != blank -%}
+          <h1 class="partner-showcase__heading h2 {{ section.settings.heading_size }} leading-none tracking-heading">{{ heading | escape }}</h1>
+        {%- endif -%}
+
+        {%- if intro != blank -%}
+          <div class="partner-showcase__intro rte">{{ intro }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="partner-showcase__grid">
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign product = block.settings.product
+
+            # --- Title: editor override for THIS language -> locale key -> product title ---
+            # Each card carries an English and a French override, so copy can be
+            # corrected in the theme editor in either language without touching
+            # the repo or Translate & Adapt. An override only applies to the
+            # language it was written for; the other language keeps falling back
+            # to the locale files.
+            if is_fr
+              assign card_title = block.settings.card_heading_fr
+            else
+              assign card_title = block.settings.card_heading
+            endif
+            if card_title == blank and block.settings.key != blank
+              assign title_key = 'canadian_tire.cards.' | append: block.settings.key | append: '.name'
+              assign card_title = title_key | t
+              if card_title contains 'Translation missing'
+                assign card_title = ''
+              endif
+            endif
+            # Final fallback, keyed on the card's position in the grid.
+            # forloop.index always exists, so this cannot be defeated by a
+            # missing or renamed stored setting.
+            if card_title == blank
+              case forloop.index
+                when 1
+                  if is_fr
+                    assign card_title = "Mélangeur haute vitesse Obliterator"
+                  else
+                    assign card_title = "Obliterator High-Speed Blender"
+                  endif
+                when 2
+                  if is_fr
+                    assign card_title = "Cafetière filtre Caffeinator Drip de 14 tasses"
+                  else
+                    assign card_title = "Caffeinator Drip 14-Cup Coffee Maker"
+                  endif
+                when 3
+                  if is_fr
+                    assign card_title = "Bouilloire électrique Fast-Boil de 1,2 L avec infuseur à thé"
+                  else
+                    assign card_title = "Fast-Boil 1.2 L Electric Kettle with Tea Infuser"
+                  endif
+                when 4
+                  if is_fr
+                    assign card_title = "Bouilloire électrique Lightning de 1,8 L"
+                  else
+                    assign card_title = "Lightning 1.8 L Electric Kettle"
+                  endif
+                when 5
+                  if is_fr
+                    assign card_title = "Friteuse à air TurboFry Touch Easy-View de 5,7 L"
+                  else
+                    assign card_title = "TurboFry Touch 5.7 L Easy-View Air Fryer"
+                  endif
+                when 6
+                  if is_fr
+                    assign card_title = "Friteuse à air numérique Crispinator de 7,6 L"
+                  else
+                    assign card_title = "Crispinator 7.6 L Digital Air Fryer"
+                  endif
+                when 7
+                  if is_fr
+                    assign card_title = "Grille-pain numérique Smart Touch à 2 tranches"
+                  else
+                    assign card_title = "Smart Touch 2-Slice Digital Toaster"
+                  endif
+                when 8
+                  if is_fr
+                    assign card_title = "Grille-pain numérique Smart Touch à 4 tranches"
+                  else
+                    assign card_title = "Smart Touch 4-Slice Digital Toaster"
+                  endif
+                when 9
+                  if is_fr
+                    assign card_title = "Tapis chauffant enroulable Roll 'n Go"
+                  else
+                    assign card_title = "Roll 'n Go Rollable Warming Mat"
+                  endif
+                when 10
+                  if is_fr
+                    assign card_title = "Four grille-pain numérique + friteuse à air Crispinator MAX"
+                  else
+                    assign card_title = "Crispinator MAX Digital Toaster Oven + Air Fryer"
+                  endif
+                when 11
+                  if is_fr
+                    assign card_title = "Friteuse de 3 L en acier inoxydable"
+                  else
+                    assign card_title = "3 L Stainless Steel Deep Fryer"
+                  endif
+                when 12
+                  if is_fr
+                    assign card_title = "Presse à panini et gril submersible Grillinator"
+                  else
+                    assign card_title = "Grillinator Submersible Panini Press & Grill"
+                  endif
+              endcase
+            endif
+            if card_title == blank
+              assign card_title = product.title
+            endif
+
+            # --- Blurb: editor override for THIS language -> locale key ---
+            if is_fr
+              assign card_blurb = block.settings.blurb_fr
+            else
+              assign card_blurb = block.settings.blurb
+            endif
+            if card_blurb == blank and block.settings.key != blank
+              assign blurb_key = 'canadian_tire.cards.' | append: block.settings.key | append: '.blurb'
+              assign card_blurb = blurb_key | t
+              if card_blurb contains 'Translation missing'
+                assign card_blurb = ''
+              endif
+            endif
+
+            # --- Image: block override -> product image ---
+            assign card_image = block.settings.image
+            if card_image == blank
+              assign card_image = product.featured_image
+            endif
+
+            # Optional phone-specific art (a tighter crop, say). Falls back to
+            # the main image when not set.
+            assign card_image_mobile = block.settings.image_mobile
+
+            # --- Link: block override -> product url ---
+            # Off by default: this page is a showcase, not a shopping surface.
+            # Blanking the URL removes the button and unlinks the image + title
+            # in one place, so nothing on the card becomes clickable.
+            assign card_url = block.settings.custom_url
+            if card_url == blank
+              assign card_url = product.url
+            endif
+            unless section.settings.show_cta
+              assign card_url = ''
+            endunless
+          -%}
+
+          <div class="partner-card" {{ block.shopify_attributes }}>
+            <div class="partner-card__media{% if card_image == blank %} partner-card__media--empty{% endif %}">
+              {%- if card_image != blank -%}
+                {%- if card_url != blank -%}<a href="{{ card_url }}" tabindex="-1" aria-hidden="true">{%- endif -%}
+                {%- if card_image_mobile != blank -%}
+                  {%- comment -%} Separate phone art: swap the source under 640px {%- endcomment -%}
+                  <picture>
+                    <source
+                      media="(max-width: 639px)"
+                      srcset="{{ card_image_mobile | image_url: width: 400 }} 400w, {{ card_image_mobile | image_url: width: 800 }} 800w"
+                      sizes="92vw"
+                    >
+                    {{-
+                      card_image
+                      | image_url: width: 900
+                      | image_tag:
+                        widths: '200,300,400,600,900',
+                        sizes: '(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 92vw',
+                        loading: 'lazy',
+                        alt: card_title
+                    -}}
+                  </picture>
+                {%- else -%}
+                  {{-
+                    card_image
+                    | image_url: width: 900
+                    | image_tag:
+                      widths: '200,300,400,600,900',
+                      sizes: '(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 92vw',
+                      loading: 'lazy',
+                      alt: card_title
+                  -}}
+                {%- endif -%}
+                {%- if card_url != blank -%}</a>{%- endif -%}
+              {%- endif -%}
+            </div>
+
+            {%- comment -%}
+              Title. The literal fallbacks below are written with plain tags and
+              plain text: no liquid tag, no case, no translation lookup,
+              no stored setting. If this file is the one being served, a title
+              renders. card_title still wins when it has a value, so the editor
+              override and locale copy keep working.
+            {%- endcomment -%}
+            <h2 class="partner-card__title">
+              {%- if card_url != blank -%}<a href="{{ card_url }}">{%- endif -%}
+              {%- if card_title != blank -%}
+                {{- card_title | escape -}}
+              {%- elsif forloop.index == 1 -%}
+                {%- if is_fr -%}
+                  Mélangeur haute vitesse Obliterator
+                {%- else -%}
+                  Obliterator High-Speed Blender
+                {%- endif -%}
+              {%- elsif forloop.index == 2 -%}
+                {%- if is_fr -%}
+                  Cafetière filtre Caffeinator Drip de 14 tasses
+                {%- else -%}
+                  Caffeinator Drip 14-Cup Coffee Maker
+                {%- endif -%}
+              {%- elsif forloop.index == 3 -%}
+                {%- if is_fr -%}
+                  Bouilloire électrique Fast-Boil de 1,2 L avec infuseur à thé
+                {%- else -%}
+                  Fast-Boil 1.2 L Electric Kettle with Tea Infuser
+                {%- endif -%}
+              {%- elsif forloop.index == 4 -%}
+                {%- if is_fr -%}
+                  Bouilloire électrique Lightning de 1,8 L
+                {%- else -%}
+                  Lightning 1.8 L Electric Kettle
+                {%- endif -%}
+              {%- elsif forloop.index == 5 -%}
+                {%- if is_fr -%}
+                  Friteuse à air TurboFry Touch Easy-View de 5,7 L
+                {%- else -%}
+                  TurboFry Touch 5.7 L Easy-View Air Fryer
+                {%- endif -%}
+              {%- elsif forloop.index == 6 -%}
+                {%- if is_fr -%}
+                  Friteuse à air numérique Crispinator de 7,6 L
+                {%- else -%}
+                  Crispinator 7.6 L Digital Air Fryer
+                {%- endif -%}
+              {%- elsif forloop.index == 7 -%}
+                {%- if is_fr -%}
+                  Grille-pain numérique Smart Touch à 2 tranches
+                {%- else -%}
+                  Smart Touch 2-Slice Digital Toaster
+                {%- endif -%}
+              {%- elsif forloop.index == 8 -%}
+                {%- if is_fr -%}
+                  Grille-pain numérique Smart Touch à 4 tranches
+                {%- else -%}
+                  Smart Touch 4-Slice Digital Toaster
+                {%- endif -%}
+              {%- elsif forloop.index == 9 -%}
+                {%- if is_fr -%}
+                  Tapis chauffant enroulable Roll 'n Go
+                {%- else -%}
+                  Roll 'n Go Rollable Warming Mat
+                {%- endif -%}
+              {%- elsif forloop.index == 10 -%}
+                {%- if is_fr -%}
+                  Four grille-pain numérique + friteuse à air Crispinator MAX
+                {%- else -%}
+                  Crispinator MAX Digital Toaster Oven + Air Fryer
+                {%- endif -%}
+              {%- elsif forloop.index == 11 -%}
+                {%- if is_fr -%}
+                  Friteuse de 3 L en acier inoxydable
+                {%- else -%}
+                  3 L Stainless Steel Deep Fryer
+                {%- endif -%}
+              {%- elsif forloop.index == 12 -%}
+                {%- if is_fr -%}
+                  Presse à panini et gril submersible Grillinator
+                {%- else -%}
+                  Grillinator Submersible Panini Press & Grill
+                {%- endif -%}
+              {%- endif -%}
+              {%- if card_url != blank -%}</a>{%- endif -%}
+            </h2>
+
+            {%- if section.settings.show_meta -%}
+              {%- liquid
+                assign meta_parts = ''
+                if block.settings.colour != blank
+                  assign meta_parts = block.settings.colour
+                endif
+                if block.settings.sku != blank
+                  if meta_parts != blank
+                    assign meta_parts = meta_parts | append: ' · ' | append: block.settings.sku
+                  else
+                    assign meta_parts = block.settings.sku
+                  endif
+                endif
+              -%}
+              {%- if meta_parts != blank -%}
+                <p class="partner-card__meta">{{ meta_parts | escape }}</p>
+              {%- endif -%}
+            {%- endif -%}
+
+            {%- if card_blurb != blank -%}
+              <div class="partner-card__blurb rte">{{ card_blurb }}</div>
+            {%- endif -%}
+
+            {%- if card_url != blank -%}
+              <div class="partner-card__cta">
+                <a
+                  class="button button--{{ section.settings.button_style }}"
+                  href="{{ card_url }}"
+                >
+                  {{- button_label | escape -}}
+                </a>
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "CT Showcase",
+  "tag": "section",
+  "max_blocks": 24,
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Mobile-first product grid: 1 column on phones, 2 on tablet, 4 on desktop. Leave a card's title/blurb empty to use the bilingual copy from the theme's locale files (locales/en.default.json + fr.json), which switches with the language toggle."
+    },
+    {
+      "type": "header",
+      "content": "Partner logo"
+    },
+    {
+      "type": "text",
+      "id": "partner_label",
+      "label": "Small label above the logo",
+      "info": "Optional, e.g. \"Prepared for\". Not translated automatically — leave blank for a bilingual page."
+    },
+    {
+      "type": "image_picker",
+      "id": "partner_logo",
+      "label": "Partner logo",
+      "info": "Recommended: upload the logo to Content → Files and pick it here."
+    },
+    {
+      "type": "text",
+      "id": "partner_logo_url",
+      "label": "Partner logo URL (fallback)",
+      "info": "Used only when no image is picked above."
+    },
+    {
+      "type": "text",
+      "id": "partner_logo_alt",
+      "label": "Logo alt text",
+      "default": "Canadian Tire"
+    },
+    {
+      "type": "range",
+      "id": "partner_logo_height",
+      "label": "Logo height",
+      "min": 24,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading (English)",
+      "info": "Leave blank to fall back to the locale files."
+    },
+    {
+      "type": "text",
+      "id": "heading_fr",
+      "label": "Heading (French)"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "md:title-sm", "label": "Small" },
+        { "value": "md:title-md", "label": "Medium" },
+        { "value": "md:title-lg", "label": "Large" },
+        { "value": "md:title-xl", "label": "Extra large" }
+      ],
+      "default": "md:title-lg"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Intro text (English)",
+      "info": "Leave blank to fall back to the locale files."
+    },
+    {
+      "type": "richtext",
+      "id": "intro_fr",
+      "label": "Intro text (French)"
+    },
+    {
+      "type": "header",
+      "content": "Cards"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_cta",
+      "label": "Make cards clickable",
+      "info": "Off by default — this page is a showcase, not a shopping surface. Turning it on adds a button to each card and links the image and title to the product.",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "info": "Only used when cards are clickable. Leave blank for the translated \"Learn more\"."
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "options": [
+        { "value": "primary", "label": "Primary" },
+        { "value": "secondary", "label": "Secondary" }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_meta",
+      "label": "Show colour + model number on cards",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Card images"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image shape",
+      "info": "The supplied product photos are all 2:3 portrait, which fills that shape exactly with no letterboxing.",
+      "options": [
+        { "value": "2 / 3", "label": "Portrait 2:3 (matches supplied photos)" },
+        { "value": "3 / 4", "label": "Portrait 3:4" },
+        { "value": "4 / 5", "label": "Portrait 4:5" },
+        { "value": "1 / 1", "label": "Square" },
+        { "value": "natural", "label": "Natural (image's own shape)" }
+      ],
+      "default": "2 / 3"
+    },
+    {
+      "type": "select",
+      "id": "image_fit",
+      "label": "Image fit",
+      "info": "Contain shows the whole photo. Cover fills the card and crops the edges — use it when a photo is composed wide and leaves dead space.",
+      "options": [
+        { "value": "contain", "label": "Contain (show whole photo)" },
+        { "value": "cover", "label": "Cover (fill and crop)" }
+      ],
+      "default": "contain"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Crop focus",
+      "info": "Only applies when fit is set to Cover.",
+      "options": [
+        { "value": "center", "label": "Centre" },
+        { "value": "top", "label": "Top" },
+        { "value": "bottom", "label": "Bottom" },
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "color",
+      "id": "card_image_background",
+      "label": "Card image background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "header",
+      "content": "Section"
+    },
+    {
+      "type": "color",
+      "id": "color_text",
+      "label": "Text",
+      "default": "#121e2a"
+    },
+    {
+      "type": "color",
+      "id": "color_background",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "gradient_background",
+      "label": "Background gradient"
+    },
+    {
+      "type": "color",
+      "id": "color_button_text",
+      "label": "Button text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "color_button_background",
+      "label": "Button background",
+      "default": "#121e2a"
+    },
+    {
+      "type": "color_background",
+      "id": "color_button_gradient",
+      "label": "Button gradient"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 64
+    },
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "Show divider",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "rounded",
+      "label": "Rounded",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_card",
+      "name": "Product card",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product",
+          "info": "Optional. Only needed as a fallback source for the image/title, or to give the card a destination when \"Make cards clickable\" is on."
+        },
+        {
+          "type": "text",
+          "id": "key",
+          "label": "Locale key",
+          "info": "Looks up canadian_tire.cards.<key>.title / .blurb in the theme's locale files so the card is bilingual."
+        },
+        {
+          "type": "header",
+          "content": "English copy"
+        },
+        {
+          "type": "text",
+          "id": "card_heading",
+          "label": "Title (English)",
+          "info": "Leave blank to use the copy from the locale files. Applies to the English page only."
+        },
+        {
+          "type": "richtext",
+          "id": "blurb",
+          "label": "Blurb (English)"
+        },
+        {
+          "type": "header",
+          "content": "French copy"
+        },
+        {
+          "type": "text",
+          "id": "card_heading_fr",
+          "label": "Title (French)",
+          "info": "Shown on the French page instead of the locale-file copy. Edit here to correct French wording without a Translate & Adapt import."
+        },
+        {
+          "type": "richtext",
+          "id": "blurb_fr",
+          "label": "Blurb (French)"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "Overrides the product's featured image. Use this to swap in a different photo, or to supply art for a product that isn't on the store yet."
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Image — phone only",
+          "info": "Optional. Shown below 640px instead of the image above — handy when the main photo is composed wide and reads badly on a phone."
+        },
+        {
+          "type": "url",
+          "id": "custom_url",
+          "label": "Link",
+          "info": "Only used when \"Make cards clickable\" is on. Takes priority over the product's own URL."
+        },
+        {
+          "type": "text",
+          "id": "colour",
+          "label": "Colour"
+        },
+        {
+          "type": "text",
+          "id": "sku",
+          "label": "Model number"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CT Showcase",
+      "blocks": [
+        { "type": "product_card" },
+        { "type": "product_card" },
+        { "type": "product_card" },
+        { "type": "product_card" }
+      ]
+    }
+  ]
+}
+{% endschema %}
