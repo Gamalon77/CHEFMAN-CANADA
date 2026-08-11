@@ -1,0 +1,156 @@
+{
+  "sections": {
+    "showcase": {
+      "type": "partner-product-showcase",
+      "blocks": {
+        "card_obliterator": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "key": "obliterator_blender",
+            "colour": "Midnight",
+            "sku": "C27-2TJ-2M-CA1"
+          }
+        },
+        "card_caffeinator": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "key": "caffeinator_drip",
+            "colour": "Midnight",
+            "sku": "C14-DR14-1M-CA2"
+          }
+        },
+        "card_kettle_manual": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "key": "kettle_manual_12l",
+            "colour": "Glass/SS",
+            "sku": "RJ11-12-TI-CA"
+          }
+        },
+        "card_kettle_digital": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "key": "kettle_digital_dual_glass",
+            "colour": "Glass/SS",
+            "sku": "RJ11-18-SCTI-DG-HP-CA"
+          }
+        },
+        "card_air_fryer_55": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "key": "air_fryer_55l",
+            "colour": "Black",
+            "sku": "RJ38-6TW-BLACK-DS-CA"
+          }
+        },
+        "card_crispinator": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "key": "crispinator_air_fryer",
+            "colour": "Midnight",
+            "sku": "C38-8W7-1M-CA1"
+          }
+        },
+        "card_toaster_2": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "key": "toaster_2_slice",
+            "colour": "Stainless",
+            "sku": "RJ31-SS-T-2S-CA"
+          }
+        },
+        "card_toaster_4": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "key": "toaster_4_slice",
+            "colour": "Stainless",
+            "sku": "RJ31-SS-T-4S-CA"
+          }
+        },
+        "card_warming_mat": {
+          "type": "product_card",
+          "settings": {
+            "product": "roll-n-go-food-warming-mat",
+            "key": "warming_mat",
+            "colour": "Blue",
+            "sku": "RJ22-S-BLUE-CA"
+          }
+        },
+        "card_max_toaf": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "key": "crispinator_max_toaf",
+            "colour": "Stainless",
+            "sku": "C50-T25-1SS-CA1"
+          }
+        },
+        "card_deep_fryer": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "key": "deep_fryer_3l",
+            "colour": "Stainless",
+            "sku": "RJ07-32-SS-D-CA"
+          }
+        },
+        "card_grillinator": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "key": "grillinator_grill",
+            "colour": "Midnight",
+            "sku": "C02-S-1M-CA2"
+          }
+        }
+      },
+      "block_order": [
+        "card_obliterator",
+        "card_caffeinator",
+        "card_kettle_manual",
+        "card_kettle_digital",
+        "card_air_fryer_55",
+        "card_crispinator",
+        "card_toaster_2",
+        "card_toaster_4",
+        "card_warming_mat",
+        "card_max_toaf",
+        "card_deep_fryer",
+        "card_grillinator"
+      ],
+      "settings": {
+        "partner_label": "",
+        "partner_logo_url": "https://cdn.shopify.com/s/files/1/0714/7647/8117/files/CT_Logo.png?v=1786452409",
+        "partner_logo_alt": "Canadian Tire",
+        "partner_logo_height": 56,
+        "heading": "",
+        "heading_size": "md:title-lg",
+        "intro": "",
+        "button_label": "",
+        "button_style": "primary",
+        "show_meta": false,
+        "card_image_background": "#f5f5f5",
+        "color_text": "#121e2a",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_button_text": "#ffffff",
+        "color_button_background": "#121e2a",
+        "color_button_gradient": "",
+        "padding_top": 40,
+        "padding_bottom": 64,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    }
+  },
+  "order": ["showcase"]
+}

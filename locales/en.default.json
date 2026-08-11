@@ -573,5 +573,60 @@
   },
   "date_formats": {
     "month_day_year": "%b %d, %Y"
+  },
+  "canadian_tire": {
+    "heading": "The Chefman Lineup",
+    "intro": "A closer look at the products we're bringing to Canadian Tire. Tap any product for full details.",
+    "learn_more": "Learn more",
+    "cards": {
+      "obliterator_blender": {
+        "title": "Obliterator Blender + 2 Travel Jars",
+        "blurb": "Breaks ice and frozen fruit down to a smooth pour, then hands off to two travel jars so the blend leaves with you."
+      },
+      "caffeinator_drip": {
+        "title": "Caffeinator 14-Cup Drip Coffee Maker",
+        "blurb": "Brews up to 14 cups of drip coffee, enough to keep a full table topped up."
+      },
+      "kettle_manual_12l": {
+        "title": "1.2 L Glass & Stainless Kettle",
+        "blurb": "Boils 1.2 L in a glass body that shows the water line, with stainless trim that wipes clean."
+      },
+      "kettle_digital_dual_glass": {
+        "title": "Dual-Glass Digital Kettle",
+        "blurb": "Digital temperature control dials in the right heat for green tea, oolong or a full boil."
+      },
+      "air_fryer_55l": {
+        "title": "5.5 L Digital Air Fryer",
+        "blurb": "A 5.5 L basket with digital controls, sized for wings, fries or a family batch of vegetables."
+      },
+      "crispinator_air_fryer": {
+        "title": "Crispinator Air Fryer",
+        "blurb": "Crisps with circulating hot air instead of oil, so fries and wings skip the deep-fry cleanup."
+      },
+      "toaster_2_slice": {
+        "title": "2-Slice Smart Touch Toaster",
+        "blurb": "Touch controls and a digital countdown replace the guesswork of a dial."
+      },
+      "toaster_4_slice": {
+        "title": "4-Slice Smart Touch Toaster",
+        "blurb": "Four slices at once, with a countdown that shows exactly how much time is left."
+      },
+      "warming_mat": {
+        "title": "Roll n' Go Food Warming Mat",
+        "blurb": "Holds dishes at serving temperature across the buffet, then rolls up to store flat in a drawer."
+      },
+      "crispinator_max_toaf": {
+        "title": "Crispinator MAX TOAF",
+        "blurb": "A countertop oven that toasts, bakes and air-fries, covering breakfast through dinner in one footprint."
+      },
+      "deep_fryer_3l": {
+        "title": "3 L Deep Fryer",
+        "blurb": "Three litres of oil and a lift-out basket for draining, in a stainless body that wipes down fast."
+      },
+      "grillinator_grill": {
+        "title": "Grillinator Submersible Grill",
+        "blurb": "Grills indoors year-round, and the whole plate goes into the sink when you're done."
+      }
+    }
   }
 }
