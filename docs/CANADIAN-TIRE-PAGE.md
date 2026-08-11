@@ -26,10 +26,21 @@ rendering issue on this store is documented at the bottom.
    block.
 5. Point the QR code at the page URL.
 
-Each product section shows: **title** (heading block), **colour · model number**
-(subheading block, e.g. *Midnight · C27-2TJ-2M-CA1*), and the **blurb** (text
-block). Delete the subheading block in any section if you don't want the model
-line shown.
+Each product section now carries the full VP-requested field set:
+
+| Block | Content | Status |
+|-------|---------|--------|
+| Heading | 1-line product title | done |
+| Subheading 1 | `Model <CA model> · <colour>` | done |
+| Subheading 2 | `CTC item #: TBD · Regular retail: $TBD` | **fill in the two TBDs** |
+| Text | Top 3–4 features as bullets (from the deck, metric) | done |
+| Button | "View at Canadian Tire" | **paste the CT product URL** into Button link |
+| Link | "Watch the video" | disabled — enable the block and paste the URL when a video exists |
+
+All of those are ordinary theme-editor fields on each *Image with text*
+section. `CT-VP-fill-in-sheet.csv` (sent separately) lists every product with
+blank columns for CTC #, retail price, CT URL and video URL — hand it to the
+VP, then paste the returned values into the editor.
 
 ## 2. Editing copy
 

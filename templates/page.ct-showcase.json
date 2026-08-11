@@ -86,15 +86,23 @@
         "sub_obliterator_blender": {
           "type": "subheading",
           "settings": {
-            "subheading": "Midnight · C27-2TJ-2M-CA1",
+            "subheading": "Model C27-2TJ-2M-CA1 · Midnight",
             "subheading_size": "subtitle-md",
             "secondary_color": true
           }
         },
-        "text_obliterator_blender": {
+        "ctc_obliterator_blender": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "feat_obliterator_blender": {
           "type": "text",
           "settings": {
-            "text": "<p>Auto-Blend senses what's in the 1.4 L Triton jar and sets the blend time itself, backed by more than 20,000 rpm. Two travel jars come along for the ride.</p>",
+            "text": "<ul><li>Auto-Blend senses ingredients and sets the blend time automatically</li><li>Over 20,000 rpm with a 1.4 L Triton jar</li><li>Two travel jars included</li><li>Pulse and Clean presets</li></ul>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -102,12 +110,35 @@
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
+        },
+        "ctbtn_obliterator_blender": {
+          "type": "button",
+          "settings": {
+            "button_label": "View at Canadian Tire",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_size": "md",
+            "button_external": true,
+            "button_icon": true
+          }
+        },
+        "video_obliterator_blender": {
+          "type": "link",
+          "disabled": true,
+          "settings": {
+            "label": "Watch the video",
+            "link": "",
+            "external": true
+          }
         }
       },
       "block_order": [
         "heading_obliterator_blender",
         "sub_obliterator_blender",
-        "text_obliterator_blender"
+        "ctc_obliterator_blender",
+        "feat_obliterator_blender",
+        "ctbtn_obliterator_blender",
+        "video_obliterator_blender"
       ],
       "settings": {
         "image_height": "450px",
@@ -152,15 +183,23 @@
         "sub_caffeinator_drip": {
           "type": "subheading",
           "settings": {
-            "subheading": "Midnight · C14-DR14-1M-CA2",
+            "subheading": "Model C14-DR14-1M-CA2 · Midnight",
             "subheading_size": "subtitle-md",
             "secondary_color": true
           }
         },
-        "text_caffeinator_drip": {
+        "ctc_caffeinator_drip": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "feat_caffeinator_drip": {
           "type": "text",
           "settings": {
-            "text": "<p>Brews 14 cups from a 2.1 L reservoir, with a touchscreen, Classic and Bold settings and a 24-hour delay timer. The 1-to-4-cup setting covers a single mug.</p>",
+            "text": "<ul><li>14-cup capacity with a 2.1 L water reservoir</li><li>Touchscreen with Classic and Bold brew settings</li><li>24-hour programmable delay brew</li><li>Reusable GoldTone filter included</li></ul>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -168,12 +207,35 @@
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
+        },
+        "ctbtn_caffeinator_drip": {
+          "type": "button",
+          "settings": {
+            "button_label": "View at Canadian Tire",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_size": "md",
+            "button_external": true,
+            "button_icon": true
+          }
+        },
+        "video_caffeinator_drip": {
+          "type": "link",
+          "disabled": true,
+          "settings": {
+            "label": "Watch the video",
+            "link": "",
+            "external": true
+          }
         }
       },
       "block_order": [
         "heading_caffeinator_drip",
         "sub_caffeinator_drip",
-        "text_caffeinator_drip"
+        "ctc_caffeinator_drip",
+        "feat_caffeinator_drip",
+        "ctbtn_caffeinator_drip",
+        "video_caffeinator_drip"
       ],
       "settings": {
         "image_height": "450px",
@@ -218,15 +280,23 @@
         "sub_kettle_manual_12l": {
           "type": "subheading",
           "settings": {
-            "subheading": "Glass/SS · RJ11-12-TI-CA",
+            "subheading": "Model RJ11-12-TI-CA · Glass/SS",
             "subheading_size": "subtitle-md",
             "secondary_color": true
           }
         },
-        "text_kettle_manual_12l": {
+        "ctc_kettle_manual_12l": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "feat_kettle_manual_12l": {
           "type": "text",
           "settings": {
-            "text": "<p>1500 W brings 1.2 L up in stain-resistant borosilicate glass, with blue LEDs that light while it heats. Both the tea infuser and the lid lift out.</p>",
+            "text": "<ul><li>1500 W fast boil</li><li>Removable tea infuser and lift-out lid</li><li>Stain-resistant borosilicate glass</li><li>Blue LEDs illuminate while boiling</li></ul>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -234,12 +304,35 @@
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
+        },
+        "ctbtn_kettle_manual_12l": {
+          "type": "button",
+          "settings": {
+            "button_label": "View at Canadian Tire",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_size": "md",
+            "button_external": true,
+            "button_icon": true
+          }
+        },
+        "video_kettle_manual_12l": {
+          "type": "link",
+          "disabled": true,
+          "settings": {
+            "label": "Watch the video",
+            "link": "",
+            "external": true
+          }
         }
       },
       "block_order": [
         "heading_kettle_manual_12l",
         "sub_kettle_manual_12l",
-        "text_kettle_manual_12l"
+        "ctc_kettle_manual_12l",
+        "feat_kettle_manual_12l",
+        "ctbtn_kettle_manual_12l",
+        "video_kettle_manual_12l"
       ],
       "settings": {
         "image_height": "450px",
@@ -284,15 +377,23 @@
         "sub_kettle_digital_dual_glass": {
           "type": "subheading",
           "settings": {
-            "subheading": "Glass/SS · RJ11-18-SCTI-DG-HP-CA",
+            "subheading": "Model RJ11-18-SCTI-DG-HP-CA · Glass/SS",
             "subheading_size": "subtitle-md",
             "secondary_color": true
           }
         },
-        "text_kettle_digital_dual_glass": {
+        "ctc_kettle_digital_dual_glass": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "feat_kettle_digital_dual_glass": {
           "type": "text",
           "settings": {
-            "text": "<p>1750 W of Lightning power boils up to 25% faster, with five temperature presets and tricolour LEDs for standby, heating and ready. Auto shut-off and boil-dry protection included.</p>",
+            "text": "<ul><li>1750 W — boils up to 25% faster</li><li>Five temperature presets with digital control</li><li>Tricolour LEDs for standby, heating and ready</li><li>Auto shut-off and boil-dry protection</li></ul>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -300,12 +401,35 @@
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
+        },
+        "ctbtn_kettle_digital_dual_glass": {
+          "type": "button",
+          "settings": {
+            "button_label": "View at Canadian Tire",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_size": "md",
+            "button_external": true,
+            "button_icon": true
+          }
+        },
+        "video_kettle_digital_dual_glass": {
+          "type": "link",
+          "disabled": true,
+          "settings": {
+            "label": "Watch the video",
+            "link": "",
+            "external": true
+          }
         }
       },
       "block_order": [
         "heading_kettle_digital_dual_glass",
         "sub_kettle_digital_dual_glass",
-        "text_kettle_digital_dual_glass"
+        "ctc_kettle_digital_dual_glass",
+        "feat_kettle_digital_dual_glass",
+        "ctbtn_kettle_digital_dual_glass",
+        "video_kettle_digital_dual_glass"
       ],
       "settings": {
         "image_height": "450px",
@@ -350,15 +474,23 @@
         "sub_air_fryer_55l": {
           "type": "subheading",
           "settings": {
-            "subheading": "Black · RJ38-6TW-BLACK-DS-CA",
+            "subheading": "Model RJ38-6TW-BLACK-DS-CA · Black",
             "subheading_size": "subtitle-md",
             "secondary_color": true
           }
         },
-        "text_air_fryer_55l": {
+        "ctc_air_fryer_55l": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "feat_air_fryer_55l": {
           "type": "text",
           "settings": {
-            "text": "<p>A 5.7 L basket sits behind a large window with an interior light, joined by four digital presets and a Hi-Fry button that runs 232 °C for two minutes. An LED reminder prompts you to shake mid-cook, and the basket and rack are dishwasher-safe.</p>",
+            "text": "<ul><li>5.7 L basket with four digital presets</li><li>Hi-Fry button: 232 °C burst for extra crisp</li><li>Large viewing window with interior light</li><li>Dishwasher-safe basket and rack</li></ul>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -366,12 +498,35 @@
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
+        },
+        "ctbtn_air_fryer_55l": {
+          "type": "button",
+          "settings": {
+            "button_label": "View at Canadian Tire",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_size": "md",
+            "button_external": true,
+            "button_icon": true
+          }
+        },
+        "video_air_fryer_55l": {
+          "type": "link",
+          "disabled": true,
+          "settings": {
+            "label": "Watch the video",
+            "link": "",
+            "external": true
+          }
         }
       },
       "block_order": [
         "heading_air_fryer_55l",
         "sub_air_fryer_55l",
-        "text_air_fryer_55l"
+        "ctc_air_fryer_55l",
+        "feat_air_fryer_55l",
+        "ctbtn_air_fryer_55l",
+        "video_air_fryer_55l"
       ],
       "settings": {
         "image_height": "450px",
@@ -416,15 +571,23 @@
         "sub_crispinator_air_fryer": {
           "type": "subheading",
           "settings": {
-            "subheading": "Midnight · C38-8W7-1M-CA1",
+            "subheading": "Model C38-8W7-1M-CA1 · Midnight",
             "subheading_size": "subtitle-md",
             "secondary_color": true
           }
         },
-        "text_crispinator_air_fryer": {
+        "ctc_crispinator_air_fryer": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "feat_crispinator_air_fryer": {
           "type": "text",
           "settings": {
-            "text": "<p>An adjustable-speed DC motor crisps, bakes and fries up to 40% faster across seven functions plus manual control. The Frozen setting defrosts first, then switches to cook.</p>",
+            "text": "<ul><li>Adjustable-speed DC motor cooks up to 40% faster</li><li>Seven functions plus manual control</li><li>Two-step Frozen function: defrosts, then cooks</li><li>Large viewing window with natural interior light</li></ul>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -432,12 +595,35 @@
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
+        },
+        "ctbtn_crispinator_air_fryer": {
+          "type": "button",
+          "settings": {
+            "button_label": "View at Canadian Tire",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_size": "md",
+            "button_external": true,
+            "button_icon": true
+          }
+        },
+        "video_crispinator_air_fryer": {
+          "type": "link",
+          "disabled": true,
+          "settings": {
+            "label": "Watch the video",
+            "link": "",
+            "external": true
+          }
         }
       },
       "block_order": [
         "heading_crispinator_air_fryer",
         "sub_crispinator_air_fryer",
-        "text_crispinator_air_fryer"
+        "ctc_crispinator_air_fryer",
+        "feat_crispinator_air_fryer",
+        "ctbtn_crispinator_air_fryer",
+        "video_crispinator_air_fryer"
       ],
       "settings": {
         "image_height": "450px",
@@ -482,15 +668,23 @@
         "sub_toaster_2_slice": {
           "type": "subheading",
           "settings": {
-            "subheading": "Stainless · RJ31-SS-T-2S-CA",
+            "subheading": "Model RJ31-SS-T-2S-CA · Stainless",
             "subheading_size": "subtitle-md",
             "secondary_color": true
           }
         },
-        "text_toaster_2_slice": {
+        "ctc_toaster_2_slice": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "feat_toaster_2_slice": {
           "type": "text",
           "settings": {
-            "text": "<p>A reveal-screen touchscreen with six shade settings and a countdown, plus Bagel, Frozen and a +10 second button. The crumb tray pushes open from the front.</p>",
+            "text": "<ul><li>Reveal-screen touchscreen interface</li><li>Six shade settings with countdown timer</li><li>Bagel, Frozen and +10 second functions</li><li>Front push-open crumb tray</li></ul>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -498,12 +692,35 @@
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
+        },
+        "ctbtn_toaster_2_slice": {
+          "type": "button",
+          "settings": {
+            "button_label": "View at Canadian Tire",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_size": "md",
+            "button_external": true,
+            "button_icon": true
+          }
+        },
+        "video_toaster_2_slice": {
+          "type": "link",
+          "disabled": true,
+          "settings": {
+            "label": "Watch the video",
+            "link": "",
+            "external": true
+          }
         }
       },
       "block_order": [
         "heading_toaster_2_slice",
         "sub_toaster_2_slice",
-        "text_toaster_2_slice"
+        "ctc_toaster_2_slice",
+        "feat_toaster_2_slice",
+        "ctbtn_toaster_2_slice",
+        "video_toaster_2_slice"
       ],
       "settings": {
         "image_height": "450px",
@@ -548,15 +765,23 @@
         "sub_toaster_4_slice": {
           "type": "subheading",
           "settings": {
-            "subheading": "Stainless · RJ31-SS-T-4S-CA",
+            "subheading": "Model RJ31-SS-T-4S-CA · Stainless",
             "subheading_size": "subtitle-md",
             "secondary_color": true
           }
         },
-        "text_toaster_4_slice": {
+        "ctc_toaster_4_slice": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "feat_toaster_4_slice": {
           "type": "text",
           "settings": {
-            "text": "<p>Four extra-wide slots, six shade settings, a countdown and a high-lift lever. Bagel, Frozen and a +10 second button round it out.</p>",
+            "text": "<ul><li>Four extra-wide slots</li><li>Touchscreen with countdown timer and six shade settings</li><li>Bagel, Frozen and +10 second functions</li><li>High-lift lever and removable crumb tray</li></ul>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -564,12 +789,35 @@
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
+        },
+        "ctbtn_toaster_4_slice": {
+          "type": "button",
+          "settings": {
+            "button_label": "View at Canadian Tire",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_size": "md",
+            "button_external": true,
+            "button_icon": true
+          }
+        },
+        "video_toaster_4_slice": {
+          "type": "link",
+          "disabled": true,
+          "settings": {
+            "label": "Watch the video",
+            "link": "",
+            "external": true
+          }
         }
       },
       "block_order": [
         "heading_toaster_4_slice",
         "sub_toaster_4_slice",
-        "text_toaster_4_slice"
+        "ctc_toaster_4_slice",
+        "feat_toaster_4_slice",
+        "ctbtn_toaster_4_slice",
+        "video_toaster_4_slice"
       ],
       "settings": {
         "image_height": "450px",
@@ -614,15 +862,23 @@
         "sub_warming_mat": {
           "type": "subheading",
           "settings": {
-            "subheading": "Blue · RJ22-S-BLUE-CA",
+            "subheading": "Model RJ22-S-BLUE-CA · Blue",
             "subheading_size": "subtitle-md",
             "secondary_color": true
           }
         },
-        "text_warming_mat": {
+        "ctc_warming_mat": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "feat_warming_mat": {
           "type": "text",
           "settings": {
-            "text": "<p>Heats its full surface to hold a buffet at temperature, with three levels of control and a wipeable silicone top. Rolls up into the storage bag it ships with.</p>",
+            "text": "<ul><li>Rapid full-surface heating</li><li>Three-level temperature control</li><li>Flexible, wipeable silicone rolls up for flat storage</li><li>Storage bag included</li></ul>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -630,12 +886,35 @@
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
+        },
+        "ctbtn_warming_mat": {
+          "type": "button",
+          "settings": {
+            "button_label": "View at Canadian Tire",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_size": "md",
+            "button_external": true,
+            "button_icon": true
+          }
+        },
+        "video_warming_mat": {
+          "type": "link",
+          "disabled": true,
+          "settings": {
+            "label": "Watch the video",
+            "link": "",
+            "external": true
+          }
         }
       },
       "block_order": [
         "heading_warming_mat",
         "sub_warming_mat",
-        "text_warming_mat"
+        "ctc_warming_mat",
+        "feat_warming_mat",
+        "ctbtn_warming_mat",
+        "video_warming_mat"
       ],
       "settings": {
         "image_height": "450px",
@@ -680,15 +959,23 @@
         "sub_crispinator_max_toaf": {
           "type": "subheading",
           "settings": {
-            "subheading": "Stainless · C50-T25-1SS-CA1",
+            "subheading": "Model C50-T25-1SS-CA1 · Stainless",
             "subheading_size": "subtitle-md",
             "secondary_color": true
           }
         },
-        "text_crispinator_max_toaf": {
+        "ctc_crispinator_max_toaf": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "feat_crispinator_max_toaf": {
           "type": "text",
           "settings": {
-            "text": "<p>A brushless DC motor drives nine functions up to 260 °C, from air fry and roast through proof and dehydrate. Fits a 33 cm pizza or a 23 × 33 cm pan, and includes the basket, rack, baking tray and crumb tray.</p>",
+            "text": "<ul><li>Brushless DC motor — up to 30% faster than other air fryer ovens</li><li>Nine functions, up to 260 °C</li><li>Fits a 33 cm pizza or 23 × 33 cm pan</li><li>Air fryer basket, wire rack, baking tray and crumb tray included</li></ul>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -696,12 +983,35 @@
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
+        },
+        "ctbtn_crispinator_max_toaf": {
+          "type": "button",
+          "settings": {
+            "button_label": "View at Canadian Tire",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_size": "md",
+            "button_external": true,
+            "button_icon": true
+          }
+        },
+        "video_crispinator_max_toaf": {
+          "type": "link",
+          "disabled": true,
+          "settings": {
+            "label": "Watch the video",
+            "link": "",
+            "external": true
+          }
         }
       },
       "block_order": [
         "heading_crispinator_max_toaf",
         "sub_crispinator_max_toaf",
-        "text_crispinator_max_toaf"
+        "ctc_crispinator_max_toaf",
+        "feat_crispinator_max_toaf",
+        "ctbtn_crispinator_max_toaf",
+        "video_crispinator_max_toaf"
       ],
       "settings": {
         "image_height": "450px",
@@ -746,15 +1056,23 @@
         "sub_deep_fryer_3l": {
           "type": "subheading",
           "settings": {
-            "subheading": "Stainless · RJ07-32-SS-D-CA",
+            "subheading": "Model RJ07-32-SS-D-CA · Stainless",
             "subheading_size": "subtitle-md",
             "secondary_color": true
           }
         },
-        "text_deep_fryer_3l": {
+        "ctc_deep_fryer_3l": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "feat_deep_fryer_3l": {
           "type": "text",
           "settings": {
-            "text": "<p>A 1500 W element brings 3 L up to temperature, and a divider lets you fry two foods at once. The oil container lifts out, the parts are dishwasher-safe and a charcoal filter absorbs frying odours.</p>",
+            "text": "<ul><li>1500 W element with removable oil container</li><li>Divider fries two foods at once</li><li>Magnetic breakaway cord and dishwasher-safe parts</li><li>Charcoal filter absorbs frying odours</li></ul>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -762,12 +1080,35 @@
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
+        },
+        "ctbtn_deep_fryer_3l": {
+          "type": "button",
+          "settings": {
+            "button_label": "View at Canadian Tire",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_size": "md",
+            "button_external": true,
+            "button_icon": true
+          }
+        },
+        "video_deep_fryer_3l": {
+          "type": "link",
+          "disabled": true,
+          "settings": {
+            "label": "Watch the video",
+            "link": "",
+            "external": true
+          }
         }
       },
       "block_order": [
         "heading_deep_fryer_3l",
         "sub_deep_fryer_3l",
-        "text_deep_fryer_3l"
+        "ctc_deep_fryer_3l",
+        "feat_deep_fryer_3l",
+        "ctbtn_deep_fryer_3l",
+        "video_deep_fryer_3l"
       ],
       "settings": {
         "image_height": "450px",
@@ -812,15 +1153,23 @@
         "sub_grillinator_grill": {
           "type": "subheading",
           "settings": {
-            "subheading": "Midnight · C02-S-1M-CA2",
+            "subheading": "Model C02-S-1M-CA2 · Midnight",
             "subheading_size": "subtitle-md",
             "secondary_color": true
           }
         },
-        "text_grillinator_grill": {
+        "ctc_grillinator_grill": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "feat_grillinator_grill": {
           "type": "text",
           "settings": {
-            "text": "<p>Pull the plug and the whole grill goes in the dishwasher. Ceramic nonstick plates run 121 °C to 232 °C, and a floating hinge over a 25 × 23 cm surface takes five slices at once.</p>",
+            "text": "<ul><li>Fully dishwasher-safe once the plug is removed</li><li>Ceramic nonstick plates, 121–232 °C</li><li>Extra-large five-slice capacity on a 25 × 23 cm surface</li><li>Floating hinge for thicker foods</li></ul>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -828,12 +1177,35 @@
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
+        },
+        "ctbtn_grillinator_grill": {
+          "type": "button",
+          "settings": {
+            "button_label": "View at Canadian Tire",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_size": "md",
+            "button_external": true,
+            "button_icon": true
+          }
+        },
+        "video_grillinator_grill": {
+          "type": "link",
+          "disabled": true,
+          "settings": {
+            "label": "Watch the video",
+            "link": "",
+            "external": true
+          }
         }
       },
       "block_order": [
         "heading_grillinator_grill",
         "sub_grillinator_grill",
-        "text_grillinator_grill"
+        "ctc_grillinator_grill",
+        "feat_grillinator_grill",
+        "ctbtn_grillinator_grill",
+        "video_grillinator_grill"
       ],
       "settings": {
         "image_height": "450px",
