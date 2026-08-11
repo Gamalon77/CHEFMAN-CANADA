@@ -14900,3 +14900,19 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
     }
   }
 }
+
+
+/* CT showcase page (templates/page.ct-showcase.json): on mobile the feature
+   lists are centred, so hanging bullet markers read badly — remove them below
+   the 1024px breakpoint. Desktop keeps the theme's standard rte bullets.
+   Scoped to this page's sections via their wrapper ids (…__iwt_<product>). */
+@media screen and (max-width: 1023.98px) {
+  [id*="__iwt_"] .rte :where(ul):not(:where([class~=not-rte] *)) {
+    list-style: none;
+    padding-inline-start: 0;
+  }
+  [id*="__iwt_"] .rte :where(ul):not(:where([class~=not-rte] *)) ::marker,
+  [id*="__iwt_"] .rte :where(ul):not(:where([class~=not-rte] *))::marker {
+    color: transparent;
+  }
+}
