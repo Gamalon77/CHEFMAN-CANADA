@@ -225,6 +225,49 @@
   }
 </style>
 
+{%- comment -%} TEMPORARY probe v13: diff the invisible title against the visible blurb {%- endcomment -%}
+<div style="border:2px solid #c00; padding:12px 16px; margin:12px auto; max-width:860px; font:12px/1.7 monospace; background:#fff; color:#111;">
+  <strong>v13 — title vs blurb style diff</strong>
+  <div id="ctv13" style="white-space:pre-wrap;">waiting…</div>
+</div>
+<script>
+  (function () {
+    var PROPS = ['display','visibility','opacity','fontSize','fontFamily','fontWeight','color',
+      'webkitTextFillColor','textIndent','letterSpacing','wordSpacing','clipPath','clip','transform',
+      'filter','mixBlendMode','backgroundClip','webkitBackgroundClip','position','zIndex','overflow',
+      'width','height','lineHeight','textShadow','contentVisibility','containIntrinsicSize'];
+    function styleMap(el) {
+      var cs = getComputedStyle(el), m = {};
+      PROPS.forEach(function (p) { m[p] = cs[p]; });
+      return m;
+    }
+    function run() {
+      var out = document.getElementById('ctv13');
+      if (!out) return;
+      var title = document.querySelector('.partner-showcase__grid .partner-card__title');
+      var blurb = document.querySelector('.partner-showcase__grid .partner-card__blurb');
+      var lines = [];
+      if (!title || !blurb) { out.textContent = 'title in DOM: ' + !!title + ' | blurb in DOM: ' + !!blurb; return; }
+      var ts = styleMap(title), bs = styleMap(blurb);
+      var diffs = [];
+      PROPS.forEach(function (p) { if (ts[p] !== bs[p]) diffs.push(p + ': title=' + ts[p] + ' | blurb=' + bs[p]); });
+      lines.push('DIFFS (title vs blurb):');
+      lines.push(diffs.length ? diffs.join('\n') : '(computed styles identical!)');
+      var r = title.getBoundingClientRect();
+      lines.push('title rect: x=' + Math.round(r.x) + ' y=' + Math.round(r.y) + ' w=' + Math.round(r.width) + ' h=' + Math.round(r.height));
+      var top = document.elementFromPoint(r.left + 10, r.top + r.height / 2);
+      lines.push('element on top at title position: ' + (top ? top.tagName + ' class="' + String(top.className).slice(0, 60) + '"' : 'n/a'));
+      lines.push('title is that element or contains it: ' + (top === title || title.contains(top)));
+      lines.push('title outerHTML: ' + title.outerHTML.replace(/</g, '‹').slice(0, 300));
+      lines.push('fonts: status=' + document.fonts.status +
+        ' InstrSans600=' + document.fonts.check('600 18px "Instrument Sans"') +
+        ' InstrSans400=' + document.fonts.check('400 16px "Instrument Sans"'));
+      out.textContent = lines.join('\n');
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
+    setTimeout(run, 2500);
+  })();
+</script>
 <div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded{% endif %}">
   <div class="page-width{% if section.settings.full_width %} page-width--full{% endif %}">
     {%- liquid
