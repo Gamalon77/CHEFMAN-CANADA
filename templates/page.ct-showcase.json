@@ -1164,6 +1164,7 @@
         "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
+        "image": "shopify://shop_images/RJ07-32-SS-D_HERO-LIFESTYLE_C.webp",
         "image_height": "450px",
         "image_width": "medium",
         "layout": "image_first",
@@ -1264,6 +1265,7 @@
         "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
+        "image": "shopify://shop_images/C02-S-1M-CANADA_Hero__Burger_Scene.webp",
         "image_height": "450px",
         "image_width": "medium",
         "layout": "text_first",
