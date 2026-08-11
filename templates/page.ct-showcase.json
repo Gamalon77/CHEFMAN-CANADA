@@ -154,6 +154,7 @@
         "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
+        "image": "shopify://shop_images/dark-obliterator.webp",
         "image_height": "450px",
         "image_width": "medium",
         "layout": "image_first",
@@ -254,6 +255,7 @@
         "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
+        "image": "shopify://shop_images/caffeinator-drip.webp",
         "image_height": "450px",
         "image_width": "medium",
         "layout": "text_first",
@@ -354,6 +356,7 @@
         "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
+        "image": "shopify://shop_images/rj11-ti-ca.webp",
         "image_height": "450px",
         "image_width": "medium",
         "layout": "image_first",
@@ -454,6 +457,7 @@
         "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
+        "image": "shopify://shop_images/lightning-kettle-ca.webp",
         "image_height": "450px",
         "image_width": "medium",
         "layout": "text_first",
@@ -554,6 +558,7 @@
         "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
+        "image": "shopify://shop_images/rj38-6tw-ca.webp",
         "image_height": "450px",
         "image_width": "medium",
         "layout": "image_first",
@@ -654,6 +659,7 @@
         "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
+        "image": "shopify://shop_images/crispinator-ca.webp",
         "image_height": "450px",
         "image_width": "medium",
         "layout": "text_first",
@@ -754,6 +760,7 @@
         "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
+        "image": "shopify://shop_images/rj31-ss-t-ca.webp",
         "image_height": "450px",
         "image_width": "medium",
         "layout": "image_first",
@@ -854,6 +861,7 @@
         "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
+        "image": "shopify://shop_images/RJ31-SS-T-4S_Blue-Background-NOARM_Bagel.webp",
         "image_height": "450px",
         "image_width": "medium",
         "layout": "text_first",
@@ -954,6 +962,7 @@
         "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
+        "image": "shopify://shop_images/2025_01_09_RJ22-S-BLUE_ECOM_6_2_1.webp",
         "image_height": "450px",
         "image_width": "medium",
         "layout": "image_first",
@@ -1054,6 +1063,7 @@
         "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
+        "image": "shopify://shop_images/C50-T25-1SS-Countertop_Oven_C.webp",
         "image_height": "450px",
         "image_width": "medium",
         "layout": "text_first",
