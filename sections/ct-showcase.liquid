@@ -245,7 +245,59 @@
   10 computed heading: [{{ heading }}]<br>
   11 computed intro: [{{ intro }}]<br>
   12 is_fr: [{{ is_fr }}] locale: [{{ request.locale.iso_code }}]<br>
+  <hr>
+  <strong>markup probes — which of these four lines can you see?</strong><br>
+  <h2 style="font-size:13px; margin:0;">P13 bare h2 (inline styled)</h2>
+  <h2>P14 bare h2 (no class, theme styles)</h2>
+  <h2 class="partner-card__title">P15 h2 with class partner-card__title</h2>
+  <h1 class="partner-showcase__heading h2 md:title-lg leading-none tracking-heading">P16 h1 with the header classes</h1>
+  <hr>
+  <strong>computed-style report:</strong>
+  <div id="ctv10-report" style="white-space:pre-wrap;">waiting for script…</div>
 </div>
+<script>
+  (function () {
+    function report() {
+      var out = document.getElementById('ctv10-report');
+      if (!out) return;
+      var lines = [];
+      function probe(label, el) {
+        if (!el) { lines.push(label + ': NOT IN DOM'); return; }
+        var cs = getComputedStyle(el);
+        lines.push(
+          label + ': text="' + (el.textContent || '').trim().slice(0, 40) + '"' +
+          ' display=' + cs.display + ' visibility=' + cs.visibility +
+          ' opacity=' + cs.opacity + ' font-size=' + cs.fontSize +
+          ' color=' + cs.color + ' height=' + el.offsetHeight + 'px'
+        );
+        var p = el.parentElement, hop = 0;
+        while (p && hop < 12) {
+          var pcs = getComputedStyle(p);
+          if (pcs.display === 'none' || pcs.visibility === 'hidden' || parseFloat(pcs.opacity) === 0 ||
+              (p.offsetHeight === 0 && pcs.overflow !== 'visible')) {
+            lines.push('  hidden ancestor: <' + p.tagName.toLowerCase() +
+              ' class="' + p.className + '"> display=' + pcs.display +
+              ' visibility=' + pcs.visibility + ' opacity=' + pcs.opacity +
+              ' height=' + p.offsetHeight + 'px');
+            break;
+          }
+          p = p.parentElement; hop++;
+        }
+      }
+      var grid = document.querySelector('.partner-showcase__grid');
+      probe('grid title', grid ? grid.querySelector('.partner-card__title') : null);
+      probe('page heading', document.querySelector('.partner-showcase__heading'));
+      probe('header div', document.querySelector('.partner-showcase__header'));
+      out.textContent = lines.join('\n');
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', report);
+    } else {
+      report();
+    }
+    setTimeout(report, 2000);
+  })();
+</script>
 <div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded{% endif %}">
   <div class="page-width{% if section.settings.full_width %} page-width--full{% endif %}">
     {%- liquid
