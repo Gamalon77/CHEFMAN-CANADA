@@ -296,77 +296,78 @@
                 assign card_title = ''
               endif
             endif
-            # Final fallback: the titles live in this section file, so a card can
-            # never render without one even if no stored setting reaches Liquid.
+            # Final fallback, keyed on the card's position in the grid.
+            # forloop.index always exists, so this cannot be defeated by a
+            # missing or renamed stored setting.
             if card_title == blank
-              case block.settings.key
-                when 'obliterator_blender'
+              case forloop.index
+                when 1
                   if is_fr
                     assign card_title = "Mélangeur haute vitesse Obliterator"
                   else
                     assign card_title = "Obliterator High-Speed Blender"
                   endif
-                when 'caffeinator_drip'
+                when 2
                   if is_fr
                     assign card_title = "Cafetière filtre Caffeinator Drip de 14 tasses"
                   else
                     assign card_title = "Caffeinator Drip 14-Cup Coffee Maker"
                   endif
-                when 'kettle_manual_12l'
+                when 3
                   if is_fr
                     assign card_title = "Bouilloire électrique Fast-Boil de 1,2 L avec infuseur à thé"
                   else
                     assign card_title = "Fast-Boil 1.2 L Electric Kettle with Tea Infuser"
                   endif
-                when 'kettle_digital_dual_glass'
+                when 4
                   if is_fr
                     assign card_title = "Bouilloire électrique Lightning de 1,8 L"
                   else
                     assign card_title = "Lightning 1.8 L Electric Kettle"
                   endif
-                when 'air_fryer_55l'
+                when 5
                   if is_fr
                     assign card_title = "Friteuse à air TurboFry Touch Easy-View de 5,7 L"
                   else
                     assign card_title = "TurboFry Touch 5.7 L Easy-View Air Fryer"
                   endif
-                when 'crispinator_air_fryer'
+                when 6
                   if is_fr
                     assign card_title = "Friteuse à air numérique Crispinator de 7,6 L"
                   else
                     assign card_title = "Crispinator 7.6 L Digital Air Fryer"
                   endif
-                when 'toaster_2_slice'
+                when 7
                   if is_fr
                     assign card_title = "Grille-pain numérique Smart Touch à 2 tranches"
                   else
                     assign card_title = "Smart Touch 2-Slice Digital Toaster"
                   endif
-                when 'toaster_4_slice'
+                when 8
                   if is_fr
                     assign card_title = "Grille-pain numérique Smart Touch à 4 tranches"
                   else
                     assign card_title = "Smart Touch 4-Slice Digital Toaster"
                   endif
-                when 'warming_mat'
+                when 9
                   if is_fr
                     assign card_title = "Tapis chauffant enroulable Roll 'n Go"
                   else
                     assign card_title = "Roll 'n Go Rollable Warming Mat"
                   endif
-                when 'crispinator_max_toaf'
+                when 10
                   if is_fr
                     assign card_title = "Four grille-pain numérique + friteuse à air Crispinator MAX"
                   else
                     assign card_title = "Crispinator MAX Digital Toaster Oven + Air Fryer"
                   endif
-                when 'deep_fryer_3l'
+                when 11
                   if is_fr
                     assign card_title = "Friteuse de 3 L en acier inoxydable"
                   else
                     assign card_title = "3 L Stainless Steel Deep Fryer"
                   endif
-                when 'grillinator_grill'
+                when 12
                   if is_fr
                     assign card_title = "Presse à panini et gril submersible Grillinator"
                   else
