@@ -271,12 +271,12 @@
             # language it was written for; the other language keeps falling back
             # to the locale files.
             if is_fr
-              assign card_title = block.settings.title_fr
+              assign card_title = block.settings.card_heading_fr
             else
-              assign card_title = block.settings.title
+              assign card_title = block.settings.card_heading
             endif
             if card_title == blank and block.settings.key != blank
-              assign title_key = 'canadian_tire.cards.' | append: block.settings.key | append: '.title'
+              assign title_key = 'canadian_tire.cards.' | append: block.settings.key | append: '.name'
               assign card_title = title_key | t
               if card_title contains 'Translation missing'
                 assign card_title = ''
@@ -678,7 +678,7 @@
         },
         {
           "type": "text",
-          "id": "title",
+          "id": "card_heading",
           "label": "Title (English)",
           "info": "Leave blank to use the copy from the locale files. Applies to the English page only."
         },
@@ -693,7 +693,7 @@
         },
         {
           "type": "text",
-          "id": "title_fr",
+          "id": "card_heading_fr",
           "label": "Title (French)",
           "info": "Shown on the French page instead of the locale-file copy. Edit here to correct French wording without a Translate & Adapt import."
         },

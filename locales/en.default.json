@@ -580,51 +580,51 @@
     "learn_more": "Learn more",
     "cards": {
       "obliterator_blender": {
-        "title": "Obliterator High-Speed Blender",
+        "name": "Obliterator High-Speed Blender",
         "blurb": "Auto-Blend senses what's in the 1.4 L Triton jar and sets the blend time itself, backed by more than 20,000 rpm. Two travel jars come along for the ride."
       },
       "caffeinator_drip": {
-        "title": "Caffeinator Drip 14-Cup Coffee Maker",
+        "name": "Caffeinator Drip 14-Cup Coffee Maker",
         "blurb": "Brews 14 cups from a 2.1 L reservoir, with a touchscreen, Classic and Bold settings and a 24-hour delay timer. The 1-to-4-cup setting covers a single mug."
       },
       "kettle_manual_12l": {
-        "title": "Fast-Boil 1.2 L Electric Kettle with Tea Infuser",
+        "name": "Fast-Boil 1.2 L Electric Kettle with Tea Infuser",
         "blurb": "1500 W brings 1.2 L up in stain-resistant borosilicate glass, with blue LEDs that light while it heats. Both the tea infuser and the lid lift out."
       },
       "kettle_digital_dual_glass": {
-        "title": "Lightning 1.8 L Electric Kettle",
+        "name": "Lightning 1.8 L Electric Kettle",
         "blurb": "1750 W of Lightning power boils up to 25% faster, with five temperature presets and tricolour LEDs for standby, heating and ready. Auto shut-off and boil-dry protection included."
       },
       "air_fryer_55l": {
-        "title": "TurboFry Touch 5.7 L Easy-View Air Fryer",
+        "name": "TurboFry Touch 5.7 L Easy-View Air Fryer",
         "blurb": "A 5.7 L basket sits behind a large window with an interior light, joined by four digital presets and a Hi-Fry button that runs 232 °C for two minutes. An LED reminder prompts you to shake mid-cook, and the basket and rack are dishwasher-safe."
       },
       "crispinator_air_fryer": {
-        "title": "Crispinator 7.6 L Digital Air Fryer",
+        "name": "Crispinator 7.6 L Digital Air Fryer",
         "blurb": "An adjustable-speed DC motor crisps, bakes and fries up to 40% faster across seven functions plus manual control. The Frozen setting defrosts first, then switches to cook."
       },
       "toaster_2_slice": {
-        "title": "Smart Touch 2-Slice Digital Toaster",
+        "name": "Smart Touch 2-Slice Digital Toaster",
         "blurb": "A reveal-screen touchscreen with six shade settings and a countdown, plus Bagel, Frozen and a +10 second button. The crumb tray pushes open from the front."
       },
       "toaster_4_slice": {
-        "title": "Smart Touch 4-Slice Digital Toaster",
+        "name": "Smart Touch 4-Slice Digital Toaster",
         "blurb": "Four extra-wide slots, six shade settings, a countdown and a high-lift lever. Bagel, Frozen and a +10 second button round it out."
       },
       "warming_mat": {
-        "title": "Roll 'n Go Rollable Warming Mat",
+        "name": "Roll 'n Go Rollable Warming Mat",
         "blurb": "Heats its full surface to hold a buffet at temperature, with three levels of control and a wipeable silicone top. Rolls up into the storage bag it ships with."
       },
       "crispinator_max_toaf": {
-        "title": "Crispinator MAX Digital Toaster Oven + Air Fryer",
+        "name": "Crispinator MAX Digital Toaster Oven + Air Fryer",
         "blurb": "A brushless DC motor drives nine functions up to 260 °C, from air fry and roast through proof and dehydrate. Fits a 33 cm pizza or a 23 × 33 cm pan, and includes the basket, rack, baking tray and crumb tray."
       },
       "deep_fryer_3l": {
-        "title": "3 L Stainless Steel Deep Fryer",
+        "name": "3 L Stainless Steel Deep Fryer",
         "blurb": "A 1500 W element brings 3 L up to temperature, and a divider lets you fry two foods at once. The oil container lifts out, the parts are dishwasher-safe and a charcoal filter absorbs frying odours."
       },
       "grillinator_grill": {
-        "title": "Grillinator Submersible Panini Press & Grill",
+        "name": "Grillinator Submersible Panini Press & Grill",
         "blurb": "Pull the plug and the whole grill goes in the dishwasher. Ceramic nonstick plates run 121 °C to 232 °C, and a floating hinge over a 25 × 23 cm surface takes five slices at once."
       }
     }

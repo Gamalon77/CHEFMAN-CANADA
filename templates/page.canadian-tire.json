@@ -10,9 +10,9 @@
             "key": "obliterator_blender",
             "colour": "Midnight",
             "sku": "C27-2TJ-2M-CA1",
-            "title": "Obliterator High-Speed Blender",
+            "card_heading": "Obliterator High-Speed Blender",
             "blurb": "<p>Auto-Blend senses what's in the 1.4 L Triton jar and sets the blend time itself, backed by more than 20,000 rpm. Two travel jars come along for the ride.</p>",
-            "title_fr": "Mélangeur haute vitesse Obliterator",
+            "card_heading_fr": "Mélangeur haute vitesse Obliterator",
             "blurb_fr": "<p>La technologie Auto-Blend détecte le contenu du pot Triton de 1,4 L et règle elle-même la durée, avec plus de 20 000 tr/min. Deux pots de voyage sont inclus.</p>"
           }
         },
@@ -23,9 +23,9 @@
             "key": "caffeinator_drip",
             "colour": "Midnight",
             "sku": "C14-DR14-1M-CA2",
-            "title": "Caffeinator Drip 14-Cup Coffee Maker",
+            "card_heading": "Caffeinator Drip 14-Cup Coffee Maker",
             "blurb": "<p>Brews 14 cups from a 2.1 L reservoir, with a touchscreen, Classic and Bold settings and a 24-hour delay timer. The 1-to-4-cup setting covers a single mug.</p>",
-            "title_fr": "Cafetière filtre Caffeinator Drip de 14 tasses",
+            "card_heading_fr": "Cafetière filtre Caffeinator Drip de 14 tasses",
             "blurb_fr": "<p>Prépare 14 tasses à partir d'un réservoir de 2,1 L, avec écran tactile, réglages Classic et Bold et minuterie différée de 24 heures. Le mode 1 à 4 tasses suffit pour une seule tasse.</p>"
           }
         },
@@ -36,9 +36,9 @@
             "key": "kettle_manual_12l",
             "colour": "Glass/SS",
             "sku": "RJ11-12-TI-CA",
-            "title": "Fast-Boil 1.2 L Electric Kettle with Tea Infuser",
+            "card_heading": "Fast-Boil 1.2 L Electric Kettle with Tea Infuser",
             "blurb": "<p>1500 W brings 1.2 L up in stain-resistant borosilicate glass, with blue LEDs that light while it heats. Both the tea infuser and the lid lift out.</p>",
-            "title_fr": "Bouilloire électrique Fast-Boil de 1,2 L avec infuseur à thé",
+            "card_heading_fr": "Bouilloire électrique Fast-Boil de 1,2 L avec infuseur à thé",
             "blurb_fr": "<p>1500 W amènent 1,2 L à ébullition dans un verre borosilicaté résistant aux taches, avec des DEL bleues allumées pendant la chauffe. L'infuseur à thé et le couvercle s'enlèvent tous les deux.</p>"
           }
         },
@@ -49,9 +49,9 @@
             "key": "kettle_digital_dual_glass",
             "colour": "Glass/SS",
             "sku": "RJ11-18-SCTI-DG-HP-CA",
-            "title": "Lightning 1.8 L Electric Kettle",
+            "card_heading": "Lightning 1.8 L Electric Kettle",
             "blurb": "<p>1750 W of Lightning power boils up to 25% faster, with five temperature presets and tricolour LEDs for standby, heating and ready. Auto shut-off and boil-dry protection included.</p>",
-            "title_fr": "Bouilloire électrique Lightning de 1,8 L",
+            "card_heading_fr": "Bouilloire électrique Lightning de 1,8 L",
             "blurb_fr": "<p>1750 W de puissance Lightning font bouillir jusqu'à 25 % plus vite, avec cinq préréglages de température et des DEL tricolores pour l'attente, la chauffe et le prêt. Arrêt automatique et protection contre l'ébullition à vide inclus.</p>"
           }
         },
@@ -62,9 +62,9 @@
             "key": "air_fryer_55l",
             "colour": "Black",
             "sku": "RJ38-6TW-BLACK-DS-CA",
-            "title": "TurboFry Touch 5.7 L Easy-View Air Fryer",
+            "card_heading": "TurboFry Touch 5.7 L Easy-View Air Fryer",
             "blurb": "<p>A 5.7 L basket sits behind a large window with an interior light, joined by four digital presets and a Hi-Fry button that runs 232 °C for two minutes. An LED reminder prompts you to shake mid-cook, and the basket and rack are dishwasher-safe.</p>",
-            "title_fr": "Friteuse à air TurboFry Touch Easy-View de 5,7 L",
+            "card_heading_fr": "Friteuse à air TurboFry Touch Easy-View de 5,7 L",
             "blurb_fr": "<p>Un panier de 5,7 L se trouve derrière une grande fenêtre avec éclairage intérieur, accompagné de quatre préréglages numériques et d'un bouton Hi-Fry qui monte à 232 °C pendant deux minutes. Un rappel à DEL invite à secouer en cours de cuisson, et le panier et la grille vont au lave-vaisselle.</p>"
           }
         },
@@ -75,9 +75,9 @@
             "key": "crispinator_air_fryer",
             "colour": "Midnight",
             "sku": "C38-8W7-1M-CA1",
-            "title": "Crispinator 7.6 L Digital Air Fryer",
+            "card_heading": "Crispinator 7.6 L Digital Air Fryer",
             "blurb": "<p>An adjustable-speed DC motor crisps, bakes and fries up to 40% faster across seven functions plus manual control. The Frozen setting defrosts first, then switches to cook.</p>",
-            "title_fr": "Friteuse à air numérique Crispinator de 7,6 L",
+            "card_heading_fr": "Friteuse à air numérique Crispinator de 7,6 L",
             "blurb_fr": "<p>Un moteur à courant continu à vitesse réglable croustille, cuit et frit jusqu'à 40 % plus vite, avec sept fonctions et une commande manuelle. Le mode Frozen décongèle d'abord, puis passe à la cuisson.</p>"
           }
         },
@@ -88,9 +88,9 @@
             "key": "toaster_2_slice",
             "colour": "Stainless",
             "sku": "RJ31-SS-T-2S-CA",
-            "title": "Smart Touch 2-Slice Digital Toaster",
+            "card_heading": "Smart Touch 2-Slice Digital Toaster",
             "blurb": "<p>A reveal-screen touchscreen with six shade settings and a countdown, plus Bagel, Frozen and a +10 second button. The crumb tray pushes open from the front.</p>",
-            "title_fr": "Grille-pain numérique Smart Touch à 2 tranches",
+            "card_heading_fr": "Grille-pain numérique Smart Touch à 2 tranches",
             "blurb_fr": "<p>Un écran tactile « reveal-screen » avec six degrés de brunissage et un compte à rebours, plus les fonctions Bagel, Frozen et un bouton +10 secondes. Le ramasse-miettes s'ouvre par l'avant.</p>"
           }
         },
@@ -101,9 +101,9 @@
             "key": "toaster_4_slice",
             "colour": "Stainless",
             "sku": "RJ31-SS-T-4S-CA",
-            "title": "Smart Touch 4-Slice Digital Toaster",
+            "card_heading": "Smart Touch 4-Slice Digital Toaster",
             "blurb": "<p>Four extra-wide slots, six shade settings, a countdown and a high-lift lever. Bagel, Frozen and a +10 second button round it out.</p>",
-            "title_fr": "Grille-pain numérique Smart Touch à 4 tranches",
+            "card_heading_fr": "Grille-pain numérique Smart Touch à 4 tranches",
             "blurb_fr": "<p>Quatre fentes extra-larges, six degrés de brunissage, un compte à rebours et un levier à haute levée. Les fonctions Bagel, Frozen et le bouton +10 secondes complètent le tout.</p>"
           }
         },
@@ -114,9 +114,9 @@
             "key": "warming_mat",
             "colour": "Blue",
             "sku": "RJ22-S-BLUE-CA",
-            "title": "Roll 'n Go Rollable Warming Mat",
+            "card_heading": "Roll 'n Go Rollable Warming Mat",
             "blurb": "<p>Heats its full surface to hold a buffet at temperature, with three levels of control and a wipeable silicone top. Rolls up into the storage bag it ships with.</p>",
-            "title_fr": "Tapis chauffant enroulable Roll 'n Go",
+            "card_heading_fr": "Tapis chauffant enroulable Roll 'n Go",
             "blurb_fr": "<p>Chauffe toute sa surface pour garder un buffet à température, avec trois niveaux de réglage et un dessus en silicone facile à essuyer. S'enroule dans le sac de rangement fourni.</p>"
           }
         },
@@ -127,9 +127,9 @@
             "key": "crispinator_max_toaf",
             "colour": "Stainless",
             "sku": "C50-T25-1SS-CA1",
-            "title": "Crispinator MAX Digital Toaster Oven + Air Fryer",
+            "card_heading": "Crispinator MAX Digital Toaster Oven + Air Fryer",
             "blurb": "<p>A brushless DC motor drives nine functions up to 260 °C, from air fry and roast through proof and dehydrate. Fits a 33 cm pizza or a 23 × 33 cm pan, and includes the basket, rack, baking tray and crumb tray.</p>",
-            "title_fr": "Four grille-pain numérique + friteuse à air Crispinator MAX",
+            "card_heading_fr": "Four grille-pain numérique + friteuse à air Crispinator MAX",
             "blurb_fr": "<p>Un moteur sans balais alimente neuf fonctions jusqu'à 260 °C, de la friture à air au rôtissage en passant par la levée et la déshydratation. Accueille une pizza de 33 cm ou une plaque de 23 × 33 cm, et comprend le panier, la grille, la plaque de cuisson et le ramasse-miettes.</p>"
           }
         },
@@ -140,9 +140,9 @@
             "key": "deep_fryer_3l",
             "colour": "Stainless",
             "sku": "RJ07-32-SS-D-CA",
-            "title": "3 L Stainless Steel Deep Fryer",
+            "card_heading": "3 L Stainless Steel Deep Fryer",
             "blurb": "<p>A 1500 W element brings 3 L up to temperature, and a divider lets you fry two foods at once. The oil container lifts out, the parts are dishwasher-safe and a charcoal filter absorbs frying odours.</p>",
-            "title_fr": "Friteuse de 3 L en acier inoxydable",
+            "card_heading_fr": "Friteuse de 3 L en acier inoxydable",
             "blurb_fr": "<p>Un élément de 1500 W amène 3 L à température, et un séparateur permet de frire deux aliments à la fois. Le contenant à huile s'enlève, les pièces vont au lave-vaisselle et un filtre au charbon absorbe les odeurs de friture.</p>"
           }
         },
@@ -153,9 +153,9 @@
             "key": "grillinator_grill",
             "colour": "Midnight",
             "sku": "C02-S-1M-CA2",
-            "title": "Grillinator Submersible Panini Press & Grill",
+            "card_heading": "Grillinator Submersible Panini Press & Grill",
             "blurb": "<p>Pull the plug and the whole grill goes in the dishwasher. Ceramic nonstick plates run 121 °C to 232 °C, and a floating hinge over a 25 × 23 cm surface takes five slices at once.</p>",
-            "title_fr": "Presse à panini et gril submersible Grillinator",
+            "card_heading_fr": "Presse à panini et gril submersible Grillinator",
             "blurb_fr": "<p>Débranchez la fiche et le gril entier va au lave-vaisselle. Les plaques antiadhésives en céramique vont de 121 °C à 232 °C, et la charnière flottante sur une surface de 25 × 23 cm accueille cinq tranches à la fois.</p>"
           }
         }

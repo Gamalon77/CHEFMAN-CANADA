@@ -5,51 +5,51 @@
     "learn_more": "En savoir plus",
     "cards": {
       "obliterator_blender": {
-        "title": "Mélangeur haute vitesse Obliterator",
+        "name": "Mélangeur haute vitesse Obliterator",
         "blurb": "La technologie Auto-Blend détecte le contenu du pot Triton de 1,4 L et règle elle-même la durée, avec plus de 20 000 tr/min. Deux pots de voyage sont inclus."
       },
       "caffeinator_drip": {
-        "title": "Cafetière filtre Caffeinator Drip de 14 tasses",
+        "name": "Cafetière filtre Caffeinator Drip de 14 tasses",
         "blurb": "Prépare 14 tasses à partir d'un réservoir de 2,1 L, avec écran tactile, réglages Classic et Bold et minuterie différée de 24 heures. Le mode 1 à 4 tasses suffit pour une seule tasse."
       },
       "kettle_manual_12l": {
-        "title": "Bouilloire électrique Fast-Boil de 1,2 L avec infuseur à thé",
+        "name": "Bouilloire électrique Fast-Boil de 1,2 L avec infuseur à thé",
         "blurb": "1500 W amènent 1,2 L à ébullition dans un verre borosilicaté résistant aux taches, avec des DEL bleues allumées pendant la chauffe. L'infuseur à thé et le couvercle s'enlèvent tous les deux."
       },
       "kettle_digital_dual_glass": {
-        "title": "Bouilloire électrique Lightning de 1,8 L",
+        "name": "Bouilloire électrique Lightning de 1,8 L",
         "blurb": "1750 W de puissance Lightning font bouillir jusqu'à 25 % plus vite, avec cinq préréglages de température et des DEL tricolores pour l'attente, la chauffe et le prêt. Arrêt automatique et protection contre l'ébullition à vide inclus."
       },
       "air_fryer_55l": {
-        "title": "Friteuse à air TurboFry Touch Easy-View de 5,7 L",
+        "name": "Friteuse à air TurboFry Touch Easy-View de 5,7 L",
         "blurb": "Un panier de 5,7 L se trouve derrière une grande fenêtre avec éclairage intérieur, accompagné de quatre préréglages numériques et d'un bouton Hi-Fry qui monte à 232 °C pendant deux minutes. Un rappel à DEL invite à secouer en cours de cuisson, et le panier et la grille vont au lave-vaisselle."
       },
       "crispinator_air_fryer": {
-        "title": "Friteuse à air numérique Crispinator de 7,6 L",
+        "name": "Friteuse à air numérique Crispinator de 7,6 L",
         "blurb": "Un moteur à courant continu à vitesse réglable croustille, cuit et frit jusqu'à 40 % plus vite, avec sept fonctions et une commande manuelle. Le mode Frozen décongèle d'abord, puis passe à la cuisson."
       },
       "toaster_2_slice": {
-        "title": "Grille-pain numérique Smart Touch à 2 tranches",
+        "name": "Grille-pain numérique Smart Touch à 2 tranches",
         "blurb": "Un écran tactile « reveal-screen » avec six degrés de brunissage et un compte à rebours, plus les fonctions Bagel, Frozen et un bouton +10 secondes. Le ramasse-miettes s'ouvre par l'avant."
       },
       "toaster_4_slice": {
-        "title": "Grille-pain numérique Smart Touch à 4 tranches",
+        "name": "Grille-pain numérique Smart Touch à 4 tranches",
         "blurb": "Quatre fentes extra-larges, six degrés de brunissage, un compte à rebours et un levier à haute levée. Les fonctions Bagel, Frozen et le bouton +10 secondes complètent le tout."
       },
       "warming_mat": {
-        "title": "Tapis chauffant enroulable Roll 'n Go",
+        "name": "Tapis chauffant enroulable Roll 'n Go",
         "blurb": "Chauffe toute sa surface pour garder un buffet à température, avec trois niveaux de réglage et un dessus en silicone facile à essuyer. S'enroule dans le sac de rangement fourni."
       },
       "crispinator_max_toaf": {
-        "title": "Four grille-pain numérique + friteuse à air Crispinator MAX",
+        "name": "Four grille-pain numérique + friteuse à air Crispinator MAX",
         "blurb": "Un moteur sans balais alimente neuf fonctions jusqu'à 260 °C, de la friture à air au rôtissage en passant par la levée et la déshydratation. Accueille une pizza de 33 cm ou une plaque de 23 × 33 cm, et comprend le panier, la grille, la plaque de cuisson et le ramasse-miettes."
       },
       "deep_fryer_3l": {
-        "title": "Friteuse de 3 L en acier inoxydable",
+        "name": "Friteuse de 3 L en acier inoxydable",
         "blurb": "Un élément de 1500 W amène 3 L à température, et un séparateur permet de frire deux aliments à la fois. Le contenant à huile s'enlève, les pièces vont au lave-vaisselle et un filtre au charbon absorbe les odeurs de friture."
       },
       "grillinator_grill": {
-        "title": "Presse à panini et gril submersible Grillinator",
+        "name": "Presse à panini et gril submersible Grillinator",
         "blurb": "Débranchez la fiche et le gril entier va au lave-vaisselle. Les plaques antiadhésives en céramique vont de 121 °C à 232 °C, et la charnière flottante sur une surface de 25 × 23 cm accueille cinq tranches à la fois."
       }
     }
