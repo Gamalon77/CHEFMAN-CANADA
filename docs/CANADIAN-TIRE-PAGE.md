@@ -176,11 +176,14 @@ nothing is cropped.
 
 ## 6. Canadian Tire logo
 
-Currently loaded from the URL supplied with the request:
+**If the logo isn't appearing, this is why.** It is currently loaded from the URL
+supplied with the request:
 `cdn.shopify.com/s/files/1/0714/7647/8117/files/CT_Logo.png`
 
-That's a **cross-store CDN hotlink** — it works, but it depends on a file in
-another store staying put. Before the event, upload `CT_Logo.png` to
+That's a **cross-store CDN hotlink** — it points at a file in a different
+Shopify store, so it can fail for reasons outside this theme (the file moving,
+or the other store restricting access). I could not verify the URL from my
+sandbox, so treat it as unconfirmed. The reliable fix: upload `CT_Logo.png` to
 **Content → Files** on the CA store and pick it in the section's **Partner logo**
 setting; the picker takes priority over the URL. Logo height is adjustable
 (default 56px), and the alt text is set to "Canadian Tire".

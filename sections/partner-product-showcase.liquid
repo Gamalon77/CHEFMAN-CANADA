@@ -27,7 +27,14 @@
     assign is_fr = true
   endif
 
-  assign heading = section.settings.heading
+  # Heading and intro follow the same pattern as the cards: a per-language
+  # setting first (so the real text is visible and editable in the theme
+  # editor), then the locale file as a fallback.
+  if is_fr
+    assign heading = section.settings.heading_fr
+  else
+    assign heading = section.settings.heading
+  endif
   if heading == blank
     assign heading = 'canadian_tire.heading' | t
     if heading contains 'Translation missing'
@@ -35,7 +42,11 @@
     endif
   endif
 
-  assign intro = section.settings.intro
+  if is_fr
+    assign intro = section.settings.intro_fr
+  else
+    assign intro = section.settings.intro
+  endif
   if intro == blank
     assign intro = 'canadian_tire.intro' | t
     if intro contains 'Translation missing'
@@ -57,6 +68,23 @@
     --section-padding-top: {{ section.settings.padding_top }}px;
     --section-padding-bottom: {{ section.settings.padding_bottom }}px;
     {%- render 'section-variables', section: section -%}
+  }
+
+  {%- comment -%}
+    Set the text colour explicitly from the section setting rather than relying
+    on rgb(var(--color-foreground)). The theme's base h1-h6 rule colours
+    headings from that variable, so if it ever fails to resolve in this scope the
+    headings inherit and can end up invisible against the card background, while
+    body copy still shows. Hard-coding it here removes that failure mode.
+  {%- endcomment -%}
+  #shopify-section-{{ section.id }} .partner-showcase__header,
+  #shopify-section-{{ section.id }} .partner-showcase__heading,
+  #shopify-section-{{ section.id }} .partner-showcase__intro,
+  #shopify-section-{{ section.id }} .partner-card,
+  #shopify-section-{{ section.id }} .partner-card__title,
+  #shopify-section-{{ section.id }} .partner-card__title a,
+  #shopify-section-{{ section.id }} .partner-card__blurb {
+    color: {{ section.settings.color_text | default: '#121e2a' }};
   }
 
   {%- comment -%} Header: partner lockup + heading, centred and mobile-first {%- endcomment -%}
@@ -221,7 +249,7 @@
         {%- endif -%}
 
         {%- if heading != blank -%}
-          <h1 class="h2 {{ section.settings.heading_size }} leading-none tracking-heading">{{ heading | escape }}</h1>
+          <h1 class="partner-showcase__heading h2 {{ section.settings.heading_size }} leading-none tracking-heading">{{ heading | escape }}</h1>
         {%- endif -%}
 
         {%- if intro != blank -%}
@@ -437,8 +465,13 @@
     {
       "type": "text",
       "id": "heading",
-      "label": "Heading",
-      "info": "Leave blank to use the bilingual heading from the locale files."
+      "label": "Heading (English)",
+      "info": "Leave blank to fall back to the locale files."
+    },
+    {
+      "type": "text",
+      "id": "heading_fr",
+      "label": "Heading (French)"
     },
     {
       "type": "select",
@@ -455,8 +488,13 @@
     {
       "type": "richtext",
       "id": "intro",
-      "label": "Intro text",
-      "info": "Leave blank to use the bilingual intro from the locale files."
+      "label": "Intro text (English)",
+      "info": "Leave blank to fall back to the locale files."
+    },
+    {
+      "type": "richtext",
+      "id": "intro_fr",
+      "label": "Intro text (French)"
     },
     {
       "type": "header",

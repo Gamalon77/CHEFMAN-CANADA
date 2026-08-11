@@ -179,9 +179,9 @@
         "partner_logo_url": "https://cdn.shopify.com/s/files/1/0714/7647/8117/files/CT_Logo.png?v=1786452409",
         "partner_logo_alt": "Canadian Tire",
         "partner_logo_height": 56,
-        "heading": "",
+        "heading": "The Chefman Lineup",
         "heading_size": "md:title-lg",
-        "intro": "",
+        "intro": "<p>A closer look at the products we're bringing to Canadian Tire.</p>",
         "show_cta": false,
         "button_label": "",
         "button_style": "primary",
@@ -200,7 +200,9 @@
         "padding_bottom": 64,
         "divider": false,
         "full_width": false,
-        "rounded": false
+        "rounded": false,
+        "heading_fr": "La gamme Chefman",
+        "intro_fr": "<p>Un aperçu des produits que nous présentons à Canadian Tire.</p>"
       }
     }
   },
