@@ -101,14 +101,6 @@
             "highlighted_scribble": "circle"
           }
         },
-        "ctc_obliterator_blender": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
-            "subheading_size": "subtitle-md",
-            "secondary_color": false
-          }
-        },
         "feat_obliterator_blender": {
           "type": "text",
           "settings": {
@@ -119,6 +111,14 @@
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
+          }
+        },
+        "ctc_obliterator_blender": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": false
           }
         },
         "ctbtn_obliterator_blender": {
@@ -145,10 +145,13 @@
       "block_order": [
         "sub_obliterator_blender",
         "heading_obliterator_blender",
-        "ctc_obliterator_blender",
         "feat_obliterator_blender",
+        "ctc_obliterator_blender",
         "ctbtn_obliterator_blender",
         "video_obliterator_blender"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
         "image_height": "450px",
@@ -198,14 +201,6 @@
             "highlighted_scribble": "circle"
           }
         },
-        "ctc_caffeinator_drip": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
-            "subheading_size": "subtitle-md",
-            "secondary_color": false
-          }
-        },
         "feat_caffeinator_drip": {
           "type": "text",
           "settings": {
@@ -216,6 +211,14 @@
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
+          }
+        },
+        "ctc_caffeinator_drip": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": false
           }
         },
         "ctbtn_caffeinator_drip": {
@@ -242,10 +245,13 @@
       "block_order": [
         "sub_caffeinator_drip",
         "heading_caffeinator_drip",
-        "ctc_caffeinator_drip",
         "feat_caffeinator_drip",
+        "ctc_caffeinator_drip",
         "ctbtn_caffeinator_drip",
         "video_caffeinator_drip"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
         "image_height": "450px",
@@ -295,14 +301,6 @@
             "highlighted_scribble": "circle"
           }
         },
-        "ctc_kettle_manual_12l": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
-            "subheading_size": "subtitle-md",
-            "secondary_color": false
-          }
-        },
         "feat_kettle_manual_12l": {
           "type": "text",
           "settings": {
@@ -313,6 +311,14 @@
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
+          }
+        },
+        "ctc_kettle_manual_12l": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": false
           }
         },
         "ctbtn_kettle_manual_12l": {
@@ -339,10 +345,13 @@
       "block_order": [
         "sub_kettle_manual_12l",
         "heading_kettle_manual_12l",
-        "ctc_kettle_manual_12l",
         "feat_kettle_manual_12l",
+        "ctc_kettle_manual_12l",
         "ctbtn_kettle_manual_12l",
         "video_kettle_manual_12l"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
         "image_height": "450px",
@@ -392,14 +401,6 @@
             "highlighted_scribble": "circle"
           }
         },
-        "ctc_kettle_digital_dual_glass": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
-            "subheading_size": "subtitle-md",
-            "secondary_color": false
-          }
-        },
         "feat_kettle_digital_dual_glass": {
           "type": "text",
           "settings": {
@@ -410,6 +411,14 @@
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
+          }
+        },
+        "ctc_kettle_digital_dual_glass": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": false
           }
         },
         "ctbtn_kettle_digital_dual_glass": {
@@ -436,10 +445,13 @@
       "block_order": [
         "sub_kettle_digital_dual_glass",
         "heading_kettle_digital_dual_glass",
-        "ctc_kettle_digital_dual_glass",
         "feat_kettle_digital_dual_glass",
+        "ctc_kettle_digital_dual_glass",
         "ctbtn_kettle_digital_dual_glass",
         "video_kettle_digital_dual_glass"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
         "image_height": "450px",
@@ -489,14 +501,6 @@
             "highlighted_scribble": "circle"
           }
         },
-        "ctc_air_fryer_55l": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
-            "subheading_size": "subtitle-md",
-            "secondary_color": false
-          }
-        },
         "feat_air_fryer_55l": {
           "type": "text",
           "settings": {
@@ -507,6 +511,14 @@
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
+          }
+        },
+        "ctc_air_fryer_55l": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": false
           }
         },
         "ctbtn_air_fryer_55l": {
@@ -533,10 +545,13 @@
       "block_order": [
         "sub_air_fryer_55l",
         "heading_air_fryer_55l",
-        "ctc_air_fryer_55l",
         "feat_air_fryer_55l",
+        "ctc_air_fryer_55l",
         "ctbtn_air_fryer_55l",
         "video_air_fryer_55l"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
         "image_height": "450px",
@@ -586,14 +601,6 @@
             "highlighted_scribble": "circle"
           }
         },
-        "ctc_crispinator_air_fryer": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
-            "subheading_size": "subtitle-md",
-            "secondary_color": false
-          }
-        },
         "feat_crispinator_air_fryer": {
           "type": "text",
           "settings": {
@@ -604,6 +611,14 @@
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
+          }
+        },
+        "ctc_crispinator_air_fryer": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": false
           }
         },
         "ctbtn_crispinator_air_fryer": {
@@ -630,10 +645,13 @@
       "block_order": [
         "sub_crispinator_air_fryer",
         "heading_crispinator_air_fryer",
-        "ctc_crispinator_air_fryer",
         "feat_crispinator_air_fryer",
+        "ctc_crispinator_air_fryer",
         "ctbtn_crispinator_air_fryer",
         "video_crispinator_air_fryer"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
         "image_height": "450px",
@@ -683,14 +701,6 @@
             "highlighted_scribble": "circle"
           }
         },
-        "ctc_toaster_2_slice": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
-            "subheading_size": "subtitle-md",
-            "secondary_color": false
-          }
-        },
         "feat_toaster_2_slice": {
           "type": "text",
           "settings": {
@@ -701,6 +711,14 @@
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
+          }
+        },
+        "ctc_toaster_2_slice": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": false
           }
         },
         "ctbtn_toaster_2_slice": {
@@ -727,10 +745,13 @@
       "block_order": [
         "sub_toaster_2_slice",
         "heading_toaster_2_slice",
-        "ctc_toaster_2_slice",
         "feat_toaster_2_slice",
+        "ctc_toaster_2_slice",
         "ctbtn_toaster_2_slice",
         "video_toaster_2_slice"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
         "image_height": "450px",
@@ -780,14 +801,6 @@
             "highlighted_scribble": "circle"
           }
         },
-        "ctc_toaster_4_slice": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
-            "subheading_size": "subtitle-md",
-            "secondary_color": false
-          }
-        },
         "feat_toaster_4_slice": {
           "type": "text",
           "settings": {
@@ -798,6 +811,14 @@
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
+          }
+        },
+        "ctc_toaster_4_slice": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": false
           }
         },
         "ctbtn_toaster_4_slice": {
@@ -824,10 +845,13 @@
       "block_order": [
         "sub_toaster_4_slice",
         "heading_toaster_4_slice",
-        "ctc_toaster_4_slice",
         "feat_toaster_4_slice",
+        "ctc_toaster_4_slice",
         "ctbtn_toaster_4_slice",
         "video_toaster_4_slice"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
         "image_height": "450px",
@@ -877,14 +901,6 @@
             "highlighted_scribble": "circle"
           }
         },
-        "ctc_warming_mat": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
-            "subheading_size": "subtitle-md",
-            "secondary_color": false
-          }
-        },
         "feat_warming_mat": {
           "type": "text",
           "settings": {
@@ -895,6 +911,14 @@
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
+          }
+        },
+        "ctc_warming_mat": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": false
           }
         },
         "ctbtn_warming_mat": {
@@ -921,10 +945,13 @@
       "block_order": [
         "sub_warming_mat",
         "heading_warming_mat",
-        "ctc_warming_mat",
         "feat_warming_mat",
+        "ctc_warming_mat",
         "ctbtn_warming_mat",
         "video_warming_mat"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
         "image_height": "450px",
@@ -974,14 +1001,6 @@
             "highlighted_scribble": "circle"
           }
         },
-        "ctc_crispinator_max_toaf": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
-            "subheading_size": "subtitle-md",
-            "secondary_color": false
-          }
-        },
         "feat_crispinator_max_toaf": {
           "type": "text",
           "settings": {
@@ -992,6 +1011,14 @@
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
+          }
+        },
+        "ctc_crispinator_max_toaf": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": false
           }
         },
         "ctbtn_crispinator_max_toaf": {
@@ -1018,10 +1045,13 @@
       "block_order": [
         "sub_crispinator_max_toaf",
         "heading_crispinator_max_toaf",
-        "ctc_crispinator_max_toaf",
         "feat_crispinator_max_toaf",
+        "ctc_crispinator_max_toaf",
         "ctbtn_crispinator_max_toaf",
         "video_crispinator_max_toaf"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
         "image_height": "450px",
@@ -1120,6 +1150,9 @@
         "ctbtn_deep_fryer_3l",
         "video_deep_fryer_3l"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
+      ],
       "settings": {
         "image_height": "450px",
         "image_width": "medium",
@@ -1168,14 +1201,6 @@
             "highlighted_scribble": "circle"
           }
         },
-        "ctc_grillinator_grill": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
-            "subheading_size": "subtitle-md",
-            "secondary_color": false
-          }
-        },
         "feat_grillinator_grill": {
           "type": "text",
           "settings": {
@@ -1186,6 +1211,14 @@
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
+          }
+        },
+        "ctc_grillinator_grill": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading_size": "subtitle-md",
+            "secondary_color": false
           }
         },
         "ctbtn_grillinator_grill": {
@@ -1212,10 +1245,13 @@
       "block_order": [
         "sub_grillinator_grill",
         "heading_grillinator_grill",
-        "ctc_grillinator_grill",
         "feat_grillinator_grill",
+        "ctc_grillinator_grill",
         "ctbtn_grillinator_grill",
         "video_grillinator_grill"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 767px) {.rich-text > .banner__subheading {font-size: calc(var(--text-sm) * 0.75); line-height: 1.55; }}"
       ],
       "settings": {
         "image_height": "450px",
