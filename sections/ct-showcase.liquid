@@ -271,7 +271,7 @@
         {%- endif -%}
 
         {%- if heading != blank -%}
-          <div class="partner-showcase__heading-line" role="heading" aria-level="1">{{ heading | escape }}</div>
+          <div class="partner-showcase__heading-line">{{ heading | escape }}</div>
         {%- endif -%}
 
         {%- if intro != blank -%}
@@ -480,18 +480,13 @@
               {%- endif -%}
             {%- endif -%}
 
-            {%- comment -%}
-              Title and blurb share one container. The blurb element is the one
-              piece of card copy that has always painted on this store, so the
-              title rides inside it as a bold lead-in line rather than in its
-              own heading element.
-            {%- endcomment -%}
-            <div class="partner-card__blurb rte">
-              {%- if card_title != blank -%}
-                <p class="partner-card__title-line" role="heading" aria-level="2"><strong>{{ card_title | escape }}</strong></p>
-              {%- endif -%}
-              {{ card_blurb }}
-            </div>
+            {%- if card_title != blank -%}
+              <p class="partner-card__title-line"><strong>{{ card_title | escape }}</strong></p>
+            {%- endif -%}
+
+            {%- if card_blurb != blank -%}
+              <div class="partner-card__blurb rte">{{ card_blurb }}</div>
+            {%- endif -%}
 
             {%- if card_url != blank -%}
               <div class="partner-card__cta">
