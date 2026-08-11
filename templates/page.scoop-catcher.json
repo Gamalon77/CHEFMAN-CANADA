@@ -1,1 +1,33 @@
-{"sections":{"scoop_catcher":{"type":"scoop-catcher","custom_css":["h1 {font-weight: bold;}"],"settings":{"heading":"Melt Down","heading_size":"title-md","intro":"<p>Fly through the land of treats and thread the gaps between the sweets.<\/p>","play_label":"Play","shop_label":"Make your own → Shop ice cream makers","shop_link":"shopify:\/\/collections\/frozen-treat-makers","padding_top":56,"padding_bottom":80,"divider":false}}},"order":["scoop_catcher"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "scoop_catcher": {
+      "type": "scoop-catcher",
+      "custom_css": [
+        "h1 {font-weight: bold;}"
+      ],
+      "settings": {
+        "heading": "Melt Down",
+        "heading_size": "title-md",
+        "intro": "<p>Fly through the land of treats and thread the gaps between the sweets.</p>",
+        "play_label": "Play",
+        "shop_label": "Make your own → Shop ice cream makers",
+        "shop_link": "shopify://collections/frozen-treat-makers",
+        "padding_top": 56,
+        "padding_bottom": 80,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "scoop_catcher"
+  ]
+}

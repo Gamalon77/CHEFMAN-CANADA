@@ -1,1 +1,33 @@
-{"sections":{"perfect_pour":{"type":"perfect-pour","custom_css":["h1 {font-weight: bold}"],"settings":{"heading":"Perfect Pour","heading_size":"title-md","intro":"<p>Think you can pull the perfect shot? Stop the pour in the crema zone.<\/p>","play_label":"Play","shop_label":"Caffeinate for real → Shop coffee makers","shop_link":"shopify:\/\/collections\/coffee-espresso-makers","padding_top":56,"padding_bottom":80,"divider":false}}},"order":["perfect_pour"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "perfect_pour": {
+      "type": "perfect-pour",
+      "custom_css": [
+        "h1 {font-weight: bold}"
+      ],
+      "settings": {
+        "heading": "Perfect Pour",
+        "heading_size": "title-md",
+        "intro": "<p>Think you can pull the perfect shot? Stop the pour in the crema zone.</p>",
+        "play_label": "Play",
+        "shop_label": "Caffeinate for real → Shop coffee makers",
+        "shop_link": "shopify://collections/coffee-espresso-makers",
+        "padding_top": 56,
+        "padding_bottom": 80,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "perfect_pour"
+  ]
+}
