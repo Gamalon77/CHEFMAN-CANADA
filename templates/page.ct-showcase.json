@@ -88,7 +88,7 @@
           "settings": {
             "subheading": "Model C27-2TJ-2M-CA1 · Midnight",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "ctc_obliterator_blender": {
@@ -96,7 +96,7 @@
           "settings": {
             "subheading": "CTC item #: TBD · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "feat_obliterator_blender": {
@@ -147,7 +147,7 @@
         "text_alignment": "left",
         "content_position": "align-self-center",
         "image_height_mobile": "auto",
-        "text_alignment_mobile": "left",
+        "text_alignment_mobile": "center",
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
@@ -185,7 +185,7 @@
           "settings": {
             "subheading": "Model C14-DR14-1M-CA2 · Midnight",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "ctc_caffeinator_drip": {
@@ -193,7 +193,7 @@
           "settings": {
             "subheading": "CTC item #: TBD · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "feat_caffeinator_drip": {
@@ -244,7 +244,7 @@
         "text_alignment": "left",
         "content_position": "align-self-center",
         "image_height_mobile": "auto",
-        "text_alignment_mobile": "left",
+        "text_alignment_mobile": "center",
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
@@ -282,7 +282,7 @@
           "settings": {
             "subheading": "Model RJ11-12-TI-CA · Glass/SS",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "ctc_kettle_manual_12l": {
@@ -290,7 +290,7 @@
           "settings": {
             "subheading": "CTC item #: TBD · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "feat_kettle_manual_12l": {
@@ -341,7 +341,7 @@
         "text_alignment": "left",
         "content_position": "align-self-center",
         "image_height_mobile": "auto",
-        "text_alignment_mobile": "left",
+        "text_alignment_mobile": "center",
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
@@ -379,7 +379,7 @@
           "settings": {
             "subheading": "Model RJ11-18-SCTI-DG-HP-CA · Glass/SS",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "ctc_kettle_digital_dual_glass": {
@@ -387,7 +387,7 @@
           "settings": {
             "subheading": "CTC item #: TBD · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "feat_kettle_digital_dual_glass": {
@@ -438,7 +438,7 @@
         "text_alignment": "left",
         "content_position": "align-self-center",
         "image_height_mobile": "auto",
-        "text_alignment_mobile": "left",
+        "text_alignment_mobile": "center",
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
@@ -476,7 +476,7 @@
           "settings": {
             "subheading": "Model RJ38-6TW-BLACK-DS-CA · Black",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "ctc_air_fryer_55l": {
@@ -484,7 +484,7 @@
           "settings": {
             "subheading": "CTC item #: TBD · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "feat_air_fryer_55l": {
@@ -535,7 +535,7 @@
         "text_alignment": "left",
         "content_position": "align-self-center",
         "image_height_mobile": "auto",
-        "text_alignment_mobile": "left",
+        "text_alignment_mobile": "center",
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
@@ -573,7 +573,7 @@
           "settings": {
             "subheading": "Model C38-8W7-1M-CA1 · Midnight",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "ctc_crispinator_air_fryer": {
@@ -581,7 +581,7 @@
           "settings": {
             "subheading": "CTC item #: TBD · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "feat_crispinator_air_fryer": {
@@ -632,7 +632,7 @@
         "text_alignment": "left",
         "content_position": "align-self-center",
         "image_height_mobile": "auto",
-        "text_alignment_mobile": "left",
+        "text_alignment_mobile": "center",
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
@@ -670,7 +670,7 @@
           "settings": {
             "subheading": "Model RJ31-SS-T-2S-CA · Stainless",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "ctc_toaster_2_slice": {
@@ -678,7 +678,7 @@
           "settings": {
             "subheading": "CTC item #: TBD · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "feat_toaster_2_slice": {
@@ -729,7 +729,7 @@
         "text_alignment": "left",
         "content_position": "align-self-center",
         "image_height_mobile": "auto",
-        "text_alignment_mobile": "left",
+        "text_alignment_mobile": "center",
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
@@ -767,7 +767,7 @@
           "settings": {
             "subheading": "Model RJ31-SS-T-4S-CA · Stainless",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "ctc_toaster_4_slice": {
@@ -775,7 +775,7 @@
           "settings": {
             "subheading": "CTC item #: TBD · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "feat_toaster_4_slice": {
@@ -826,7 +826,7 @@
         "text_alignment": "left",
         "content_position": "align-self-center",
         "image_height_mobile": "auto",
-        "text_alignment_mobile": "left",
+        "text_alignment_mobile": "center",
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
@@ -864,7 +864,7 @@
           "settings": {
             "subheading": "Model RJ22-S-BLUE-CA · Blue",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "ctc_warming_mat": {
@@ -872,7 +872,7 @@
           "settings": {
             "subheading": "CTC item #: TBD · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "feat_warming_mat": {
@@ -923,7 +923,7 @@
         "text_alignment": "left",
         "content_position": "align-self-center",
         "image_height_mobile": "auto",
-        "text_alignment_mobile": "left",
+        "text_alignment_mobile": "center",
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
@@ -961,7 +961,7 @@
           "settings": {
             "subheading": "Model C50-T25-1SS-CA1 · Stainless",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "ctc_crispinator_max_toaf": {
@@ -969,7 +969,7 @@
           "settings": {
             "subheading": "CTC item #: TBD · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "feat_crispinator_max_toaf": {
@@ -1020,7 +1020,7 @@
         "text_alignment": "left",
         "content_position": "align-self-center",
         "image_height_mobile": "auto",
-        "text_alignment_mobile": "left",
+        "text_alignment_mobile": "center",
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
@@ -1058,7 +1058,7 @@
           "settings": {
             "subheading": "Model RJ07-32-SS-D-CA · Stainless",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "ctc_deep_fryer_3l": {
@@ -1066,7 +1066,7 @@
           "settings": {
             "subheading": "CTC item #: TBD · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "feat_deep_fryer_3l": {
@@ -1117,7 +1117,7 @@
         "text_alignment": "left",
         "content_position": "align-self-center",
         "image_height_mobile": "auto",
-        "text_alignment_mobile": "left",
+        "text_alignment_mobile": "center",
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
@@ -1155,7 +1155,7 @@
           "settings": {
             "subheading": "Model C02-S-1M-CA2 · Midnight",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "ctc_grillinator_grill": {
@@ -1163,7 +1163,7 @@
           "settings": {
             "subheading": "CTC item #: TBD · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
-            "secondary_color": true
+            "secondary_color": false
           }
         },
         "feat_grillinator_grill": {
@@ -1214,7 +1214,7 @@
         "text_alignment": "left",
         "content_position": "align-self-center",
         "image_height_mobile": "auto",
-        "text_alignment_mobile": "left",
+        "text_alignment_mobile": "center",
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
