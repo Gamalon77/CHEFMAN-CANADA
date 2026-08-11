@@ -31,45 +31,90 @@ presentation (accessed at the event by QR code).
 
 ---
 
-## 2. Assign the products
+## 2. Images
 
-Each card gets its image, link and fallback title from a **product picker**.
-11 of the 12 cards still need a product assigned (see the list below) — my product
-data snapshot predates these SKUs, so I did not guess and risk pointing a
-"Learn more" button at the wrong product in front of a buyer.
+The 12 product photos were pulled from `CanadianTireSelectedSKUs.pptx` and are
+supplied separately as `chefman-ct-product-photos.zip`. They are clean lifestyle
+shots with no text or pricing baked in, and every one is **exactly 2:3 portrait**
+(750×1125, 600×900 or 1024×1536), which is why the card image shape defaults to
+2:3 — the photos fill it with no letterboxing.
+
+**To load them:** Content → **Files** → upload all 12 → then in the theme editor
+pick each one on its card (**Image**). File names match the products.
+
+### Replacing an image
+
+Every card has two independent image slots, so a deck photo can always be swapped:
+
+| Setting | What it does |
+|---------|--------------|
+| **Image** | Overrides the product's featured image. Also how you give art to a product that isn't on the store yet. |
+| **Image — phone only** | Optional. Used *instead* of the above below 640px, via a `<picture>` source. For when the main shot is composed wide and reads badly on a phone. |
+
+Section-level controls (apply to all cards, under **Card images**):
+- **Image shape** — 2:3 (default), 3:4, 4:5, square, or natural.
+- **Image fit** — *Contain* shows the whole photo (default, never crops a product);
+  *Cover* fills the card and crops the edges.
+- **Crop focus** — centre/top/bottom/left/right, used only with *Cover*.
+
+One to watch: the **Roll 'n Go warming mat** photo is composed wide, so in a
+portrait card the product sits low with empty wall above it. Either supply a
+tighter crop in the **Image — phone only** slot, or switch fit to *Cover* with
+crop focus *Bottom*.
+
+---
+
+## 3. Assign the products
+
+Each card's **Learn more** button and fallback title come from a **product
+picker**. 11 of 12 still need one assigned — the deck lists **US** model numbers
+(e.g. `C38-8W7-1M-US1`) while the page uses the CA SKUs, and these products
+weren't in my catalogue snapshot, so I did not guess and risk pointing a button
+at the wrong product in front of a buyer.
 
 **Theme editor → the page → Partner product showcase → click a card:**
-- **Product** — search the product by name. This fills in the image, the link, and
-  uses Shopify's own product translations for the title.
-- **Link override** — use this instead if the product isn't on the CA store yet
-  (paste any URL).
-- **Image override** — use if you want a specific hero shot rather than the
-  product's featured image.
+- **Product** — search by name. Fills in the link, the image (if you haven't set
+  one) and uses Shopify's own product translations for the title.
+- **Link override** — use instead if the product isn't on the CA store yet.
 
-Cards are already labelled with the model number so you know which is which:
-
-| Card | Model | Product assigned? |
-|------|-------|-------------------|
-| Obliterator Blender + 2 Travel Jars | C27-2TJ-2M-CA1 | ❌ needs product |
-| Caffeinator 14-Cup Drip Coffee Maker | C14-DR14-1M-CA2 | ❌ needs product |
-| 1.2 L Glass & Stainless Kettle | RJ11-12-TI-CA | ❌ needs product |
-| Dual-Glass Digital Kettle | RJ11-18-SCTI-DG-HP-CA | ❌ needs product |
-| 5.5 L Digital Air Fryer | RJ38-6TW-BLACK-DS-CA | ❌ needs product |
-| Crispinator Air Fryer | C38-8W7-1M-CA1 | ❌ needs product |
-| 2-Slice Smart Touch Toaster | RJ31-SS-T-2S-CA | ❌ needs product |
-| 4-Slice Smart Touch Toaster | RJ31-SS-T-4S-CA | ❌ needs product |
-| Roll n' Go Food Warming Mat | RJ22-S-BLUE-CA | ✅ `roll-n-go-food-warming-mat` |
-| Crispinator MAX TOAF | C50-T25-1SS-CA1 | ❌ needs product |
-| 3 L Deep Fryer | RJ07-32-SS-D-CA | ❌ needs product |
-| Grillinator Submersible Grill | C02-S-1M-CA2 | ❌ needs product |
+| Card | CA model | Deck model | Product assigned? |
+|------|----------|-----------|-------------------|
+| Obliterator High-Speed Blender + 2 Travel Jars | C27-2TJ-2M-CA1 | C27-2TJ-2M-1US1 | ❌ |
+| Caffeinator Drip 14-Cup Coffee Maker | C14-DR14-1M-CA2 | C14-DR14-1M | ❌ |
+| Fast-Boil 1.2 L Glass Kettle + Tea Infuser | RJ11-12-TI-CA | RJ11-12-TI | ❌ |
+| Lightning 1.8 L Digital Kettle | RJ11-18-SCTI-DG-HP-CA | RJ11-18-SCTI-HP | ❌ |
+| TurboFry Touch Easy-View Air Fryer | RJ38-6TW-BLACK-DS-CA | RJ38-6TW-BLACK | ❌ |
+| Crispinator 7.6 L Digital Air Fryer | C38-8W7-1M-CA1 | C38-8W7-1M-US1 | ❌ |
+| Smart Touch 2-Slice Digital Toaster | RJ31-SS-T-2S-CA | RJ31-SS-T-2S | ❌ |
+| Smart Touch 4-Slice Digital Toaster | RJ31-SS-T-4S-CA | RJ31-SS-T-4S | ❌ |
+| Roll 'n Go Rollable Warming Mat | RJ22-S-BLUE-CA | RJ22-S-BLUE | ✅ `roll-n-go-food-warming-mat` |
+| Crispinator MAX Toaster Oven + Air Fryer | C50-T25-1SS-CA1 | C50-T25-SS | ❌ |
+| 3 L Stainless Steel Deep Fryer | RJ07-32-SS-D-CA | RJ07-32-SS-D | ❌ |
+| Grillinator Submersible Panini Press + Grill | C02-S-1M-CA2 | C02-S-1M | ❌ |
 
 A card with no product still renders (title + blurb) but shows a dashed
 placeholder where the image goes and hides its button — so it's obvious at a
 glance which cards are still unwired.
 
+### Two specs to confirm
+
+1. **TurboFry Touch Easy-View air fryer** — the CA SKU list calls it a
+   *5.5 L Digital Air Fryer*, but the deck says **6-quart** (≈ 5.7 L). The title
+   and blurb currently state **no capacity** rather than pick a number. Confirm
+   which is right for Canada and it goes in.
+2. **Lightning kettle** — the CA SKU carries `-DG-` (dual glass) which the US
+   model (`RJ11-18-SCTI-HP`) does not, so the CA unit may differ from the deck
+   spec. Copy currently describes only what the deck confirms: 1.8 L, 1750 W,
+   25% faster, five presets.
+
+All other copy is taken directly from the deck's feature lists, with imperial
+converted to metric (450°F → 232 °C, 500°F → 260 °C, 8 qt → 7.6 L,
+48 oz → 1.4 L, 72 oz → 2.1 L, 13" → 33 cm, 9"×13" → 23 × 33 cm,
+10"×9" → 25 × 23 cm, 250–450°F → 121–232 °C).
+
 ---
 
-## 3. How the bilingual copy works
+## 4. How the bilingual copy works
 
 Unlike the rest of the theme's baked content, this page's copy lives in the
 **theme locale files**, not Translate & Adapt:
@@ -95,7 +140,7 @@ translations already loaded in Translate & Adapt.
 
 ---
 
-## 4. Layout
+## 5. Layout
 
 Mobile-first, all in scoped CSS in the section (no dependency on utility classes
 that aren't in this theme's compiled `theme.css`):
@@ -113,7 +158,7 @@ across a row. On phones the button is full-width for an easier tap target.
 
 ---
 
-## 5. Canadian Tire logo
+## 6. Canadian Tire logo
 
 Currently loaded from the URL supplied with the request:
 `cdn.shopify.com/s/files/1/0714/7647/8117/files/CT_Logo.png`
@@ -126,7 +171,7 @@ setting; the picker takes priority over the URL. Logo height is adjustable
 
 ---
 
-## 6. Optional toggles
+## 7. Optional toggles
 
 - **Show colour + model number on cards** — off by default. Every card already
   stores its colourway and model number, so flipping this on adds a small line

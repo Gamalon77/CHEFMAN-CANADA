@@ -108,12 +108,15 @@
   }
 
   {%- comment -%}
-    Product shots sit on a light plate and use object-fit: contain so nothing
-    is cropped — these are catalogue images being shown to a retail buyer.
+    Product shots sit on a light plate. `contain` shows the whole frame (nothing
+    cropped); `cover` fills the card and crops the edges — useful when a source
+    photo is composed wide and leaves dead space in a portrait card.
   {%- endcomment -%}
   #shopify-section-{{ section.id }} .partner-card__media {
     position: relative;
-    aspect-ratio: 1 / 1;
+    {%- if section.settings.image_ratio != 'natural' %}
+    aspect-ratio: {{ section.settings.image_ratio }};
+    {%- endif %}
     display: flex;
     align-items: center;
     justify-content: center;
@@ -124,8 +127,11 @@
 
   #shopify-section-{{ section.id }} .partner-card__media img {
     width: 100%;
+    {%- if section.settings.image_ratio != 'natural' %}
     height: 100%;
-    object-fit: contain;
+    {%- endif %}
+    object-fit: {{ section.settings.image_fit }};
+    object-position: {{ section.settings.image_position }};
   }
 
   #shopify-section-{{ section.id }} .partner-card__media--empty {
@@ -252,6 +258,10 @@
               assign card_image = product.featured_image
             endif
 
+            # Optional phone-specific art (a tighter crop, say). Falls back to
+            # the main image when not set.
+            assign card_image_mobile = block.settings.image_mobile
+
             # --- Link: block override -> product url ---
             assign card_url = block.settings.custom_url
             if card_url == blank
@@ -263,15 +273,35 @@
             <div class="partner-card__media{% if card_image == blank %} partner-card__media--empty{% endif %}">
               {%- if card_image != blank -%}
                 {%- if card_url != blank -%}<a href="{{ card_url }}" tabindex="-1" aria-hidden="true">{%- endif -%}
-                {{-
-                  card_image
-                  | image_url: width: 900
-                  | image_tag:
-                    widths: '200,300,400,600,900',
-                    sizes: '(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 92vw',
-                    loading: 'lazy',
-                    alt: card_title
-                -}}
+                {%- if card_image_mobile != blank -%}
+                  {%- comment -%} Separate phone art: swap the source under 640px {%- endcomment -%}
+                  <picture>
+                    <source
+                      media="(max-width: 639px)"
+                      srcset="{{ card_image_mobile | image_url: width: 400 }} 400w, {{ card_image_mobile | image_url: width: 800 }} 800w"
+                      sizes="92vw"
+                    >
+                    {{-
+                      card_image
+                      | image_url: width: 900
+                      | image_tag:
+                        widths: '200,300,400,600,900',
+                        sizes: '(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 92vw',
+                        loading: 'lazy',
+                        alt: card_title
+                    -}}
+                  </picture>
+                {%- else -%}
+                  {{-
+                    card_image
+                    | image_url: width: 900
+                    | image_tag:
+                      widths: '200,300,400,600,900',
+                      sizes: '(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 92vw',
+                      loading: 'lazy',
+                      alt: card_title
+                  -}}
+                {%- endif -%}
                 {%- if card_url != blank -%}</a>{%- endif -%}
               {%- endif -%}
             </div>
@@ -429,6 +459,49 @@
       "default": false
     },
     {
+      "type": "header",
+      "content": "Card images"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image shape",
+      "info": "The supplied product photos are all 2:3 portrait, which fills that shape exactly with no letterboxing.",
+      "options": [
+        { "value": "2 / 3", "label": "Portrait 2:3 (matches supplied photos)" },
+        { "value": "3 / 4", "label": "Portrait 3:4" },
+        { "value": "4 / 5", "label": "Portrait 4:5" },
+        { "value": "1 / 1", "label": "Square" },
+        { "value": "natural", "label": "Natural (image's own shape)" }
+      ],
+      "default": "2 / 3"
+    },
+    {
+      "type": "select",
+      "id": "image_fit",
+      "label": "Image fit",
+      "info": "Contain shows the whole photo. Cover fills the card and crops the edges — use it when a photo is composed wide and leaves dead space.",
+      "options": [
+        { "value": "contain", "label": "Contain (show whole photo)" },
+        { "value": "cover", "label": "Cover (fill and crop)" }
+      ],
+      "default": "contain"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Crop focus",
+      "info": "Only applies when fit is set to Cover.",
+      "options": [
+        { "value": "center", "label": "Centre" },
+        { "value": "top", "label": "Top" },
+        { "value": "bottom", "label": "Bottom" },
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
       "type": "color",
       "id": "card_image_background",
       "label": "Card image background",
@@ -541,7 +614,14 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Image override"
+          "label": "Image",
+          "info": "Overrides the product's featured image. Use this to swap in a different photo, or to supply art for a product that isn't on the store yet."
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Image — phone only",
+          "info": "Optional. Shown below 640px instead of the image above — handy when the main photo is composed wide and reads badly on a phone."
         },
         {
           "type": "url",
