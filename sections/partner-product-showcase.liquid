@@ -225,6 +225,7 @@
   }
 </style>
 
+<!-- partner-showcase v7 -->
 <div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded{% endif %}">
   <div class="page-width{% if section.settings.full_width %} page-width--full{% endif %}">
     {%- liquid
@@ -453,15 +454,92 @@
               {%- endif -%}
             </div>
 
-            {%- if card_title != blank -%}
-              <h2 class="partner-card__title">
-                {%- if card_url != blank -%}
-                  <a href="{{ card_url }}">{{ card_title | escape }}</a>
+            {%- comment -%}
+              Title. The literal fallbacks below are written with plain tags and
+              plain text: no liquid tag, no case, no translation lookup,
+              no stored setting. If this file is the one being served, a title
+              renders. card_title still wins when it has a value, so the editor
+              override and locale copy keep working.
+            {%- endcomment -%}
+            <h2 class="partner-card__title">
+              {%- if card_url != blank -%}<a href="{{ card_url }}">{%- endif -%}
+              {%- if card_title != blank -%}
+                {{- card_title | escape -}}
+              {%- elsif forloop.index == 1 -%}
+                {%- if is_fr -%}
+                  Mélangeur haute vitesse Obliterator
                 {%- else -%}
-                  {{ card_title | escape }}
+                  Obliterator High-Speed Blender
                 {%- endif -%}
-              </h2>
-            {%- endif -%}
+              {%- elsif forloop.index == 2 -%}
+                {%- if is_fr -%}
+                  Cafetière filtre Caffeinator Drip de 14 tasses
+                {%- else -%}
+                  Caffeinator Drip 14-Cup Coffee Maker
+                {%- endif -%}
+              {%- elsif forloop.index == 3 -%}
+                {%- if is_fr -%}
+                  Bouilloire électrique Fast-Boil de 1,2 L avec infuseur à thé
+                {%- else -%}
+                  Fast-Boil 1.2 L Electric Kettle with Tea Infuser
+                {%- endif -%}
+              {%- elsif forloop.index == 4 -%}
+                {%- if is_fr -%}
+                  Bouilloire électrique Lightning de 1,8 L
+                {%- else -%}
+                  Lightning 1.8 L Electric Kettle
+                {%- endif -%}
+              {%- elsif forloop.index == 5 -%}
+                {%- if is_fr -%}
+                  Friteuse à air TurboFry Touch Easy-View de 5,7 L
+                {%- else -%}
+                  TurboFry Touch 5.7 L Easy-View Air Fryer
+                {%- endif -%}
+              {%- elsif forloop.index == 6 -%}
+                {%- if is_fr -%}
+                  Friteuse à air numérique Crispinator de 7,6 L
+                {%- else -%}
+                  Crispinator 7.6 L Digital Air Fryer
+                {%- endif -%}
+              {%- elsif forloop.index == 7 -%}
+                {%- if is_fr -%}
+                  Grille-pain numérique Smart Touch à 2 tranches
+                {%- else -%}
+                  Smart Touch 2-Slice Digital Toaster
+                {%- endif -%}
+              {%- elsif forloop.index == 8 -%}
+                {%- if is_fr -%}
+                  Grille-pain numérique Smart Touch à 4 tranches
+                {%- else -%}
+                  Smart Touch 4-Slice Digital Toaster
+                {%- endif -%}
+              {%- elsif forloop.index == 9 -%}
+                {%- if is_fr -%}
+                  Tapis chauffant enroulable Roll 'n Go
+                {%- else -%}
+                  Roll 'n Go Rollable Warming Mat
+                {%- endif -%}
+              {%- elsif forloop.index == 10 -%}
+                {%- if is_fr -%}
+                  Four grille-pain numérique + friteuse à air Crispinator MAX
+                {%- else -%}
+                  Crispinator MAX Digital Toaster Oven + Air Fryer
+                {%- endif -%}
+              {%- elsif forloop.index == 11 -%}
+                {%- if is_fr -%}
+                  Friteuse de 3 L en acier inoxydable
+                {%- else -%}
+                  3 L Stainless Steel Deep Fryer
+                {%- endif -%}
+              {%- elsif forloop.index == 12 -%}
+                {%- if is_fr -%}
+                  Presse à panini et gril submersible Grillinator
+                {%- else -%}
+                  Grillinator Submersible Panini Press & Grill
+                {%- endif -%}
+              {%- endif -%}
+              {%- if card_url != blank -%}</a>{%- endif -%}
+            </h2>
 
             {%- if section.settings.show_meta -%}
               {%- liquid
