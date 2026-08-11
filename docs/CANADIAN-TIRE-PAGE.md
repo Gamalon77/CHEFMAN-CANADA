@@ -48,7 +48,7 @@ Every card has two independent image slots, so a deck photo can always be swappe
 
 | Setting | What it does |
 |---------|--------------|
-| **Image** | Overrides the product's featured image. Also how you give art to a product that isn't on the store yet. |
+| **Image** | The card's photo. Swap in anything here — a different deck export, a retouched version, or a fresh studio shot. |
 | **Image — phone only** | Optional. Used *instead* of the above below 640px, via a `<picture>` source. For when the main shot is composed wide and reads badly on a phone. |
 
 Section-level controls (apply to all cards, under **Card images**):
@@ -64,79 +64,92 @@ crop focus *Bottom*.
 
 ---
 
-## 3. Assign the products
+## 3. The deck is the source of truth
 
-Each card's **Learn more** button and fallback title come from a **product
-picker**. 11 of 12 still need one assigned — the deck lists **US** model numbers
-(e.g. `C38-8W7-1M-US1`) while the page uses the CA SKUs, and these products
-weren't in my catalogue snapshot, so I did not guess and risk pointing a button
-at the wrong product in front of a buyer.
+**`CanadianTireSelectedSKUs.pptx` is the authority for this page.** Every title,
+feature and photo comes from it — not from the CA product catalogue. Nothing on
+the page reads from Shopify product data, so the page is complete once the 12
+images are uploaded.
 
-**Theme editor → the page → Partner product showcase → click a card:**
-- **Product** — search by name. Fills in the link, the image (if you haven't set
-  one) and uses Shopify's own product translations for the title.
-- **Link override** — use instead if the product isn't on the CA store yet.
+Consequences worth knowing:
 
-| Card | CA model | Deck model | Product assigned? |
-|------|----------|-----------|-------------------|
-| Obliterator High-Speed Blender + 2 Travel Jars | C27-2TJ-2M-CA1 | C27-2TJ-2M-1US1 | ❌ |
-| Caffeinator Drip 14-Cup Coffee Maker | C14-DR14-1M-CA2 | C14-DR14-1M | ❌ |
-| Fast-Boil 1.2 L Glass Kettle + Tea Infuser | RJ11-12-TI-CA | RJ11-12-TI | ❌ |
-| Lightning 1.8 L Digital Kettle | RJ11-18-SCTI-DG-HP-CA | RJ11-18-SCTI-HP | ❌ |
-| TurboFry Touch Easy-View Air Fryer | RJ38-6TW-BLACK-DS-CA | RJ38-6TW-BLACK | ❌ |
-| Crispinator 7.6 L Digital Air Fryer | C38-8W7-1M-CA1 | C38-8W7-1M-US1 | ❌ |
-| Smart Touch 2-Slice Digital Toaster | RJ31-SS-T-2S-CA | RJ31-SS-T-2S | ❌ |
-| Smart Touch 4-Slice Digital Toaster | RJ31-SS-T-4S-CA | RJ31-SS-T-4S | ❌ |
-| Roll 'n Go Rollable Warming Mat | RJ22-S-BLUE-CA | RJ22-S-BLUE | ✅ `roll-n-go-food-warming-mat` |
-| Crispinator MAX Toaster Oven + Air Fryer | C50-T25-1SS-CA1 | C50-T25-SS | ❌ |
-| 3 L Stainless Steel Deep Fryer | RJ07-32-SS-D-CA | RJ07-32-SS-D | ❌ |
-| Grillinator Submersible Panini Press + Grill | C02-S-1M-CA2 | C02-S-1M | ❌ |
+- **No product needs to be assigned.** The **Product** picker on each card is
+  optional and left empty on all 12; it only matters if you later switch cards to
+  be clickable.
+- **Cards are not clickable.** There are no "Learn more" buttons, and neither the
+  image nor the title is a link. (See §7 to turn that on later.)
+- Titles follow the deck's own product naming, e.g. *TurboFry Touch 5.7 L
+  Easy-View Air Fryer*, *Crispinator MAX Digital Toaster Oven + Air Fryer*,
+  *Grillinator Submersible Panini Press & Grill*.
 
-A card with no product still renders (title + blurb) but shows a dashed
-placeholder where the image goes and hides its button — so it's obvious at a
-glance which cards are still unwired.
+Cards still carry their CA model number and colourway as reference fields (and §7
+can display them), mapped to the deck as follows:
 
-### Two specs to confirm
+| Card | CA model | Deck model |
+|------|----------|-----------|
+| Obliterator High-Speed Blender | C27-2TJ-2M-CA1 | C27-2TJ-2M-1US1 |
+| Caffeinator Drip 14-Cup Coffee Maker | C14-DR14-1M-CA2 | C14-DR14-1M |
+| Fast-Boil 1.2 L Electric Kettle with Tea Infuser | RJ11-12-TI-CA | RJ11-12-TI |
+| Lightning 1.8 L Electric Kettle | RJ11-18-SCTI-DG-HP-CA | RJ11-18-SCTI-HP |
+| TurboFry Touch 5.7 L Easy-View Air Fryer | RJ38-6TW-BLACK-DS-CA | RJ38-6TW-BLACK |
+| Crispinator 7.6 L Digital Air Fryer | C38-8W7-1M-CA1 | C38-8W7-1M-US1 |
+| Smart Touch 2-Slice Digital Toaster | RJ31-SS-T-2S-CA | RJ31-SS-T-2S |
+| Smart Touch 4-Slice Digital Toaster | RJ31-SS-T-4S-CA | RJ31-SS-T-4S |
+| Roll 'n Go Rollable Warming Mat | RJ22-S-BLUE-CA | RJ22-S-BLUE |
+| Crispinator MAX Digital Toaster Oven + Air Fryer | C50-T25-1SS-CA1 | C50-T25-SS |
+| 3 L Stainless Steel Deep Fryer | RJ07-32-SS-D-CA | RJ07-32-SS-D |
+| Grillinator Submersible Panini Press & Grill | C02-S-1M-CA2 | C02-S-1M |
 
-1. **TurboFry Touch Easy-View air fryer** — the CA SKU list calls it a
-   *5.5 L Digital Air Fryer*, but the deck says **6-quart** (≈ 5.7 L). The title
-   and blurb currently state **no capacity** rather than pick a number. Confirm
-   which is right for Canada and it goes in.
-2. **Lightning kettle** — the CA SKU carries `-DG-` (dual glass) which the US
-   model (`RJ11-18-SCTI-HP`) does not, so the CA unit may differ from the deck
-   spec. Copy currently describes only what the deck confirms: 1.8 L, 1750 W,
-   25% faster, five presets.
+### Metric conversions applied
 
-All other copy is taken directly from the deck's feature lists, with imperial
-converted to metric (450°F → 232 °C, 500°F → 260 °C, 8 qt → 7.6 L,
-48 oz → 1.4 L, 72 oz → 2.1 L, 13" → 33 cm, 9"×13" → 23 × 33 cm,
-10"×9" → 25 × 23 cm, 250–450°F → 121–232 °C).
+All imperial figures in the deck were converted for both languages:
+6 qt → 5.7 L · 8 qt → 7.6 L · 48 oz → 1.4 L · 72 oz → 2.1 L ·
+450°F → 232 °C · 500°F → 260 °C · 250–450°F → 121–232 °C ·
+13″ → 33 cm · 9″×13″ → 23 × 33 cm · 10″×9″ → 25 × 23 cm.
+
+Per the deck the air fryer is **6-quart (5.7 L)**, not the 5.5 L shown on the CA
+SKU list. The Lightning kettle's CA unit is confirmed identical to the deck spec.
+
+Product, brand and feature names are left untranslated: Obliterator,
+Caffeinator Drip, Fast-Boil, Lightning, TurboFry Touch, Easy-View, Crispinator,
+MAX, Smart Touch, Roll 'n Go, Grillinator, Hi-Fry, Auto-Blend, Bagel, Frozen.
 
 ---
 
-## 4. How the bilingual copy works
+## 4. Editing the copy
 
-Unlike the rest of the theme's baked content, this page's copy lives in the
-**theme locale files**, not Translate & Adapt:
+**You can edit any card's wording yourself, in either language, from the theme
+editor — no repo change and no Translate & Adapt import.**
+
+Each card has four copy fields:
+
+| Field | Appears on |
+|-------|-----------|
+| **Title (English)** / **Blurb (English)** | the English page only |
+| **Title (French)** / **Blurb (French)** | the French page only |
+
+Leave a field blank and the card falls back to the default copy shipped in the
+locale files. Fill one in and it wins for that language. The two languages are
+independent: correcting the French blurb does not disturb the English one, and
+vice versa.
+
+The section decides which pair to use from the current request locale
+(`request.locale.iso_code`, matching both `fr` and `fr-CA`).
+
+### Where the default copy lives
 
 - `locales/en.default.json` → `canadian_tire`
 - `locales/fr.json` → `canadian_tire`
 
-**Why:** locale files are theme *code*. They sync through GitHub, travel to every
-theme (including duplicates), and switch instantly with the header language
-toggle — no import step, and nothing bound to a single theme ID. For a
-time-boxed event page that has to work in both languages on the day, that is far
-more reliable than a Translate & Adapt import.
+**Why locale files rather than Translate & Adapt:** they are theme *code*, so they
+sync through GitHub, travel to every theme (including duplicates), and switch
+instantly with the language toggle — no import step and nothing bound to a single
+theme ID. For an event page that has to work in both languages on the day, that is
+far more reliable. The per-card override fields above then give you editor-level
+control on top, which is the best of both.
 
-**Trade-off:** copy edits happen in those two JSON files (in the repo) rather than
-in the theme editor. If you'd rather hand copy control to the marketing team in
-the editor, type text into a card's **Title override** / **Blurb override** — that
-wins over the locale value, but it will then be English-only unless it's also
-registered in Translate & Adapt.
-
-Product **titles** are a special case: when a card has a product assigned and no
-title override, the title comes from the product itself, so it uses the product
-translations already loaded in Translate & Adapt.
+So: small wording fixes → theme editor. Permanent changes you want in the repo →
+the two locale files (or ask me).
 
 ---
 
@@ -151,10 +164,9 @@ that aren't in this theme's compiled `theme.css`):
 | ≥ 640px | 2 |
 | ≥ 1024px | **4** — 12 cards = 3 rows of 4 |
 
-Card order is top-to-bottom the same as the source list. Product images use
-`object-fit: contain` on a light plate so nothing gets cropped, and the
-"Learn more" button is pinned to the bottom of each card so buttons line up
-across a row. On phones the button is full-width for an easier tap target.
+Card order is top-to-bottom the same as the deck list. Each card is image →
+title → blurb, with images on a light plate using `object-fit: contain` so
+nothing is cropped.
 
 ---
 
@@ -173,6 +185,9 @@ setting; the picker takes priority over the URL. Logo height is adjustable
 
 ## 7. Optional toggles
 
+- **Make cards clickable** — off by default, per the brief. Turning it on adds a
+  button to each card and links the image and title. It needs a destination, so
+  fill in each card's **Product** or **Link** first, or the button stays hidden.
 - **Show colour + model number on cards** — off by default. Every card already
   stores its colourway and model number, so flipping this on adds a small line
   like `Midnight · C27-2TJ-2M-CA1` under each title. Useful for a buyer-facing

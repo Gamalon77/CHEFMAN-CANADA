@@ -20,6 +20,13 @@
 {%- endcomment -%}
 
 {%- liquid
+  # Which language is being served. Used so a card's editor overrides only apply
+  # to the language they were written in. Matches "fr" and "fr-CA".
+  assign is_fr = false
+  if request.locale.iso_code contains 'fr'
+    assign is_fr = true
+  endif
+
   assign heading = section.settings.heading
   if heading == blank
     assign heading = 'canadian_tire.heading' | t
@@ -229,8 +236,17 @@
           {%- liquid
             assign product = block.settings.product
 
-            # --- Title: block override -> locale key -> product title ---
-            assign card_title = block.settings.title
+            # --- Title: editor override for THIS language -> locale key -> product title ---
+            # Each card carries an English and a French override, so copy can be
+            # corrected in the theme editor in either language without touching
+            # the repo or Translate & Adapt. An override only applies to the
+            # language it was written for; the other language keeps falling back
+            # to the locale files.
+            if is_fr
+              assign card_title = block.settings.title_fr
+            else
+              assign card_title = block.settings.title
+            endif
             if card_title == blank and block.settings.key != blank
               assign title_key = 'canadian_tire.cards.' | append: block.settings.key | append: '.title'
               assign card_title = title_key | t
@@ -242,8 +258,12 @@
               assign card_title = product.title
             endif
 
-            # --- Blurb: block override -> locale key ---
-            assign card_blurb = block.settings.blurb
+            # --- Blurb: editor override for THIS language -> locale key ---
+            if is_fr
+              assign card_blurb = block.settings.blurb_fr
+            else
+              assign card_blurb = block.settings.blurb
+            endif
             if card_blurb == blank and block.settings.key != blank
               assign blurb_key = 'canadian_tire.cards.' | append: block.settings.key | append: '.blurb'
               assign card_blurb = blurb_key | t
@@ -263,10 +283,16 @@
             assign card_image_mobile = block.settings.image_mobile
 
             # --- Link: block override -> product url ---
+            # Off by default: this page is a showcase, not a shopping surface.
+            # Blanking the URL removes the button and unlinks the image + title
+            # in one place, so nothing on the card becomes clickable.
             assign card_url = block.settings.custom_url
             if card_url == blank
               assign card_url = product.url
             endif
+            unless section.settings.show_cta
+              assign card_url = ''
+            endunless
           -%}
 
           <div class="partner-card" {{ block.shopify_attributes }}>
@@ -437,10 +463,17 @@
       "content": "Cards"
     },
     {
+      "type": "checkbox",
+      "id": "show_cta",
+      "label": "Make cards clickable",
+      "info": "Off by default — this page is a showcase, not a shopping surface. Turning it on adds a button to each card and links the image and title to the product.",
+      "default": false
+    },
+    {
       "type": "text",
       "id": "button_label",
       "label": "Button label",
-      "info": "Leave blank to use the translated \"Learn more\" from the locale files."
+      "info": "Only used when cards are clickable. Leave blank for the translated \"Learn more\"."
     },
     {
       "type": "select",
@@ -593,7 +626,7 @@
           "type": "product",
           "id": "product",
           "label": "Product",
-          "info": "Supplies the image, the link and (as a fallback) the title. Product titles use Shopify's own product translations."
+          "info": "Optional. Only needed as a fallback source for the image/title, or to give the card a destination when \"Make cards clickable\" is on."
         },
         {
           "type": "text",
@@ -602,14 +635,34 @@
           "info": "Looks up canadian_tire.cards.<key>.title / .blurb in the theme's locale files so the card is bilingual."
         },
         {
+          "type": "header",
+          "content": "English copy"
+        },
+        {
           "type": "text",
           "id": "title",
-          "label": "Title override"
+          "label": "Title (English)",
+          "info": "Leave blank to use the copy from the locale files. Applies to the English page only."
         },
         {
           "type": "richtext",
           "id": "blurb",
-          "label": "Blurb override"
+          "label": "Blurb (English)"
+        },
+        {
+          "type": "header",
+          "content": "French copy"
+        },
+        {
+          "type": "text",
+          "id": "title_fr",
+          "label": "Title (French)",
+          "info": "Shown on the French page instead of the locale-file copy. Edit here to correct French wording without a Translate & Adapt import."
+        },
+        {
+          "type": "richtext",
+          "id": "blurb_fr",
+          "label": "Blurb (French)"
         },
         {
           "type": "image_picker",
@@ -626,8 +679,8 @@
         {
           "type": "url",
           "id": "custom_url",
-          "label": "Link override",
-          "info": "Use when the product is not on this store yet."
+          "label": "Link",
+          "info": "Only used when \"Make cards clickable\" is on. Takes priority over the product's own URL."
         },
         {
           "type": "text",

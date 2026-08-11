@@ -576,11 +576,11 @@
   },
   "canadian_tire": {
     "heading": "The Chefman Lineup",
-    "intro": "A closer look at the products we're bringing to Canadian Tire. Tap any product for full details.",
+    "intro": "A closer look at the products we're bringing to Canadian Tire.",
     "learn_more": "Learn more",
     "cards": {
       "obliterator_blender": {
-        "title": "Obliterator High-Speed Blender + 2 Travel Jars",
+        "title": "Obliterator High-Speed Blender",
         "blurb": "Auto-Blend senses what's in the 1.4 L Triton jar and sets the blend time itself, backed by more than 20,000 rpm. Two travel jars come along for the ride."
       },
       "caffeinator_drip": {
@@ -588,16 +588,16 @@
         "blurb": "Brews 14 cups from a 2.1 L reservoir, with a touchscreen, Classic and Bold settings and a 24-hour delay timer. The 1-to-4-cup setting covers a single mug."
       },
       "kettle_manual_12l": {
-        "title": "Fast-Boil 1.2 L Glass Kettle + Tea Infuser",
+        "title": "Fast-Boil 1.2 L Electric Kettle with Tea Infuser",
         "blurb": "1500 W brings 1.2 L up in stain-resistant borosilicate glass, with blue LEDs that light while it heats. Both the tea infuser and the lid lift out."
       },
       "kettle_digital_dual_glass": {
-        "title": "Lightning 1.8 L Digital Kettle",
+        "title": "Lightning 1.8 L Electric Kettle",
         "blurb": "1750 W of Lightning power boils up to 25% faster, with five temperature presets and tricolour LEDs for standby, heating and ready. Auto shut-off and boil-dry protection included."
       },
       "air_fryer_55l": {
-        "title": "TurboFry Touch Easy-View Air Fryer",
-        "blurb": "A large window and interior light let you watch it crisp, with four digital presets and a Hi-Fry button that runs 232 °C for two minutes. Basket and rack go in the dishwasher."
+        "title": "TurboFry Touch 5.7 L Easy-View Air Fryer",
+        "blurb": "A 5.7 L basket sits behind a large window with an interior light, joined by four digital presets and a Hi-Fry button that runs 232 °C for two minutes. An LED reminder prompts you to shake mid-cook, and the basket and rack are dishwasher-safe."
       },
       "crispinator_air_fryer": {
         "title": "Crispinator 7.6 L Digital Air Fryer",
@@ -616,7 +616,7 @@
         "blurb": "Heats its full surface to hold a buffet at temperature, with three levels of control and a wipeable silicone top. Rolls up into the storage bag it ships with."
       },
       "crispinator_max_toaf": {
-        "title": "Crispinator MAX Toaster Oven + Air Fryer",
+        "title": "Crispinator MAX Digital Toaster Oven + Air Fryer",
         "blurb": "A brushless DC motor drives nine functions up to 260 °C, from air fry and roast through proof and dehydrate. Fits a 33 cm pizza or a 23 × 33 cm pan, and includes the basket, rack, baking tray and crumb tray."
       },
       "deep_fryer_3l": {
@@ -624,7 +624,7 @@
         "blurb": "A 1500 W element brings 3 L up to temperature, and a divider lets you fry two foods at once. The oil container lifts out, the parts are dishwasher-safe and a charcoal filter absorbs frying odours."
       },
       "grillinator_grill": {
-        "title": "Grillinator Submersible Panini Press + Grill",
+        "title": "Grillinator Submersible Panini Press & Grill",
         "blurb": "Pull the plug and the whole grill goes in the dishwasher. Ceramic nonstick plates run 121 °C to 232 °C, and a floating hinge over a 25 × 23 cm surface takes five slices at once."
       }
     }
