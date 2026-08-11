@@ -1,212 +1,881 @@
 {
   "sections": {
-    "showcase": {
-      "type": "ct-showcase",
+    "rich_text_intro": {
+      "type": "rich-text",
       "blocks": {
-        "card_obliterator": {
-          "type": "product_card",
+        "image_ctlogo": {
+          "type": "image",
           "settings": {
-            "product": "",
-            "key": "obliterator_blender",
-            "colour": "Midnight",
-            "sku": "C27-2TJ-2M-CA1",
-            "card_heading": "Obliterator High-Speed Blender",
-            "blurb": "<p>Auto-Blend senses what's in the 1.4 L Triton jar and sets the blend time itself, backed by more than 20,000 rpm. Two travel jars come along for the ride.</p>",
-            "card_heading_fr": "Mélangeur haute vitesse Obliterator",
-            "blurb_fr": "<p>La technologie Auto-Blend détecte le contenu du pot Triton de 1,4 L et règle elle-même la durée, avec plus de 20 000 tr/min. Deux pots de voyage sont inclus.</p>"
+            "image_width": "custom",
+            "image_max_width": 220,
+            "image_max_width_mobile": 160
           }
         },
-        "card_caffeinator": {
-          "type": "product_card",
+        "heading_main": {
+          "type": "heading",
           "settings": {
-            "product": "",
-            "key": "caffeinator_drip",
-            "colour": "Midnight",
-            "sku": "C14-DR14-1M-CA2",
-            "card_heading": "Caffeinator Drip 14-Cup Coffee Maker",
-            "blurb": "<p>Brews 14 cups from a 2.1 L reservoir, with a touchscreen, Classic and Bold settings and a 24-hour delay timer. The 1-to-4-cup setting covers a single mug.</p>",
-            "card_heading_fr": "Cafetière filtre Caffeinator Drip de 14 tasses",
-            "blurb_fr": "<p>Prépare 14 tasses à partir d'un réservoir de 2,1 L, avec écran tactile, réglages Classic et Bold et minuterie différée de 24 heures. Le mode 1 à 4 tasses suffit pour une seule tasse.</p>"
+            "heading": "The Chefman Lineup",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h1",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         },
-        "card_kettle_manual": {
-          "type": "product_card",
+        "text_intro": {
+          "type": "text",
           "settings": {
-            "product": "",
-            "key": "kettle_manual_12l",
-            "colour": "Glass/SS",
-            "sku": "RJ11-12-TI-CA",
-            "card_heading": "Fast-Boil 1.2 L Electric Kettle with Tea Infuser",
-            "blurb": "<p>1500 W brings 1.2 L up in stain-resistant borosilicate glass, with blue LEDs that light while it heats. Both the tea infuser and the lid lift out.</p>",
-            "card_heading_fr": "Bouilloire électrique Fast-Boil de 1,2 L avec infuseur à thé",
-            "blurb_fr": "<p>1500 W amènent 1,2 L à ébullition dans un verre borosilicaté résistant aux taches, avec des DEL bleues allumées pendant la chauffe. L'infuseur à thé et le couvercle s'enlèvent tous les deux.</p>"
-          }
-        },
-        "card_kettle_digital": {
-          "type": "product_card",
-          "settings": {
-            "product": "",
-            "key": "kettle_digital_dual_glass",
-            "colour": "Glass/SS",
-            "sku": "RJ11-18-SCTI-DG-HP-CA",
-            "card_heading": "Lightning 1.8 L Electric Kettle",
-            "blurb": "<p>1750 W of Lightning power boils up to 25% faster, with five temperature presets and tricolour LEDs for standby, heating and ready. Auto shut-off and boil-dry protection included.</p>",
-            "card_heading_fr": "Bouilloire électrique Lightning de 1,8 L",
-            "blurb_fr": "<p>1750 W de puissance Lightning font bouillir jusqu'à 25 % plus vite, avec cinq préréglages de température et des DEL tricolores pour l'attente, la chauffe et le prêt. Arrêt automatique et protection contre l'ébullition à vide inclus.</p>"
-          }
-        },
-        "card_air_fryer_55": {
-          "type": "product_card",
-          "settings": {
-            "product": "",
-            "key": "air_fryer_55l",
-            "colour": "Black",
-            "sku": "RJ38-6TW-BLACK-DS-CA",
-            "card_heading": "TurboFry Touch 5.7 L Easy-View Air Fryer",
-            "blurb": "<p>A 5.7 L basket sits behind a large window with an interior light, joined by four digital presets and a Hi-Fry button that runs 232 °C for two minutes. An LED reminder prompts you to shake mid-cook, and the basket and rack are dishwasher-safe.</p>",
-            "card_heading_fr": "Friteuse à air TurboFry Touch Easy-View de 5,7 L",
-            "blurb_fr": "<p>Un panier de 5,7 L se trouve derrière une grande fenêtre avec éclairage intérieur, accompagné de quatre préréglages numériques et d'un bouton Hi-Fry qui monte à 232 °C pendant deux minutes. Un rappel à DEL invite à secouer en cours de cuisson, et le panier et la grille vont au lave-vaisselle.</p>"
-          }
-        },
-        "card_crispinator": {
-          "type": "product_card",
-          "settings": {
-            "product": "",
-            "key": "crispinator_air_fryer",
-            "colour": "Midnight",
-            "sku": "C38-8W7-1M-CA1",
-            "card_heading": "Crispinator 7.6 L Digital Air Fryer",
-            "blurb": "<p>An adjustable-speed DC motor crisps, bakes and fries up to 40% faster across seven functions plus manual control. The Frozen setting defrosts first, then switches to cook.</p>",
-            "card_heading_fr": "Friteuse à air numérique Crispinator de 7,6 L",
-            "blurb_fr": "<p>Un moteur à courant continu à vitesse réglable croustille, cuit et frit jusqu'à 40 % plus vite, avec sept fonctions et une commande manuelle. Le mode Frozen décongèle d'abord, puis passe à la cuisson.</p>"
-          }
-        },
-        "card_toaster_2": {
-          "type": "product_card",
-          "settings": {
-            "product": "",
-            "key": "toaster_2_slice",
-            "colour": "Stainless",
-            "sku": "RJ31-SS-T-2S-CA",
-            "card_heading": "Smart Touch 2-Slice Digital Toaster",
-            "blurb": "<p>A reveal-screen touchscreen with six shade settings and a countdown, plus Bagel, Frozen and a +10 second button. The crumb tray pushes open from the front.</p>",
-            "card_heading_fr": "Grille-pain numérique Smart Touch à 2 tranches",
-            "blurb_fr": "<p>Un écran tactile « reveal-screen » avec six degrés de brunissage et un compte à rebours, plus les fonctions Bagel, Frozen et un bouton +10 secondes. Le ramasse-miettes s'ouvre par l'avant.</p>"
-          }
-        },
-        "card_toaster_4": {
-          "type": "product_card",
-          "settings": {
-            "product": "",
-            "key": "toaster_4_slice",
-            "colour": "Stainless",
-            "sku": "RJ31-SS-T-4S-CA",
-            "card_heading": "Smart Touch 4-Slice Digital Toaster",
-            "blurb": "<p>Four extra-wide slots, six shade settings, a countdown and a high-lift lever. Bagel, Frozen and a +10 second button round it out.</p>",
-            "card_heading_fr": "Grille-pain numérique Smart Touch à 4 tranches",
-            "blurb_fr": "<p>Quatre fentes extra-larges, six degrés de brunissage, un compte à rebours et un levier à haute levée. Les fonctions Bagel, Frozen et le bouton +10 secondes complètent le tout.</p>"
-          }
-        },
-        "card_warming_mat": {
-          "type": "product_card",
-          "settings": {
-            "product": "",
-            "key": "warming_mat",
-            "colour": "Blue",
-            "sku": "RJ22-S-BLUE-CA",
-            "card_heading": "Roll 'n Go Rollable Warming Mat",
-            "blurb": "<p>Heats its full surface to hold a buffet at temperature, with three levels of control and a wipeable silicone top. Rolls up into the storage bag it ships with.</p>",
-            "card_heading_fr": "Tapis chauffant enroulable Roll 'n Go",
-            "blurb_fr": "<p>Chauffe toute sa surface pour garder un buffet à température, avec trois niveaux de réglage et un dessus en silicone facile à essuyer. S'enroule dans le sac de rangement fourni.</p>"
-          }
-        },
-        "card_max_toaf": {
-          "type": "product_card",
-          "settings": {
-            "product": "",
-            "key": "crispinator_max_toaf",
-            "colour": "Stainless",
-            "sku": "C50-T25-1SS-CA1",
-            "card_heading": "Crispinator MAX Digital Toaster Oven + Air Fryer",
-            "blurb": "<p>A brushless DC motor drives nine functions up to 260 °C, from air fry and roast through proof and dehydrate. Fits a 33 cm pizza or a 23 × 33 cm pan, and includes the basket, rack, baking tray and crumb tray.</p>",
-            "card_heading_fr": "Four grille-pain numérique + friteuse à air Crispinator MAX",
-            "blurb_fr": "<p>Un moteur sans balais alimente neuf fonctions jusqu'à 260 °C, de la friture à air au rôtissage en passant par la levée et la déshydratation. Accueille une pizza de 33 cm ou une plaque de 23 × 33 cm, et comprend le panier, la grille, la plaque de cuisson et le ramasse-miettes.</p>"
-          }
-        },
-        "card_deep_fryer": {
-          "type": "product_card",
-          "settings": {
-            "product": "",
-            "key": "deep_fryer_3l",
-            "colour": "Stainless",
-            "sku": "RJ07-32-SS-D-CA",
-            "card_heading": "3 L Stainless Steel Deep Fryer",
-            "blurb": "<p>A 1500 W element brings 3 L up to temperature, and a divider lets you fry two foods at once. The oil container lifts out, the parts are dishwasher-safe and a charcoal filter absorbs frying odours.</p>",
-            "card_heading_fr": "Friteuse de 3 L en acier inoxydable",
-            "blurb_fr": "<p>Un élément de 1500 W amène 3 L à température, et un séparateur permet de frire deux aliments à la fois. Le contenant à huile s'enlève, les pièces vont au lave-vaisselle et un filtre au charbon absorbe les odeurs de friture.</p>"
-          }
-        },
-        "card_grillinator": {
-          "type": "product_card",
-          "settings": {
-            "product": "",
-            "key": "grillinator_grill",
-            "colour": "Midnight",
-            "sku": "C02-S-1M-CA2",
-            "card_heading": "Grillinator Submersible Panini Press & Grill",
-            "blurb": "<p>Pull the plug and the whole grill goes in the dishwasher. Ceramic nonstick plates run 121 °C to 232 °C, and a floating hinge over a 25 × 23 cm surface takes five slices at once.</p>",
-            "card_heading_fr": "Presse à panini et gril submersible Grillinator",
-            "blurb_fr": "<p>Débranchez la fiche et le gril entier va au lave-vaisselle. Les plaques antiadhésives en céramique vont de 121 °C à 232 °C, et la charnière flottante sur une surface de 25 × 23 cm accueille cinq tranches à la fois.</p>"
+            "text": "<p>A closer look at the products we're bringing to Canadian Tire.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 46,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         }
       },
       "block_order": [
-        "card_obliterator",
-        "card_caffeinator",
-        "card_kettle_manual",
-        "card_kettle_digital",
-        "card_air_fryer_55",
-        "card_crispinator",
-        "card_toaster_2",
-        "card_toaster_4",
-        "card_warming_mat",
-        "card_max_toaf",
-        "card_deep_fryer",
-        "card_grillinator"
+        "image_ctlogo",
+        "heading_main",
+        "text_intro"
       ],
       "settings": {
-        "partner_label": "",
-        "partner_logo_url": "https://cdn.shopify.com/s/files/1/0714/7647/8117/files/CT_Logo.png?v=1786452409",
-        "partner_logo_alt": "Canadian Tire",
-        "partner_logo_height": 56,
-        "heading": "The Chefman Lineup",
-        "heading_size": "md:title-lg",
-        "intro": "<p>A closer look at the products we're bringing to Canadian Tire.</p>",
-        "show_cta": false,
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
         "button_label": "",
-        "button_style": "primary",
-        "show_meta": false,
-        "image_ratio": "2 / 3",
-        "image_fit": "contain",
-        "image_position": "center",
-        "card_image_background": "#f5f5f5",
-        "color_text": "#121e2a",
-        "color_background": "#ffffff",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
         "gradient_background": "",
-        "color_button_text": "#ffffff",
-        "color_button_background": "#121e2a",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 56,
+        "padding_bottom": 24,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "iwt_obliterator_blender": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_obliterator_blender": {
+          "type": "heading",
+          "settings": {
+            "heading": "Obliterator High-Speed Blender",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "sub_obliterator_blender": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Midnight · C27-2TJ-2M-CA1",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "text_obliterator_blender": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Auto-Blend senses what's in the 1.4 L Triton jar and sets the blend time itself, backed by more than 20,000 rpm. Two travel jars come along for the ride.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_obliterator_blender",
+        "sub_obliterator_blender",
+        "text_obliterator_blender"
+      ],
+      "settings": {
+        "image_height": "450px",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
         "color_button_gradient": "",
         "padding_top": 40,
-        "padding_bottom": 64,
+        "padding_bottom": 40,
         "divider": false,
         "full_width": false,
         "rounded": false,
-        "heading_fr": "La gamme Chefman",
-        "intro_fr": "<p>Un aperçu des produits que nous présentons à Canadian Tire.</p>"
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "iwt_caffeinator_drip": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_caffeinator_drip": {
+          "type": "heading",
+          "settings": {
+            "heading": "Caffeinator Drip 14-Cup Coffee Maker",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "sub_caffeinator_drip": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Midnight · C14-DR14-1M-CA2",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "text_caffeinator_drip": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Brews 14 cups from a 2.1 L reservoir, with a touchscreen, Classic and Bold settings and a 24-hour delay timer. The 1-to-4-cup setting covers a single mug.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_caffeinator_drip",
+        "sub_caffeinator_drip",
+        "text_caffeinator_drip"
+      ],
+      "settings": {
+        "image_height": "450px",
+        "image_width": "medium",
+        "layout": "text_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "iwt_kettle_manual_12l": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_kettle_manual_12l": {
+          "type": "heading",
+          "settings": {
+            "heading": "Fast-Boil 1.2 L Electric Kettle with Tea Infuser",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "sub_kettle_manual_12l": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Glass/SS · RJ11-12-TI-CA",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "text_kettle_manual_12l": {
+          "type": "text",
+          "settings": {
+            "text": "<p>1500 W brings 1.2 L up in stain-resistant borosilicate glass, with blue LEDs that light while it heats. Both the tea infuser and the lid lift out.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kettle_manual_12l",
+        "sub_kettle_manual_12l",
+        "text_kettle_manual_12l"
+      ],
+      "settings": {
+        "image_height": "450px",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "iwt_kettle_digital_dual_glass": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_kettle_digital_dual_glass": {
+          "type": "heading",
+          "settings": {
+            "heading": "Lightning 1.8 L Electric Kettle",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "sub_kettle_digital_dual_glass": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Glass/SS · RJ11-18-SCTI-DG-HP-CA",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "text_kettle_digital_dual_glass": {
+          "type": "text",
+          "settings": {
+            "text": "<p>1750 W of Lightning power boils up to 25% faster, with five temperature presets and tricolour LEDs for standby, heating and ready. Auto shut-off and boil-dry protection included.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kettle_digital_dual_glass",
+        "sub_kettle_digital_dual_glass",
+        "text_kettle_digital_dual_glass"
+      ],
+      "settings": {
+        "image_height": "450px",
+        "image_width": "medium",
+        "layout": "text_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "iwt_air_fryer_55l": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_air_fryer_55l": {
+          "type": "heading",
+          "settings": {
+            "heading": "TurboFry Touch 5.7 L Easy-View Air Fryer",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "sub_air_fryer_55l": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Black · RJ38-6TW-BLACK-DS-CA",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "text_air_fryer_55l": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A 5.7 L basket sits behind a large window with an interior light, joined by four digital presets and a Hi-Fry button that runs 232 °C for two minutes. An LED reminder prompts you to shake mid-cook, and the basket and rack are dishwasher-safe.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_air_fryer_55l",
+        "sub_air_fryer_55l",
+        "text_air_fryer_55l"
+      ],
+      "settings": {
+        "image_height": "450px",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "iwt_crispinator_air_fryer": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_crispinator_air_fryer": {
+          "type": "heading",
+          "settings": {
+            "heading": "Crispinator 7.6 L Digital Air Fryer",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "sub_crispinator_air_fryer": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Midnight · C38-8W7-1M-CA1",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "text_crispinator_air_fryer": {
+          "type": "text",
+          "settings": {
+            "text": "<p>An adjustable-speed DC motor crisps, bakes and fries up to 40% faster across seven functions plus manual control. The Frozen setting defrosts first, then switches to cook.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_crispinator_air_fryer",
+        "sub_crispinator_air_fryer",
+        "text_crispinator_air_fryer"
+      ],
+      "settings": {
+        "image_height": "450px",
+        "image_width": "medium",
+        "layout": "text_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "iwt_toaster_2_slice": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_toaster_2_slice": {
+          "type": "heading",
+          "settings": {
+            "heading": "Smart Touch 2-Slice Digital Toaster",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "sub_toaster_2_slice": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Stainless · RJ31-SS-T-2S-CA",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "text_toaster_2_slice": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A reveal-screen touchscreen with six shade settings and a countdown, plus Bagel, Frozen and a +10 second button. The crumb tray pushes open from the front.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_toaster_2_slice",
+        "sub_toaster_2_slice",
+        "text_toaster_2_slice"
+      ],
+      "settings": {
+        "image_height": "450px",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "iwt_toaster_4_slice": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_toaster_4_slice": {
+          "type": "heading",
+          "settings": {
+            "heading": "Smart Touch 4-Slice Digital Toaster",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "sub_toaster_4_slice": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Stainless · RJ31-SS-T-4S-CA",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "text_toaster_4_slice": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Four extra-wide slots, six shade settings, a countdown and a high-lift lever. Bagel, Frozen and a +10 second button round it out.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_toaster_4_slice",
+        "sub_toaster_4_slice",
+        "text_toaster_4_slice"
+      ],
+      "settings": {
+        "image_height": "450px",
+        "image_width": "medium",
+        "layout": "text_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "iwt_warming_mat": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_warming_mat": {
+          "type": "heading",
+          "settings": {
+            "heading": "Roll 'n Go Rollable Warming Mat",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "sub_warming_mat": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Blue · RJ22-S-BLUE-CA",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "text_warming_mat": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Heats its full surface to hold a buffet at temperature, with three levels of control and a wipeable silicone top. Rolls up into the storage bag it ships with.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_warming_mat",
+        "sub_warming_mat",
+        "text_warming_mat"
+      ],
+      "settings": {
+        "image_height": "450px",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "iwt_crispinator_max_toaf": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_crispinator_max_toaf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Crispinator MAX Digital Toaster Oven + Air Fryer",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "sub_crispinator_max_toaf": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Stainless · C50-T25-1SS-CA1",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "text_crispinator_max_toaf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A brushless DC motor drives nine functions up to 260 °C, from air fry and roast through proof and dehydrate. Fits a 33 cm pizza or a 23 × 33 cm pan, and includes the basket, rack, baking tray and crumb tray.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_crispinator_max_toaf",
+        "sub_crispinator_max_toaf",
+        "text_crispinator_max_toaf"
+      ],
+      "settings": {
+        "image_height": "450px",
+        "image_width": "medium",
+        "layout": "text_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "iwt_deep_fryer_3l": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_deep_fryer_3l": {
+          "type": "heading",
+          "settings": {
+            "heading": "3 L Stainless Steel Deep Fryer",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "sub_deep_fryer_3l": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Stainless · RJ07-32-SS-D-CA",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "text_deep_fryer_3l": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A 1500 W element brings 3 L up to temperature, and a divider lets you fry two foods at once. The oil container lifts out, the parts are dishwasher-safe and a charcoal filter absorbs frying odours.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_deep_fryer_3l",
+        "sub_deep_fryer_3l",
+        "text_deep_fryer_3l"
+      ],
+      "settings": {
+        "image_height": "450px",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "iwt_grillinator_grill": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_grillinator_grill": {
+          "type": "heading",
+          "settings": {
+            "heading": "Grillinator Submersible Panini Press & Grill",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "sub_grillinator_grill": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Midnight · C02-S-1M-CA2",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "text_grillinator_grill": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pull the plug and the whole grill goes in the dishwasher. Ceramic nonstick plates run 121 °C to 232 °C, and a floating hinge over a 25 × 23 cm surface takes five slices at once.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_grillinator_grill",
+        "sub_grillinator_grill",
+        "text_grillinator_grill"
+      ],
+      "settings": {
+        "image_height": "450px",
+        "image_width": "medium",
+        "layout": "text_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
       }
     }
   },
   "order": [
-    "showcase"
+    "rich_text_intro",
+    "iwt_obliterator_blender",
+    "iwt_caffeinator_drip",
+    "iwt_kettle_manual_12l",
+    "iwt_kettle_digital_dual_glass",
+    "iwt_air_fryer_55l",
+    "iwt_crispinator_air_fryer",
+    "iwt_toaster_2_slice",
+    "iwt_toaster_4_slice",
+    "iwt_warming_mat",
+    "iwt_crispinator_max_toaf",
+    "iwt_deep_fryer_3l",
+    "iwt_grillinator_grill"
   ]
 }
