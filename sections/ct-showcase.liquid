@@ -225,7 +225,27 @@
   }
 </style>
 
-<!-- ct-showcase v8 -->
+<!-- ct-showcase v9 -->
+{%- comment -%}
+  TEMPORARY diagnostic panel — remove once the missing-title cause is found.
+  Pure HTML + direct output, no conditionals, so it renders if this file is
+  served at all. Each numbered line probes one mechanism.
+{%- endcomment -%}
+<div style="border:2px solid #c00; padding:14px 18px; margin:14px auto; max-width:720px; font:13px/1.8 monospace; background:#fff; color:#111;">
+  <strong>ct-showcase v9 diagnostics</strong><br>
+  1 literal text: OK<br>
+  2 blocks count: [{{ section.blocks.size }}]<br>
+  3 setting heading: [{{ section.settings.heading }}]<br>
+  4 setting heading_size: [{{ section.settings.heading_size }}]<br>
+  5 locale t heading: [{{ 'canadian_tire.heading' | t }}]<br>
+  6 locale t card name: [{{ 'canadian_tire.cards.obliterator_blender.name' | t }}]<br>
+  7 block1 card_heading: [{{ section.blocks.first.settings.card_heading }}]<br>
+  8 block1 blurb: [{{ section.blocks.first.settings.blurb }}]<br>
+  9 block1 key: [{{ section.blocks.first.settings.key }}]<br>
+  10 computed heading: [{{ heading }}]<br>
+  11 computed intro: [{{ intro }}]<br>
+  12 is_fr: [{{ is_fr }}] locale: [{{ request.locale.iso_code }}]<br>
+</div>
 <div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded{% endif %}">
   <div class="page-width{% if section.settings.full_width %} page-width--full{% endif %}">
     {%- liquid
