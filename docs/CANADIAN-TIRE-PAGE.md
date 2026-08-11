@@ -121,17 +121,21 @@ MAX, Smart Touch, Roll 'n Go, Grillinator, Hi-Fry, Auto-Blend, Bagel, Frozen.
 **You can edit any card's wording yourself, in either language, from the theme
 editor — no repo change and no Translate & Adapt import.**
 
-Each card has four copy fields:
+Each card has four copy fields, and **all four arrive pre-filled** with the copy
+written from the deck, so you can read and adjust the real text in the editor
+rather than guessing at an invisible default:
 
 | Field | Appears on |
 |-------|-----------|
 | **Title (English)** / **Blurb (English)** | the English page only |
 | **Title (French)** / **Blurb (French)** | the French page only |
 
-Leave a field blank and the card falls back to the default copy shipped in the
-locale files. Fill one in and it wins for that language. The two languages are
-independent: correcting the French blurb does not disturb the English one, and
-vice versa.
+Every card renders as **image → title → blurb**; the title sits directly above
+its description.
+
+The two languages are independent: correcting the French blurb does not disturb
+the English one, and vice versa. Clear a field entirely and the card falls back
+to the same copy held in the locale files, so a card can never end up blank.
 
 The section decides which pair to use from the current request locale
 (`request.locale.iso_code`, matching both `fr` and `fr-CA`).
