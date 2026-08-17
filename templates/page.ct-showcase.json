@@ -116,7 +116,7 @@
         "ctc_obliterator_blender": {
           "type": "subheading",
           "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading": "CTC item #: 439910 · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
             "secondary_color": false
           }
@@ -125,7 +125,7 @@
           "type": "button",
           "settings": {
             "button_label": "View at Canadian Tire",
-            "button_link": "",
+            "button_link": "https://www.canadiantire.ca/en/pdp/pcode-0439910p.html",
             "button_style": "secondary",
             "button_size": "md",
             "button_external": true,
@@ -217,7 +217,7 @@
         "ctc_caffeinator_drip": {
           "type": "subheading",
           "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading": "CTC item #: 439911 · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
             "secondary_color": false
           }
@@ -226,7 +226,7 @@
           "type": "button",
           "settings": {
             "button_label": "View at Canadian Tire",
-            "button_link": "",
+            "button_link": "https://www.canadiantire.ca/en/pdp/pcode-0439911p.html",
             "button_style": "secondary",
             "button_size": "md",
             "button_external": true,
@@ -318,7 +318,7 @@
         "ctc_kettle_manual_12l": {
           "type": "subheading",
           "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading": "CTC item #: 439912 · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
             "secondary_color": false
           }
@@ -327,7 +327,7 @@
           "type": "button",
           "settings": {
             "button_label": "View at Canadian Tire",
-            "button_link": "",
+            "button_link": "https://www.canadiantire.ca/en/pdp/pcode-0439912p.html",
             "button_style": "secondary",
             "button_size": "md",
             "button_external": true,
@@ -419,7 +419,7 @@
         "ctc_kettle_digital_dual_glass": {
           "type": "subheading",
           "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading": "CTC item #: 439913 · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
             "secondary_color": false
           }
@@ -428,7 +428,7 @@
           "type": "button",
           "settings": {
             "button_label": "View at Canadian Tire",
-            "button_link": "",
+            "button_link": "https://www.canadiantire.ca/en/pdp/pcode-0439913p.html",
             "button_style": "secondary",
             "button_size": "md",
             "button_external": true,
@@ -520,7 +520,7 @@
         "ctc_air_fryer_55l": {
           "type": "subheading",
           "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading": "CTC item #: 439914 · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
             "secondary_color": false
           }
@@ -529,7 +529,7 @@
           "type": "button",
           "settings": {
             "button_label": "View at Canadian Tire",
-            "button_link": "",
+            "button_link": "https://www.canadiantire.ca/en/pdp/pcode-0439914p.html",
             "button_style": "secondary",
             "button_size": "md",
             "button_external": true,
@@ -621,7 +621,7 @@
         "ctc_crispinator_air_fryer": {
           "type": "subheading",
           "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading": "CTC item #: 439915 · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
             "secondary_color": false
           }
@@ -630,7 +630,7 @@
           "type": "button",
           "settings": {
             "button_label": "View at Canadian Tire",
-            "button_link": "",
+            "button_link": "https://www.canadiantire.ca/en/pdp/pcode-0439915p.html",
             "button_style": "secondary",
             "button_size": "md",
             "button_external": true,
@@ -722,7 +722,7 @@
         "ctc_toaster_2_slice": {
           "type": "subheading",
           "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading": "CTC item #: 439916 · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
             "secondary_color": false
           }
@@ -731,7 +731,7 @@
           "type": "button",
           "settings": {
             "button_label": "View at Canadian Tire",
-            "button_link": "",
+            "button_link": "https://www.canadiantire.ca/en/pdp/pcode-0439916p.html",
             "button_style": "secondary",
             "button_size": "md",
             "button_external": true,
@@ -823,7 +823,7 @@
         "ctc_toaster_4_slice": {
           "type": "subheading",
           "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading": "CTC item #: 439917 · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
             "secondary_color": false
           }
@@ -832,7 +832,7 @@
           "type": "button",
           "settings": {
             "button_label": "View at Canadian Tire",
-            "button_link": "",
+            "button_link": "https://www.canadiantire.ca/en/pdp/pcode-0439917p.html",
             "button_style": "secondary",
             "button_size": "md",
             "button_external": true,
@@ -924,7 +924,7 @@
         "ctc_warming_mat": {
           "type": "subheading",
           "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading": "CTC item #: 439918 · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
             "secondary_color": false
           }
@@ -933,7 +933,7 @@
           "type": "button",
           "settings": {
             "button_label": "View at Canadian Tire",
-            "button_link": "",
+            "button_link": "https://www.canadiantire.ca/en/pdp/pcode-0439918p.html",
             "button_style": "secondary",
             "button_size": "md",
             "button_external": true,
@@ -1025,7 +1025,7 @@
         "ctc_crispinator_max_toaf": {
           "type": "subheading",
           "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading": "CTC item #: 439919 · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
             "secondary_color": false
           }
@@ -1034,7 +1034,7 @@
           "type": "button",
           "settings": {
             "button_label": "View at Canadian Tire",
-            "button_link": "",
+            "button_link": "https://www.canadiantire.ca/en/pdp/pcode-0439919p.html",
             "button_style": "secondary",
             "button_size": "md",
             "button_external": true,
@@ -1114,7 +1114,7 @@
         "ctc_deep_fryer_3l": {
           "type": "subheading",
           "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading": "CTC item #: 439920 · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
             "secondary_color": false
           }
@@ -1135,7 +1135,7 @@
           "type": "button",
           "settings": {
             "button_label": "View at Canadian Tire",
-            "button_link": "",
+            "button_link": "https://www.canadiantire.ca/en/pdp/pcode-0439920p.html",
             "button_style": "secondary",
             "button_size": "md",
             "button_external": true,
@@ -1227,7 +1227,7 @@
         "ctc_grillinator_grill": {
           "type": "subheading",
           "settings": {
-            "subheading": "CTC item #: TBD · Regular retail: $TBD",
+            "subheading": "CTC item #: 439921 · Regular retail: $TBD",
             "subheading_size": "subtitle-md",
             "secondary_color": false
           }
@@ -1236,7 +1236,7 @@
           "type": "button",
           "settings": {
             "button_label": "View at Canadian Tire",
-            "button_link": "",
+            "button_link": "https://www.canadiantire.ca/en/pdp/pcode-0439921p.html",
             "button_style": "secondary",
             "button_size": "md",
             "button_external": true,
