@@ -14916,3 +14916,14 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
     color: transparent;
   }
 }
+
+
+/* CT showcase page: below 1024px the CTC item number and the retail price
+   split onto separate lines (the <br class="ctc-br"> baked into the
+   subheading text activates and the dot separator hides). One line on
+   desktop. */
+.ctc-br { display: none; }
+@media screen and (max-width: 1023.98px) {
+  .ctc-br { display: inline; }
+  .ctc-sep { display: none; }
+}
